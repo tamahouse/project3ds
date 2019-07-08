@@ -23,6 +23,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.xml.XmlSuite;
 
+@SuppressWarnings({"unchecked", "finally", "unused", "resource"})
 public class MyReporter implements IReporter {
 	
 	static String green = "#a3ffba";
@@ -38,7 +39,6 @@ public class MyReporter implements IReporter {
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		
 
-		// TODO Auto-generated method stub
 		try {
 			// Get content data in TestNG report template file.
 			String customReportTemplateStr = this.readEmailabelReportTemplate(outputDirectory);
@@ -84,6 +84,7 @@ public class MyReporter implements IReporter {
 	}
 
 	/* Read template content. */
+	
 	private String readEmailabelReportTemplate(String outputDirectory) {
 		StringBuffer retBuf = new StringBuffer();
 
@@ -244,6 +245,7 @@ public class MyReporter implements IReporter {
 	}
 
 	/* Get test method summary info. */
+
 	private String getTestMehodSummary(List<ISuite> suites) {
 		StringBuffer retBuf = new StringBuffer();
 
@@ -328,6 +330,7 @@ public class MyReporter implements IReporter {
 	}
 
 	/* Get failed, passed or skipped test methods report. */
+	
 	private String getTestMethodReportTitle(IResultMap testResultMap) {
 		StringBuffer retStrBuf = new StringBuffer();
 
@@ -429,6 +432,7 @@ public class MyReporter implements IReporter {
 				}
 			}
 
+			
 			List<Object> messageList = (List<Object>) testResult.getTestContext().getAttribute("messageList");
 
 			for (Object actual : messageList) {

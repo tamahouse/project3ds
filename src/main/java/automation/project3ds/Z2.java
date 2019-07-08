@@ -215,7 +215,7 @@ public class Z2 {
 		@JsonSetter("threeDSecure")
 		public void setPayment(JsonNode threeDSecure) {
 			System.out.println(threeDSecure);
-			ObjectMapper mapper = new ObjectMapper();
+//			ObjectMapper mapper = new ObjectMapper();
 			String cavv = null;
 			String eci = null;
 			try {

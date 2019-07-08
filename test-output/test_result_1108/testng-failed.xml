@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [credit_card_test]">
+  <test thread-count="5" name="test1108(failed)">
+    <classes>
+      <class name="automation.project3ds.FillCreditCardTest1108">
+        <methods>
+          <include name="setUp"/>
+          <include name="BeforeMethod"/>
+          <include name="execute" invocation-numbers="6 7 17 23 24 25 30 35"/>
+        </methods>
+      </class> <!-- automation.project3ds.FillCreditCardTest1108 -->
+    </classes>
+  </test> <!-- test1108(failed) -->
+</suite> <!-- Failed suite [credit_card_test] -->

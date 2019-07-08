@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testng]">
+  <listeners>
+    <listener class-name="automation.project3ds.MyReporter"/>
+  </listeners>
+  <test thread-count="5" name="systemTest(failed)">
+    <classes>
+      <class name="automation.project3ds.FillCreditCardTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="execute" invocation-numbers="3 6 7 12 13 17"/>
+          <include name="BeforeMethod"/>
+        </methods>
+      </class> <!-- automation.project3ds.FillCreditCardTest -->
+    </classes>
+  </test> <!-- systemTest(failed) -->
+</suite> <!-- Failed suite [testng] -->

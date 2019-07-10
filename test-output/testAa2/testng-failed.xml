@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testAa2]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="testTest(failed)">
+    <parameter name="hostValue" value="http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&amp;data%5Ba_id%5D=101601&amp;data%5Bwidget%5D=p1&amp;data%5Bco_id%5D=1&amp;data%5Buid%5D=218069cze3&amp;data%5Bag_type%5D=fixed"/>
+    <classes>
+      <class name="automation.project3ds.Aa">
+        <methods>
+          <include name="meo" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- automation.project3ds.Aa -->
+    </classes>
+  </test> <!-- testTest(failed) -->
+</suite> <!-- Failed suite [testAa2] -->

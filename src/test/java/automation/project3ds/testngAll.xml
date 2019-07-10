@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="allSuites">
+	<suite-files>
+		<suite-file path = "testng1107.xml" />
+		<suite-file path = "testng1108.xml" />
+	</suite-files>
+	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+</suite>
+

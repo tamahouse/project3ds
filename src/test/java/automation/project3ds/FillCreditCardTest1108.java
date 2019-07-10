@@ -7,9 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
-import org.testng.ITest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -21,7 +19,7 @@ import automation.project3ds.Z2.RequestAuth;
 import automation.project3ds.Z2.ResponseAuth;
 import automation.project3ds.Z2.ResponseLookup;
 
-public class FillCreditCardTest1108 implements ITest {
+public class FillCreditCardTest1108 {
 
 	String host = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&data%5Ba_id%5D=101607&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bag_type%5D=fixed";
 	String hostReport = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
@@ -32,7 +30,6 @@ public class FillCreditCardTest1108 implements ITest {
 	String password = utility.ConfigFile.password;
 	Driver driver;
 	List<Map<String, String>> mapList;
-	private ThreadLocal<String> testName = new ThreadLocal<>();
 
 	private void killRemain() throws Exception {
 		try {
@@ -115,15 +112,6 @@ public class FillCreditCardTest1108 implements ITest {
 
 	}
 
-	@BeforeMethod
-	public void BeforeMethod(Object[] testData) {
-		testName.set((String) testData[0]);
-	}
-
-	@Override
-	public String getTestName() {
-		return testName.get();
-	}
 
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
@@ -239,11 +227,7 @@ public class FillCreditCardTest1108 implements ITest {
 		assertion.assertString3DS(aWhiteListStatus, WhiteListStatus, "[WhiteListStatus]");
 		
 		String expected_cardholderVerificationMethod = map.get("cardholderVerificationMethod");
-		if (expected_cardholderVerificationMethod.equals("NO_REQUEST")) {
-			assertion.assertNull(request3, "[cardholderVerificationMethod]");
-		} else if (expected_cardholderVerificationMethod.equals("YES_REQUEST")) {
-			assertion.assertNotNull(request3, "[cardholderVerificationMethod]");
-		} else if(expected_cardholderVerificationMethod.equals("value")){
+		if(expected_cardholderVerificationMethod.equals("value")){
 			if(finalEciFlag.equals("00") || finalEciFlag.equals("07") || finalEciFlag.equals("") || finalEciFlag.equals("01") ) {
 				expected_cardholderVerificationMethod = "CVV2";
 			}else if((finalEciFlag.equals("02") || finalEciFlag.equals("05")) && finalEnrolled.equals("Y") && (finalPAResStatus.equals("Y") || finalPAResStatus.equals("C") || finalPAResStatus.equals("A") && finalSignatureVerification.equals("Y")) ){
@@ -251,44 +235,45 @@ public class FillCreditCardTest1108 implements ITest {
 			}else if((finalEciFlag.equals("01") || finalEciFlag.equals("06"))  && finalEnrolled.equals("Y") && (finalPAResStatus.equals("Y") || finalPAResStatus.equals("C") || finalPAResStatus.equals("A") && finalSignatureVerification.equals("Y"))) {
 				expected_cardholderVerificationMethod = "THREEDS_ATTEMPT";
 			}
-			
-			try {
-				cardholderVerificationMethod = request3.getcardholderVerificationMethod();
-				String cavv = request3.getCavv();
-				String eci = request3.getEci();
-				System.out.println("cardholderVerificationMethod: " + cardholderVerificationMethod);
-				System.out.println("cardholderVerificationMethod - cavv : " + cavv);
-				System.out.println("cardholderVerificationMethod - eci : " + eci);
-				assertion.assertString3DS(cardholderVerificationMethod, expected_cardholderVerificationMethod,
-						"[cardholderVerificationMethod3]");
-//				assertion.assertString3DS(cavv, aCavv, "[cavv]");
-//				assertion.assertString3DS(eci, aEciFlag, "[eci]");
-			} catch (Exception e) {
-				assertion.assertString3DS("null", "request is existed", "[requestAuth]");
-			}
-			
-			
-		}else {
-			
-			try {
-				cardholderVerificationMethod = request3.getcardholderVerificationMethod();
-				String cavv = request3.getCavv();
-				String eci = request3.getEci();
-				System.out.println("cardholderVerificationMethod: " + cardholderVerificationMethod);
-				System.out.println("cardholderVerificationMethod - cavv : " + cavv);
-				System.out.println("cardholderVerificationMethod - eci : " + eci);
-				assertion.assertString3DS(cardholderVerificationMethod, expected_cardholderVerificationMethod,
-						"[cardholderVerificationMethod3]");
-//				assertion.assertString3DS(cavv, aCavv, "[cavv]");
-//				assertion.assertString3DS(eci, aEciFlag, "[eci]");
-			} catch (Exception e) {
-				assertion.assertString3DS("null", "request is existed", "[requestAuth]");
-			}
-
 		}
 		
+		if (expected_cardholderVerificationMethod.equals("NO_REQUEST")) {
+			assertion.assertNull(request3, "[cardholderVerificationMethod]");
+		} else if(expected_cardholderVerificationMethod.equals("YES_REQUEST")) {
+			assertion.assertNotNull(request3, "[cardholderVerificationMethod]");
+		}else if (expected_cardholderVerificationMethod.equals("CVV2")){
+			cardholderVerificationMethod = request3.getcardholderVerificationMethod();
+			assertion.assertString3DS(cardholderVerificationMethod, expected_cardholderVerificationMethod,
+					"[cardholderVerificationMethod3]");
+		} else if(!expected_cardholderVerificationMethod.equals("CVV2")){
+			try {
+				cardholderVerificationMethod = request3.getcardholderVerificationMethod();
+				String cavv = request3.getCavv();
+				String eci = request3.getEci();
+				String version = request3.getVersion();
+				String directoryServerTransactionId = request3.getDirectoryServerTransactionId();
+				System.out.println("cardholderVerificationMethod: " + cardholderVerificationMethod);
+				System.out.println("cardholderVerificationMethod - cavv : " + cavv);
+				System.out.println("cardholderVerificationMethod - eci : " + eci);
+				assertion.assertString3DS(cardholderVerificationMethod, expected_cardholderVerificationMethod,
+						"[cardholderVerificationMethod3]");
+				assertion.assertNotNull(cavv,
+						"[cavv]");
+				assertion.assertString3DS(version, "V2",
+						"[version]");
+				assertion.assertNotNull(directoryServerTransactionId,
+						"[directoryServerTransactionId]");
+//				assertion.assertString3DS(cavv, aCavv, "[cavv]");
+//				assertion.assertString3DS(eci, aEciFlag, "[eci]");
+			} catch (Exception e) {
+				throw e;
+//				assertion.assertString3DS("null", "request is existed", "[requestAuth]");
+			}
+		}
+			
 		System.out.println("-----------");
 		assertion.assertAll();
+
 
 	}
 }

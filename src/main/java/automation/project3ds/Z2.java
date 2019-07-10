@@ -12,10 +12,9 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class Z2 {
 
-
 	private static Statement getStatement() throws Exception {
-			MyTunnel tunnel = new MyTunnel("wallapi");
-			Statement statement = tunnel.getStatement("z2");
+		MyTunnel tunnel = new MyTunnel("wallapi");
+		Statement statement = tunnel.getStatement("z2");
 		return statement;
 	}
 
@@ -51,9 +50,10 @@ public class Z2 {
 		}
 		return response;
 	}
-	
+
 	public static RequestAuth getAuthRequest(String t_id) throws Exception {
-		String query = "select pl_request from processor_log where t_id ='"+t_id+"' and pl_request like '%\"method\":\"AUTH\"%' limit 1";
+		String query = "select pl_request from processor_log where t_id ='" + t_id
+				+ "' and pl_request like '%\"method\":\"AUTH\"%' limit 1";
 		ResultSet resultSet = getStatement().executeQuery(query);
 		resultSet.next();
 		RequestAuth response = null;
@@ -63,9 +63,10 @@ public class Z2 {
 			JsonNode jsonNode = mapper.readTree(result);
 			jsonNode = jsonNode.path("request").get("ecomReqData");
 			System.out.println(jsonNode.toString());
-			response = mapper.convertValue(jsonNode, RequestAuth.class);;
+			response = mapper.convertValue(jsonNode, RequestAuth.class);
+			;
 		} catch (SQLException e) {
-			
+
 		}
 		return response;
 	}
@@ -209,37 +210,106 @@ public class Z2 {
 		public String cardholderVerificationMethod;
 		private String cavv;
 		private String eci;
+		private String version;
+		private String directoryServerTransactionId;
 		public JsonNode threeDSecure;
-
 
 		@JsonSetter("threeDSecure")
 		public void setPayment(JsonNode threeDSecure) {
 			System.out.println(threeDSecure);
-//			ObjectMapper mapper = new ObjectMapper();
-			String cavv = null;
-			String eci = null;
-			try {
-			cavv = threeDSecure.get("cavv").toString();
-			cavv = cavv.substring(1, cavv.length()-1);
-			eci = threeDSecure.get("eci").toString();
-			eci = eci.substring(1,eci.length()-1);
-			}catch(Exception e) {
-				
-			}
+			ObjectMapper mapper = new ObjectMapper();
+			ThreeDSecure obj = mapper.convertValue(threeDSecure, ThreeDSecure.class);
+			String cavv = obj.getCavv();
+			String aav = obj.getAav();
+			String eci = obj.getEci();
+			String version = obj.getVersion();
+			String directoryServerTransactionId = obj.getDirectoryServerTransactionId();
+			
+//			String cavv = null;
+//			String eci = null;
+//			String version = null;
+//			String directoryServerTransactionId = null;
+//			try {
+//				cavv = threeDSecure.path("*avv").asText();
+////				cavv = cavv.substring(1, cavv.length() - 1);
+//			} catch (Exception e) {
+//
+//			}
+//			try {
+//				eci = threeDSecure.path("eci").asText();
+////				eci = eci.substring(1, eci.length() - 1);
+//			} catch (Exception e) {
+//
+//			}
+//			try {
+//				version = threeDSecure.path("version").asText();
+////				version = version.substring(1, version.length() - 1);
+//			} catch (Exception e) {
+//
+//			}
+//			try {
+//				directoryServerTransactionId = threeDSecure.path("directoryServerTransactionId").asText();
+////				directoryServerTransactionId = directoryServerTransactionId.substring(1, directoryServerTransactionId.length() - 1);
+//			} catch (Exception e) {
+//
+//			}
 			this.cavv = cavv;
+			if(aav != null) {
+				this.cavv = aav;
+			}
 			this.eci = eci;
+			this.version = version;
+			this.directoryServerTransactionId = directoryServerTransactionId;
 		}
 		
+		@JsonIgnoreProperties(ignoreUnknown = true)
+		private static class ThreeDSecure {
+			public String cavv;
+			public String aav;
+			public String eci;
+			public String version;
+			public String directoryServerTransactionId;
+			
+			private String getCavv() {
+				return this.cavv;
+			}
+			
+			private String getAav() {
+				return this.aav;
+			}
+			
+			private String getEci() {
+				return this.eci;
+			}
+
+			private String getVersion() {
+				return this.version;
+			}
+
+			private String getDirectoryServerTransactionId() {
+				return this.directoryServerTransactionId;
+			}
+			
+		}
+
 		public String getcardholderVerificationMethod() {
 			return this.cardholderVerificationMethod;
 		}
-		
+
 		public String getCavv() {
 			return this.cavv;
 		}
-		
+
 		public String getEci() {
 			return this.eci;
+		}
+
+		public String getVersion() {
+			return this.version;
+		}
+
+		public String getDirectoryServerTransactionId() {
+			return this.directoryServerTransactionId;
 		}
 	}
 

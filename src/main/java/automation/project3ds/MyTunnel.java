@@ -94,8 +94,18 @@ public class MyTunnel{
 		this.createTunnel();
 		String db_Username = table.get(dbName, "db_Username");
 		String db_Password = table.get(dbName, "db_Password");
-		Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:"+setPortForwardingL_SSHTunnel_LeftLocalPort+"/"+dbName+"?"
+		Boolean x = false;
+		Connection connection = null;
+		while (setPortForwardingL_SSHTunnel_LeftLocalPort <3310 && x == false) {
+		try {
+		connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:"+setPortForwardingL_SSHTunnel_LeftLocalPort+"/"+dbName+"?"
 					+ "user="+db_Username+"&password="+db_Password+"" + "&serverTimezone=UTC");
+		System.out.println("setPortForwardingL_SSHTunnel_LeftLocalPort : " +setPortForwardingL_SSHTunnel_LeftLocalPort);
+		x = true;
+		}catch(Exception e) {
+			setPortForwardingL_SSHTunnel_LeftLocalPort++;
+		}
+		}
 		Statement statement = connection.createStatement();
 		return statement;
 	}

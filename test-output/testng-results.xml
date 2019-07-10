@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="24" ignored="0" total="72" passed="48">
+<testng-results skipped="0" failed="16" ignored="0" total="72" passed="56">
   <reporter-output>
   </reporter-output>
-  <suite name="test1107" duration-ms="1103307" started-at="2019-07-10T09:39:23Z" finished-at="2019-07-10T09:57:46Z">
+  <suite name="test1107" duration-ms="1088684" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:59:58Z">
     <groups>
     </groups>
-    <test name="test1107" duration-ms="1103307" started-at="2019-07-10T09:39:23Z" finished-at="2019-07-10T09:57:46Z">
+    <test name="test1107" duration-ms="1088684" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:59:58Z">
       <class name="automation.project3ds.CreditCardTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="setUp" is-config="true" duration-ms="14242" started-at="2019-07-10T09:39:23Z" finished-at="2019-07-10T09:39:37Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="setUp" is-config="true" duration-ms="19093" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:42:09Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="29508" started-at="2019-07-10T09:39:37Z" data-provider="data" finished-at="2019-07-10T09:40:06Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39617" started-at="2019-07-10T10:42:09Z" data-provider="data" finished-at="2019-07-10T10:42:48Z">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23817" started-at="2019-07-10T09:40:06Z" data-provider="data" finished-at="2019-07-10T09:40:30Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23460" started-at="2019-07-10T10:42:48Z" data-provider="data" finished-at="2019-07-10T10:43:12Z">
           <params>
             <param index="0">
               <value>
@@ -60,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22265" started-at="2019-07-10T09:40:30Z" data-provider="data" finished-at="2019-07-10T09:40:53Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22173" started-at="2019-07-10T10:43:12Z" data-provider="data" finished-at="2019-07-10T10:43:34Z">
           <params>
             <param index="0">
               <value>
@@ -81,7 +81,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23839" started-at="2019-07-10T09:40:53Z" data-provider="data" finished-at="2019-07-10T09:41:16Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23483" started-at="2019-07-10T10:43:34Z" data-provider="data" finished-at="2019-07-10T10:43:57Z">
           <params>
             <param index="0">
               <value>
@@ -102,7 +102,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23236" started-at="2019-07-10T09:41:16Z" data-provider="data" finished-at="2019-07-10T09:41:40Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21906" started-at="2019-07-10T10:43:58Z" data-provider="data" finished-at="2019-07-10T10:44:19Z">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22580" started-at="2019-07-10T09:41:40Z" data-provider="data" finished-at="2019-07-10T09:42:02Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22854" started-at="2019-07-10T10:44:19Z" data-provider="data" finished-at="2019-07-10T10:44:42Z">
           <params>
             <param index="0">
               <value>
@@ -144,7 +144,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23059" started-at="2019-07-10T09:42:02Z" data-provider="data" finished-at="2019-07-10T09:42:25Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21982" started-at="2019-07-10T10:44:42Z" data-provider="data" finished-at="2019-07-10T10:45:04Z">
           <params>
             <param index="0">
               <value>
@@ -204,7 +204,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32271" started-at="2019-07-10T09:42:25Z" data-provider="data" finished-at="2019-07-10T09:42:58Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32284" started-at="2019-07-10T10:45:04Z" data-provider="data" finished-at="2019-07-10T10:45:37Z">
           <params>
             <param index="0">
               <value>
@@ -266,7 +266,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22149" started-at="2019-07-10T09:42:58Z" data-provider="data" finished-at="2019-07-10T09:43:20Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22039" started-at="2019-07-10T10:45:37Z" data-provider="data" finished-at="2019-07-10T10:45:59Z">
           <params>
             <param index="0">
               <value>
@@ -287,7 +287,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="28784" started-at="2019-07-10T09:43:20Z" data-provider="data" finished-at="2019-07-10T09:43:49Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="29000" started-at="2019-07-10T10:45:59Z" data-provider="data" finished-at="2019-07-10T10:46:28Z">
           <params>
             <param index="0">
               <value>
@@ -308,7 +308,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26885" started-at="2019-07-10T09:43:49Z" data-provider="data" finished-at="2019-07-10T09:44:15Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26881" started-at="2019-07-10T10:46:28Z" data-provider="data" finished-at="2019-07-10T10:46:54Z">
           <params>
             <param index="0">
               <value>
@@ -329,7 +329,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27535" started-at="2019-07-10T09:44:15Z" data-provider="data" finished-at="2019-07-10T09:44:43Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27228" started-at="2019-07-10T10:46:54Z" data-provider="data" finished-at="2019-07-10T10:47:22Z">
           <params>
             <param index="0">
               <value>
@@ -350,7 +350,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27223" started-at="2019-07-10T09:44:43Z" data-provider="data" finished-at="2019-07-10T09:45:10Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26882" started-at="2019-07-10T10:47:22Z" data-provider="data" finished-at="2019-07-10T10:47:49Z">
           <params>
             <param index="0">
               <value>
@@ -371,7 +371,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27523" started-at="2019-07-10T09:45:10Z" data-provider="data" finished-at="2019-07-10T09:45:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27076" started-at="2019-07-10T10:47:49Z" data-provider="data" finished-at="2019-07-10T10:48:16Z">
           <params>
             <param index="0">
               <value>
@@ -392,7 +392,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22509" started-at="2019-07-10T09:45:38Z" data-provider="data" finished-at="2019-07-10T09:46:00Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22038" started-at="2019-07-10T10:48:16Z" data-provider="data" finished-at="2019-07-10T10:48:38Z">
           <params>
             <param index="0">
               <value>
@@ -413,7 +413,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="28969" started-at="2019-07-10T09:46:00Z" data-provider="data" finished-at="2019-07-10T09:46:29Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26868" started-at="2019-07-10T10:48:38Z" data-provider="data" finished-at="2019-07-10T10:49:05Z">
           <params>
             <param index="0">
               <value>
@@ -434,7 +434,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22652" started-at="2019-07-10T09:46:29Z" data-provider="data" finished-at="2019-07-10T09:46:52Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23364" started-at="2019-07-10T10:49:05Z" data-provider="data" finished-at="2019-07-10T10:49:28Z">
           <params>
             <param index="0">
               <value>
@@ -455,7 +455,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22404" started-at="2019-07-10T09:46:52Z" data-provider="data" finished-at="2019-07-10T09:47:14Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21855" started-at="2019-07-10T10:49:28Z" data-provider="data" finished-at="2019-07-10T10:49:50Z">
           <params>
             <param index="0">
               <value>
@@ -514,7 +514,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43557" started-at="2019-07-10T09:47:14Z" data-provider="data" finished-at="2019-07-10T09:47:58Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="36469" started-at="2019-07-10T10:49:50Z" data-provider="data" finished-at="2019-07-10T10:50:26Z">
           <params>
             <param index="0">
               <value>
@@ -535,7 +535,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23259" started-at="2019-07-10T09:47:58Z" data-provider="data" finished-at="2019-07-10T09:48:21Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22491" started-at="2019-07-10T10:50:26Z" data-provider="data" finished-at="2019-07-10T10:50:49Z">
           <params>
             <param index="0">
               <value>
@@ -556,7 +556,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34388" started-at="2019-07-10T09:48:21Z" data-provider="data" finished-at="2019-07-10T09:48:56Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34701" started-at="2019-07-10T10:50:49Z" data-provider="data" finished-at="2019-07-10T10:51:23Z">
           <params>
             <param index="0">
               <value>
@@ -577,7 +577,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33744" started-at="2019-07-10T09:48:56Z" data-provider="data" finished-at="2019-07-10T09:49:29Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34870" started-at="2019-07-10T10:51:24Z" data-provider="data" finished-at="2019-07-10T10:51:58Z">
           <params>
             <param index="0">
               <value>
@@ -598,7 +598,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22291" started-at="2019-07-10T09:49:29Z" data-provider="data" finished-at="2019-07-10T09:49:52Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22369" started-at="2019-07-10T10:51:58Z" data-provider="data" finished-at="2019-07-10T10:52:21Z">
           <params>
             <param index="0">
               <value>
@@ -619,7 +619,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34880" started-at="2019-07-10T09:49:52Z" data-provider="data" finished-at="2019-07-10T09:50:27Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33267" started-at="2019-07-10T10:52:21Z" data-provider="data" finished-at="2019-07-10T10:52:54Z">
           <params>
             <param index="0">
               <value>
@@ -678,7 +678,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="38878" started-at="2019-07-10T09:50:27Z" data-provider="data" finished-at="2019-07-10T09:51:05Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33151" started-at="2019-07-10T10:52:54Z" data-provider="data" finished-at="2019-07-10T10:53:27Z">
           <params>
             <param index="0">
               <value>
@@ -737,7 +737,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43560" started-at="2019-07-10T09:51:05Z" data-provider="data" finished-at="2019-07-10T09:51:49Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43844" started-at="2019-07-10T10:53:27Z" data-provider="data" finished-at="2019-07-10T10:54:11Z">
           <params>
             <param index="0">
               <value>
@@ -798,7 +798,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="35016" started-at="2019-07-10T09:51:49Z" data-provider="data" finished-at="2019-07-10T09:52:24Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="35562" started-at="2019-07-10T10:54:11Z" data-provider="data" finished-at="2019-07-10T10:54:47Z">
           <params>
             <param index="0">
               <value>
@@ -819,7 +819,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43934" started-at="2019-07-10T09:52:24Z" data-provider="data" finished-at="2019-07-10T09:53:08Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39664" started-at="2019-07-10T10:54:47Z" data-provider="data" finished-at="2019-07-10T10:55:26Z">
           <params>
             <param index="0">
               <value>
@@ -840,7 +840,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27628" started-at="2019-07-10T09:53:08Z" data-provider="data" finished-at="2019-07-10T09:53:36Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26440" started-at="2019-07-10T10:55:26Z" data-provider="data" finished-at="2019-07-10T10:55:53Z">
           <params>
             <param index="0">
               <value>
@@ -861,7 +861,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="40186" started-at="2019-07-10T09:53:36Z" data-provider="data" finished-at="2019-07-10T09:54:16Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="40259" started-at="2019-07-10T10:55:53Z" data-provider="data" finished-at="2019-07-10T10:56:33Z">
           <params>
             <param index="0">
               <value>
@@ -882,7 +882,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26868" started-at="2019-07-10T09:54:16Z" data-provider="data" finished-at="2019-07-10T09:54:43Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26804" started-at="2019-07-10T10:56:33Z" data-provider="data" finished-at="2019-07-10T10:57:00Z">
           <params>
             <param index="0">
               <value>
@@ -941,7 +941,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39404" started-at="2019-07-10T09:54:43Z" data-provider="data" finished-at="2019-07-10T09:55:22Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="37836" started-at="2019-07-10T10:57:00Z" data-provider="data" finished-at="2019-07-10T10:57:38Z">
           <params>
             <param index="0">
               <value>
@@ -962,7 +962,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34840" started-at="2019-07-10T09:55:22Z" data-provider="data" finished-at="2019-07-10T09:55:57Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34695" started-at="2019-07-10T10:57:38Z" data-provider="data" finished-at="2019-07-10T10:58:12Z">
           <params>
             <param index="0">
               <value>
@@ -983,7 +983,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39982" started-at="2019-07-10T09:55:57Z" data-provider="data" finished-at="2019-07-10T09:56:37Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="38877" started-at="2019-07-10T10:58:12Z" data-provider="data" finished-at="2019-07-10T10:58:51Z">
           <params>
             <param index="0">
               <value>
@@ -1004,7 +1004,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32735" started-at="2019-07-10T09:56:37Z" data-provider="data" finished-at="2019-07-10T09:57:10Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32758" started-at="2019-07-10T10:58:51Z" data-provider="data" finished-at="2019-07-10T10:59:24Z">
           <params>
             <param index="0">
               <value>
@@ -1025,7 +1025,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34878" started-at="2019-07-10T09:57:10Z" data-provider="data" finished-at="2019-07-10T09:57:45Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32936" started-at="2019-07-10T10:59:24Z" data-provider="data" finished-at="2019-07-10T10:59:57Z">
           <params>
             <param index="0">
               <value>
@@ -1084,23 +1084,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="tearDown" is-config="true" duration-ms="1494" started-at="2019-07-10T09:57:45Z" finished-at="2019-07-10T09:57:46Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="tearDown" is-config="true" duration-ms="1439" started-at="2019-07-10T10:59:57Z" finished-at="2019-07-10T10:59:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.project3ds.CreditCardTest -->
     </test> <!-- test1107 -->
   </suite> <!-- test1107 -->
-  <suite name="allSuites" duration-ms="0" started-at="2019-07-10T10:10:15Z" finished-at="2019-07-10T10:10:15Z">
+  <suite name="allSuites" duration-ms="0" started-at="2019-07-10T11:17:14Z" finished-at="2019-07-10T11:17:14Z">
     <groups>
     </groups>
   </suite> <!-- allSuites -->
-  <suite name="test1108" duration-ms="747287" started-at="2019-07-10T09:57:47Z" finished-at="2019-07-10T10:10:14Z">
+  <suite name="test1108" duration-ms="1033942" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:17:13Z">
     <groups>
     </groups>
-    <test name="test1108" duration-ms="747287" started-at="2019-07-10T09:57:47Z" finished-at="2019-07-10T10:10:14Z">
+    <test name="test1108" duration-ms="1033942" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:17:13Z">
       <class name="automation.project3ds.CreditCardTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="setUp" is-config="true" duration-ms="15453" started-at="2019-07-10T09:57:47Z" finished-at="2019-07-10T09:58:02Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="setUp" is-config="true" duration-ms="14134" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:00:13Z">
           <params>
             <param index="0">
               <value>
@@ -1111,7 +1111,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="35464" started-at="2019-07-10T09:58:02Z" data-provider="data" finished-at="2019-07-10T09:58:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31834" started-at="2019-07-10T11:00:13Z" data-provider="data" finished-at="2019-07-10T11:00:45Z">
           <params>
             <param index="0">
               <value>
@@ -1132,7 +1132,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25501" started-at="2019-07-10T09:58:38Z" data-provider="data" finished-at="2019-07-10T09:59:03Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25307" started-at="2019-07-10T11:00:45Z" data-provider="data" finished-at="2019-07-10T11:01:10Z">
           <params>
             <param index="0">
               <value>
@@ -1153,7 +1153,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25729" started-at="2019-07-10T09:59:03Z" data-provider="data" finished-at="2019-07-10T09:59:29Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25879" started-at="2019-07-10T11:01:10Z" data-provider="data" finished-at="2019-07-10T11:01:36Z">
           <params>
             <param index="0">
               <value>
@@ -1174,7 +1174,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25542" started-at="2019-07-10T09:59:29Z" data-provider="data" finished-at="2019-07-10T09:59:54Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24755" started-at="2019-07-10T11:01:36Z" data-provider="data" finished-at="2019-07-10T11:02:01Z">
           <params>
             <param index="0">
               <value>
@@ -1195,7 +1195,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26655" started-at="2019-07-10T09:59:54Z" data-provider="data" finished-at="2019-07-10T10:00:21Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24517" started-at="2019-07-10T11:02:01Z" data-provider="data" finished-at="2019-07-10T11:02:25Z">
           <params>
             <param index="0">
               <value>
@@ -1216,7 +1216,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25726" started-at="2019-07-10T10:00:21Z" data-provider="data" finished-at="2019-07-10T10:00:47Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25552" started-at="2019-07-10T11:02:25Z" data-provider="data" finished-at="2019-07-10T11:02:51Z">
           <params>
             <param index="0">
               <value>
@@ -1237,7 +1237,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25903" started-at="2019-07-10T10:00:47Z" data-provider="data" finished-at="2019-07-10T10:01:13Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25567" started-at="2019-07-10T11:02:51Z" data-provider="data" finished-at="2019-07-10T11:03:17Z">
           <params>
             <param index="0">
               <value>
@@ -1296,7 +1296,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="36545" started-at="2019-07-10T10:01:13Z" data-provider="data" finished-at="2019-07-10T10:01:49Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="36113" started-at="2019-07-10T11:03:17Z" data-provider="data" finished-at="2019-07-10T11:03:53Z">
           <params>
             <param index="0">
               <value>
@@ -1357,7 +1357,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27659" started-at="2019-07-10T10:01:49Z" data-provider="data" finished-at="2019-07-10T10:02:17Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26971" started-at="2019-07-10T11:03:53Z" data-provider="data" finished-at="2019-07-10T11:04:20Z">
           <params>
             <param index="0">
               <value>
@@ -1378,7 +1378,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28398" started-at="2019-07-10T10:02:17Z" data-provider="data" finished-at="2019-07-10T10:02:45Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28803" started-at="2019-07-10T11:04:20Z" data-provider="data" finished-at="2019-07-10T11:04:49Z">
           <params>
             <param index="0">
               <value>
@@ -1399,7 +1399,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27649" started-at="2019-07-10T10:02:45Z" data-provider="data" finished-at="2019-07-10T10:03:13Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28296" started-at="2019-07-10T11:04:49Z" data-provider="data" finished-at="2019-07-10T11:05:17Z">
           <params>
             <param index="0">
               <value>
@@ -1420,7 +1420,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28775" started-at="2019-07-10T10:03:13Z" data-provider="data" finished-at="2019-07-10T10:03:42Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27790" started-at="2019-07-10T11:05:17Z" data-provider="data" finished-at="2019-07-10T11:05:45Z">
           <params>
             <param index="0">
               <value>
@@ -1441,7 +1441,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="30792" started-at="2019-07-10T10:03:42Z" data-provider="data" finished-at="2019-07-10T10:04:12Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28308" started-at="2019-07-10T11:05:45Z" data-provider="data" finished-at="2019-07-10T11:06:13Z">
           <params>
             <param index="0">
               <value>
@@ -1462,7 +1462,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="30080" started-at="2019-07-10T10:04:12Z" data-provider="data" finished-at="2019-07-10T10:04:43Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27471" started-at="2019-07-10T11:06:13Z" data-provider="data" finished-at="2019-07-10T11:06:40Z">
           <params>
             <param index="0">
               <value>
@@ -1483,7 +1483,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27054" started-at="2019-07-10T10:04:43Z" data-provider="data" finished-at="2019-07-10T10:05:10Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26417" started-at="2019-07-10T11:06:40Z" data-provider="data" finished-at="2019-07-10T11:07:07Z">
           <params>
             <param index="0">
               <value>
@@ -1504,7 +1504,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28244" started-at="2019-07-10T10:05:10Z" data-provider="data" finished-at="2019-07-10T10:05:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28509" started-at="2019-07-10T11:07:07Z" data-provider="data" finished-at="2019-07-10T11:07:35Z">
           <params>
             <param index="0">
               <value>
@@ -1525,7 +1525,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25753" started-at="2019-07-10T10:05:38Z" data-provider="data" finished-at="2019-07-10T10:06:04Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26441" started-at="2019-07-10T11:07:35Z" data-provider="data" finished-at="2019-07-10T11:08:02Z">
           <params>
             <param index="0">
               <value>
@@ -1546,7 +1546,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25567" started-at="2019-07-10T10:06:04Z" data-provider="data" finished-at="2019-07-10T10:06:29Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25538" started-at="2019-07-10T11:08:02Z" data-provider="data" finished-at="2019-07-10T11:08:27Z">
           <params>
             <param index="0">
               <value>
@@ -1605,7 +1605,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29725" started-at="2019-07-10T10:06:29Z" data-provider="data" finished-at="2019-07-10T10:06:59Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="33408" started-at="2019-07-10T11:08:27Z" data-provider="data" finished-at="2019-07-10T11:09:01Z">
           <params>
             <param index="0">
               <value>
@@ -1626,7 +1626,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25276" started-at="2019-07-10T10:06:59Z" data-provider="data" finished-at="2019-07-10T10:07:24Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26146" started-at="2019-07-10T11:09:01Z" data-provider="data" finished-at="2019-07-10T11:09:27Z">
           <params>
             <param index="0">
               <value>
@@ -1647,7 +1647,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31271" started-at="2019-07-10T10:07:24Z" data-provider="data" finished-at="2019-07-10T10:07:55Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28251" started-at="2019-07-10T11:09:27Z" data-provider="data" finished-at="2019-07-10T11:09:55Z">
           <params>
             <param index="0">
               <value>
@@ -1668,7 +1668,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29485" started-at="2019-07-10T10:07:55Z" data-provider="data" finished-at="2019-07-10T10:08:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29513" started-at="2019-07-10T11:09:55Z" data-provider="data" finished-at="2019-07-10T11:10:25Z">
           <params>
             <param index="0">
               <value>
@@ -1689,7 +1689,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26206" started-at="2019-07-10T10:08:25Z" data-provider="data" finished-at="2019-07-10T10:08:51Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26877" started-at="2019-07-10T11:10:25Z" data-provider="data" finished-at="2019-07-10T11:10:52Z">
           <params>
             <param index="0">
               <value>
@@ -1710,7 +1710,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="30451" started-at="2019-07-10T10:08:51Z" data-provider="data" finished-at="2019-07-10T10:09:22Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29500" started-at="2019-07-10T11:10:52Z" data-provider="data" finished-at="2019-07-10T11:11:21Z">
           <params>
             <param index="0">
               <value>
@@ -1769,7 +1769,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31298" started-at="2019-07-10T10:09:22Z" data-provider="data" finished-at="2019-07-10T10:09:53Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28975" started-at="2019-07-10T11:11:21Z" data-provider="data" finished-at="2019-07-10T11:11:50Z">
           <params>
             <param index="0">
               <value>
@@ -1828,7 +1828,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="4198" started-at="2019-07-10T10:09:53Z" data-provider="data" finished-at="2019-07-10T10:09:57Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="39503" started-at="2019-07-10T11:11:50Z" data-provider="data" finished-at="2019-07-10T11:12:30Z">
           <params>
             <param index="0">
               <value>
@@ -1846,50 +1846,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
+              <![CDATA[The following asserts failed:
+[Enrolled] expected [] but found [U],
+[EciFlag] expected [] but found [00]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[Enrolled] expected [] but found [U],
+[EciFlag] expected [] but found [00]
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1917,11 +1885,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1551" started-at="2019-07-10T10:09:57Z" data-provider="data" finished-at="2019-07-10T10:09:59Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27979" started-at="2019-07-10T11:12:30Z" data-provider="data" finished-at="2019-07-10T11:12:57Z">
           <params>
             <param index="0">
               <value>
@@ -1939,82 +1907,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1559" started-at="2019-07-10T10:09:59Z" data-provider="data" finished-at="2019-07-10T10:10:00Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29195" started-at="2019-07-10T11:12:57Z" data-provider="data" finished-at="2019-07-10T11:13:27Z">
           <params>
             <param index="0">
               <value>
@@ -2032,82 +1928,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1568" started-at="2019-07-10T10:10:00Z" data-provider="data" finished-at="2019-07-10T10:10:02Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28255" started-at="2019-07-10T11:13:27Z" data-provider="data" finished-at="2019-07-10T11:13:55Z">
           <params>
             <param index="0">
               <value>
@@ -2125,82 +1949,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1529" started-at="2019-07-10T10:10:02Z" data-provider="data" finished-at="2019-07-10T10:10:03Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28167" started-at="2019-07-10T11:13:55Z" data-provider="data" finished-at="2019-07-10T11:14:23Z">
           <params>
             <param index="0">
               <value>
@@ -2218,82 +1970,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1525" started-at="2019-07-10T10:10:03Z" data-provider="data" finished-at="2019-07-10T10:10:05Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27766" started-at="2019-07-10T11:14:23Z" data-provider="data" finished-at="2019-07-10T11:14:51Z">
           <params>
             <param index="0">
               <value>
@@ -2311,50 +1991,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
+              <![CDATA[The following asserts failed:
+[EciFlag2] expected [00] but found []]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[EciFlag2] expected [00] but found []
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -2382,11 +2028,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1520" started-at="2019-07-10T10:10:05Z" data-provider="data" finished-at="2019-07-10T10:10:06Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28115" started-at="2019-07-10T11:14:51Z" data-provider="data" finished-at="2019-07-10T11:15:19Z">
           <params>
             <param index="0">
               <value>
@@ -2404,82 +2050,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1537" started-at="2019-07-10T10:10:06Z" data-provider="data" finished-at="2019-07-10T10:10:08Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28552" started-at="2019-07-10T11:15:19Z" data-provider="data" finished-at="2019-07-10T11:15:48Z">
           <params>
             <param index="0">
               <value>
@@ -2497,82 +2071,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1507" started-at="2019-07-10T10:10:08Z" data-provider="data" finished-at="2019-07-10T10:10:09Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27175" started-at="2019-07-10T11:15:48Z" data-provider="data" finished-at="2019-07-10T11:16:15Z">
           <params>
             <param index="0">
               <value>
@@ -2590,82 +2092,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1530" started-at="2019-07-10T10:10:09Z" data-provider="data" finished-at="2019-07-10T10:10:11Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27694" started-at="2019-07-10T11:16:15Z" data-provider="data" finished-at="2019-07-10T11:16:42Z">
           <params>
             <param index="0">
               <value>
@@ -2683,82 +2113,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
-at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="1546" started-at="2019-07-10T10:10:11Z" data-provider="data" finished-at="2019-07-10T10:10:13Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28848" started-at="2019-07-10T11:16:42Z" data-provider="data" finished-at="2019-07-10T11:17:11Z">
           <params>
             <param index="0">
               <value>
@@ -2776,50 +2134,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}]]>
+              <![CDATA[The following asserts failed:
+[PAResStatus] expected [I] but found [U]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="main"]/iframe
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 21024, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 0d7899ab-dd78-4398-85dc-4629d1d8dae4
-*** Element info: {Using=xpath, value=//*[@id="main"]/iframe}
-at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at automation.project3ds.Driver.lambda$1(Driver.java:120)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.Driver.findElement(Driver.java:1)
-at automation.project3ds.Driver.findElement(Driver.java:248)
-at automation.project3ds.PageHome1108.getMainIframe(PageHome1108.java:25)
-at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:198)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:158)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[PAResStatus] expected [I] but found [U]
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -2847,11 +2171,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="tearDown" is-config="true" duration-ms="1404" started-at="2019-07-10T10:10:13Z" finished-at="2019-07-10T10:10:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="tearDown" is-config="true" duration-ms="1733" started-at="2019-07-10T11:17:11Z" finished-at="2019-07-10T11:17:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

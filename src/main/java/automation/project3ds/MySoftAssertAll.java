@@ -1,12 +1,15 @@
 package automation.project3ds;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.Reporter;
 import org.testng.asserts.IAssert;
 import org.testng.collections.Maps;
+
+import automation.project3ds.MySoftAssert.MyIAssert;
 
 /**
  * When an assertion fails, don't throw an exception but record the failure.
@@ -17,50 +20,29 @@ public class MySoftAssertAll extends MySoftAssert {
 	// LinkedHashMap to preserve the order
 	private final Map<AssertionError, IAssert<?>> m_errors = Maps.newLinkedHashMap();
 	
-	List<Object> actualList;
-	List<Object> expectedList;
-	List<Object> messageList;
-	List<Object> resultList;
-	String cardNumber;
+	List<IAssert<?>> assertCommandList;
 	
 	public MySoftAssertAll() {
-		this.actualList = new ArrayList<Object>();
-		this.expectedList = new ArrayList<Object>();
-		this.messageList = new ArrayList<Object>();
-		this.resultList = new ArrayList<Object>();
+		assertCommandList = new ArrayList<IAssert<?>>();
 	}
 	
-	public MySoftAssertAll(String cardNumber) {
-		this.actualList = new ArrayList<Object>();
-		this.expectedList = new ArrayList<Object>();
-		this.messageList = new ArrayList<Object>();
-		this.resultList = new ArrayList<Object>();
-		this.cardNumber = cardNumber;
-	}
 
 	@Override
-	protected void doAssert(IAssert<?> a) {
+	protected void doAssert(MyIAssert<?> a) {
 		onBeforeAssert(a);
 		try {
 			a.doAssert();
-			onAssertSuccess(a);
-			  resultList.add("passed");
-			  Reporter.getCurrentTestResult().getTestContext().setAttribute("resultList"+cardNumber, resultList);
+			onMyAssertSuccess(a);
 		} catch (AssertionError ex) {
-			onAssertFailure(a, ex);
+			onMyAssertFailure(a, ex);
 			m_errors.put(ex, a);
-			  resultList.add("failed");
-			  Reporter.getCurrentTestResult().getTestContext().setAttribute("resultList"+cardNumber, resultList);
 		} finally {
+			assertCommandList.add(a);
+			Reporter.getCurrentTestResult().setAttribute("assertCommandList", assertCommandList);
 			onAfterAssert(a);
-			actualList.add(a.getActual());
-			expectedList.add(a.getExpected());
-			messageList.add(a.getMessage());
-			Reporter.getCurrentTestResult().getTestContext().setAttribute("actualList"+cardNumber, actualList);
-			Reporter.getCurrentTestResult().getTestContext().setAttribute("expectedList"+cardNumber, expectedList);
-			Reporter.getCurrentTestResult().getTestContext().setAttribute("messageList", messageList);
 		}
 	}
+	
 
 	public void assertAll() {
 		if (!m_errors.isEmpty()) {

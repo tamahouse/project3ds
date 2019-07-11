@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="16" ignored="0" total="72" passed="56">
+<testng-results skipped="0" failed="19" ignored="0" total="72" passed="53">
   <reporter-output>
   </reporter-output>
-  <suite name="test1107" duration-ms="1088684" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:59:58Z">
+  <suite name="test1107" duration-ms="1121633" started-at="2019-07-11T10:11:13Z" finished-at="2019-07-11T10:29:55Z">
     <groups>
     </groups>
-    <test name="test1107" duration-ms="1088684" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:59:58Z">
+    <test name="test1107" duration-ms="1121633" started-at="2019-07-11T10:11:13Z" finished-at="2019-07-11T10:29:55Z">
       <class name="automation.project3ds.CreditCardTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="setUp" is-config="true" duration-ms="19093" started-at="2019-07-10T10:41:50Z" finished-at="2019-07-10T10:42:09Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="setUp" is-config="true" duration-ms="19270" started-at="2019-07-11T10:11:13Z" finished-at="2019-07-11T10:11:32Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39617" started-at="2019-07-10T10:42:09Z" data-provider="data" finished-at="2019-07-10T10:42:48Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34069" started-at="2019-07-11T10:11:32Z" data-provider="data" finished-at="2019-07-11T10:12:06Z">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23460" started-at="2019-07-10T10:42:48Z" data-provider="data" finished-at="2019-07-10T10:43:12Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23880" started-at="2019-07-11T10:12:06Z" data-provider="data" finished-at="2019-07-11T10:12:30Z">
           <params>
             <param index="0">
               <value>
@@ -60,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22173" started-at="2019-07-10T10:43:12Z" data-provider="data" finished-at="2019-07-10T10:43:34Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22542" started-at="2019-07-11T10:12:30Z" data-provider="data" finished-at="2019-07-11T10:12:53Z">
           <params>
             <param index="0">
               <value>
@@ -81,7 +81,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23483" started-at="2019-07-10T10:43:34Z" data-provider="data" finished-at="2019-07-10T10:43:57Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23442" started-at="2019-07-11T10:12:53Z" data-provider="data" finished-at="2019-07-11T10:13:16Z">
           <params>
             <param index="0">
               <value>
@@ -102,7 +102,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21906" started-at="2019-07-10T10:43:58Z" data-provider="data" finished-at="2019-07-10T10:44:19Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22318" started-at="2019-07-11T10:13:16Z" data-provider="data" finished-at="2019-07-11T10:13:39Z">
           <params>
             <param index="0">
               <value>
@@ -123,7 +123,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22854" started-at="2019-07-10T10:44:19Z" data-provider="data" finished-at="2019-07-10T10:44:42Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22376" started-at="2019-07-11T10:13:39Z" data-provider="data" finished-at="2019-07-11T10:14:01Z">
           <params>
             <param index="0">
               <value>
@@ -144,7 +144,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21982" started-at="2019-07-10T10:44:42Z" data-provider="data" finished-at="2019-07-10T10:45:04Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23195" started-at="2019-07-11T10:14:01Z" data-provider="data" finished-at="2019-07-11T10:14:24Z">
           <params>
             <param index="0">
               <value>
@@ -170,8 +170,8 @@
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -204,7 +204,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32284" started-at="2019-07-10T10:45:04Z" data-provider="data" finished-at="2019-07-10T10:45:37Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32130" started-at="2019-07-11T10:14:24Z" data-provider="data" finished-at="2019-07-11T10:14:56Z">
           <params>
             <param index="0">
               <value>
@@ -232,8 +232,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U],
 [EciFlag] expected [] but found [07]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -266,7 +266,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22039" started-at="2019-07-10T10:45:37Z" data-provider="data" finished-at="2019-07-10T10:45:59Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22152" started-at="2019-07-11T10:14:56Z" data-provider="data" finished-at="2019-07-11T10:15:19Z">
           <params>
             <param index="0">
               <value>
@@ -287,7 +287,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="29000" started-at="2019-07-10T10:45:59Z" data-provider="data" finished-at="2019-07-10T10:46:28Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="30862" started-at="2019-07-11T10:15:19Z" data-provider="data" finished-at="2019-07-11T10:15:49Z">
           <params>
             <param index="0">
               <value>
@@ -308,7 +308,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26881" started-at="2019-07-10T10:46:28Z" data-provider="data" finished-at="2019-07-10T10:46:54Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26685" started-at="2019-07-11T10:15:49Z" data-provider="data" finished-at="2019-07-11T10:16:16Z">
           <params>
             <param index="0">
               <value>
@@ -329,7 +329,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27228" started-at="2019-07-10T10:46:54Z" data-provider="data" finished-at="2019-07-10T10:47:22Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26811" started-at="2019-07-11T10:16:16Z" data-provider="data" finished-at="2019-07-11T10:16:43Z">
           <params>
             <param index="0">
               <value>
@@ -350,7 +350,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26882" started-at="2019-07-10T10:47:22Z" data-provider="data" finished-at="2019-07-10T10:47:49Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27206" started-at="2019-07-11T10:16:43Z" data-provider="data" finished-at="2019-07-11T10:17:10Z">
           <params>
             <param index="0">
               <value>
@@ -371,7 +371,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27076" started-at="2019-07-10T10:47:49Z" data-provider="data" finished-at="2019-07-10T10:48:16Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="27845" started-at="2019-07-11T10:17:10Z" data-provider="data" finished-at="2019-07-11T10:17:38Z">
           <params>
             <param index="0">
               <value>
@@ -392,7 +392,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22038" started-at="2019-07-10T10:48:16Z" data-provider="data" finished-at="2019-07-10T10:48:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22200" started-at="2019-07-11T10:17:38Z" data-provider="data" finished-at="2019-07-11T10:18:00Z">
           <params>
             <param index="0">
               <value>
@@ -413,7 +413,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26868" started-at="2019-07-10T10:48:38Z" data-provider="data" finished-at="2019-07-10T10:49:05Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="28292" started-at="2019-07-11T10:18:00Z" data-provider="data" finished-at="2019-07-11T10:18:28Z">
           <params>
             <param index="0">
               <value>
@@ -434,7 +434,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="23364" started-at="2019-07-10T10:49:05Z" data-provider="data" finished-at="2019-07-10T10:49:28Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22412" started-at="2019-07-11T10:18:28Z" data-provider="data" finished-at="2019-07-11T10:18:51Z">
           <params>
             <param index="0">
               <value>
@@ -455,7 +455,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="21855" started-at="2019-07-10T10:49:28Z" data-provider="data" finished-at="2019-07-10T10:49:50Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22132" started-at="2019-07-11T10:18:51Z" data-provider="data" finished-at="2019-07-11T10:19:13Z">
           <params>
             <param index="0">
               <value>
@@ -481,8 +481,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [PAResStatus] expected [I] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -514,7 +514,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="36469" started-at="2019-07-10T10:49:50Z" data-provider="data" finished-at="2019-07-10T10:50:26Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="37086" started-at="2019-07-11T10:19:13Z" data-provider="data" finished-at="2019-07-11T10:19:50Z">
           <params>
             <param index="0">
               <value>
@@ -535,7 +535,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22491" started-at="2019-07-10T10:50:26Z" data-provider="data" finished-at="2019-07-10T10:50:49Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22440" started-at="2019-07-11T10:19:50Z" data-provider="data" finished-at="2019-07-11T10:20:13Z">
           <params>
             <param index="0">
               <value>
@@ -556,7 +556,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34701" started-at="2019-07-10T10:50:49Z" data-provider="data" finished-at="2019-07-10T10:51:23Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33165" started-at="2019-07-11T10:20:13Z" data-provider="data" finished-at="2019-07-11T10:20:46Z">
           <params>
             <param index="0">
               <value>
@@ -577,7 +577,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34870" started-at="2019-07-10T10:51:24Z" data-provider="data" finished-at="2019-07-10T10:51:58Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="44121" started-at="2019-07-11T10:20:46Z" data-provider="data" finished-at="2019-07-11T10:21:30Z">
           <params>
             <param index="0">
               <value>
@@ -595,10 +595,54 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+[Enrolled] expected [Y] but found [U],
+[PAResStatus] expected [U] but found [null],
+[SignitureVerification] expected [Y] but found [null],
+[Cavv] expected [] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[Enrolled] expected [Y] but found [U],
+[PAResStatus] expected [U] but found [null],
+[SignitureVerification] expected [Y] but found [null],
+[Cavv] expected [] but found [null]
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
+at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22369" started-at="2019-07-10T10:51:58Z" data-provider="data" finished-at="2019-07-10T10:52:21Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="22108" started-at="2019-07-11T10:21:30Z" data-provider="data" finished-at="2019-07-11T10:21:52Z">
           <params>
             <param index="0">
               <value>
@@ -619,7 +663,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33267" started-at="2019-07-10T10:52:21Z" data-provider="data" finished-at="2019-07-10T10:52:54Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34905" started-at="2019-07-11T10:21:52Z" data-provider="data" finished-at="2019-07-11T10:22:27Z">
           <params>
             <param index="0">
               <value>
@@ -645,8 +689,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [EciFlag] expected [01] but found [00]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -678,7 +722,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33151" started-at="2019-07-10T10:52:54Z" data-provider="data" finished-at="2019-07-10T10:53:27Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33301" started-at="2019-07-11T10:22:27Z" data-provider="data" finished-at="2019-07-11T10:23:00Z">
           <params>
             <param index="0">
               <value>
@@ -704,8 +748,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -737,7 +781,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43844" started-at="2019-07-10T10:53:27Z" data-provider="data" finished-at="2019-07-10T10:54:11Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="43166" started-at="2019-07-11T10:23:00Z" data-provider="data" finished-at="2019-07-11T10:23:43Z">
           <params>
             <param index="0">
               <value>
@@ -765,8 +809,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U],
 [EciFlag] expected [] but found [00]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -798,7 +842,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="35562" started-at="2019-07-10T10:54:11Z" data-provider="data" finished-at="2019-07-10T10:54:47Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="38429" started-at="2019-07-11T10:23:43Z" data-provider="data" finished-at="2019-07-11T10:24:22Z">
           <params>
             <param index="0">
               <value>
@@ -819,7 +863,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39664" started-at="2019-07-10T10:54:47Z" data-provider="data" finished-at="2019-07-10T10:55:26Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="41321" started-at="2019-07-11T10:24:22Z" data-provider="data" finished-at="2019-07-11T10:25:03Z">
           <params>
             <param index="0">
               <value>
@@ -840,7 +884,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26440" started-at="2019-07-10T10:55:26Z" data-provider="data" finished-at="2019-07-10T10:55:53Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26794" started-at="2019-07-11T10:25:03Z" data-provider="data" finished-at="2019-07-11T10:25:30Z">
           <params>
             <param index="0">
               <value>
@@ -861,7 +905,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="40259" started-at="2019-07-10T10:55:53Z" data-provider="data" finished-at="2019-07-10T10:56:33Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="38211" started-at="2019-07-11T10:25:30Z" data-provider="data" finished-at="2019-07-11T10:26:08Z">
           <params>
             <param index="0">
               <value>
@@ -882,7 +926,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="26804" started-at="2019-07-10T10:56:33Z" data-provider="data" finished-at="2019-07-10T10:57:00Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="40838" started-at="2019-07-11T10:26:08Z" data-provider="data" finished-at="2019-07-11T10:26:49Z">
           <params>
             <param index="0">
               <value>
@@ -903,13 +947,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[EciFlag2] expected [00] but found []]]>
+[expected_results_authentication] expected [NA] but found [value],
+[Enrolled] expected [Y] but found [U],
+[PAResStatus] expected [C] but found [null],
+[SignitureVerification] expected [Y] but found [null],
+[Cavv] expected [] but found [null],
+[cardholderVerificationMethod] expected [null] but found [automation.project3ds.Z2$RequestAuth@2526d85a]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[EciFlag2] expected [00] but found []
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+[expected_results_authentication] expected [NA] but found [value],
+[Enrolled] expected [Y] but found [U],
+[PAResStatus] expected [C] but found [null],
+[SignitureVerification] expected [Y] but found [null],
+[Cavv] expected [] but found [null],
+[cardholderVerificationMethod] expected [null] but found [automation.project3ds.Z2$RequestAuth@2526d85a]
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -941,7 +995,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="37836" started-at="2019-07-10T10:57:00Z" data-provider="data" finished-at="2019-07-10T10:57:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="40564" started-at="2019-07-11T10:26:49Z" data-provider="data" finished-at="2019-07-11T10:27:30Z">
           <params>
             <param index="0">
               <value>
@@ -962,7 +1016,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34695" started-at="2019-07-10T10:57:38Z" data-provider="data" finished-at="2019-07-10T10:58:12Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="33429" started-at="2019-07-11T10:27:30Z" data-provider="data" finished-at="2019-07-11T10:28:03Z">
           <params>
             <param index="0">
               <value>
@@ -983,7 +1037,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="38877" started-at="2019-07-10T10:58:12Z" data-provider="data" finished-at="2019-07-10T10:58:51Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="39762" started-at="2019-07-11T10:28:03Z" data-provider="data" finished-at="2019-07-11T10:28:43Z">
           <params>
             <param index="0">
               <value>
@@ -1004,7 +1058,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32758" started-at="2019-07-10T10:58:51Z" data-provider="data" finished-at="2019-07-10T10:59:24Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="34977" started-at="2019-07-11T10:28:43Z" data-provider="data" finished-at="2019-07-11T10:29:18Z">
           <params>
             <param index="0">
               <value>
@@ -1025,7 +1079,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="32936" started-at="2019-07-10T10:59:24Z" data-provider="data" finished-at="2019-07-10T10:59:57Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="execute" duration-ms="35186" started-at="2019-07-11T10:29:18Z" data-provider="data" finished-at="2019-07-11T10:29:53Z">
           <params>
             <param index="0">
               <value>
@@ -1051,8 +1105,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [PAResStatus] expected [I] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1084,23 +1138,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="tearDown" is-config="true" duration-ms="1439" started-at="2019-07-10T10:59:57Z" finished-at="2019-07-10T10:59:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@5cb9f472]" name="tearDown" is-config="true" duration-ms="1778" started-at="2019-07-11T10:29:53Z" finished-at="2019-07-11T10:29:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.project3ds.CreditCardTest -->
     </test> <!-- test1107 -->
   </suite> <!-- test1107 -->
-  <suite name="allSuites" duration-ms="0" started-at="2019-07-10T11:17:14Z" finished-at="2019-07-10T11:17:14Z">
+  <suite name="allSuites" duration-ms="0" started-at="2019-07-11T10:48:48Z" finished-at="2019-07-11T10:48:48Z">
     <groups>
     </groups>
   </suite> <!-- allSuites -->
-  <suite name="test1108" duration-ms="1033942" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:17:13Z">
+  <suite name="test1108" duration-ms="1132262" started-at="2019-07-11T10:29:55Z" finished-at="2019-07-11T10:48:48Z">
     <groups>
     </groups>
-    <test name="test1108" duration-ms="1033942" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:17:13Z">
+    <test name="test1108" duration-ms="1132262" started-at="2019-07-11T10:29:55Z" finished-at="2019-07-11T10:48:48Z">
       <class name="automation.project3ds.CreditCardTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="setUp" is-config="true" duration-ms="14134" started-at="2019-07-10T10:59:59Z" finished-at="2019-07-10T11:00:13Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="setUp" is-config="true" duration-ms="12919" started-at="2019-07-11T10:29:55Z" finished-at="2019-07-11T10:30:08Z">
           <params>
             <param index="0">
               <value>
@@ -1111,7 +1165,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31834" started-at="2019-07-10T11:00:13Z" data-provider="data" finished-at="2019-07-10T11:00:45Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31682" started-at="2019-07-11T10:30:08Z" data-provider="data" finished-at="2019-07-11T10:30:40Z">
           <params>
             <param index="0">
               <value>
@@ -1132,7 +1186,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25307" started-at="2019-07-10T11:00:45Z" data-provider="data" finished-at="2019-07-10T11:01:10Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24786" started-at="2019-07-11T10:30:40Z" data-provider="data" finished-at="2019-07-11T10:31:05Z">
           <params>
             <param index="0">
               <value>
@@ -1153,7 +1207,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25879" started-at="2019-07-10T11:01:10Z" data-provider="data" finished-at="2019-07-10T11:01:36Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="70558" started-at="2019-07-11T10:31:05Z" data-provider="data" finished-at="2019-07-11T10:32:15Z">
           <params>
             <param index="0">
               <value>
@@ -1171,10 +1225,83 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #brick\-card\-number
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 18884, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 03bf1c2b-886d-41a8-8fc2-79e5f537ca25
+*** Element info: {Using=id, value=brick-card-number}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #brick\-card\-number
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 18884, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 03bf1c2b-886d-41a8-8fc2-79e5f537ca25
+*** Element info: {Using=id, value=brick-card-number}
+at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at automation.project3ds.Driver.lambda$1(Driver.java:120)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at automation.project3ds.Driver.findElement(Driver.java:248)
+at automation.project3ds.Driver.findElement(Driver.java:1)
+at automation.project3ds.Driver.getElement(Driver.java:262)
+at automation.project3ds.PageHome1108$MainIframe$Iframecc.setCardNumber(PageHome1108.java:79)
+at automation.project3ds.PageHome1108$MainIframe$Iframecc.access$0(PageHome1108.java:78)
+at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:202)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:163)
+at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24755" started-at="2019-07-10T11:01:36Z" data-provider="data" finished-at="2019-07-10T11:02:01Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26196" started-at="2019-07-11T10:32:15Z" data-provider="data" finished-at="2019-07-11T10:32:42Z">
           <params>
             <param index="0">
               <value>
@@ -1195,7 +1322,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24517" started-at="2019-07-10T11:02:01Z" data-provider="data" finished-at="2019-07-10T11:02:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26371" started-at="2019-07-11T10:32:42Z" data-provider="data" finished-at="2019-07-11T10:33:08Z">
           <params>
             <param index="0">
               <value>
@@ -1216,7 +1343,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25552" started-at="2019-07-10T11:02:25Z" data-provider="data" finished-at="2019-07-10T11:02:51Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="70385" started-at="2019-07-11T10:33:08Z" data-provider="data" finished-at="2019-07-11T10:34:18Z">
           <params>
             <param index="0">
               <value>
@@ -1234,10 +1361,83 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #brick\-card\-number
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 18884, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 03bf1c2b-886d-41a8-8fc2-79e5f537ca25
+*** Element info: {Using=id, value=brick-card-number}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #brick\-card\-number
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-V097D2E', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 18884, moz:profile: C:\Users\chase\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 03bf1c2b-886d-41a8-8fc2-79e5f537ca25
+*** Element info: {Using=id, value=brick-card-number}
+at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at automation.project3ds.Driver.lambda$1(Driver.java:120)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at automation.project3ds.Driver.findElement(Driver.java:248)
+at automation.project3ds.Driver.findElement(Driver.java:1)
+at automation.project3ds.Driver.getElement(Driver.java:262)
+at automation.project3ds.PageHome1108$MainIframe$Iframecc.setCardNumber(PageHome1108.java:79)
+at automation.project3ds.PageHome1108$MainIframe$Iframecc.access$0(PageHome1108.java:78)
+at automation.project3ds.PageHome1108.returnRefID(PageHome1108.java:202)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:163)
+at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25567" started-at="2019-07-10T11:02:51Z" data-provider="data" finished-at="2019-07-10T11:03:17Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26151" started-at="2019-07-11T10:34:18Z" data-provider="data" finished-at="2019-07-11T10:34:44Z">
           <params>
             <param index="0">
               <value>
@@ -1263,8 +1463,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1296,7 +1496,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="36113" started-at="2019-07-10T11:03:17Z" data-provider="data" finished-at="2019-07-10T11:03:53Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="35734" started-at="2019-07-11T10:34:44Z" data-provider="data" finished-at="2019-07-11T10:35:20Z">
           <params>
             <param index="0">
               <value>
@@ -1324,8 +1524,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U],
 [EciFlag] expected [] but found [07]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1357,7 +1557,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26971" started-at="2019-07-10T11:03:53Z" data-provider="data" finished-at="2019-07-10T11:04:20Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26349" started-at="2019-07-11T10:35:20Z" data-provider="data" finished-at="2019-07-11T10:35:47Z">
           <params>
             <param index="0">
               <value>
@@ -1378,7 +1578,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28803" started-at="2019-07-10T11:04:20Z" data-provider="data" finished-at="2019-07-10T11:04:49Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29664" started-at="2019-07-11T10:35:47Z" data-provider="data" finished-at="2019-07-11T10:36:16Z">
           <params>
             <param index="0">
               <value>
@@ -1399,7 +1599,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28296" started-at="2019-07-10T11:04:49Z" data-provider="data" finished-at="2019-07-10T11:05:17Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27681" started-at="2019-07-11T10:36:16Z" data-provider="data" finished-at="2019-07-11T10:36:44Z">
           <params>
             <param index="0">
               <value>
@@ -1420,7 +1620,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27790" started-at="2019-07-10T11:05:17Z" data-provider="data" finished-at="2019-07-10T11:05:45Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27720" started-at="2019-07-11T10:36:44Z" data-provider="data" finished-at="2019-07-11T10:37:12Z">
           <params>
             <param index="0">
               <value>
@@ -1441,7 +1641,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28308" started-at="2019-07-10T11:05:45Z" data-provider="data" finished-at="2019-07-10T11:06:13Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27247" started-at="2019-07-11T10:37:12Z" data-provider="data" finished-at="2019-07-11T10:37:39Z">
           <params>
             <param index="0">
               <value>
@@ -1462,7 +1662,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27471" started-at="2019-07-10T11:06:13Z" data-provider="data" finished-at="2019-07-10T11:06:40Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27505" started-at="2019-07-11T10:37:39Z" data-provider="data" finished-at="2019-07-11T10:38:06Z">
           <params>
             <param index="0">
               <value>
@@ -1483,7 +1683,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26417" started-at="2019-07-10T11:06:40Z" data-provider="data" finished-at="2019-07-10T11:07:07Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26492" started-at="2019-07-11T10:38:06Z" data-provider="data" finished-at="2019-07-11T10:38:33Z">
           <params>
             <param index="0">
               <value>
@@ -1504,7 +1704,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28509" started-at="2019-07-10T11:07:07Z" data-provider="data" finished-at="2019-07-10T11:07:35Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28764" started-at="2019-07-11T10:38:33Z" data-provider="data" finished-at="2019-07-11T10:39:02Z">
           <params>
             <param index="0">
               <value>
@@ -1525,7 +1725,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26441" started-at="2019-07-10T11:07:35Z" data-provider="data" finished-at="2019-07-10T11:08:02Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26987" started-at="2019-07-11T10:39:02Z" data-provider="data" finished-at="2019-07-11T10:39:29Z">
           <params>
             <param index="0">
               <value>
@@ -1546,7 +1746,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="25538" started-at="2019-07-10T11:08:02Z" data-provider="data" finished-at="2019-07-10T11:08:27Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26056" started-at="2019-07-11T10:39:29Z" data-provider="data" finished-at="2019-07-11T10:39:55Z">
           <params>
             <param index="0">
               <value>
@@ -1572,8 +1772,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [PAResStatus] expected [I] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1605,7 +1805,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="33408" started-at="2019-07-10T11:08:27Z" data-provider="data" finished-at="2019-07-10T11:09:01Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="32794" started-at="2019-07-11T10:39:55Z" data-provider="data" finished-at="2019-07-11T10:40:28Z">
           <params>
             <param index="0">
               <value>
@@ -1626,7 +1826,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26146" started-at="2019-07-10T11:09:01Z" data-provider="data" finished-at="2019-07-10T11:09:27Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31999" started-at="2019-07-11T10:40:28Z" data-provider="data" finished-at="2019-07-11T10:41:00Z">
           <params>
             <param index="0">
               <value>
@@ -1647,7 +1847,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28251" started-at="2019-07-10T11:09:27Z" data-provider="data" finished-at="2019-07-10T11:09:55Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28836" started-at="2019-07-11T10:41:00Z" data-provider="data" finished-at="2019-07-11T10:41:28Z">
           <params>
             <param index="0">
               <value>
@@ -1668,7 +1868,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29513" started-at="2019-07-10T11:09:55Z" data-provider="data" finished-at="2019-07-10T11:10:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29323" started-at="2019-07-11T10:41:28Z" data-provider="data" finished-at="2019-07-11T10:41:58Z">
           <params>
             <param index="0">
               <value>
@@ -1689,7 +1889,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26877" started-at="2019-07-10T11:10:25Z" data-provider="data" finished-at="2019-07-10T11:10:52Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="24521" started-at="2019-07-11T10:41:58Z" data-provider="data" finished-at="2019-07-11T10:42:22Z">
           <params>
             <param index="0">
               <value>
@@ -1710,7 +1910,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29500" started-at="2019-07-10T11:10:52Z" data-provider="data" finished-at="2019-07-10T11:11:21Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29408" started-at="2019-07-11T10:42:22Z" data-provider="data" finished-at="2019-07-11T10:42:52Z">
           <params>
             <param index="0">
               <value>
@@ -1736,8 +1936,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [EciFlag] expected [01] but found [00]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1769,7 +1969,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28975" started-at="2019-07-10T11:11:21Z" data-provider="data" finished-at="2019-07-10T11:11:50Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="30066" started-at="2019-07-11T10:42:52Z" data-provider="data" finished-at="2019-07-11T10:43:22Z">
           <params>
             <param index="0">
               <value>
@@ -1795,8 +1995,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1828,7 +2028,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="39503" started-at="2019-07-10T11:11:50Z" data-provider="data" finished-at="2019-07-10T11:12:30Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="38264" started-at="2019-07-11T10:43:22Z" data-provider="data" finished-at="2019-07-11T10:44:00Z">
           <params>
             <param index="0">
               <value>
@@ -1856,8 +2056,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [Enrolled] expected [] but found [U],
 [EciFlag] expected [] but found [00]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -1889,7 +2089,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27979" started-at="2019-07-10T11:12:30Z" data-provider="data" finished-at="2019-07-10T11:12:57Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28272" started-at="2019-07-11T10:44:00Z" data-provider="data" finished-at="2019-07-11T10:44:28Z">
           <params>
             <param index="0">
               <value>
@@ -1910,7 +2110,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29195" started-at="2019-07-10T11:12:57Z" data-provider="data" finished-at="2019-07-10T11:13:27Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27843" started-at="2019-07-11T10:44:28Z" data-provider="data" finished-at="2019-07-11T10:44:56Z">
           <params>
             <param index="0">
               <value>
@@ -1931,7 +2131,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28255" started-at="2019-07-10T11:13:27Z" data-provider="data" finished-at="2019-07-10T11:13:55Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27162" started-at="2019-07-11T10:44:56Z" data-provider="data" finished-at="2019-07-11T10:45:23Z">
           <params>
             <param index="0">
               <value>
@@ -1952,7 +2152,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28167" started-at="2019-07-10T11:13:55Z" data-provider="data" finished-at="2019-07-10T11:14:23Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="26967" started-at="2019-07-11T10:45:23Z" data-provider="data" finished-at="2019-07-11T10:45:50Z">
           <params>
             <param index="0">
               <value>
@@ -1973,7 +2173,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27766" started-at="2019-07-10T11:14:23Z" data-provider="data" finished-at="2019-07-10T11:14:51Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27491" started-at="2019-07-11T10:45:50Z" data-provider="data" finished-at="2019-07-11T10:46:18Z">
           <params>
             <param index="0">
               <value>
@@ -1999,8 +2199,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [EciFlag2] expected [00] but found []
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -2032,7 +2232,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28115" started-at="2019-07-10T11:14:51Z" data-provider="data" finished-at="2019-07-10T11:15:19Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27924" started-at="2019-07-11T10:46:18Z" data-provider="data" finished-at="2019-07-11T10:46:46Z">
           <params>
             <param index="0">
               <value>
@@ -2053,7 +2253,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28552" started-at="2019-07-10T11:15:19Z" data-provider="data" finished-at="2019-07-10T11:15:48Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="30597" started-at="2019-07-11T10:46:46Z" data-provider="data" finished-at="2019-07-11T10:47:16Z">
           <params>
             <param index="0">
               <value>
@@ -2074,7 +2274,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27175" started-at="2019-07-10T11:15:48Z" data-provider="data" finished-at="2019-07-10T11:16:15Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28868" started-at="2019-07-11T10:47:16Z" data-provider="data" finished-at="2019-07-11T10:47:45Z">
           <params>
             <param index="0">
               <value>
@@ -2095,7 +2295,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="27694" started-at="2019-07-10T11:16:15Z" data-provider="data" finished-at="2019-07-10T11:16:42Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="31440" started-at="2019-07-11T10:47:45Z" data-provider="data" finished-at="2019-07-11T10:48:17Z">
           <params>
             <param index="0">
               <value>
@@ -2116,7 +2316,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="28848" started-at="2019-07-10T11:16:42Z" data-provider="data" finished-at="2019-07-10T11:17:11Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="execute" duration-ms="29429" started-at="2019-07-11T10:48:17Z" data-provider="data" finished-at="2019-07-11T10:48:46Z">
           <params>
             <param index="0">
               <value>
@@ -2142,8 +2342,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [PAResStatus] expected [I] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:78)
-at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:301)
+at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:309)
 at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
@@ -2175,7 +2375,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="tearDown" is-config="true" duration-ms="1733" started-at="2019-07-10T11:17:11Z" finished-at="2019-07-10T11:17:13Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.CreditCardTest@4e1d422d]" name="tearDown" is-config="true" duration-ms="1674" started-at="2019-07-11T10:48:46Z" finished-at="2019-07-11T10:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

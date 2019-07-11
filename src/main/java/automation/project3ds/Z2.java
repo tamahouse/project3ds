@@ -26,10 +26,16 @@ public class Z2 {
 		ResponseLookup response = null;
 		try {
 			String result = resultSet.getString("pl_response");
+			String printResult = PrettyPrint.formatXML(result);
+			try {
+			ExtentTestManager.getTest().info("lookup_response: " + printResult);
+			}catch(Exception ignore) {
+			}
 			XmlMapper xmlMapper = new XmlMapper();
 			response = xmlMapper.readValue(result, ResponseLookup.class);
-		} catch (Exception e) {
-
+		} catch (SQLException ignore) {
+		} catch(Exception e) {
+			throw e;
 		}
 		return response;
 	}
@@ -43,10 +49,17 @@ public class Z2 {
 			String result = resultSet.getString("pl_response");
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode jsonNode = mapper.readTree(result);
+			String printResult = PrettyPrint.formatJson(jsonNode);
+			try {
+			ExtentTestManager.getTest().info("auth_response:<br />" + printResult);
+			}catch(Exception ignore) {
+				
+			}
 			jsonNode = jsonNode.get("Payload");
 			response = mapper.convertValue(jsonNode, ResponseAuth.class);
-		} catch (Exception e) {
-
+		} catch (SQLException ignore) {
+		} catch(Exception e) {
+			throw e;
 		}
 		return response;
 	}
@@ -61,12 +74,19 @@ public class Z2 {
 			String result = resultSet.getString("pl_request");
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode jsonNode = mapper.readTree(result);
+			String printResult = PrettyPrint.formatJson(jsonNode);
+			try {
+			ExtentTestManager.getTest().info("auth_quest:<br />" + printResult);
+			}catch(Exception ignore) {
+				
+			}
 			jsonNode = jsonNode.path("request").get("ecomReqData");
 			System.out.println(jsonNode.toString());
 			response = mapper.convertValue(jsonNode, RequestAuth.class);
 			;
-		} catch (SQLException e) {
-
+		} catch (SQLException ignore) {
+		} catch(Exception e) {
+			throw e;
 		}
 		return response;
 	}

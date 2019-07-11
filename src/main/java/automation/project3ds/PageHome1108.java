@@ -207,6 +207,7 @@ public class PageHome1108 {
 		iframecc.setEmail();
 		iframecc.clickBuyButton();
 		refID = iframecc.getRefId();
+		ExtentTestManager.getTest().info("refID: " + refID);
 		String caseKey = iframecc.getSelectedCase();
 		if (caseKey.equals("ERROR")) {
 

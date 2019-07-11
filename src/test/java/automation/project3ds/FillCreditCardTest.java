@@ -179,7 +179,7 @@ public class FillCreditCardTest{
 
 		RequestAuth request3 = Z2.getAuthRequest(t_id);
 
-		MySoftAssertAll assertion = new MySoftAssertAll(cardNumber);
+		MySoftAssertAll assertion = new MySoftAssertAll();
 		assertion.assertNotNull(refID, "[REFID]");
 
 		

@@ -143,6 +143,11 @@ public class CreditCardTest {
 
 	@Test(dataProvider = "data")
 	public void execute(String cardNumber, String host, Map<String, String> map) throws Exception {
+		try {
+		ExtentTestManager.getTest().info("CardNumber: " + cardNumber);
+		}catch(Exception ignore) {
+			
+		}
 		String finalEciFlag = null;
 		String finalEnrolled = null;
 		String finalPAResStatus = null;
@@ -166,10 +171,13 @@ public class CreditCardTest {
 		String t_id = Pslog.getTID(refID);
 
 		System.out.println(cardNumber + " : " + refID + " : " + t_id);
-		ITestResult result = Reporter.getCurrentTestResult();
-		result.setAttribute("cardNumber", cardNumber);
-		result.setAttribute("refID", refID);
-		result.setAttribute("t_id", t_id);
+
+		try {
+		ExtentTestManager.getTest().info("t_id: " + t_id);
+		}catch(Exception ignore) {
+			
+		}
+		
 		ResponseLookup response = Z2.getLookupResponse(t_id);
 		String aEnrolled = response.getEnrolled();
 		String aPAResStatus = response.getPAResStatus();
@@ -204,7 +212,7 @@ public class CreditCardTest {
 
 		RequestAuth request3 = Z2.getAuthRequest(t_id);
 
-		MySoftAssertAll assertion = new MySoftAssertAll(cardNumber);
+		MySoftAssertAll assertion = new MySoftAssertAll();
 		assertion.assertNotNull(refID, "[REFID]");
 
 		

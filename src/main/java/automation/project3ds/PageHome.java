@@ -205,6 +205,11 @@ public class PageHome {
 		iframecc.setState();
 		iframecc.clickBuyButton();
 		refID = iframecc.getRefId();
+		try {
+		ExtentTestManager.getTest().info("refID: " + refID);
+		}catch(Exception ignore) {
+			
+		}
 		String caseKey = iframecc.getSelectedCase();
 		if (caseKey.equals("ERROR")) {
 

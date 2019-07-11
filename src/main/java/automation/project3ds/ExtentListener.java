@@ -10,9 +10,12 @@ import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.asserts.IAssert;
 import org.testng.xml.XmlTest;
 
 import com.aventstack.extentreports.Status;
+
+import automation.project3ds.MySoftAssert.MyIAssert;
 
 
 
@@ -46,22 +49,38 @@ public class ExtentListener implements ITestListener{
 		ExtentTestManager.startTest(displayName);
 		ExtentTestManager.getTest().assignCategory(suiteName);
 		if(map != null) {
-		ExtentTestManager.getTest().info(map);
+		ExtentTestManager.getTest().info("Params: " + map);
 		}
 
 		
 	}
 	
 	private void printAttribute(ITestResult result) {
+		String assertInfo = "";
+		String actual = null;
+		String expected = null;
 		try {
-			String cardNumber = (String) result.getAttribute("cardNumber");
-			String refID = (String) result.getAttribute("refID");
-			String t_id = (String) result.getAttribute("t_id");
-			ExtentTestManager.getTest().info("CardNumber: " + cardNumber);
-			ExtentTestManager.getTest().info("refID: " + refID);
-			ExtentTestManager.getTest().info("t_id: " + t_id);
+			@SuppressWarnings("unchecked")
+			List<MyIAssert<?>> list = (List<MyIAssert<?>>) result.getAttribute("assertCommandList");
+			if(list != null) {
+			for(MyIAssert<?> a : list) {
+				if(a.getActual() instanceof String) {
+				actual = (String) a.getActual();
+				expected = (String) a.getExpected();
+				}else if(!(a.getActual() instanceof String) ) {
+					actual = String.valueOf(a.getActual());
+					expected = String.valueOf(a.getExpected());
+				}
+				String message = a.getMessage();
+				String assertType = a.getAssertType();
+				String line = message + " expected {" + expected + "}"+ assertType +"actual {" + actual + "}" + "<br />";
+				assertInfo = assertInfo + line;
+			}
+		
+			ExtentTestManager.getTest().info(assertInfo);
+			}
 		}catch(Exception e) {
-			
+			throw e;
 		}
 	}
 

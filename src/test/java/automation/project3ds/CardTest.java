@@ -205,7 +205,7 @@ public class CardTest{
 
 		RequestAuth request3 = Z2.getAuthRequest(t_id);
 
-		MySoftAssertAll assertion = new MySoftAssertAll(cardNumber);
+		MySoftAssertAll assertion = new MySoftAssertAll();
 		assertion.assertNotNull(refID, "[REFID]");
 
 		String expected_results_authentication = map.get("expected_results_authentication");

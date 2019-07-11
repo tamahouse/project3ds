@@ -5,7 +5,8 @@
     <classes>
       <class name="automation.project3ds.Aa">
         <methods>
-          <include name="meo"/>
+          <include name="setUp"/>
+          <include name="meo" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- automation.project3ds.Aa -->
     </classes>

@@ -128,6 +128,7 @@ public class FillCreditCardTest1108 {
 
 	@Test(dataProvider = "data")
 	public void execute(String cardNumber, Map<String, String> map) throws Exception {
+		cardNumber = "5200000000001096";
 		String finalEciFlag = null;
 		String finalEnrolled = null;
 		String finalPAResStatus = null;

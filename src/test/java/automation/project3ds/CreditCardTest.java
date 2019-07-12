@@ -2,11 +2,19 @@ package automation.project3ds;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -20,6 +28,7 @@ import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
+import automation.project3ds.Driver.Browser;
 import automation.project3ds.Z2.RequestAuth;
 import automation.project3ds.Z2.ResponseAuth;
 import automation.project3ds.Z2.ResponseLookup;
@@ -53,11 +62,12 @@ public class CreditCardTest {
 	@Parameters({"hostValue"})
 	@BeforeClass
 	public void setUp(@Optional(host1107) String hostValue) throws Exception {
+
 //		this.killRemain();
 		host = hostValue;
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection(utility.ConfigFile.filePath);
-		driver = new Driver();
+		driver = new Driver(Browser.Chrome);
 		driver.get(host);
 		Element nameTextbox = driver.getElement(nameTxb);
 		Element passwordTextbox = driver.getElement(passwordTxb);
@@ -161,6 +171,21 @@ public class CreditCardTest {
 		}else if(host.contains("1108")){
 			PageHome1108 home = new PageHome1108(driver);
 			refID = home.returnRefID(cardNumber);
+		}
+		try {
+		LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        for (LogEntry entry : logEntries) {
+        	String message = entry.getMessage();
+        	int start = message.indexOf("\"");
+        	int end = message.lastIndexOf("\"")+1;
+        	try {
+            System.out.println(message.substring(start, end));
+        	} catch (Exception ignore) {
+        		
+        	}
+        }
+		}catch (Exception e) {
+			throw e;
 		}
 //		connection.executeUpdate("UPDATE data Set clickID = '"+refID+"' where PAN = '"+cardNumber+"'");
 //		driver.switchTo().defaultContent();

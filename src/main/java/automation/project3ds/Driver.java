@@ -26,7 +26,11 @@ import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.TouchScreen;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.logging.Logs;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.events.internal.EventFiringKeyboard;
 import org.openqa.selenium.support.events.internal.EventFiringMouse;
@@ -44,6 +48,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 /**
@@ -56,20 +61,28 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 		HasTouchScreen, Interactive, HasCapabilities {
 
 	final WebDriver driver;
-	public static int is_chrome = 0;
+	public static String browser = Browser.Firefox;
 
 	public Driver() throws Exception {
+			this(browser);
+	}
+	
+	public Driver(String browser) throws Exception {
 		Driver driver = null;
-		if (is_chrome == 1) {
-			System.setProperty("webdriver.chrome.driver", utility.ConfigFile.chromePath);
+		if (browser.equals(Browser.Chrome)) {
+			
+	        LoggingPreferences logPrefs = new LoggingPreferences();
+	        logPrefs.enable(LogType.BROWSER, Level.ALL);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
+			options.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
+			System.setProperty("webdriver.chrome.driver", utility.ConfigFile.chromePath);
 			WebDriver e_driver = new ChromeDriver(options);
 			driver = new Driver(e_driver);
 			MyWebDriverEventListener eventListener = new MyWebDriverEventListener();
 			driver.register(eventListener);
-		} else {
-
+		} else if (browser.equals(Browser.Firefox)) {
+		      
 			System.setProperty("webdriver.firefox.driver", utility.ConfigFile.geckoPath);
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
@@ -78,20 +91,20 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 			MyWebDriverEventListener eventListener = new MyWebDriverEventListener();
 			driver.register(eventListener);
 		}
+		
+		
 
 		driver.manage().window().setPosition(utility.ConfigFile.p);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		this.driver = driver;
 	}
-
-	public static void setBrowserAsChrome() {
-		is_chrome = 1;
+	
+	public static class Browser {
+		static final String Chrome = "Chrome";
+		static final String Firefox = "Firefox";
 	}
 
-	public static void setBrowserAsFirefox() {
-		is_chrome = 0;
-	}
 
 	private final List<WebDriverEventListener> eventListeners = new ArrayList<>();
 	final WebDriverEventListener dispatcher = (WebDriverEventListener) Proxy.newProxyInstance(
@@ -360,7 +373,7 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 		return null;
 	}
 
-	private Boolean checkExist(By by, int time) {
+	public Boolean checkExist(By by, int time) {
 		Boolean x = false;
 		int count = 0;
 		while (x == false) {

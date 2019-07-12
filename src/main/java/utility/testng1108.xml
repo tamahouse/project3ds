@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="credit_card_test">
-	<test name="test1108">
-		 <classes>
-       <class name="automation.project3ds.FillCreditCardTest1108" />
-    </classes>
-	</test>
-</suite>

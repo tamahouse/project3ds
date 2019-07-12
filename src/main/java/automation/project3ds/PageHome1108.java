@@ -21,7 +21,7 @@ public class PageHome1108 {
 		this.driver = driver;
 	}
 
-	private MainIframe getMainIframe() {
+	public MainIframe getMainIframe() {
 		Element iframe = driver.findElement(By.xpath("//*[@id=\"main\"]/iframe"));
 		driver.switchTo().frame(iframe);
 		return new MainIframe(driver);
@@ -36,12 +36,13 @@ public class PageHome1108 {
 			this.driver = driver;
 		}
 
-		private void clickBuyButton() throws Exception {
+		public void clickBuyButton() throws Exception {
 			driver.getElement(this.buyBtn).click();
 			Thread.sleep(3000);
 		}
 
 		public Iframecc getIframecc() throws Exception {
+			driver.checkExist(By.tagName("iframe"), 100);
 			Element newIframe = driver.getElement(By.tagName("iframe"));
 			driver.switchTo().frame(newIframe);
 			return new Iframecc(driver);
@@ -75,7 +76,7 @@ public class PageHome1108 {
 //				this.clickImage();
 			}
 
-			private void setCardNumber(String cardNumber) throws Exception {
+			public void setCardNumber(String cardNumber) throws Exception {
 				Element container = driver.getElement(cardNumberContainer);
 				JavascriptExecutor jse = (JavascriptExecutor)driver;
 				jse.executeScript("arguments[0].value='"+cardNumber+"';", container);
@@ -207,7 +208,11 @@ public class PageHome1108 {
 		iframecc.setEmail();
 		iframecc.clickBuyButton();
 		refID = iframecc.getRefId();
+		try {
 		ExtentTestManager.getTest().info("refID: " + refID);
+		}catch (Exception ignore) {
+			
+		}
 		String caseKey = iframecc.getSelectedCase();
 		if (caseKey.equals("ERROR")) {
 

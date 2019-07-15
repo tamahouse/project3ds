@@ -8,6 +8,7 @@ public class aSample {
 	public void sample() throws Exception {
 		String refID = "65563938";
 		String t_id = Pslog.getTID(refID);
+		System.out.println("meo");
 	}
 
 }

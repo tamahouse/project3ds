@@ -17,6 +17,14 @@ public class Z2 {
 		Statement statement = tunnel.getStatement("z2");
 		return statement;
 	}
+	
+	public static String get_t_id() throws SQLException, Exception {
+		String query = "select t_id from processor_log order by t_id desc limit 1";
+		ResultSet resultSet = getStatement().executeQuery(query);
+		resultSet.next();
+		String t_id = resultSet.getString("t_id");
+		return t_id;
+	}
 
 	public static ResponseLookup getLookupResponse(String t_id) throws Exception {
 		String query = "select pl_response from processor_log where t_id = '" + t_id

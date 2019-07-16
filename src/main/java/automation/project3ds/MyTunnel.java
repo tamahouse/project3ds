@@ -11,6 +11,8 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
+import utility.ConfigFile;
+
 public class MyTunnel{
 
 	String dbName;
@@ -101,7 +103,8 @@ public class MyTunnel{
 		connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:"+setPortForwardingL_SSHTunnel_LeftLocalPort+"/"+dbName+"?"
 					+ "user="+db_Username+"&password="+db_Password+"" + "&serverTimezone=UTC");
 		System.out.println("setPortForwardingL_SSHTunnel_LeftLocalPort : " +setPortForwardingL_SSHTunnel_LeftLocalPort);
-		x = true;
+		x = connection.isValid(500);
+//		x = true;
 		}catch(Exception e) {
 			setPortForwardingL_SSHTunnel_LeftLocalPort++;
 		}

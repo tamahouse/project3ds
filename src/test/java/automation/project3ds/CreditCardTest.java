@@ -37,6 +37,7 @@ public class CreditCardTest {
 
 	final String host1107 = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&data%5Ba_id%5D=101601&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069cze3&data%5Bag_type%5D=fixed";
 	final String host1108 = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&data%5Ba_id%5D=101607&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bag_type%5D=fixed";
+	final String hostBrickHTML = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html";
 	String host;
 //	String hostReport = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
 	By nameTxb = By.id("login");
@@ -69,12 +70,14 @@ public class CreditCardTest {
 		Connection connection = fillo.getConnection(utility.ConfigFile.filePath);
 		driver = new Driver(Browser.Chrome);
 		driver.get(host);
+		if(!host.contains("brick.html")) {
 		Element nameTextbox = driver.getElement(nameTxb);
 		Element passwordTextbox = driver.getElement(passwordTxb);
 		Element loginButton = driver.getElement(loginBtn);
 		nameTextbox.sendKeys(name);
 		passwordTextbox.sendKeys(password);
 		loginButton.click();
+		}
 		Recordset record = connection.executeQuery("SELECT * FROM data WHERE Available = '1'");
 		mapList = new ArrayList<Map<String, String>>();
 		while (record.next()) {
@@ -165,11 +168,14 @@ public class CreditCardTest {
 		String cardholderVerificationMethod = null;
 		String refID = null;
 		driver.get(host);
-		if(host.contains("1107")) {
+		if(host.contains("1107") && host.contains("admin")) {
 			PageHome home = new PageHome(driver);
 			refID = home.returnRefID(cardNumber);
-		}else if(host.contains("1108")){
+		}else if(host.contains("1108") && host.contains("admin")){
 			PageHome1108 home = new PageHome1108(driver);
+			refID = home.returnRefID(cardNumber);
+		}else if(host.contains("brick.html")) {
+			PageBrickHTML home = new PageBrickHTML(driver);
 			refID = home.returnRefID(cardNumber);
 		}
 		try {

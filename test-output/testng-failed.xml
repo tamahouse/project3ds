@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test1108]">
-  <listeners>
-    <listener class-name="automation.project3ds.ExtentListener"/>
-  </listeners>
-  <test thread-count="5" name="test1108(failed)">
-    <parameter name="hostValue" value="http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&amp;data%5Ba_id%5D=101607&amp;data%5Bwidget%5D=p1&amp;data%5Bco_id%5D=1&amp;data%5Buid%5D=218069&amp;data%5Bag_type%5D=fixed"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="automation.project3ds.CreditCardTest">
         <methods>
-          <include name="execute" invocation-numbers="6 7 17 23 24 25 30 35"/>
+          <include name="execute"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- automation.project3ds.CreditCardTest -->
     </classes>
-  </test> <!-- test1108(failed) -->
-</suite> <!-- Failed suite [test1108] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

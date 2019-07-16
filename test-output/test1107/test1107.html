@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 15 11:20:33 ICT 2019</td>
+<td>Started on:</td><td>Mon Jul 15 12:58:08 ICT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>135 seconds (135027 ms)</td>
+<tr><td>Total time:</td><td>85 seconds (85168 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,31 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='automation.project3ds.CreditCardTest.execute()'><b>execute</b><br>Test class: automation.project3ds.CreditCardTest<br>Parameters: 4000000000001000, http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&data%5Ba_id%5D=101601&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069cze3&data%5Bag_type%5D=fixed, {Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=05, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001000, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Visa 1: Successful Frictionless Authentication}</td>
-<td><div><pre>java.lang.NullPointerException
-	at automation.project3ds.Pslog.getTID(Pslog.java:28)
-	at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:196)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace323287038", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace323287038'><pre>java.lang.NullPointerException
-	at automation.project3ds.Pslog.getTID(Pslog.java:28)
-	at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:196)
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [null],
+	[SignitureVerification] expected [Y] but found [null],
+	[Cavv] expected object to not be null,
+	[EciFlag] expected [05] but found [07],
+	[cardholderVerificationMethod3] expected [THREEDS] but found [CVV2],
+	[cavv] expected object to not be null,
+	[version] expected [V2] but found [null],
+	[directoryServerTransactionId] expected object to not be null
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:334)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1328901016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1328901016'><pre>java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [null],
+	[SignitureVerification] expected [Y] but found [null],
+	[Cavv] expected object to not be null,
+	[EciFlag] expected [05] but found [07],
+	[cardholderVerificationMethod3] expected [THREEDS] but found [CVV2],
+	[cavv] expected object to not be null,
+	[version] expected [V2] but found [null],
+	[directoryServerTransactionId] expected object to not be null
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.CreditCardTest.execute(CreditCardTest.java:334)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -110,7 +128,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>99</td>
+<td>62</td>
 <td>automation.project3ds.CreditCardTest@5cb9f472</td></tr>
 </table><p>
 </body>

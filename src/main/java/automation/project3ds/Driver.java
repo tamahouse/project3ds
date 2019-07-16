@@ -36,6 +36,12 @@ import org.openqa.selenium.support.events.internal.EventFiringKeyboard;
 import org.openqa.selenium.support.events.internal.EventFiringMouse;
 import org.openqa.selenium.support.events.internal.EventFiringTouch;
 
+import utility.ConfigFile;
+
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Proxy;
 import java.net.URL;
@@ -64,47 +70,64 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 	public static String browser = Browser.Firefox;
 
 	public Driver() throws Exception {
-			this(browser);
+		this(browser);
+	}
+
+	private Point getLastScreenPosition() {
+		GraphicsEnvironment meo = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		GraphicsDevice[] arr = meo.getScreenDevices();
+		List<GraphicsDevice> list = Arrays.asList(arr);
+		Rectangle screen = null;
+			for (int i = list.size() - 1; i > -1; i--) {
+				try {
+					GraphicsDevice device = list.get(i);
+					screen = device.getDefaultConfiguration().getBounds();
+					break;
+				} catch (Exception e) {
+
+				}
+			}
+		double xd = screen.getLocation().getX();
+		double yd = screen.getLocation().getY();
+		int x = (int) xd;
+		int y = (int) yd;
+		Point p = new Point(x, y);
+		return p;
 	}
 	
+
+
 	public Driver(String browser) throws Exception {
 		Driver driver = null;
+		Point p = this.getLastScreenPosition();
+		String workspacePath = ConfigFile.getWorkspacePath();
 		if (browser.equals(Browser.Chrome)) {
-			
-	        LoggingPreferences logPrefs = new LoggingPreferences();
-	        logPrefs.enable(LogType.BROWSER, Level.ALL);
+			LoggingPreferences logPrefs = new LoggingPreferences();
+			logPrefs.enable(LogType.BROWSER, Level.ALL);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
 			options.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
-			System.setProperty("webdriver.chrome.driver", utility.ConfigFile.chromePath);
+			System.setProperty("webdriver.chrome.driver", workspacePath + "\\chromedriver.exe");
 			WebDriver e_driver = new ChromeDriver(options);
 			driver = new Driver(e_driver);
-			MyWebDriverEventListener eventListener = new MyWebDriverEventListener();
-			driver.register(eventListener);
 		} else if (browser.equals(Browser.Firefox)) {
-		      
-			System.setProperty("webdriver.firefox.driver", utility.ConfigFile.geckoPath);
+			System.setProperty("webdriver.firefox.driver", workspacePath + "\\geckodriver.exe");
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 			WebDriver e_driver = new FirefoxDriver();
 			driver = new Driver(e_driver);
-			MyWebDriverEventListener eventListener = new MyWebDriverEventListener();
-			driver.register(eventListener);
 		}
-		
-		
 
-		driver.manage().window().setPosition(utility.ConfigFile.p);
+		driver.manage().window().setPosition(p);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		this.driver = driver;
 	}
-	
+
 	public static class Browser {
 		static final String Chrome = "Chrome";
 		static final String Firefox = "Firefox";
 	}
-
 
 	private final List<WebDriverEventListener> eventListeners = new ArrayList<>();
 	final WebDriverEventListener dispatcher = (WebDriverEventListener) Proxy.newProxyInstance(
@@ -360,7 +383,7 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 		Boolean x = false;
 		int count = 0;
 		while (x == false) {
-			for (Map.Entry<By, String> entry: map.entrySet()) {
+			for (Map.Entry<By, String> entry : map.entrySet()) {
 				if (this.isInstanceExist(entry.getKey()) == true) {
 					return entry.getValue();
 				}
@@ -381,6 +404,29 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 				driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
 				WebElement temp = driver.findElement(by);
 				highlight(driver, temp);
+				return true;
+			} catch (Exception e) {
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				if (++count > time) {
+					return false;
+				}
+			}
+		}
+		return false;
+	}
+
+	public Boolean checkAlertExist(int time) {
+		Boolean x = false;
+		int count = 0;
+		while (x == false) {
+			try {
+				driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
+				driver.switchTo().alert();
 				return true;
 			} catch (Exception e) {
 				try {

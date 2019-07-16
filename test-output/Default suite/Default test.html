@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 11 16:22:42 ICT 2019</td>
+<td>Started on:</td><td>Tue Jul 16 19:58:03 ICT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (801 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (63 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,34 +68,28 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.project3ds.Aa.meo()'><b>meo</b><br>Test class: automation.project3ds.Aa<br>Parameters: param1Value, url, param2Value</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	[MESSAGE] expected [0] but found [1],
-	[MESSAGE] expected not [meo] to but still found [meo],
-	[MESSAGE] expected not [null] to but still found [null],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected object to not be null,
-	[MESSAGE] expected [gau] but found [meo]
-	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
-	at automation.project3ds.Aa.meo(Aa.java:69)
+<td title='automation.project3ds.CreditCardTest.setUp()'><b>setUp</b><br>Test class: automation.project3ds.CreditCardTest<br>Parameters: http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&data%5Ba_id%5D=101601&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069cze3&data%5Bag_type%5D=fixed</td>
+<td><div><pre>com.codoid.products.exception.FilloException: Workbook is not found - C:\Workspace\project3ds\.src/main/java/utility/cardNumber.xlsx
+	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:46)
+	at automation.project3ds.CreditCardTest.setUp(CreditCardTest.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
 	at org.testng.TestRunner.run(TestRunner.java:505)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -111,27 +105,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace71587369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace71587369'><pre>java.lang.AssertionError: The following asserts failed:
-	[MESSAGE] expected [0] but found [1],
-	[MESSAGE] expected not [meo] to but still found [meo],
-	[MESSAGE] expected not [null] to but still found [null],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected object to not be null,
-	[MESSAGE] expected [gau] but found [meo]
-	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
-	at automation.project3ds.Aa.meo(Aa.java:69)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1166807841", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1166807841'><pre>com.codoid.products.exception.FilloException: Workbook is not found - C:\Workspace\project3ds\.src/main/java/utility/cardNumber.xlsx
+	at com.codoid.products.fillo.Fillo.getConnection(Fillo.java:46)
+	at automation.project3ds.CreditCardTest.setUp(CreditCardTest.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
 	at org.testng.TestRunner.run(TestRunner.java:505)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -149,27 +137,37 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>automation.project3ds.Aa@f6c48ac</td></tr>
+<td>automation.project3ds.CreditCardTest@29ca901e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='automation.project3ds.Aa.meo()'><b>meo</b><br>Test class: automation.project3ds.Aa<br>Parameters: param1Value, url, param2Value</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	[MESSAGE] expected [0] but found [1],
-	[MESSAGE] expected not [meo] to but still found [meo],
-	[MESSAGE] expected not [null] to but still found [null],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected object to not be null,
-	[MESSAGE] expected [gau] but found [meo]
-	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
-	at automation.project3ds.Aa.meo(Aa.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+<td title='automation.project3ds.CreditCardTest.tearDown()'><b>tearDown</b><br>Test class: automation.project3ds.CreditCardTest</td>
+<td></td>
+<td>0</td>
+<td>automation.project3ds.CreditCardTest@29ca901e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.project3ds.CreditCardTest.execute()'><b>execute</b><br>Test class: automation.project3ds.CreditCardTest</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -187,25 +185,24 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1016925085", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1016925085'><pre>java.lang.AssertionError: The following asserts failed:
-	[MESSAGE] expected [0] but found [1],
-	[MESSAGE] expected not [meo] to but still found [meo],
-	[MESSAGE] expected not [null] to but still found [null],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected [null] but found [meo],
-	[MESSAGE] expected object to not be null,
-	[MESSAGE] expected [gau] but found [meo]
-	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
-	at automation.project3ds.Aa.meo(Aa.java:69)
+Caused by: java.lang.NullPointerException
+	at automation.project3ds.CreditCardTest.data(CreditCardTest.java:147)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	... 22 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace525571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace525571'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -223,9 +220,19 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at automation.project3ds.CreditCardTest.data(CreditCardTest.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	... 22 more
 </pre></div></td>
 <td>0</td>
-<td>automation.project3ds.Aa@f6c48ac</td></tr>
+<td>automation.project3ds.CreditCardTest@29ca901e</td></tr>
 </table><p>
 </body>
 </html>

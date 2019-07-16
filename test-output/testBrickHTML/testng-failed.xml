@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testBrickHTML]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="testBrickHTML(failed)">
+    <parameter name="hostValue" value="http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html"/>
+    <classes>
+      <class name="automation.project3ds.testBrickHTML">
+        <methods>
+          <include name="setUp"/>
+          <include name="execute" invocation-numbers="6 7 14 17 23 24 25 30 32 35"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.project3ds.testBrickHTML -->
+    </classes>
+  </test> <!-- testBrickHTML(failed) -->
+</suite> <!-- Failed suite [testBrickHTML] -->

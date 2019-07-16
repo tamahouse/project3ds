@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="testBrickURL">
+	<test name="testBrickURL">
+		 <classes>
+       <class name="automation.project3ds.testBrickURL" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

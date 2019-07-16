@@ -1,0 +1,3787 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jul 15, 2019 07:24:56 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>testBrickHTML</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='29.412%'><span class='strong'>5</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='70.588%'>12</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001013, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:24:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:24:56 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:25:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+605ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:24:56 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001013, SignitureVerification=Y, ACSUrl=blank, PAResStatus=N, testName=Test Mastercard 2: Failed Frictionless Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:24:56 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001013
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:13 PM</td>
+				<td class='step-details'>
+						t_id: 37517
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:15 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>01jtUdB3XI3loKKpEfd0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>N</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>85092aa4-736c-430c-8921-6afd022abd8b</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>c2081e01-55cd-47eb-b1cd-7be212da3e08</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <StatusReason>01</StatusReason>
+     <DSTransactionId>9377ce8a-680a-4530-b3e3-aa80276618ca</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010988990622125</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:20 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {N} to equal to actual {N}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod vs case] expected {ERROR} to equal to actual {ERROR}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:25:20 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001021, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:25:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:25:20 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:25:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+757ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:20 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=THREEDS_ATTEMPT, expected_results_authentication=NA, Enrolled=Y, EciFlag=01, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001021, SignitureVerification=Y, ACSUrl=blank, PAResStatus=A, testName=Test Mastercard 3: Attempts Frictionless Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:20 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001021
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:33 PM</td>
+				<td class='step-details'>
+						t_id: 37518
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:35 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>N1E6FDHtLoD34ykQ01V0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv>Y2FyZGluYWxjb21tZXJjZWF1dGg=</Cavv>
+     <PAResStatus>A</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>ec26ef81-ed1d-4b0f-91e8-8eb8370751da</ACSTransactionId>
+     <EciFlag>01</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>910b2d65-0e6a-4bc8-88c5-249a79572b4c</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>faa78c91-21be-41a8-9746-585451b8c0e6</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010797457588459</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564080",
+    "transactionId" : "d65564080-37518",
+    "operationId" : "d65564080-37518-5d2c70b877022",
+    "plainCardData" : {
+      "cardNumber" : "520000******1021",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "THREEDS_ATTEMPT",
+      "cardReadingMethod" : "ECOM",
+      "threeDSecure" : {
+        "xid" : "",
+        "aav" : "Y2FyZGluYWxjb21tZXJjZWF1dGg=",
+        "version" : "V2",
+        "directoryServerTransactionId" : "faa78c91-21be-41a8-9746-585451b8c0e6"
+      }
+    },
+    "transactionTimestamp" : "2019-07-15T14:25:28",
+    "retrievalRefNumber" : "000000037518"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {A} to equal to actual {A}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {null} to not equal to actual {Y2FyZGluYWxjb21tZXJjZWF1dGg=}<br />[EciFlag] expected {01} to equal to actual {01}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {THREEDS_ATTEMPT} to equal to actual {THREEDS_ATTEMPT}<br />[cardholderVerificationMethod vs case] expected {THREEDS_ATTEMPT} to equal to actual {CVV2}<br />[cavv] expected {null} to not equal to actual {Y2FyZGluYWxjb21tZXJjZWF1dGg=}<br />[version] expected {V2} to equal to actual {V2}<br />[directoryServerTransactionId] expected {null} to not equal to actual {faa78c91-21be-41a8-9746-585451b8c0e6}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS_ATTEMPT] but found [CVV2]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001039, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:25:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:25:40 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:26:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+96ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001039, SignitureVerification=Y, ACSUrl=blank, PAResStatus=U, testName=Test Mastercard 4: Unavailable Frictionless Authentication from the Issuer}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:40 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001039
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:54 PM</td>
+				<td class='step-details'>
+						t_id: 37519
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:25:57 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>leFasQc1rH2ruJdVLrZ0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>U</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>3bf55dd3-c49b-4ac4-93c3-425b42284b25</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>1732f565-193b-4556-bdb4-f193696432e3</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <StatusReason>01</StatusReason>
+     <DSTransactionId>aa316871-846e-4d77-a01f-0cae2cf49acd</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010223989860241</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:01 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564081",
+    "transactionId" : "d65564081-37519",
+    "operationId" : "d65564081-37519-5d2c70cd691b7",
+    "plainCardData" : {
+      "cardNumber" : "520000******1039",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:25:49",
+    "retrievalRefNumber" : "000000037519"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:01 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {U} to equal to actual {U}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:26:01 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001047, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:26:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:26:01 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:26:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+591ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:01 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001047, SignitureVerification=Y, ACSUrl=blank, PAResStatus=R, testName=Test Mastercard 5: Rejected Frictionless Authentication by the Issuer}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:01 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001047
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:13 PM</td>
+				<td class='step-details'>
+						t_id: 37520
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:15 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>Ioav32l9Z4varjHMI540</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>R</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>512d8c16-768a-45bb-9172-b3f97fb567d4</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>9eeb8b55-4c58-488c-88da-d49bcc92f3e2</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <StatusReason>01</StatusReason>
+     <DSTransactionId>68ae6dc7-12a1-4993-9cb0-19127c8b0cfc</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010042327402981</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:20 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {R} to equal to actual {R}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod vs case] expected {ERROR} to equal to actual {ERROR}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:26:20 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001054, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:26:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:26:20 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:26:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+232ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:20 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=U, EciFlag=01, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001054, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 6: Authentication Not Available on Lookup}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:20 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001054
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:33 PM</td>
+				<td class='step-details'>
+						t_id: 37521
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:35 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>nj0DoJruuzbJ32sYqHs0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus/>
+     <Enrolled>U</Enrolled>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>fbe1f3d2-3be8-4842-9fee-8e5dab518944</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <ReasonDesc>Invalid Formatted Message Invalid Formatted Message</ReasonDesc>
+     <CardBrand>MASTERCARD</CardBrand>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <ReasonCode>101</ReasonCode>
+     <OrderId>8010263767444826</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification/>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564083",
+    "transactionId" : "d65564083-37521",
+    "operationId" : "d65564083-37521-5d2c70f3bdaf2",
+    "plainCardData" : {
+      "cardNumber" : "520000******1054",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:26:27",
+    "retrievalRefNumber" : "000000037521"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {U} to equal to actual {U}<br />[PAResStatus] expected {} to equal to actual {}<br />[SignitureVerification] expected {} to equal to actual {}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {01} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[EciFlag] expected [01] but found [00]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001062, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:26:40 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:26:40 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:26:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+330ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=00, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=5200000000001062, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 7: Error on Lookup}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:40 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001062
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:52 PM</td>
+				<td class='step-details'>
+						t_id: 37522
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:55 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>1001</ErrorNo>
+     <TransactionId>pG5oe4i8Y4DPPFasKpX0</TransactionId>
+     <Payload/>
+     <ErrorDesc>Error Processing Message Request</ErrorDesc>
+     <Cavv/>
+     <PAResStatus/>
+     <Enrolled>U</Enrolled>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>9292c7a5-16e0-4c87-ae14-d57e518d9946</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <ReasonDesc>Error Processing Message Request</ReasonDesc>
+     <CardBrand>MASTERCARD</CardBrand>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <ReasonCode>1001</ReasonCode>
+     <OrderId>8010441345981994</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification/>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564084",
+    "transactionId" : "d65564084-37522",
+    "operationId" : "d65564084-37522-5d2c71081dfd0",
+    "plainCardData" : {
+      "cardNumber" : "520000******1062",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:26:48",
+    "retrievalRefNumber" : "000000037522"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {} to equal to actual {U}<br />[PAResStatus] expected {} to equal to actual {}<br />[SignitureVerification] expected {} to equal to actual {}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {null} to not equal to actual {1001}<br />[ErrorDesc] expected {null} to not equal to actual {Error Processing Message Request}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [] but found [U]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001070, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:26:59 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:26:59 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:27:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+292ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=blank, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=5200000000001070, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 8: Timeout on cmpi_lookup Transaction}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:26:59 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001070
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:22 PM</td>
+				<td class='step-details'>
+						t_id: 37523
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:24 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>6ntjvmkI1ZWutUsAAQs0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus/>
+     <Enrolled>U</Enrolled>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>0f2a446c-11bd-4653-b507-454e5bad72c5</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <ReasonDesc>Message Received Invalid Invalid Formatted Message</ReasonDesc>
+     <CardBrand>MASTERCARD</CardBrand>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <ReasonCode>101</ReasonCode>
+     <OrderId>8010176607816443</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification/>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564085",
+    "transactionId" : "d65564085-37523",
+    "operationId" : "d65564085-37523-5d2c712555e00",
+    "plainCardData" : {
+      "cardNumber" : "520000******1070",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:27:17",
+    "retrievalRefNumber" : "000000037523"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {} to equal to actual {U}<br />[PAResStatus] expected {} to equal to actual {}<br />[SignitureVerification] expected {} to equal to actual {}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {null} to not equal to actual {0}<br />[ErrorDesc] expected {null} to not equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [] but found [U],
+	[EciFlag] expected [] but found [00]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001088, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:27:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:27:29 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:27:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+397ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=B, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001088, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 9: Bypassed Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:29 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001088
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:41 PM</td>
+				<td class='step-details'>
+						t_id: 37524
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:43 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>47oFEaSDRSqEozxEmHf0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus/>
+     <Enrolled>B</Enrolled>
+     <ACSTransactionId>b6dcff45-7ad5-4c83-abf5-0e81656fa752</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>4884c582-04fe-4437-b218-eea49999dd16</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <StatusReason>01</StatusReason>
+     <DSTransactionId>80c11858-c804-41c9-a41e-467d4c865900</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010602311942001</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification/>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:48 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564086",
+    "transactionId" : "d65564086-37524",
+    "operationId" : "d65564086-37524-5d2c713894005",
+    "plainCardData" : {
+      "cardNumber" : "520000******1088",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:27:36",
+    "retrievalRefNumber" : "000000037524"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:48 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {B} to equal to actual {B}<br />[PAResStatus] expected {} to equal to actual {}<br />[SignitureVerification] expected {} to equal to actual {}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:27:48 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001096, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:27:48 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:27:48 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:28:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+928ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:48 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=THREEDS, expected_results_authentication=value, EciFlag2=02, Cavv2=value, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=Y, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001096, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 10: Successful Step Up Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:27:48 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001096
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:07 PM</td>
+				<td class='step-details'>
+						t_id: 37525
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:09 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>5VuUM0FKNr18IcimQhe0</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0M2I3YzE5YS05NjBjLTRmZmEtYWZiNC0zNTQ4YjI5NjZiZTUiLCJhY3NUcmFuc0lEIjoiZjEwYjQ5MmMtOTU0NC00Y2NlLWJkYWMtMjkwN2E0ODVmMDljIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>f10b492c-9544-4cce-bdac-2907a485f09c</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>43b7c19a-960c-4ffa-afb4-3548b2966be5</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>64f289e3-4f90-4eb3-9ccc-8593136739e6</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010015362440074</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:12 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193680,
+  "exp" : 1563200880,
+  "jti" : "57a6bf3d-4adb-46b9-963b-b29c20cb1576",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "19e59c95-2a46-4838-ac98-cbeb20e55613",
+  "aud" : "e3677cea-f60b-4746-ae28-1b442eccbb71",
+  "Payload" : {
+    "Validated" : true,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "5VuUM0FKNr18IcimQhe0",
+      "ExtendedData" : {
+        "CAVV" : "MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=",
+        "ECIFlag" : "02",
+        "ThreeDSVersion" : "2.2.0",
+        "PAResStatus" : "Y",
+        "SignatureVerification" : "Y"
+      }
+    },
+    "ActionCode" : "SUCCESS",
+    "ErrorNumber" : 0,
+    "ErrorDescription" : "Success"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564087",
+    "transactionId" : "d65564087-37525",
+    "operationId" : "d65564087-37525-5d2c715296a11",
+    "plainCardData" : {
+      "cardNumber" : "520000******1096",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "THREEDS",
+      "cardReadingMethod" : "ECOM",
+      "threeDSecure" : {
+        "xid" : "",
+        "aav" : "MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=",
+        "version" : "V2",
+        "directoryServerTransactionId" : "64f289e3-4f90-4eb3-9ccc-8593136739e6"
+      }
+    },
+    "transactionTimestamp" : "2019-07-15T14:28:02",
+    "retrievalRefNumber" : "000000037525"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {Y} to equal to actual {Y}<br />[SignitureVerification2] expected {Y} to equal to actual {Y}<br />[Cavv2] expected {null} to not equal to actual {MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=}<br />[EciFlag2] expected {02} to equal to actual {02}<br />[ErrorNo2] expected {0} to equal to actual {0}<br />[ErrorDesc2] expected {Success} to equal to actual {Success}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0M2I3YzE5YS05NjBjLTRmZmEtYWZiNC0zNTQ4YjI5NjZiZTUiLCJhY3NUcmFuc0lEIjoiZjEwYjQ5MmMtOTU0NC00Y2NlLWJkYWMtMjkwN2E0ODVmMDljIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {THREEDS} to equal to actual {THREEDS}<br />[cardholderVerificationMethod vs case] expected {THREEDS} to equal to actual {MASTERCARD_PURCHASE}<br />[cavv] expected {null} to not equal to actual {MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=}<br />[version] expected {V2} to equal to actual {V2}<br />[directoryServerTransactionId] expected {null} to not equal to actual {64f289e3-4f90-4eb3-9ccc-8593136739e6}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001104, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:28:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:28:14 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:28:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+7ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=N, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001104, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 11: Failed Step Up Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:14 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001104
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:40 PM</td>
+				<td class='step-details'>
+						t_id: 37526
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:42 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>O6T5WtVOQsVPcpjs3w50</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI5ZWZjZTMxOC1iNGNiLTQwODEtYWRhMC1jYTg0YmUzZTE0ZTgiLCJhY3NUcmFuc0lEIjoiNTdiZWVmNmYtNDQ2Yi00MGM0LThiOTAtNGI3OTJjZDAwZDk1IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>57beef6f-446b-40c4-8b90-4b792cd00d95</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>9efce318-b4cb-4081-ada0-ca84be3e14e8</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>318479c5-1e01-4904-a142-d1e0f4d051c9</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010177066168201</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:45 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193706,
+  "exp" : 1563200906,
+  "jti" : "cd4165f8-b20c-49bc-9645-8f56d34925a3",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "23a852f4-d33c-4ddc-b561-11cff126f7fe",
+  "aud" : "c690bd52-fb68-40a2-888b-ebc7d07bbc74",
+  "Payload" : {
+    "Validated" : false,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "O6T5WtVOQsVPcpjs3w50",
+      "ExtendedData" : {
+        "CAVV" : "",
+        "ECIFlag" : "00",
+        "ThreeDSVersion" : "2.2.0",
+        "PAResStatus" : "N",
+        "SignatureVerification" : "Y"
+      }
+    },
+    "ActionCode" : "FAILURE",
+    "ErrorNumber" : 0,
+    "ErrorDescription" : "Success"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:47 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {N} to equal to actual {N}<br />[SignitureVerification2] expected {Y} to equal to actual {Y}<br />[Cavv2] expected {} to equal to actual {}<br />[EciFlag2] expected {00} to equal to actual {00}<br />[ErrorNo2] expected {0} to equal to actual {0}<br />[ErrorDesc2] expected {Success} to equal to actual {Success}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI5ZWZjZTMxOC1iNGNiLTQwODEtYWRhMC1jYTg0YmUzZTE0ZTgiLCJhY3NUcmFuc0lEIjoiNTdiZWVmNmYtNDQ2Yi00MGM0LThiOTAtNGI3OTJjZDAwZDk1IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod vs case] expected {ERROR} to equal to actual {null}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:28:47 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [ERROR] but found [null]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:28:47 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001112, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:28:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:28:47 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:29:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+436ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:47 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=YES_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=U, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001112, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 12: Step Up Authentication is Unavailable}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:28:47 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001112
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:12 PM</td>
+				<td class='step-details'>
+						t_id: 37527
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:15 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>XTNtk2PHC3HjnF0pH0e0</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJhMjM3MzQzZi05YzAzLTRjNDEtOTFhMi0xZmZlZjY1ODAyM2UiLCJhY3NUcmFuc0lEIjoiZTU2YmIyYWMtZTY2Mi00ZDIzLTk1NjUtZWZiOTc3OGRjZGI4IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>e56bb2ac-e662-4d23-9565-efb9778dcdb8</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>a237343f-9c03-4c41-91a2-1ffef658023e</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>db3418c6-923a-4230-a5ce-b9fcb212d24a</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010015301258462</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:17 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193739,
+  "exp" : 1563200939,
+  "jti" : "9a3600c7-b9eb-4c46-b956-1e8d917ac70a",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "e808a340-07de-488f-b44c-4f175caf1f71",
+  "aud" : "ed76b59e-b4bf-4153-a9ee-0d90f7e3021e",
+  "Payload" : {
+    "Validated" : true,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "XTNtk2PHC3HjnF0pH0e0",
+      "ExtendedData" : {
+        "CAVV" : "",
+        "ECIFlag" : "00",
+        "ThreeDSVersion" : "2.2.0",
+        "PAResStatus" : "U",
+        "SignatureVerification" : "Y"
+      }
+    },
+    "ActionCode" : "NOACTION",
+    "ErrorNumber" : 0,
+    "ErrorDescription" : "Success"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:19 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564089",
+    "transactionId" : "d65564089-37527",
+    "operationId" : "d65564089-37527-5d2c7193b960c",
+    "plainCardData" : {
+      "cardNumber" : "520000******1112",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:29:07",
+    "retrievalRefNumber" : "000000037527"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:19 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {U} to equal to actual {U}<br />[SignitureVerification2] expected {Y} to equal to actual {Y}<br />[Cavv2] expected {} to equal to actual {}<br />[EciFlag2] expected {00} to equal to actual {00}<br />[ErrorNo2] expected {0} to equal to actual {0}<br />[ErrorDesc2] expected {Success} to equal to actual {Success}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {00} to equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJhMjM3MzQzZi05YzAzLTRjNDEtOTFhMi0xZmZlZjY1ODAyM2UiLCJhY3NUcmFuc0lEIjoiZTU2YmIyYWMtZTY2Mi00ZDIzLTk1NjUtZWZiOTc3OGRjZGI4IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod] expected {null} to not equal to actual {automation.project3ds.Z2$RequestAuth@5a7e0d68}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>7:29:19 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001120, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:29:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:29:20 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:29:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+592ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:20 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=value, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=blank, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=value, SignitureVerification2=blank, Payload=value, PAN=5200000000001120, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 13: Error on Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:20 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001120
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:44 PM</td>
+				<td class='step-details'>
+						t_id: 37528
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:46 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>UE8mU4oYXHhzD0nTJQk0</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIxYzFhMDAzMC01MjU5LTQzYjgtOGRiNi1iOWE4NmRlMDBlZGQiLCJhY3NUcmFuc0lEIjoiMGYyYTI3ZGItNjc0Zi00MjMyLTkxODUtMDcyMTgzZGVmOWQxIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>0f2a27db-674f-4232-9185-072183def9d1</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>1c1a0030-5259-43b8-8db6-b9a86de00edd</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>0569493f-1cb2-474b-99d0-63c97c70203e</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010556305355119</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:49 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193770,
+  "exp" : 1563200970,
+  "jti" : "4d7c4e2a-69ac-43cd-a950-959f78b9ad84",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "9c6e9d63-952e-41a2-b670-6a33cc884f86",
+  "aud" : "7efe0b2b-4d2c-4535-80db-1eb810739222",
+  "Payload" : {
+    "Validated" : false,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "UE8mU4oYXHhzD0nTJQk0",
+      "ExtendedData" : [ ],
+      "ReasonCode" : "1050",
+      "ReasonDescription" : "Error Processing PARes"
+    },
+    "ActionCode" : "ERROR",
+    "ErrorNumber" : 1050,
+    "ErrorDescription" : "Error Processing PARes"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:51 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {} to equal to actual {}<br />[SignitureVerification2] expected {} to equal to actual {}<br />[Cavv2] expected {} to equal to actual {}<br />[EciFlag2] expected {00} to equal to actual {}<br />[ErrorNo2] expected {null} to not equal to actual {1050}<br />[ErrorDesc2] expected {null} to not equal to actual {Error Processing PARes}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIxYzFhMDAzMC01MjU5LTQzYjgtOGRiNi1iOWE4NmRlMDBlZGQiLCJhY3NUcmFuc0lEIjoiMGYyYTI3ZGItNjc0Zi00MjMyLTkxODUtMDcyMTgzZGVmOWQxIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod vs case] expected {ERROR} to equal to actual {null}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:29:51 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[EciFlag2] expected [00] but found [],
+	[cardholderVerificationMethod vs case] expected [ERROR] but found [null]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:29:51 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001138, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:29:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:29:51 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:30:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+775ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:51 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=value, EciFlag2=value, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=B, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001138, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 14: Step Up Authentication with Merchant Bypass}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:29:51 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001138
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:09 PM</td>
+				<td class='step-details'>
+						t_id: 37529
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:11 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>AkJW2j3BAipcsv271OD0</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIzYTI5ZWE5Yy0zNTYyLTRhNTMtYjNjNS03M2I1NWU1N2VmNzIiLCJhY3NUcmFuc0lEIjoiZTM5N2UwNDMtMTY0Yi00Yzg0LThmYWQtOTk3NWNjYWRiZTk5IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>e397e043-164b-4c84-8fad-9975ccadbe99</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>3a29ea9c-3562-4a53-b3c5-73b55e57ef72</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>847b6ee8-79c2-454f-8692-98740725c1fe</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010020392874961</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:14 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193802,
+  "exp" : 1563201002,
+  "jti" : "3db30d05-dbaf-4f3a-861f-f1f9ac52befb",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "f39ef09b-1e9e-4f2e-ae9d-ca185fe71cb5",
+  "aud" : "f567481a-b815-457a-ad63-9fb24f0fd01e",
+  "Payload" : {
+    "Validated" : true,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "AkJW2j3BAipcsv271OD0",
+      "ExtendedData" : {
+        "CAVV" : "",
+        "ECIFlag" : "00",
+        "ThreeDSVersion" : "2.2.0",
+        "PAResStatus" : "B",
+        "SignatureVerification" : "Y"
+      }
+    },
+    "ActionCode" : "NOACTION",
+    "ErrorNumber" : 0,
+    "ErrorDescription" : "Success"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564091",
+    "transactionId" : "d65564091-37529",
+    "operationId" : "d65564091-37529-5d2c71cc51fc8",
+    "plainCardData" : {
+      "cardNumber" : "520000******1138",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:30:04",
+    "retrievalRefNumber" : "000000037529"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {B} to equal to actual {B}<br />[SignitureVerification2] expected {Y} to equal to actual {Y}<br />[Cavv2] expected {} to equal to actual {}<br />[EciFlag2] expected {null} to not equal to actual {00}<br />[ErrorNo2] expected {0} to equal to actual {0}<br />[ErrorDesc2] expected {Success} to equal to actual {Success}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIzYTI5ZWE5Yy0zNTYyLTRhNTMtYjNjNS03M2I1NWU1N2VmNzIiLCJhY3NUcmFuc0lEIjoiZTM5N2UwNDMtMTY0Yi00Yzg0LThmYWQtOTk3NWNjYWRiZTk5IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {MASTERCARD_PURCHASE}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [CVV2] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000001146, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:30:16 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:30:16 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:30:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+321ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001146, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Mastercard 15: Require MethodURL}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:16 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001146
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:28 PM</td>
+				<td class='step-details'>
+						t_id: 37530
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:30 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>F8YaVZzsTlsmQiSDisA0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus/>
+     <Enrolled>U</Enrolled>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>d152b59b-b0eb-41b6-9af4-f31bd99397d2</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <ReasonDesc>Method URL was incomplete. 403</ReasonDesc>
+     <CardBrand>MASTERCARD</CardBrand>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <ReasonCode>101</ReasonCode>
+     <OrderId>8010890511096187</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification/>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564092",
+    "transactionId" : "d65564092-37530",
+    "operationId" : "d65564092-37530-5d2c71dfd000b",
+    "plainCardData" : {
+      "cardNumber" : "520000******1146",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:30:23",
+    "retrievalRefNumber" : "000000037530"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {U}<br />[PAResStatus] expected {Y} to equal to actual {}<br />[SignitureVerification] expected {Y} to equal to actual {}<br />[Cavv] expected {null} to not equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [],
+	[SignitureVerification] expected [Y] but found []
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000002003, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:30:35 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:30:35 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:31:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+736ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=value, expected_results_authentication=value, EciFlag2=value, Cavv2=value, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=Y, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000002003, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 16: Prompt for Whitelist}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:35 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002003
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:53 PM</td>
+				<td class='step-details'>
+						t_id: 37531
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:55 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>eO59AUG3pjHUOvjmPy80</TransactionId>
+     <Payload>eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIyNDQ5OGI2Yy02YTQ3LTQyZGUtYTE4OC1jMDk1MWM1YTQ5NDQiLCJhY3NUcmFuc0lEIjoiODZmZWI4MmQtNmY4Ni00NmMxLTk0NDEtZjkzZDYxYjE1NDc2IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0</Payload>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>C</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>86feb82d-6f86-46c1-9441-f93d61b15476</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl>https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp</ACSUrl>
+     <ThreeDSServerTransactionId>24498b6c-6a47-42de-a188-c0951c5a4944</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>3d1d32e3-7271-4deb-b152-198a7810955d</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010458676095400</OrderId>
+     <ChallengeRequired>N</ChallengeRequired>
+     <SignatureVerification>Y</SignatureVerification>
+     <SDKFlowType>CARDINAL</SDKFlowType>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:30:58 PM</td>
+				<td class='step-details'>
+						auth_response:<br /><pre>{
+  "iss" : "5cfa7ccb0e423d0f7cf35f20",
+  "iat" : 1563193846,
+  "exp" : 1563201046,
+  "jti" : "070c1a2d-7518-484c-a08e-fc303d22fd65",
+  "ConsumerSessionId" : "0_c7ba6ddd-8053-4765-99d5-e153a52d1eb3",
+  "ReferenceId" : "31e544d5-ad37-4065-a605-6c5e4099a399",
+  "aud" : "e2e30610-98b6-443e-a645-efaa402d37fd",
+  "Payload" : {
+    "Validated" : true,
+    "Payment" : {
+      "Type" : "CCA",
+      "ProcessorTransactionId" : "eO59AUG3pjHUOvjmPy80",
+      "ExtendedData" : {
+        "CAVV" : "MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=",
+        "ECIFlag" : "02",
+        "ThreeDSVersion" : "2.2.0",
+        "PAResStatus" : "Y",
+        "SignatureVerification" : "Y"
+      }
+    },
+    "ActionCode" : "SUCCESS",
+    "ErrorNumber" : 0,
+    "ErrorDescription" : "Success"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564093",
+    "transactionId" : "d65564093-37531",
+    "operationId" : "d65564093-37531-5d2c71f887fd6",
+    "plainCardData" : {
+      "cardNumber" : "520000******2003",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "THREEDS",
+      "cardReadingMethod" : "ECOM",
+      "threeDSecure" : {
+        "xid" : "",
+        "aav" : "MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=",
+        "version" : "V2",
+        "directoryServerTransactionId" : "3d1d32e3-7271-4deb-b152-198a7810955d"
+      }
+    },
+    "transactionTimestamp" : "2019-07-15T14:30:48",
+    "retrievalRefNumber" : "000000037531"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						[PAResStatus2] expected {Y} to equal to actual {Y}<br />[SignitureVerification2] expected {Y} to equal to actual {Y}<br />[Cavv2] expected {null} to not equal to actual {MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=}<br />[EciFlag2] expected {null} to not equal to actual {02}<br />[ErrorNo2] expected {0} to equal to actual {0}<br />[ErrorDesc2] expected {Success} to equal to actual {Success}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {C} to equal to actual {C}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {} to equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {null} to not equal to actual {https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp}<br />[Payload] expected {null} to not equal to actual {eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMi4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIyNDQ5OGI2Yy02YTQ3LTQyZGUtYTE4OC1jMDk1MWM1YTQ5NDQiLCJhY3NUcmFuc0lEIjoiODZmZWI4MmQtNmY4Ni00NmMxLTk0NDEtZjkzZDYxYjE1NDc2IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {THREEDS} to equal to actual {THREEDS}<br />[cardholderVerificationMethod vs case] expected {THREEDS} to equal to actual {MASTERCARD_PURCHASE}<br />[cavv] expected {null} to not equal to actual {MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=}<br />[version] expected {V2} to equal to actual {V2}<br />[directoryServerTransactionId] expected {null} to not equal to actual {3d1d32e3-7271-4deb-b152-198a7810955d}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000002011, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:31:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:31:00 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:31:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+910ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=Y, ErrorDesc=blank, WhiteListStatusSource=value, ErrorNo=0, Payload=blank, PAN=5200000000002011, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Mastercard 17: Pre-Whitelisted}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:00 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002011
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:13 PM</td>
+				<td class='step-details'>
+						t_id: 37532
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:15 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>SQY69sVbMS14m3apKpq0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv>Y2FyZGluYWxjb21tZXJjZWF1dGg=</Cavv>
+     <PAResStatus>Y</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>714cb89a-6d9e-4366-ae2f-de05f20667b8</ACSTransactionId>
+     <EciFlag>02</EciFlag>
+     <WhiteListStatusSource>03</WhiteListStatusSource>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>31ddfbe3-7586-4c6e-bf8d-fb5b6bad3a5d</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <DSTransactionId>30979868-8c32-49e3-bfe2-86cf5858eec1</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010532664371930</OrderId>
+     <ChallengeRequired/>
+     <WhiteListStatus>Y</WhiteListStatus>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564094",
+    "transactionId" : "d65564094-37532",
+    "operationId" : "d65564094-37532-5d2c720bd679d",
+    "plainCardData" : {
+      "cardNumber" : "520000******2011",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "THREEDS",
+      "cardReadingMethod" : "ECOM",
+      "threeDSecure" : {
+        "xid" : "",
+        "aav" : "Y2FyZGluYWxjb21tZXJjZWF1dGg=",
+        "version" : "V2",
+        "directoryServerTransactionId" : "30979868-8c32-49e3-bfe2-86cf5858eec1"
+      }
+    },
+    "transactionTimestamp" : "2019-07-15T14:31:07",
+    "retrievalRefNumber" : "000000037532"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {Y} to equal to actual {Y}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {null} to not equal to actual {Y2FyZGluYWxjb21tZXJjZWF1dGg=}<br />[EciFlag] expected {null} to not equal to actual {02}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to not equal to actual {03}<br />[WhiteListStatus] expected {Y} to equal to actual {Y}<br />[cardholderVerificationMethod3] expected {THREEDS} to equal to actual {THREEDS}<br />[cardholderVerificationMethod vs case] expected {THREEDS} to equal to actual {CVV2}<br />[cavv] expected {null} to not equal to actual {Y2FyZGluYWxjb21tZXJjZWF1dGg=}<br />[version] expected {V2} to equal to actual {V2}<br />[directoryServerTransactionId] expected {null} to not equal to actual {30979868-8c32-49e3-bfe2-86cf5858eec1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [CVV2]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>testBrickHTML (5200000000002029, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Jul 15, 2019 07:31:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 15, 2019 07:31:20 PM</span>
+	<span class='label end-time'>Jul 15, 2019 07:31:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+601ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>testBrickHTML</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000002029, SignitureVerification=Y, ACSUrl=blank, PAResStatus=I, testName=Test Mastercard 18: Support TransStatus I}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:20 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002029
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:32 PM</td>
+				<td class='step-details'>
+						t_id: 37533
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:35 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <ErrorNo>0</ErrorNo>
+     <TransactionId>6PzKHKK0vJQbr16VZPR0</TransactionId>
+     <Payload/>
+     <ErrorDesc/>
+     <Cavv/>
+     <PAResStatus>U</PAResStatus>
+     <Enrolled>Y</Enrolled>
+     <ACSTransactionId>dd7f5c8f-c56c-41e2-8ca6-a174653d631d</ACSTransactionId>
+     <EciFlag>00</EciFlag>
+     <ACSUrl/>
+     <ThreeDSServerTransactionId>d8277138-9cb1-4037-afb9-1aa6e03c2512</ThreeDSServerTransactionId>
+     <CardBin>520000</CardBin>
+     <CardBrand>MASTERCARD</CardBrand>
+     <StatusReason>01</StatusReason>
+     <DSTransactionId>899f122e-0442-4dd0-92e3-5b8736ff2926</DSTransactionId>
+     <ThreeDSVersion>2.2.0</ThreeDSVersion>
+     <OrderId>8010352752778056</OrderId>
+     <ChallengeRequired/>
+     <SignatureVerification>Y</SignatureVerification>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:39 PM</td>
+				<td class='step-details'>
+						auth_quest:<br /><pre>{
+  "method" : "AUTH",
+  "request" : {
+    "type" : "AUTH",
+    "merchant" : {
+      "merchantId" : "63103550",
+      "name" : "Embarcadero"
+    },
+    "merchantRef" : "d65564095",
+    "transactionId" : "d65564095-37533",
+    "operationId" : "d65564095-37533-5d2c721fd7dd9",
+    "plainCardData" : {
+      "cardNumber" : "520000******2029",
+      "expiry" : "2201",
+      "cvv2" : "***"
+    },
+    "amount" : {
+      "isoAmount" : 783,
+      "currency" : "EUR"
+    },
+    "ecomReqData" : {
+      "allow3dsDowngrade" : true,
+      "cardholderVerificationMethod" : "CVV2",
+      "cardReadingMethod" : "ECOM"
+    },
+    "transactionTimestamp" : "2019-07-15T14:31:27",
+    "retrievalRefNumber" : "000000037533"
+  },
+  "headers" : {
+    "Content-Type" : "application/json",
+    "Authorization" : "Bearer eyJ*****di06tFr_nQ"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>7:31:39 PM</td>
+				<td class='step-details'>
+						[expected_results_authentication] expected {NA} to equal to actual {NA}<br />[Enrolled] expected {Y} to equal to actual {Y}<br />[PAResStatus] expected {I} to equal to actual {U}<br />[SignitureVerification] expected {Y} to equal to actual {Y}<br />[Cavv] expected {null} to not equal to actual {}<br />[EciFlag] expected {null} to not equal to actual {00}<br />[ACSUrl] expected {} to equal to actual {}<br />[Payload] expected {} to equal to actual {}<br />[ErrorNo] expected {0} to equal to actual {0}<br />[ErrorDesc] expected {} to equal to actual {}<br />[WhiteListStatusSource] expected {null} to equal to actual {null}<br />[WhiteListStatus] expected {null} to equal to actual {null}<br />[cardholderVerificationMethod3] expected {CVV2} to equal to actual {CVV2}<br />[cardholderVerificationMethod vs case] expected {CVV2} to equal to actual {CVV2}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:39 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[PAResStatus] expected [I] but found [U]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:31:39 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>testBrickHTML</span>
+						<span class='category-status right'>
+						<span class='label pass'>5</span>
+						<span class='label fail'>12</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 12</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 15, 2019 07:24:56 PM</td>
+										<td class='linked' test-id='1'>testBrickHTML (5200000000001013, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:25:20 PM</td>
+										<td class='linked' test-id='2'>testBrickHTML (5200000000001021, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:25:40 PM</td>
+										<td class='linked' test-id='3'>testBrickHTML (5200000000001039, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:01 PM</td>
+										<td class='linked' test-id='4'>testBrickHTML (5200000000001047, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:20 PM</td>
+										<td class='linked' test-id='5'>testBrickHTML (5200000000001054, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:40 PM</td>
+										<td class='linked' test-id='6'>testBrickHTML (5200000000001062, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:59 PM</td>
+										<td class='linked' test-id='7'>testBrickHTML (5200000000001070, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:27:29 PM</td>
+										<td class='linked' test-id='8'>testBrickHTML (5200000000001088, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:27:48 PM</td>
+										<td class='linked' test-id='9'>testBrickHTML (5200000000001096, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:28:14 PM</td>
+										<td class='linked' test-id='10'>testBrickHTML (5200000000001104, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:28:47 PM</td>
+										<td class='linked' test-id='11'>testBrickHTML (5200000000001112, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:29:20 PM</td>
+										<td class='linked' test-id='12'>testBrickHTML (5200000000001120, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:29:51 PM</td>
+										<td class='linked' test-id='13'>testBrickHTML (5200000000001138, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:30:16 PM</td>
+										<td class='linked' test-id='14'>testBrickHTML (5200000000001146, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:30:35 PM</td>
+										<td class='linked' test-id='15'>testBrickHTML (5200000000002003, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:31:00 PM</td>
+										<td class='linked' test-id='16'>testBrickHTML (5200000000002011, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:31:20 PM</td>
+										<td class='linked' test-id='17'>testBrickHTML (5200000000002029, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>12</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 15, 2019 07:25:20 PM</td>
+										<td class='linked' test-id='2'>testBrickHTML (5200000000001021, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS_ATTEMPT] but found [CVV2]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:20 PM</td>
+										<td class='linked' test-id='5'>testBrickHTML (5200000000001054, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[EciFlag] expected [01] but found [00]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:40 PM</td>
+										<td class='linked' test-id='6'>testBrickHTML (5200000000001062, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [] but found [U]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:26:59 PM</td>
+										<td class='linked' test-id='7'>testBrickHTML (5200000000001070, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [] but found [U],
+	[EciFlag] expected [] but found [00]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:27:48 PM</td>
+										<td class='linked' test-id='9'>testBrickHTML (5200000000001096, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:28:14 PM</td>
+										<td class='linked' test-id='10'>testBrickHTML (5200000000001104, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [ERROR] but found [null]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:29:20 PM</td>
+										<td class='linked' test-id='12'>testBrickHTML (5200000000001120, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[EciFlag2] expected [00] but found [],
+	[cardholderVerificationMethod vs case] expected [ERROR] but found [null]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:29:51 PM</td>
+										<td class='linked' test-id='13'>testBrickHTML (5200000000001138, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [CVV2] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:30:16 PM</td>
+										<td class='linked' test-id='14'>testBrickHTML (5200000000001146, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [],
+	[SignitureVerification] expected [Y] but found []
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:30:35 PM</td>
+										<td class='linked' test-id='15'>testBrickHTML (5200000000002003, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [MASTERCARD_PURCHASE]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:31:00 PM</td>
+										<td class='linked' test-id='16'>testBrickHTML (5200000000002011, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[cardholderVerificationMethod vs case] expected [THREEDS] but found [CVV2]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Jul 15, 2019 07:31:20 PM</td>
+										<td class='linked' test-id='17'>testBrickHTML (5200000000002029, http://feature-pwg-1108.wallap... )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[PAResStatus] expected [I] but found [U]
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:60)
+	at automation.project3ds.testBrickHTML.execute(testBrickHTML.java:343)
+	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>17</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 15, 2019 07:24:56 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 15, 2019 07:31:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 6m 46s+10ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>testBrickHTML</td>
+							<td>5</td>
+							<td>12</td>
+							<td>0</td>
+							<td>
+									29.412%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 17,
+				passParent: 5,
+				failParent: 12,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 12,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "testBrickHTML (5200000000001013, http://feature-pwg-1108.wallap... )":24.605,"testBrickHTML (5200000000001021, http://feature-pwg-1108.wallap... )":19.757,"testBrickHTML (5200000000001039, http://feature-pwg-1108.wallap... )":21.096,"testBrickHTML (5200000000001047, http://feature-pwg-1108.wallap... )":18.591,"testBrickHTML (5200000000001054, http://feature-pwg-1108.wallap... )":20.232,"testBrickHTML (5200000000001062, http://feature-pwg-1108.wallap... )":19.33,"testBrickHTML (5200000000001070, http://feature-pwg-1108.wallap... )":29.292,"testBrickHTML (5200000000001088, http://feature-pwg-1108.wallap... )":19.397,"testBrickHTML (5200000000001096, http://feature-pwg-1108.wallap... )":25.928,"testBrickHTML (5200000000001104, http://feature-pwg-1108.wallap... )":33.007,"testBrickHTML (5200000000001112, http://feature-pwg-1108.wallap... )":32.436,"testBrickHTML (5200000000001120, http://feature-pwg-1108.wallap... )":31.592,"testBrickHTML (5200000000001138, http://feature-pwg-1108.wallap... )":24.775,"testBrickHTML (5200000000001146, http://feature-pwg-1108.wallap... )":19.321,"testBrickHTML (5200000000002003, http://feature-pwg-1108.wallap... )":24.736,"testBrickHTML (5200000000002011, http://feature-pwg-1108.wallap... )":19.91,"testBrickHTML (5200000000002029, http://feature-pwg-1108.wallap... )":19.601
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

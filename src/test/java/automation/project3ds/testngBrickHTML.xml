@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="testBrickHTML">
+	<test name="testBrickHTML">
+	<parameter name="hostValue" value="http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html" />
+		 <classes>
+       <class name="automation.project3ds.testBrickHTML" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

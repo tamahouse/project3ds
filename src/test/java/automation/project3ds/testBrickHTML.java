@@ -28,7 +28,7 @@ public class testBrickHTML {
 //	final String host1107 = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&data%5Ba_id%5D=101601&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069cze3&data%5Bag_type%5D=fixed";
 //	final String host1108 = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&data%5Ba_id%5D=101607&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bag_type%5D=fixed";
 	final String hostBrickHTML = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html";
-	String host;
+	String host = hostBrickHTML;
 //	String hostReport = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
 	By nameTxb = By.id("login");
 	By passwordTxb = By.id("password");
@@ -51,12 +51,10 @@ public class testBrickHTML {
 		}
 	}
 
-	@Parameters({"hostValue"})
 	@BeforeClass
-	public void setUp(@Optional(hostBrickHTML) String hostValue) throws Exception {
+	public void setUp(String host) throws Exception {
 
 //		this.killRemain();
-		host = hostValue;
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection(utility.ConfigFile.filePath);
 		driver = new Driver(Browser.Chrome);

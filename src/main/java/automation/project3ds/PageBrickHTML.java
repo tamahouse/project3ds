@@ -3,14 +3,7 @@ package automation.project3ds;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.UnhandledAlertException;
-
-import automation.project3ds.PageHome.MainIframe.Iframecc.VisaPurchaseIframe;
-import automation.project3ds.PageHome1108.MainIframe;
-import automation.project3ds.PageHome1108.MainIframe.Iframecc;
-import automation.project3ds.PageHome1108.MainIframe.Iframecc.PurchaseIframe;
 
 public class PageBrickHTML {
 
@@ -66,7 +59,7 @@ public class PageBrickHTML {
 	}
 
 	public void clickPayButton() throws Exception {
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 		element = driver.getElement(payBtn);
 		element.click();
 	}
@@ -162,7 +155,6 @@ public class PageBrickHTML {
 	}
 
 	public String returnRefID(String cardNumber) throws Exception {
-		String refID = null;
 		this.setCardnumber(cardNumber);
 		this.setExpiryDate();
 		this.setCardholderName();

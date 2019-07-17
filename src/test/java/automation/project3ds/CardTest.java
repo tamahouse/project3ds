@@ -7,13 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
-import org.testng.ITest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
@@ -38,7 +35,6 @@ public class CardTest{
 	String password = utility.ConfigFile.password;
 	Driver driver;
 	List<Map<String, String>> mapList;
-	private ThreadLocal<String> testName = new ThreadLocal<>();
 
 	private void killRemain() throws Exception {
 		try {

@@ -36,7 +36,6 @@ public class OpenForm {
 		driver.get(host);
 		PageHome1108 home = new PageHome1108(driver);
 		MainIframe mainIframe = home.getMainIframe();
-		String refID = null;
 		mainIframe.clickBuyButton();
 		Iframecc iframecc = mainIframe.getIframecc();
 		iframecc.setCardNumber("111111111");

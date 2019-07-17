@@ -2,8 +2,8 @@
 
 <suite name="allSuites">
 	<suite-files>
-		<suite-file path = "testng1107.xml" />
-		<suite-file path = "testng1108.xml" />
+		<suite-file path = "testBrickHTML.xml" />
+		<suite-file path = "testBrickURL.xml" />
 	</suite-files>
 	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

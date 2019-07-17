@@ -1,11 +1,9 @@
 package automation.project3ds;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.testng.Reporter;
 import org.testng.asserts.IAssert;
 import org.testng.collections.Maps;
 

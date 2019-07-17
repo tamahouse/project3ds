@@ -4,7 +4,6 @@ import static org.testng.internal.EclipseInterface.ASSERT_LEFT;
 import static org.testng.internal.EclipseInterface.ASSERT_MIDDLE;
 import static org.testng.internal.EclipseInterface.ASSERT_RIGHT;
 
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Map;
@@ -98,7 +97,7 @@ public class MySoftAssert implements IAssertLifecycle {
 	public void onAfterAssert(IAssert<?> assertCommand) {
 	}
 	
-	public interface MyIAssert<T> extends IAssert{
+	public interface MyIAssert<T> extends IAssert<T>{
 
 		  String getMessage();
 		  void doAssert();

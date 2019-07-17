@@ -3,9 +3,6 @@ package utility;
 
 import java.io.File;
 
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-
 public class ConfigFile {
 
 	public static String name = "chase";

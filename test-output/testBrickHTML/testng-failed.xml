@@ -10,7 +10,7 @@
       <class name="automation.project3ds.testBrickHTML">
         <methods>
           <include name="setUp"/>
-          <include name="execute" invocation-numbers="6 7 14 17 23 24 25 30 32 35"/>
+          <include name="execute" invocation-numbers="6 7 17 23 24 25 30 35"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.project3ds.testBrickHTML -->

@@ -1,14 +1,9 @@
 package automation.project3ds;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import automation.project3ds.Driver.Browser;
-import automation.project3ds.PageBrickHTML.VisaPurchaseIframe;
 
 public class PageBrickURL {
 

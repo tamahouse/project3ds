@@ -1,15 +1,12 @@
 package automation.project3ds;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.Reporter;
 import org.testng.asserts.IAssert;
 import org.testng.collections.Maps;
-
-import automation.project3ds.MySoftAssert.MyIAssert;
 
 /**
  * When an assertion fails, don't throw an exception but record the failure.

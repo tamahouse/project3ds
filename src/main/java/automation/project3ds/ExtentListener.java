@@ -1,17 +1,12 @@
 package automation.project3ds;
 
-import org.testng.ITestContext;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.asserts.IAssert;
-import org.testng.xml.XmlTest;
 
 import com.aventstack.extentreports.Status;
 

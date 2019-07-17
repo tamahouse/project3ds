@@ -16,7 +16,8 @@ public class ExtentManager {
 
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {
-			String reportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\ExtentReportResults"+getTime()+".html";
+			String[] time = getTime();
+			String reportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\ExtentReportResults"+time[0]+"\\ReportTime"+time[1]+".html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
@@ -24,11 +25,13 @@ public class ExtentManager {
 		return extent;
 	}
 
-	private static String getTime() {
+	private static String[] getTime() {
 		Timestamp stamp = new Timestamp(System.currentTimeMillis());
-		Date date = new Date(stamp.getTime());
-		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd_HH-mm-ss");
-		String formattedDate = sdf.format(date);
-		return formattedDate;
+		Date currentTime = new Date(stamp.getTime());
+		SimpleDateFormat sdfDate = new SimpleDateFormat("YYYY-MM-dd");
+		String date = sdfDate.format(currentTime);
+		SimpleDateFormat sdfTime = new SimpleDateFormat("HH-mm-ss");
+		String time = sdfTime.format(currentTime);
+		return new String[] {date, time};
 	}
 }

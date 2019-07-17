@@ -131,7 +131,7 @@ public class testBrickHTML {
 	}
 
 
-// 	@DataProvider(name = "data")
+	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
 		List<Object[]> temp = new ArrayList<Object[]>();
 		for (Map<String, String> map : mapList) {

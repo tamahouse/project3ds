@@ -131,18 +131,18 @@ public class testBrickHTML {
 	}
 
 
-	@DataProvider(name = "data")
-	public Object[][] data() throws Exception {
-		List<Object[]> temp = new ArrayList<Object[]>();
-		for (Map<String, String> map : mapList) {
-			String PAN = map.get("PAN");
-			Object[] obj = new Object[] { PAN, host, map };
-			temp.add(obj);
-
-		}
-		Object[][] data = temp.toArray(new Object[][] {});
-		return data;
-	}
+//	@DataProvider(name = "data")
+//	public Object[][] data() throws Exception {
+//		List<Object[]> temp = new ArrayList<Object[]>();
+//		for (Map<String, String> map : mapList) {
+//			String PAN = map.get("PAN");
+//			Object[] obj = new Object[] { PAN, host, map };
+//			temp.add(obj);
+//
+//		}
+//		Object[][] data = temp.toArray(new Object[][] {});
+//		return data;
+//	}
 
 	@Test(dataProvider = "data")
 	public void execute(String cardNumber, String host, Map<String, String> map) throws Exception {

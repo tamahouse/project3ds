@@ -78,34 +78,30 @@ public class PageHome1108 {
 
 			public void setCardNumber(String cardNumber) throws Exception {
 				Element container = driver.getElement(cardNumberContainer);
-				JavascriptExecutor jse = (JavascriptExecutor)driver;
-				jse.executeScript("arguments[0].value='"+cardNumber+"';", container);
-//				jse.executeScript("document.getElementById('ssn').value='555-55-5555';");
-//				container.sendKeys(cardNumber);
-//				this.clickImage();
+				container.sendKeysSlow(cardNumber);
 			}
 
-			private void setExpiredDate() {
+			private void setExpiredDate() throws Exception {
 				Element expiredTextbox = driver.getElement(expTxb);
-				expiredTextbox.sendKeys("0122");
+				expiredTextbox.sendKeysSlow("0122");
 //				this.clickImage();
 			}
 
-			private void setCVV() {
+			private void setCVV() throws Exception {
 				Element cvvTextbox = driver.getElement(cvvTxb);
-				cvvTextbox.sendKeys("123");
+				cvvTextbox.sendKeysSlow("123");
 //				this.clickImage();
 			}
 
-			private void setZipCode() {
+			private void setZipCode() throws Exception {
 				Element zipTextbox = driver.getElement(zipTxb);
-				zipTextbox.sendKeys("32043");
+				zipTextbox.sendKeysSlow("32043");
 //				this.clickImage();
 			}
 
-			private void setEmail() {
+			private void setEmail() throws Exception {
 				Element emailTextbox = driver.getElement(emailTxb);
-				emailTextbox.sendKeys("meo@spam4.me");
+				emailTextbox.sendKeysSlow("meo@spam4.me");
 //				this.clickImage();
 			}
 

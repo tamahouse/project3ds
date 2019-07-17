@@ -8,7 +8,7 @@
     <classes>
       <class name="automation.project3ds.testBrickURL">
         <methods>
-          <include name="execute" invocation-numbers="6 7 17 23 24 25 30 35"/>
+          <include name="execute"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

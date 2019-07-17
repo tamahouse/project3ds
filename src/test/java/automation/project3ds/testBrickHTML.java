@@ -52,7 +52,7 @@ public class testBrickHTML {
 	}
 
 	@BeforeClass(alwaysRun=true)
-	public void setUp() throws Exception {
+	public void beforeClass() throws Exception {
 
 //		this.killRemain();
 		Fillo fillo = new Fillo();

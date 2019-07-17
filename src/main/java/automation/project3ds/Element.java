@@ -221,6 +221,35 @@ public class Element implements WebElement, WrapsElement, WrapsDriver, org.openq
 				this.driver.dispatcher.afterChangeValueOf(element, this.driver.driver, keysToSend);
 			}
 		}
+		
+		public void sendKeysSlow(CharSequence... keysToSend) throws Exception{
+			if (keysToSend != null) {
+				this.driver.dispatcher.beforeChangeValueOf(element, this.driver.driver, keysToSend);
+				Boolean x = false;
+				int count = 0;
+				while (x == false) {
+					try {
+						for(CharSequence str: keysToSend) {
+						element.sendKeys(str);
+						Thread.sleep(1000);
+						}
+						x = true;
+					} catch (Exception e) {
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						this.element = this.driver.findElement(by);
+						if (++count > 200) {
+							throw e;
+						}
+					}
+				}
+				this.driver.dispatcher.afterChangeValueOf(element, this.driver.driver, keysToSend);
+			}
+		}
 
 		@Override
 		public void clear() {

@@ -25,29 +25,34 @@ public class PageBrickURL {
 		this.driver = driver;
 	}
 
-	private void setEmail() {
+	private void setEmail() throws Exception {
 		element = driver.getElement(emailTxb);
-		element.sendKeys("meo@spam4.me");
+		element.click();
+		element.sendKeysSlow("meo@spam4.me");
 	}
 
-	private void setCardNumber(String cardNumber) {
+	private void setCardNumber(String cardNumber) throws Exception {
 		element = driver.getElement(cardNumberTxb);
-		element.sendKeys(cardNumber);
+		element.click();
+		element.sendKeysSlow(cardNumber);
 	}
 
-	private void setExpiryMonth() {
+	private void setExpiryMonth() throws Exception {
 		element = driver.getElement(expiryMonthTxb);
-		element.sendKeys("01");
+		element.click();
+		element.sendKeysSlow("01");
 	}
 
-	private void setExpiryYear() {
+	private void setExpiryYear() throws Exception {
 		element = driver.getElement(expiryYearTxb);
-		element.sendKeys("22");
+		element.click();
+		element.sendKeysSlow("22");
 	}
 
-	private void setCvv() {
+	private void setCvv() throws Exception {
 		element = driver.getElement(cvvTxb);
-		element.sendKeys("123");
+		element.click();
+		element.sendKeysSlow("123");
 	}
 
 	private void clickSubmit() throws Exception {
@@ -112,7 +117,7 @@ public class PageBrickURL {
 		private void setOTP() throws Exception {
 			Element otpTextbox = driver.getElement(otpTxb);
 			otpTextbox.moveToView();
-			otpTextbox.sendKeys("1234");
+			otpTextbox.sendKeysSlow("1234");
 		}
 
 		private void clickOTPSubmitButton() throws Exception {
@@ -123,6 +128,7 @@ public class PageBrickURL {
 	}
 
 	public void submitInformation(String cardNumber) throws Exception {
+		Thread.sleep(1000);
 		this.setEmail();
 		this.setCardNumber(cardNumber);
 		this.setExpiryMonth();

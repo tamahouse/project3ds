@@ -105,11 +105,11 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
 			options.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
-			System.setProperty("webdriver.chrome.driver", workspacePath + "\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			WebDriver e_driver = new ChromeDriver(options);
 			driver = new Driver(e_driver);
 		} else if (browser.equals(Browser.Firefox)) {
-			System.setProperty("webdriver.firefox.driver", workspacePath + "\\geckodriver.exe");
+			System.setProperty("webdriver.firefox.driver", "geckodriver.exe");
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 			WebDriver e_driver = new FirefoxDriver();

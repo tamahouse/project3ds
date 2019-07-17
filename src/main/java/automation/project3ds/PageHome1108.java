@@ -70,15 +70,16 @@ public class PageHome1108 {
 //				image.click();
 //			}
 
-			private void setCardHolderName() {
+			private void setCardHolderName() throws Exception {
 				Element cardHolderNameTextbox = driver.getElement(cardHolderNameTxb);
-				cardHolderNameTextbox.sendKeys("Payment Wall");
+				cardHolderNameTextbox.sendKeysSlow("Payment Wall");
 //				this.clickImage();
 			}
 
 			public void setCardNumber(String cardNumber) throws Exception {
 				Element container = driver.getElement(cardNumberContainer);
 				container.sendKeysSlow(cardNumber);
+				Thread.sleep(2000);
 			}
 
 			private void setExpiredDate() throws Exception {
@@ -106,7 +107,6 @@ public class PageHome1108 {
 			}
 
 			private void clickBuyButton() throws Exception {
-				Thread.sleep(3000);
 				Element buyButton = driver.getElement(buyBtn);
 				buyButton.moveToView();
 				buyButton.click();
@@ -194,6 +194,7 @@ public class PageHome1108 {
 	public String returnRefID(String cardNumber) throws Exception {
 		MainIframe mainIframe = this.getMainIframe();
 		String refID = null;
+		Thread.sleep(1000);
 		mainIframe.clickBuyButton();
 		Iframecc iframecc = mainIframe.getIframecc();
 		iframecc.setCardNumber(cardNumber);

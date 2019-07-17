@@ -51,7 +51,7 @@ public class testBrickHTML {
 		}
 	}
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void setUp() throws Exception {
 
 //		this.killRemain();

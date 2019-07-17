@@ -49,8 +49,7 @@ public class testBrickURL {
 		}
 	}
 
-	@BeforeClass
-	public void setUp() throws Exception {
+	private void setUp() throws Exception {
 
 		this.killRemain();
 		Fillo fillo = new Fillo();
@@ -121,6 +120,7 @@ public class testBrickURL {
 
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
+		this.setUp();
 		List<Object[]> temp = new ArrayList<Object[]>();
 		for (Map<String, String> map : mapList) {
 			String PAN = map.get("PAN");

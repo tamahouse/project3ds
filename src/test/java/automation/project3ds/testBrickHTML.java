@@ -51,8 +51,7 @@ public class testBrickHTML {
 		}
 	}
 
-	@BeforeClass(alwaysRun=true)
-	public void beforeClass() throws Exception {
+	private void beforeClass() throws Exception {
 
 //		this.killRemain();
 		Fillo fillo = new Fillo();
@@ -133,6 +132,7 @@ public class testBrickHTML {
 
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
+		this.beforeClass();
 		List<Object[]> temp = new ArrayList<Object[]>();
 		for (Map<String, String> map : mapList) {
 			String PAN = map.get("PAN");

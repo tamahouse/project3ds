@@ -12,18 +12,20 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 //OB: ExtentReports extent instance created here. That instance can be reachable by getReporter() method.
 public class ExtentManager {
 
-	private static ExtentReports extent;
+	private static ExtentReportImpl extent;
+	private static String[] time;
 
-	public synchronized static ExtentReports getReporter() {
+	public synchronized static ExtentReportImpl getReporter() {
 		if (extent == null) {
-			String[] time = getTime();
-			String reportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\ExtentReportResults"+time[0]+"\\ReportTime"+time[1]+".html";
-			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
-			extent = new ExtentReports();
-			extent.attachReporter(reporter);
+			time = getTime();
+			String reportName = "Report "+time[0]+" "+time[1];
+			String dateReportName = "ReportDate " + time[0];
+			extent = new ExtentReportImpl(reportName, dateReportName);
 		}
 		return extent;
 	}
+	
+
 
 	private static String[] getTime() {
 		Timestamp stamp = new Timestamp(System.currentTimeMillis());

@@ -73,12 +73,13 @@ public class PageHome1108 {
 			private void setCardHolderName() throws Exception {
 				Element cardHolderNameTextbox = driver.getElement(cardHolderNameTxb);
 				cardHolderNameTextbox.sendKeysSlow("Payment Wall");
-//				this.clickImage();
+//				
 			}
 
 			public void setCardNumber(String cardNumber) throws Exception {
 				Element container = driver.getElement(cardNumberContainer);
 				container.sendKeysSlow(cardNumber);
+				driver.getElement(By.xpath("//label[@for='brick-card-number']")).click();
 				Thread.sleep(2000);
 			}
 

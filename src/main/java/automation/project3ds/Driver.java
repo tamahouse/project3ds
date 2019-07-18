@@ -126,6 +126,19 @@ public class Driver implements WebDriver, JavascriptExecutor, TakesScreenshot, W
 		static final String Chrome = "Chrome";
 		static final String Firefox = "Firefox";
 	}
+	
+	public void waitUtilJSLoaded() {
+		int count = 0;
+		while(++count < 200) {
+			if(this.isJSLoaded() == true) {
+				count = 500;
+			}
+		}
+	}
+	
+	private Boolean isJSLoaded() {
+		return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+	}
 
 	private final List<WebDriverEventListener> eventListeners = new ArrayList<>();
 	final WebDriverEventListener dispatcher = (WebDriverEventListener) Proxy.newProxyInstance(

@@ -51,7 +51,7 @@ public class testBrickURL {
 
 	private void setUp() throws Exception {
 
-		this.killRemain();
+//		this.killRemain();
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection(utility.ConfigFile.filePath);
 		driver = new Driver(Browser.Chrome);

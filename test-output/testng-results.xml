@@ -2,16 +2,37 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62" started-at="2019-07-17T11:38:33Z" finished-at="2019-07-17T11:38:33Z">
+  <suite name="testBrickURL" duration-ms="44436" started-at="2019-07-18T08:34:51Z" finished-at="2019-07-18T08:35:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62" started-at="2019-07-17T11:38:33Z" finished-at="2019-07-17T11:38:33Z">
-      <class name="automation.project3ds.aSample">
-        <test-method status="PASS" signature="sample()[pri:0, instance:automation.project3ds.aSample@5622fdf]" name="sample" duration-ms="24" started-at="2019-07-17T11:38:33Z" finished-at="2019-07-17T11:38:33Z">
+    <test name="testBrickURL" duration-ms="44436" started-at="2019-07-18T08:34:51Z" finished-at="2019-07-18T08:35:35Z">
+      <class name="automation.project3ds.testBrickURL">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@5f2108b5]" name="execute" duration-ms="37084" started-at="2019-07-18T08:34:57Z" data-provider="data" finished-at="2019-07-18T08:35:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4000000000001000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=05, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001000, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Visa 1: Successful Frictionless Authentication}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sample -->
-      </class> <!-- automation.project3ds.aSample -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- execute -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.testBrickURL@5f2108b5]" name="tearDown" is-config="true" duration-ms="725" started-at="2019-07-18T08:35:34Z" finished-at="2019-07-18T08:35:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.project3ds.testBrickURL -->
+    </test> <!-- testBrickURL -->
+  </suite> <!-- testBrickURL -->
 </testng-results>

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.project3ds.CreditCardTest">
+      <class name="automation.project3ds.aSample">
         <methods>
-          <include name="execute"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="sample"/>
         </methods>
-      </class> <!-- automation.project3ds.CreditCardTest -->
+      </class> <!-- automation.project3ds.aSample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

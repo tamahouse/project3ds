@@ -36,7 +36,7 @@ public class Z2 {
 			String result = resultSet.getString("pl_response");
 			String printResult = PrettyPrint.formatXML(result);
 			try {
-			ExtentTestManager.getTest().info("lookup_response: " + printResult);
+				ExtentManager.getTest().info("lookup_response: " + printResult);
 			}catch(Exception ignore) {
 			}
 			XmlMapper xmlMapper = new XmlMapper();
@@ -59,7 +59,7 @@ public class Z2 {
 			JsonNode jsonNode = mapper.readTree(result);
 			String printResult = PrettyPrint.formatJson(jsonNode);
 			try {
-			ExtentTestManager.getTest().info("auth_response:<br />" + printResult);
+				ExtentManager.getTest().info("auth_response:<br />" + printResult);
 			}catch(Exception ignore) {
 				
 			}
@@ -84,7 +84,7 @@ public class Z2 {
 			JsonNode jsonNode = mapper.readTree(result);
 			String printResult = PrettyPrint.formatJson(jsonNode);
 			try {
-			ExtentTestManager.getTest().info("auth_quest:<br />" + printResult);
+				ExtentManager.getTest().info("auth_quest:<br />" + printResult);
 			}catch(Exception ignore) {
 				
 			}

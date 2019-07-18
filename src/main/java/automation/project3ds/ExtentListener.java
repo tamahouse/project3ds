@@ -41,10 +41,10 @@ public class ExtentListener implements ITestListener{
 			lastName = lastName +", " + name ;
 		}
 		String displayName = suiteName+" ("+lastName.substring(2)+" )";
-		ExtentTestManager.startTest(displayName);
-		ExtentTestManager.getTest().assignCategory(suiteName);
+		ExtentManager.startTest(displayName);
+		ExtentManager.getTest().assignCategory(suiteName);
 		if(map != null) {
-		ExtentTestManager.getTest().info("Params: " + map);
+			ExtentManager.getTest().info("Params: " + map);
 		}
 
 		
@@ -72,7 +72,7 @@ public class ExtentListener implements ITestListener{
 				assertInfo = assertInfo + line;
 			}
 		
-			ExtentTestManager.getTest().info(assertInfo);
+			ExtentManager.getTest().info(assertInfo);
 			}
 		}catch(Exception e) {
 			throw e;
@@ -83,7 +83,7 @@ public class ExtentListener implements ITestListener{
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		this.printAttribute(result);
-		ExtentTestManager.getTest().log(Status.PASS, "Test passed");
+		ExtentManager.getTest().log(Status.PASS, "Test passed");
 		
 	}
 
@@ -91,8 +91,8 @@ public class ExtentListener implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		this.printAttribute(result);
-		ExtentTestManager.getTest().log(Status.FAIL, result.getThrowable());
-		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
+		ExtentManager.getTest().log(Status.FAIL, result.getThrowable());
+		ExtentManager.getTest().log(Status.FAIL, "Test Failed");
 		
 		
 	}
@@ -101,7 +101,7 @@ public class ExtentListener implements ITestListener{
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
 		this.printAttribute(result);
-		ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
+		ExtentManager.getTest().log(Status.SKIP, "Test Skipped");
 	
 	}
 
@@ -120,7 +120,7 @@ public class ExtentListener implements ITestListener{
 	@Override
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
-		ExtentTestManager.endTest();
+		ExtentManager.endTest();
 		ExtentManager.getReporter().flush();
 	}
 

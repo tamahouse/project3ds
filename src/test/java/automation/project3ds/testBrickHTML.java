@@ -148,7 +148,7 @@ public class testBrickHTML {
 	public void execute(String cardNumber, String host, Map<String, String> map) throws Exception {
 //		cardNumber = "5200000000001096";
 		try {
-		ExtentTestManager.getTest().info("CardNumber: " + cardNumber);
+			ExtentManager.getTest().info("CardNumber: " + cardNumber);
 		}catch(Exception ignore) {
 			
 		}
@@ -194,7 +194,7 @@ public class testBrickHTML {
 		System.out.println(cardNumber + " : " + refID + " : " + t_id);
 
 		try {
-		ExtentTestManager.getTest().info("t_id: " + t_id);
+			ExtentManager.getTest().info("t_id: " + t_id);
 		}catch(Exception ignore) {
 			
 		}

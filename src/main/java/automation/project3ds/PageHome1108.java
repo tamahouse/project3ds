@@ -207,7 +207,7 @@ public class PageHome1108 {
 		iframecc.clickBuyButton();
 		refID = iframecc.getRefId();
 		try {
-		ExtentTestManager.getTest().info("refID: " + refID);
+			ExtentManager.getTest().info("refID: " + refID);
 		}catch (Exception ignore) {
 			
 		}

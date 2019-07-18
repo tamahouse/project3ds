@@ -22,8 +22,8 @@ public class ExtentReportImpl extends ExtentReports {
 	public ExtentReportImpl(String reportName, String dateReportName) {
 		this.reportName = reportName;
 		this.dateReportName = dateReportName;
-		this.reportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\" + reportName + ".html";
-		this.dateReportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\" + dateReportName + ".html";
+		this.reportPath = "test-output\\ExtendReport\\"+dateReportName+"\\" + reportName + ".html";
+		this.dateReportPath = "test-output\\ExtendReport\\ReportDate\\" + dateReportName + ".html";
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 		this.attachReporter(reporter);
 		this.setDateIndex();
@@ -42,14 +42,15 @@ public class ExtentReportImpl extends ExtentReports {
 		return dateIndex;
 	}
 
-	private static Document getHTMLFile(String reportPath) {
-		String html = Reader.readAllText(reportPath);
-		Document doc = Jsoup.parse(html);
-		return doc;
-	}
 
 	private static Boolean isTestExist(String reportPath, String reportNameToCheck) {
-		Document doc = getHTMLFile(reportPath);
+		Document doc = null;
+		try {
+		String html = Reader.readAllText(reportPath);
+		doc = Jsoup.parse(html);
+		}catch (IllegalArgumentException e) {
+			return false;
+		}
 		Elements allTests = doc.select("#test-collection > .test");
 		for (Element test : allTests) {
 			String name = test.select(".test-name").first().html();
@@ -61,7 +62,7 @@ public class ExtentReportImpl extends ExtentReports {
 	}
 
 	private void setIndex() {
-		String indexReportPath = "C:\\Workspace\\project3ds\\test-output\\ExtendReport\\index.html";
+		String indexReportPath = "test-output\\ExtendReport\\index.html";
 		if (ExtentReportImpl.isTestExist(indexReportPath, dateReportName) == false) {
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(indexReportPath);
 			reporter.setAppendExisting(true);

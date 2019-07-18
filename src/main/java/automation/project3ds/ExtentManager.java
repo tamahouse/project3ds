@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
@@ -14,6 +15,7 @@ public class ExtentManager {
 
 	private static ExtentReportImpl extent;
 	private static String[] time;
+	private static ExtentTest test;
 
 	public synchronized static ExtentReportImpl getReporter() {
 		if (extent == null) {
@@ -35,5 +37,30 @@ public class ExtentManager {
 		SimpleDateFormat sdfTime = new SimpleDateFormat("HH-mm-ss");
 		String time = sdfTime.format(currentTime);
 		return new String[] {date, time};
+	}
+	
+
+
+	public static ExtentTest getTest() {
+//		return (ExtentTest) extentTestMap.get((int) (long) (Thread.currentThread().getId()));
+		return test;
+	}
+
+	public static void endTest() {
+		extent.flush();
+		ExtentReports dateIndex = extent.getDateIndex();
+		ExtentReports index = extent.getIndex();
+		if(dateIndex != null) {
+			dateIndex.flush();
+		}
+		if(index != null) {
+			index.flush();
+		}
+	}
+
+	public static synchronized ExtentTest startTest(String testName) {
+		test = getReporter().createTest(testName);
+//		extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
+		return test;
 	}
 }

@@ -94,7 +94,7 @@ public class PageBrickURL {
 //		print final response
 		String printResult2 = PrettyPrint.formatJson(jsonNode);
 		try {
-			ExtentTestManager.getTest().info("Response:<br />" + printResult2);
+			ExtentManager.getTest().info("Response:<br />" + printResult2);
 			System.out.println(printResult2);
 		} catch (Exception ignore) {
 

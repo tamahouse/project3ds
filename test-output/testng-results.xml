@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="testBrickURL" duration-ms="44436" started-at="2019-07-18T08:34:51Z" finished-at="2019-07-18T08:35:35Z">
+  <suite name="testBrickHTML" duration-ms="164072" started-at="2019-07-18T10:43:21Z" finished-at="2019-07-18T10:46:05Z">
     <groups>
     </groups>
-    <test name="testBrickURL" duration-ms="44436" started-at="2019-07-18T08:34:51Z" finished-at="2019-07-18T08:35:35Z">
-      <class name="automation.project3ds.testBrickURL">
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@5f2108b5]" name="execute" duration-ms="37084" started-at="2019-07-18T08:34:57Z" data-provider="data" finished-at="2019-07-18T08:35:34Z">
+    <test name="testBrickHTML" duration-ms="164072" started-at="2019-07-18T10:43:21Z" finished-at="2019-07-18T10:46:05Z">
+      <class name="automation.project3ds.testBrickHTML">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickHTML@1d9b7cce]" name="execute" duration-ms="156327" started-at="2019-07-18T10:43:28Z" data-provider="data" finished-at="2019-07-18T10:46:04Z">
           <params>
             <param index="0">
               <value>
@@ -16,7 +16,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
+                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html]]>
               </value>
             </param>
             <param index="2">
@@ -28,11 +28,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.testBrickURL@5f2108b5]" name="tearDown" is-config="true" duration-ms="725" started-at="2019-07-18T08:35:34Z" finished-at="2019-07-18T08:35:35Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.testBrickHTML@1d9b7cce]" name="tearDown" is-config="true" duration-ms="695" started-at="2019-07-18T10:46:04Z" finished-at="2019-07-18T10:46:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.project3ds.testBrickURL -->
-    </test> <!-- testBrickURL -->
-  </suite> <!-- testBrickURL -->
+      </class> <!-- automation.project3ds.testBrickHTML -->
+    </test> <!-- testBrickHTML -->
+  </suite> <!-- testBrickHTML -->
 </testng-results>

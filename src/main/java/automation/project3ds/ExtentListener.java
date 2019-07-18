@@ -40,7 +40,12 @@ public class ExtentListener implements ITestListener{
 		for(String name : names) {
 			lastName = lastName +", " + name ;
 		}
-		String displayName = suiteName+" ("+lastName.substring(2)+" )";
+		try {
+			lastName = lastName.substring(2);
+		}catch(Exception ignore) {
+			
+		}
+		String displayName = suiteName+" ("+lastName+" )";
 		ExtentManager.startTest(displayName);
 		ExtentManager.getTest().assignCategory(suiteName);
 		if(map != null) {

@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.project3ds.aSample">
+      <class name="automation.project3ds.Aa">
         <methods>
-          <include name="sample"/>
+          <include name="setUp"/>
+          <include name="meo" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- automation.project3ds.aSample -->
+      </class> <!-- automation.project3ds.Aa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

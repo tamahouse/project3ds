@@ -49,13 +49,13 @@ public class MySoftAssert implements IAssertLifecycle {
 	@Override
 	public void onAssertSuccess(IAssert<?> assertCommand) {
 
-		System.out.println(assertCommand.getMessage() + " expect {" + assertCommand.getActual() + "}  actual {"
+		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "}  expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 	
 	public void onMyAssertSuccess(MyIAssert<?> assertCommand) {
 
-		System.out.println(assertCommand.getMessage() + " expect {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"actual {"
+		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 
@@ -73,13 +73,13 @@ public class MySoftAssert implements IAssertLifecycle {
 	@Override
 	public void onAssertFailure(IAssert<?> assertCommand, AssertionError ex) {
 		onAssertFailure(assertCommand);
-		System.out.println(assertCommand.getMessage() + " expect {" + assertCommand.getActual() + "} and actual {"
+		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "} and expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 	
 	public void onMyAssertFailure(MyIAssert<?> assertCommand, AssertionError ex) {
 		onAssertFailure(assertCommand);
-		System.out.println(assertCommand.getMessage() + " expect {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"actual {"
+		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 

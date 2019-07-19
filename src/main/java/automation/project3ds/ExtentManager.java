@@ -23,9 +23,9 @@ public class ExtentManager {
 			String[] time = getTime();
 			folderPath = "test-output\\ExtendReport\\";
 			String folderName = "Report"+time[0];
-			String reportName = folderName+time[1] ;
+			String reportName = folderName+"_"+time[1] ;
 			String reportPath = folderPath +folderName+"\\" + reportName + ".html";
-			ExtentHtmlReporterImpl reporter = new ExtentHtmlReporterImpl(reportPath);
+			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 		}
@@ -54,7 +54,7 @@ public class ExtentManager {
 	
 	private static void createIndexPage() {
 		String indexReportPath = folderPath +"index.html";
-			ExtentHtmlReporterImpl reporter = new ExtentHtmlReporterImpl(indexReportPath);
+			ExtentHtmlReporter reporter = new ExtentHtmlReporter(indexReportPath);
 			ExtentReports index = new ExtentReports();
 			index.attachReporter(reporter);
 			File[] directories = new File(folderPath).listFiles(File::isDirectory);

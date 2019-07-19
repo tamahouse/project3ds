@@ -5,6 +5,9 @@
 		 <classes>
        <class name="automation.project3ds.aSample" />
     </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
     </test>
 </suite>
 

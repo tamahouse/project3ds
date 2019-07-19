@@ -17,6 +17,7 @@ public class PageBrickURL {
 	By cvvTxb = By.id("cvv");
 	By submitBtn = By.xpath("//button");
 	By jsonBody = By.xpath("//body[contains(text(),'success')]");
+	int s = 30;
 
 	By otpTxb = By.name("challengeDataEntry");
 	By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");
@@ -28,7 +29,7 @@ public class PageBrickURL {
 	private void setEmail() throws Exception {
 		element = driver.getElement(emailTxb);
 		element.click();
-		element.sendKeysSlow("meo@spam4.me");
+		element.sendKeysSlow(s,"meo@spam4.me");
 	}
 
 	private void setCardNumber(String cardNumber) throws Exception {
@@ -40,23 +41,23 @@ public class PageBrickURL {
 	private void setExpiryMonth() throws Exception {
 		element = driver.getElement(expiryMonthTxb);
 		element.click();
-		element.sendKeysSlow("01");
+		element.sendKeysSlow(s,"01");
 	}
 
 	private void setExpiryYear() throws Exception {
 		element = driver.getElement(expiryYearTxb);
 		element.click();
-		element.sendKeysSlow("22");
+		element.sendKeysSlow(s,"22");
 	}
 
 	private void setCvv() throws Exception {
 		element = driver.getElement(cvvTxb);
 		element.click();
-		element.sendKeysSlow("123");
+		element.sendKeysSlow(s,"123");
 	}
 
 	private void clickSubmit() throws Exception {
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 		element = driver.getElement(submitBtn);
 		element.click();
 	}

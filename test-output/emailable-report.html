@@ -8,11 +8,23 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">testAa</th></tr>
-<tr><td><a href="#t0">testTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">278</td><td></td><td></td></tr>
+<tr><th colspan="7">testBrickURL</th></tr>
+<tr><td><a href="#t0">testBrickURL</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">79,789</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">testAa</th></tr></tbody><tbody id="t0"><tr><th colspan="4">testTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">automation.project3ds.aSample</td><td><a href="#m0">sample</a></td><td rowspan="1">1563514992326</td><td rowspan="1">217</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">testBrickURL</th></tr></tbody><tbody id="t0"><tr><th colspan="4">testBrickURL &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">automation.project3ds.testBrickURL</td><td><a href="#m0">execute</a></td><td rowspan="1">1563522411939</td><td rowspan="1">72163</td></tr></tbody>
 </table>
-<h2>testTest</h2><h3 id="m0">automation.project3ds.aSample#sample</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>testBrickURL</h2><h3 id="m0">automation.project3ds.testBrickURL#execute</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>4000000000001000</td><td>http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html</td><td>{Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=05, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001000, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Visa 1: Successful Frictionless Authentication}</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [null],
+	[SignitureVerification] expected [Y] but found [null],
+	[Cavv] expected object to not be null,
+	[EciFlag] expected [05] but found [07],
+	[cardholderVerificationMethod3] expected [THREEDS] but found [CVV2],
+	[cavv] expected object to not be null,
+	[version] expected [V2] but found [null],
+	[directoryServerTransactionId] expected object to not be null
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
+	at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

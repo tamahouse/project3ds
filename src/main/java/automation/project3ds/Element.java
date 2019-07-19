@@ -217,7 +217,7 @@ public class Element implements WebElement, WrapsElement, WrapsDriver, org.openq
 		}
 	}
 
-	public void sendKeysSlow(CharSequence... keysToSend) throws Exception {
+	public void sendKeysSlow(int speed, CharSequence... keysToSend) throws Exception {
 		if (keysToSend != null) {
 			this.driver.dispatcher.beforeChangeValueOf(element, this.driver.driver, keysToSend);
 			Boolean x = false;
@@ -229,7 +229,7 @@ public class Element implements WebElement, WrapsElement, WrapsDriver, org.openq
 						for (char character : chars) {
 							String str = String.valueOf(character);
 							element.sendKeys(str);
-							Thread.sleep(10);
+							Thread.sleep(speed);
 						}
 					}
 					x = true;
@@ -250,6 +250,10 @@ public class Element implements WebElement, WrapsElement, WrapsDriver, org.openq
 		}
 	}
 
+	public void sendKeysSlow(CharSequence... keysToSend) throws Exception {
+		int speed = 10;
+		this.sendKeysSlow(speed, keysToSend);
+	}
 	@Override
 	public void clear() {
 		this.driver.dispatcher.beforeChangeValueOf(element, this.driver.driver, null);

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-testAa">
-              <span class="suite-name border-passed">testAa</span>
+            <a href="#" class="navigator-link" panel-name="suite-testBrickURL">
+              <span class="suite-name border-failed">testBrickURL</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-testAa">
-                    <span>C:\Workspace\project3ds\src\test\java\automation\project3ds\testngaSample.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-testBrickURL">
+                    <span>C:\Workspace\project3ds\src\test\java\automation\project3ds\testngBrickURL.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-testAa">
+                  <a href="#" class="navigator-link " panel-name="testlist-testBrickURL">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-testAa">
+                  <a href="#" class="navigator-link " panel-name="group-testBrickURL">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-testAa">
+                  <a href="#" class="navigator-link " panel-name="times-testBrickURL">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-testAa">
+                  <a href="#" class="navigator-link " panel-name="reporter-testBrickURL">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-testAa">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-testBrickURL">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-testAa">
+                  <a href="#" class="navigator-link " panel-name="chronological-testBrickURL">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-testAa" class="hide-methods passed suite-testAa"> (hide)</a> <!-- hide-methods passed suite-testAa -->
-                      <a href="#" panel-name="suite-testAa" class="show-methods passed suite-testAa"> (show)</a> <!-- show-methods passed suite-testAa -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-testBrickURL" class="hide-methods failed suite-testBrickURL"> (hide)</a> <!-- hide-methods failed suite-testBrickURL -->
+                      <a href="#" panel-name="suite-testBrickURL" class="show-methods failed suite-testBrickURL"> (show)</a> <!-- show-methods failed suite-testBrickURL -->
                     </span>
-                    <div class="method-list-content passed suite-testAa">
+                    <div class="method-list-content failed suite-testBrickURL">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-testAa" title="automation.project3ds.aSample" hash-for-method="sample">sample</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testBrickURL" title="automation.project3ds.testBrickURL" hash-for-method="execute(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom...)">execute(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-testAa -->
+                    </div> <!-- method-list-content failed suite-testBrickURL -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,72 +116,87 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-testAa" class="panel testAa">
-          <div class="suite-testAa-class-passed">
+        <div panel-name="suite-testBrickURL" class="panel testBrickURL">
+          <div class="suite-testBrickURL-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">automation.project3ds.aSample</span>
+              <img src="failed.png"/>
+              <span class="class-name">automation.project3ds.testBrickURL</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sample">
-                  </a> <!-- sample -->
-                  <span class="method-name">sample</span>
+                  <a name="execute(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom...)">
+                  </a> <!-- execute(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom...) -->
+                  <span class="method-name">execute</span>
+                  <span class="parameters">(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html, {Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=05, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001000, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Visa 1: Successful Frictionless Authentication})</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	[Enrolled] expected [Y] but found [U],
+	[PAResStatus] expected [Y] but found [null],
+	[SignitureVerification] expected [Y] but found [null],
+	[Cavv] expected object to not be null,
+	[EciFlag] expected [05] but found [07],
+	[cardholderVerificationMethod3] expected [THREEDS] but found [CVV2],
+	[cavv] expected object to not be null,
+	[version] expected [V2] but found [null],
+	[directoryServerTransactionId] expected object to not be null
+	at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
+	at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-testAa-class-passed -->
-        </div> <!-- panel testAa -->
-        <div panel-name="test-xml-testAa" class="panel">
+          </div> <!-- suite-testBrickURL-class-failed -->
+        </div> <!-- panel testBrickURL -->
+        <div panel-name="test-xml-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Workspace\project3ds\src\test\java\automation\project3ds\testngaSample.xml</span>
+            <span class="header-content">C:\Workspace\project3ds\src\test\java\automation\project3ds\testngBrickURL.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;testAa&quot;&gt;
+&lt;suite name=&quot;testBrickURL&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;automation.project3ds.ExtentListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;testTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;testBrickURL&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;automation.project3ds.aSample&quot;/&gt;
+      &lt;class name=&quot;automation.project3ds.testBrickURL&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- testTest --&gt;
-&lt;/suite&gt; &lt;!-- testAa --&gt;
+  &lt;/test&gt; &lt;!-- testBrickURL --&gt;
+&lt;/suite&gt; &lt;!-- testBrickURL --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-testAa" class="panel">
+        <div panel-name="testlist-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for testAa</span>
+            <span class="header-content">Tests for testBrickURL</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">testTest (1 class)</span>
+                <span class="test-name">testBrickURL (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-testAa" class="panel">
+        <div panel-name="group-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for testAa</span>
+            <span class="header-content">Groups for testBrickURL</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-testAa" class="panel">
+        <div panel-name="times-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for testAa</span>
+            <span class="header-content">Times for testBrickURL</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_testAa');
-function tableData_testAa() {
+suiteTableInitFunctions.push('tableData_testBrickURL');
+function tableData_testBrickURL() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -189,44 +204,50 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sample')
-data.setCell(0, 2, 'automation.project3ds.aSample')
-data.setCell(0, 3, 217);
-window.suiteTableData['testAa']= { tableData: data, tableDiv: 'times-div-testAa'}
+data.setCell(0, 1, 'execute')
+data.setCell(0, 2, 'automation.project3ds.testBrickURL')
+data.setCell(0, 3, 72163);
+window.suiteTableData['testBrickURL']= { tableData: data, tableDiv: 'times-div-testBrickURL'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 217 ms</span>
-              <div id="times-div-testAa">
-              </div> <!-- times-div-testAa -->
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-testBrickURL">
+              </div> <!-- times-div-testBrickURL -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-testAa" class="panel">
+        <div panel-name="reporter-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for testAa</span>
+            <span class="header-content">Reporter output for testBrickURL</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-testAa" class="panel">
+        <div panel-name="ignored-methods-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-testAa" class="panel">
+        <div panel-name="chronological-testBrickURL" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">automation.project3ds.aSample</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">automation.project3ds.testBrickURL</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">sample</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">execute(4000000000001000, http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">72170 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

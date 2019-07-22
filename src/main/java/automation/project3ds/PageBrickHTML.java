@@ -96,13 +96,13 @@ public class PageBrickHTML {
 		private void setOTP() throws Exception {
 			Element otpTextbox = driver.getElement(otpTxb);
 			otpTextbox.moveToView();
-			otpTextbox.sendKeys("1234");
+			otpTextbox.sendKeysSlow(30,"1234");
 		}
 
 		private void clickOTPSubmitButton() throws Exception {
 			Element optSubmitButton = driver.getElement(otpSummitBtn);
 			optSubmitButton.highlight();
-			optSubmitButton.clickJS();
+			optSubmitButton.click();
 		}
 	}
 

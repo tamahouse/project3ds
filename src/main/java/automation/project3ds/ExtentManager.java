@@ -24,7 +24,7 @@ public class ExtentManager {
 			folderPath = "test-output\\ExtendReport\\";
 			String folderName = "Report"+time[0];
 			String reportName = folderName+"_"+time[1] ;
-			String reportPath = folderPath +folderName+"\\" + reportName + ".html";
+			String reportPath = folderName+"\\" + reportName + ".html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);

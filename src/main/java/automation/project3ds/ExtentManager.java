@@ -61,13 +61,13 @@ public class ExtentManager {
 			for(int i = directories.length-1; i > -1; i-- ) {
 				File directory = directories[i];
 				String dateName = directory.getName();
-				String datePath = directory.getAbsolutePath();
+				String datePath = directory.getPath();
 				ExtentTest indexTest = index.createTest(dateName);
 				File[] files = new File(datePath).listFiles(File::isFile);
 				for(int ii = files.length-1; ii > -1; ii-- ) {
 					File file = files[ii];
 					String timeName = file.getName();
-					String timePath = file.getAbsolutePath();
+					String timePath = file.getPath();
 					indexTest.info("<a href =\"" + timePath + "\">" + timeName + "</a>");
 				}
 				}

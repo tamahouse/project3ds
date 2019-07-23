@@ -24,11 +24,11 @@ public class aSample {
 	public void sample() throws Exception {
 		File[] directories = new File("test-output\\ExtendReport").listFiles(File::isDirectory);
 		for(File directory: directories) {
-			String meo = directory.getAbsolutePath();
+			String meo = directory.getPath();
 			System.out.println(meo);
 			File[] files = new File(meo).listFiles(File::isFile);
 			for(File file : files) {
-				String gau = file.getAbsolutePath();
+				String gau = file.getPath();
 				System.out.println(gau);
 			}
 		}

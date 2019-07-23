@@ -24,7 +24,7 @@ public class ExtentManager {
 			folderPath = "test-output\\ExtendReport\\";
 			String folderName = "Report"+time[0];
 			String reportName = folderName+"_"+time[1] ;
-			String reportPath = folderName+"\\" + reportName + ".html";
+			String reportPath = folderPath +folderName+"\\" + reportName + ".html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
@@ -67,7 +67,7 @@ public class ExtentManager {
 				for(int ii = files.length-1; ii > -1; ii-- ) {
 					File file = files[ii];
 					String timeName = file.getName();
-					String timePath = file.getPath();
+					String timePath = file.getPath().replace(folderPath, "");
 					indexTest.info("<a href =\"" + timePath + "\">" + timeName + "</a>");
 				}
 				}

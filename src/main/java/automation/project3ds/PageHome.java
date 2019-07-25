@@ -27,8 +27,8 @@ public class PageHome {
 	}
 	
 	private MainIframe getMainIframe() {
-		Element iframe = driver.findElement(By.xpath("//*[@id=\"main\"]/iframe"));
-		driver.switchTo().frame(iframe);
+		Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
+		driver.switchTo().frame(iframe.getWebElement());
 		return new MainIframe(driver);
 	}
 
@@ -48,7 +48,7 @@ public class PageHome {
 		
 		public Iframecc getIframecc() {
 			Element newIframe = driver.getElement(By.id("iframecc"));
-			driver.switchTo().frame(newIframe);
+			driver.switchTo().frame(newIframe.getWebElement());
 			return new Iframecc(driver);
 		}
 		
@@ -88,17 +88,17 @@ public class PageHome {
 				
 				private Iframecc getIframecc() {
 					driver.switchTo().defaultContent();
-					Element iframe = driver.findElement(By.xpath("//*[@id=\"main\"]/iframe"));
-					driver.switchTo().frame(iframe);
+					Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
+					driver.switchTo().frame(iframe.getWebElement());
 					Element iframe2 = driver.getElement(By.id("iframecc"));
-					driver.switchTo().frame(iframe2);
+					driver.switchTo().frame(iframe2.getWebElement());
 					return new Iframecc(driver);
 				}
 
 				private void clickOTPSubmitButton() throws Exception {
 					Element optSubmitButton = driver.getElement(otpSummitBtn);
 					optSubmitButton.highlight();
-					optSubmitButton.clickJS();
+					optSubmitButton.click();
 				}
 			}
 			
@@ -108,7 +108,7 @@ public class PageHome {
 
 			public VisaPurchaseIframe getPurchaseFrame() {
 				Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
-				driver.switchTo().frame(iframe);
+				driver.switchTo().frame(iframe.getWebElement());
 				return new VisaPurchaseIframe(driver);
 			}
 
@@ -172,7 +172,7 @@ public class PageHome {
 			}
 
 			private String getRefId() {
-				Element refIdContainer = driver.findElement(refIDContainer);
+				Element refIdContainer = driver.getElement(refIDContainer);
 				String str = refIdContainer.getAttribute("value");
 				str = str.substring(1);
 				return str;
@@ -183,7 +183,7 @@ public class PageHome {
 				map.put(By.id("Cardinal-CCA-IFrame"), "VISA_PURCHASE");
 				map.put(By.xpath("//*[@id ='errors' and not(contains(@style,'none'))]"), "ERROR");
 				map.put(By.id("save_button_id"), "MASTERCARD_PURCHASE");
-				return driver.getSelectedCase(map);
+				return driver.getSelection(map);
 			}
 
 		}

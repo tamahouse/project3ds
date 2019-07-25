@@ -66,7 +66,7 @@ public class PageBrickHTML {
 
 	public String getRefId() {
 		String str = null;
-		if (driver.checkExist(refIDForm, 20) == true) {
+		if (driver.isExist(refIDForm, 20) == true) {
 			element = driver.getElement(refIDForm);
 			str = element.getAttribute("value");
 			str = str.substring(str.lastIndexOf("=") + 1).substring(1);
@@ -82,7 +82,7 @@ public class PageBrickHTML {
 
 	public VisaPurchaseIframe getPurchaseFrame() {
 		Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
-		driver.switchTo().frame(iframe);
+		driver.switchTo().frame(iframe.getWebElement());
 		return new VisaPurchaseIframe(driver);
 	}
 
@@ -112,46 +112,14 @@ public class PageBrickHTML {
 		map.put(By.xpath("//li[@class = 'errors__error']"), "ERROR");
 		map.put(By.xpath("//*[@class='brick-step brick-step-3dsecure js-brick-step-3dsecure is-active']"),
 				"OTP");
-
-		Boolean x = false;
-		int count = 0;
-		while (x == false) {
-			for (Map.Entry<By, String> entry : map.entrySet()) {
-				if (driver.isInstanceExist(entry.getKey()) == true) {
-					String str = entry.getValue();
-					System.out.println(str);
-					return str;
-				}
-			}
-			Thread.sleep(100);
-			if (++count > 100) {
-				return null;
-			}
-		}
-		return null;
+		return driver.getSelection(map);
 	}
 
 	private String getSelectedCaseAfterOTP() throws Exception {
 		Map<By, String> map = new HashMap<By, String>();
 		map.put(successBtn, "THREEDS_SUCCESS");
 		map.put(By.xpath("//li[@class = 'errors__error']"), "THREEDS_FAILED");
-
-		Boolean x = false;
-		int count = 0;
-		while (x == false) {
-			for (Map.Entry<By, String> entry : map.entrySet()) {
-				if (driver.isInstanceExist(entry.getKey()) == true) {
-					String str =  entry.getValue();
-					System.out.println(str);
-					return str;
-				}
-			}
-			Thread.sleep(100);
-			if (++count > 100) {
-				return null;
-			}
-		}
-		return null;
+		return driver.getSelection(map);
 	}
 
 	public String returnRefID(String cardNumber) throws Exception {

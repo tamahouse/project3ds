@@ -32,17 +32,17 @@ public class GatherTestcase {
 			System.out.println(++count);
 			String B = header.getText();
 			Element element = header.getElement(By.xpath("./following-sibling::*/table/tbody"));
-			String C = element.findElement(scenario).highlight().getText();
-			String D = element.findElement(testValue).highlight().getText();
-			String E = element.findElement(lookup).highlight().getText();
+			String C = element.getElement(scenario).highlight().getText();
+			String D = element.getElement(testValue).highlight().getText();
+			String E = element.getElement(lookup).highlight().getText();
 			String F ="blank";
 			try {
-				Element fElement = element.findElement(authentication);
+				Element fElement = element.getElement(authentication);
 				element.highlight();
 				F = fElement.getText();
 			}catch(Exception e) {
 			}
-			String G = element.findElement(action).highlight().getText();
+			String G = element.getElement(action).highlight().getText();
 			query = "INSERT INTO Sheet1(testName,Scenario,test_value,expected_results_lookup,expected_results_authentication,merchant_action) VALUES ('"
 					+ B + "','" + C + "','" + D + "','" + E + "','"
 					+ F + "','" + G + "')";

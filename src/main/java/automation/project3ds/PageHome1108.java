@@ -22,8 +22,8 @@ public class PageHome1108 {
 	}
 
 	public MainIframe getMainIframe() {
-		Element iframe = driver.findElement(By.xpath("//*[@id=\"main\"]/iframe"));
-		driver.switchTo().frame(iframe);
+		Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
+		driver.switchTo().frame(iframe.getWebElement());
 		return new MainIframe(driver);
 	}
 
@@ -42,9 +42,9 @@ public class PageHome1108 {
 		}
 
 		public Iframecc getIframecc() throws Exception {
-			driver.checkExist(By.tagName("iframe"), 100);
+			driver.isExist(By.tagName("iframe"), 100);
 			Element newIframe = driver.getElement(By.tagName("iframe"));
-			driver.switchTo().frame(newIframe);
+			driver.switchTo().frame(newIframe.getWebElement());
 			return new Iframecc(driver);
 		}
 
@@ -121,7 +121,7 @@ public class PageHome1108 {
 			}
 
 			private String getRefId() {
-				Element refIdContainer = driver.findElement(refIDContainer);
+				Element refIdContainer = driver.getElement(refIDContainer);
 				String str = refIdContainer.getAttribute("action");
 				str = str.substring(str.lastIndexOf("=") + 1).substring(1);
 				return str;
@@ -135,7 +135,7 @@ public class PageHome1108 {
 				map.put(By.xpath("//*[@class ='errors js-brick-errors is-errors' and not(contains(@style,'none'))]"),
 						"ERROR");
 				map.put(By.xpath("//*[@class='button js-brick-submit brick-is-success']"),"SUCCESS");
-				return driver.getSelectedCase(map);
+				return driver.getSelection(map);
 			}
 
 			private String getRedirectCase() throws Exception {
@@ -143,7 +143,7 @@ public class PageHome1108 {
 				map.put(By.id("Cardinal-CCA-IFrame"), "PURCHASE");
 				map.put(By.xpath("//*[@class ='errors js-brick-errors is-errors' and not(contains(@style,'none'))]"),
 						"ERROR");
-				return driver.getSelectedCase(map);
+				return driver.getSelection(map);
 			}
 
 			private String getCompleteCase() throws Exception {
@@ -151,7 +151,7 @@ public class PageHome1108 {
 				map.put(By.xpath("//*[@class='brick-submit__success']"), "PURCHASE");
 				map.put(By.xpath("//*[@class ='errors js-brick-errors is-errors' and not(contains(@style,'none'))]"),
 						"ERROR");
-				return driver.getSelectedCase(map);
+				return driver.getSelection(map);
 			}
 
 			public class PurchaseIframe {
@@ -170,22 +170,22 @@ public class PageHome1108 {
 				private void clickOTPSubmitButton() throws Exception {
 					Element optSubmitButton = driver.getElement(otpSummitBtn);
 					optSubmitButton.highlight();
-					optSubmitButton.clickJS();
+					optSubmitButton.click();
 				}
 
 				private Iframecc getIframecc() {
 					driver.switchTo().defaultContent();
-					Element iframe = driver.findElement(By.xpath("//*[@id=\"main\"]/iframe"));
-					driver.switchTo().frame(iframe);
+					Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
+					driver.switchTo().frame(iframe.getWebElement());
 					Element iframe2 = driver.getElement(By.id("iframecc"));
-					driver.switchTo().frame(iframe2);
+					driver.switchTo().frame(iframe2.getWebElement());
 					return new Iframecc(driver);
 				}
 			}
 
 			public PurchaseIframe getPurchaseFrame() {
 				Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
-				driver.switchTo().frame(iframe);
+				driver.switchTo().frame(iframe.getWebElement());
 				return new PurchaseIframe(driver);
 			}
 

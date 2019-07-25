@@ -16,8 +16,8 @@ public class PageBrickURL {
 	By expiryYearTxb = By.id("card-exp-year");
 	By cvvTxb = By.id("cvv");
 	By submitBtn = By.xpath("//button");
-	By jsonBody = By.xpath("//body[contains(text(),'success')]");
-	int s = 30;
+	By jsonBody = By.xpath("//body[contains(text(),'secure')]");
+	int s = 80;
 
 	By otpTxb = By.name("challengeDataEntry");
 	By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");
@@ -77,9 +77,9 @@ public class PageBrickURL {
 		}
 		
 //		check response
-		int success = jsonNode.path("success").asInt();
+//		int success = jsonNode.path("success").asInt();
 		String url = jsonNode.path("secure").path("redirect").asText();
-		if (success == 0 && !url.equals("")) {
+		if (!url.equals("")) {
 			
 			System.out.println(url);
 			driver.get(url);
@@ -104,7 +104,7 @@ public class PageBrickURL {
 
 	public VisaPurchaseIframe getPurchaseFrame() {
 		Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
-		driver.switchTo().frame(iframe);
+		driver.switchTo().frame(iframe.getWebElement());
 		return new VisaPurchaseIframe(driver);
 	}
 
@@ -124,7 +124,7 @@ public class PageBrickURL {
 		private void clickOTPSubmitButton() throws Exception {
 			Element optSubmitButton = driver.getElement(otpSummitBtn);
 			optSubmitButton.highlight();
-			optSubmitButton.clickJS();
+			optSubmitButton.click();
 		}
 	}
 

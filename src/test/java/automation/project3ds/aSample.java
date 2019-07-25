@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -17,22 +20,20 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.utils.Reader;
 
+import us.codecraft.xsoup.Xsoup;
+
 public class aSample {
-	
+	String host = "https://kiemthutudong.com/blog/wp-login.php";
+	String xpath = "user_login";
+	String outer = "<input type=\"text\" name=\"log\" id=\"user_login\" class=\"input\" value=\"\" size=\"20\">";
 	
 	@Test
 	public void sample() throws Exception {
-		File[] directories = new File("test-output\\ExtendReport").listFiles(File::isDirectory);
-		for(File directory: directories) {
-			String meo = directory.getPath();
-			System.out.println(meo);
-			File[] files = new File(meo).listFiles(File::isFile);
-			for(File file : files) {
-				String gau = file.getPath();
-				System.out.println(gau);
-			}
-		}
-		
-		
+		Driver driver = new Driver();
+		driver.get(host);
+		String html = driver.getPageSource();
+		Document doc = Jsoup.parse(html);
+		Elements meo = doc.select(outer);
+		System.out.println();
 	}
 }

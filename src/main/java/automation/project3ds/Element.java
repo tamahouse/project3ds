@@ -25,6 +25,29 @@ public class Element implements WebElement{
 		this.element = element;
 	}
 	
+	public void moveToTopView() {
+		((JavascriptExecutor) this.driver.driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		driver.sleep(500);
+	}
+	
+	public void moveUnderNavigationBar(By byNavigationBar) {
+			Element navigationBar = driver.getElement(byNavigationBar,7000);
+			Boolean x = element.getLocation()
+					.getY() > (navigationBar.getLocation().getY() + navigationBar.getSize().getHeight());
+			int count = 0;
+			while (x == false) {
+				int y = 0 - navigationBar.getSize().getHeight();
+				((JavascriptExecutor) this.driver.driver).executeScript("window.scrollBy(0," + y + ")", "");
+				element = driver.getElement(by);
+				x = element.getLocation()
+						.getY() > (navigationBar.getLocation().getY() + navigationBar.getSize().getHeight());
+				driver.sleep(100);
+				if (++count > 200) {
+					x = true;
+				}
+			}
+	}
+	
 	private String getXPath() {
 		return "//*" + (String) ((JavascriptExecutor) this.driver).executeScript(
 				"gPt=function(c){if(c.id!==''){return'[@id=\'+'\"'+c.id+'\'+'\"]'}if(c===document.body){return c.tagName}var a=0;var e=c.parentNode.childNodes;for(var b=0;b<e.length;b++){var d=e[b];if(d===c){return gPt(c.parentNode)+'/'+c.tagName+'['+(a+1)+']'}if(d.nodeType===1&&d.tagName===c.tagName){a++}}};return gPt(arguments[0]).toLowerCase();",
@@ -59,7 +82,7 @@ public class Element implements WebElement{
 				smallStr = smallStr.replaceFirst(".", "/");
 				String str = bigStr+smallStr;
 				element.setBy(By.xpath(str));
-				element.highlight();
+//				element.highlight();
 				return element;
 			}
 			driver.sleep(timeout);
@@ -86,7 +109,7 @@ public class Element implements WebElement{
 			String str = bigStr+smallStr;
 			str = "(" + str + ")[" + i + "]";
 			element.setBy(By.xpath(str));
-			element.highlight();
+//			element.highlight();
 			list.add(element);
 		}
 		return list;
@@ -215,7 +238,7 @@ public class Element implements WebElement{
 	@Override
 	public void click() {
 		// TODO Auto-generated method stub
-		this.highlight(element);
+//		this.highlight(element);
 		element.click();
 	}
 
@@ -228,14 +251,14 @@ public class Element implements WebElement{
 	@Override
 	public void sendKeys(CharSequence... keysToSend) {
 		// TODO Auto-generated method stub
-		this.highlight(element);
+//		this.highlight(element);
 		element.sendKeys(keysToSend);
 	}
 
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		this.highlight(element);
+//		this.highlight(element);
 		element.clear();
 	}
 

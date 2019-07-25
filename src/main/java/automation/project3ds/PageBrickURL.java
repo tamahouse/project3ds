@@ -16,8 +16,8 @@ public class PageBrickURL {
 	By expiryYearTxb = By.id("card-exp-year");
 	By cvvTxb = By.id("cvv");
 	By submitBtn = By.xpath("//button");
-	By jsonBody = By.xpath("//body[contains(text(),'secure')]");
-	int s = 80;
+	By jsonBody = By.xpath("//body[contains(text(),'{')]");
+	int s = 110;
 
 	By otpTxb = By.name("challengeDataEntry");
 	By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");

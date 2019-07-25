@@ -137,7 +137,7 @@ public class Driver implements WebDriver {
 				Element element = new Element(webElement);
 				element.setDriver(this);
 				element.setBy(by);
-				element.highlight();
+//				element.highlight();
 				return element;
 			}
 			this.sleep(timeout);
@@ -161,7 +161,7 @@ public class Driver implements WebDriver {
 			String str = this.getXpathString(by);
 			str = "(" + str + ")[" + i + "]";
 			element.setBy(By.xpath(str));
-			element.highlight();
+//			element.highlight();
 			list.add(element);
 		}
 		return list;

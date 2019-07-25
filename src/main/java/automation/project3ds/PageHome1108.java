@@ -109,7 +109,7 @@ public class PageHome1108 {
 
 			private void clickBuyButton() throws Exception {
 				Element buyButton = driver.getElement(buyBtn);
-				buyButton.moveToView();
+				buyButton.moveToTopView();
 				buyButton.click();
 				
 			}
@@ -163,8 +163,8 @@ public class PageHome1108 {
 
 				private void setOTP() throws Exception {
 					Element otpTextbox = driver.getElement(otpTxb);
-					otpTextbox.moveToView();
-					otpTextbox.sendKeys("1234");
+					otpTextbox.moveToTopView();
+					otpTextbox.sendKeysSlow(80,"1234");
 				}
 
 				private void clickOTPSubmitButton() throws Exception {

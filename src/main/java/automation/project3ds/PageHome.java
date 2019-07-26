@@ -82,7 +82,7 @@ public class PageHome {
 
 				private void setOTP() throws Exception {
 					Element otpTextbox = driver.getElement(otpTxb);
-					otpTextbox.moveToView();
+					otpTextbox.moveToTopView();
 					otpTextbox.sendKeys("1234");
 				}
 				

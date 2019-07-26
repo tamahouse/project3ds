@@ -5,12 +5,10 @@
     <listener class-name="automation.project3ds.ExtentListener"/>
   </listeners>
   <test thread-count="5" name="testBrickHTML(failed)">
-    <parameter name="hostValue" value="http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html"/>
     <classes>
       <class name="automation.project3ds.testBrickHTML">
         <methods>
-          <include name="setUp"/>
-          <include name="execute" invocation-numbers="6 7 17 23 24 25 30 35"/>
+          <include name="execute" invocation-numbers="8 14 15 16 21 26"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.project3ds.testBrickHTML -->

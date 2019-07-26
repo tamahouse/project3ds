@@ -29,31 +29,31 @@ public class PageBrickURL {
 	private void setEmail() throws Exception {
 		element = driver.getElement(emailTxb);
 		element.click();
-		element.sendKeysSlow(s,"meo@spam4.me");
+		element.sendKeys("meo@spam4.me");
 	}
 
 	private void setCardNumber(String cardNumber) throws Exception {
 		element = driver.getElement(cardNumberTxb);
 		element.click();
-		element.sendKeysSlow(cardNumber);
+		element.sendKeys(cardNumber);
 	}
 
 	private void setExpiryMonth() throws Exception {
 		element = driver.getElement(expiryMonthTxb);
 		element.click();
-		element.sendKeysSlow(s,"01");
+		element.sendKeys("01");
 	}
 
 	private void setExpiryYear() throws Exception {
 		element = driver.getElement(expiryYearTxb);
 		element.click();
-		element.sendKeysSlow(s,"22");
+		element.sendKeys("22");
 	}
 
 	private void setCvv() throws Exception {
 		element = driver.getElement(cvvTxb);
 		element.click();
-		element.sendKeysSlow(s,"123");
+		element.sendKeys("123");
 	}
 
 	private void clickSubmit() throws Exception {
@@ -118,7 +118,7 @@ public class PageBrickURL {
 		private void setOTP() throws Exception {
 			Element otpTextbox = driver.getElement(otpTxb);
 			otpTextbox.moveToView();
-			otpTextbox.sendKeysSlow("1234");
+			otpTextbox.sendKeys("1234");
 		}
 
 		private void clickOTPSubmitButton() throws Exception {

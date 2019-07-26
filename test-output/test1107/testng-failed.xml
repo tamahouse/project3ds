@@ -9,7 +9,7 @@
     <classes>
       <class name="automation.project3ds.CreditCardTest">
         <methods>
-          <include name="execute" invocation-numbers="0"/>
+          <include name="execute" invocation-numbers="8 10 14 15 16 21 26"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

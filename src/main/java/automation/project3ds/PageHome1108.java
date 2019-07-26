@@ -72,50 +72,53 @@ public class PageHome1108 {
 
 			private void setCardHolderName() throws Exception {
 				Element cardHolderNameTextbox = driver.getElement(cardHolderNameTxb);
-				cardHolderNameTextbox.sendKeysSlow("Payment Wall");
+				cardHolderNameTextbox.sendKeys("Payment Wall");
 //				
 			}
 
 			public void setCardNumber(String cardNumber) throws Exception {
 				Element container = driver.getElement(cardNumberContainer);
-				container.sendKeysSlow(cardNumber);
+				container.sendKeys(cardNumber);
 				driver.getElement(By.xpath("//label[@for='brick-card-number']")).click();
 				Thread.sleep(2000);
 			}
 
 			private void setExpiredDate() throws Exception {
+				Thread.sleep(1000);
 				Element expiredTextbox = driver.getElement(expTxb);
-				expiredTextbox.sendKeysSlow("0122");
+				expiredTextbox.click();
+				expiredTextbox.sendKeys("0122");
 //				this.clickImage();
 			}
 
 			private void setCVV() throws Exception {
 				Element cvvTextbox = driver.getElement(cvvTxb);
-				cvvTextbox.sendKeysSlow("123");
+				cvvTextbox.sendKeys("123");
 //				this.clickImage();
 			}
 
 			private void setZipCode() throws Exception {
 				Element zipTextbox = driver.getElement(zipTxb);
-				zipTextbox.sendKeysSlow("32043");
+				zipTextbox.sendKeys("32043");
 //				this.clickImage();
 			}
 
 			private void setEmail() throws Exception {
 				Element emailTextbox = driver.getElement(emailTxb);
-				emailTextbox.sendKeysSlow("meo@spam4.me");
+				emailTextbox.sendKeys("meo@spam4.me");
 //				this.clickImage();
 			}
 
 			private void clickBuyButton() throws Exception {
+//				Thread.sleep(5000);
 				Element buyButton = driver.getElement(buyBtn);
 				buyButton.moveToTopView();
 				buyButton.click();
 				
 			}
 
-			private void clickProcessButton() {
-				
+			private void clickProcessButton() throws Exception {
+				Thread.sleep(1000);
 				Element processButton = driver.getElement(processBtn);
 				processButton.click();
 			}

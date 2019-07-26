@@ -1,280 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="9" ignored="0" total="36" passed="27">
+<testng-results skipped="0" failed="6" ignored="0" total="27" passed="21">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1160713" started-at="2019-07-25T10:43:08Z" finished-at="2019-07-25T11:02:29Z">
+  <suite name="testBrickURL" duration-ms="729792" started-at="2019-07-25T12:59:55Z" finished-at="2019-07-25T13:12:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1160713" started-at="2019-07-25T10:43:08Z" finished-at="2019-07-25T11:02:29Z">
+    <test name="testBrickURL" duration-ms="729792" started-at="2019-07-25T12:59:55Z" finished-at="2019-07-25T13:12:05Z">
       <class name="automation.project3ds.testBrickURL">
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="27938" started-at="2019-07-25T10:43:16Z" data-provider="data" finished-at="2019-07-25T10:43:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001000]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=05, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001000, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Visa 1: Successful Frictionless Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="27440" started-at="2019-07-25T10:43:44Z" data-provider="data" finished-at="2019-07-25T10:44:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001018]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=07, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001018, SignitureVerification=Y, ACSUrl=blank, PAResStatus=N, testName=Test Visa 2: Failed Frictionless Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="29551" started-at="2019-07-25T10:44:11Z" data-provider="data" finished-at="2019-07-25T10:44:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001026]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=value, cardholderVerificationMethod=THREEDS_ATTEMPT, expected_results_authentication=NA, Enrolled=Y, EciFlag=06, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001026, SignitureVerification=Y, ACSUrl=blank, PAResStatus=A, testName=Test Visa 3: Attempts Frictionless Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="32617" started-at="2019-07-25T10:44:41Z" data-provider="data" finished-at="2019-07-25T10:45:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001034]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=Y, EciFlag=07, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001034, SignitureVerification=Y, ACSUrl=blank, PAResStatus=U, testName=Test Visa 4: Unavailable Frictionless Authentication from the Issuer}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="23415" started-at="2019-07-25T10:45:13Z" data-provider="data" finished-at="2019-07-25T10:45:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001042]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=07, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001042, SignitureVerification=Y, ACSUrl=blank, PAResStatus=R, testName=Test Visa 5: Rejected Frictionless Authentication by the Issuer}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="25181" started-at="2019-07-25T10:45:37Z" data-provider="data" finished-at="2019-07-25T10:46:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001059]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=U, EciFlag=07, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001059, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Visa 6: Authentication Not Available on Lookup}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="25679" started-at="2019-07-25T10:46:02Z" data-provider="data" finished-at="2019-07-25T10:46:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001067]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=07, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=4000000000001067, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Visa 7: Error on Lookup}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-[Enrolled] expected [] but found [U]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-[Enrolled] expected [] but found [U]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
-at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="32891" started-at="2019-07-25T10:46:28Z" data-provider="data" finished-at="2019-07-25T10:47:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001075]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=blank, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=4000000000001075, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Visa 8: Timeout on cmpi_lookup Transaction}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-[Enrolled] expected [] but found [U],
-[EciFlag] expected [] but found [07]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-[Enrolled] expected [] but found [U],
-[EciFlag] expected [] but found [07]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
-at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="22412" started-at="2019-07-25T10:47:01Z" data-provider="data" finished-at="2019-07-25T10:47:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4000000000001083]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=B, EciFlag=07, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=4000000000001083, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Visa 9: Bypassed Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="46182" started-at="2019-07-25T10:47:23Z" data-provider="data" finished-at="2019-07-25T10:48:09Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="47457" started-at="2019-07-25T13:00:02Z" data-provider="data" finished-at="2019-07-25T13:00:50Z">
           <params>
             <param index="0">
               <value>
@@ -295,7 +28,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="45603" started-at="2019-07-25T10:48:09Z" data-provider="data" finished-at="2019-07-25T10:48:55Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="34458" started-at="2019-07-25T13:00:50Z" data-provider="data" finished-at="2019-07-25T13:01:24Z">
           <params>
             <param index="0">
               <value>
@@ -316,7 +49,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="44116" started-at="2019-07-25T10:48:55Z" data-provider="data" finished-at="2019-07-25T10:49:39Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="33480" started-at="2019-07-25T13:01:24Z" data-provider="data" finished-at="2019-07-25T13:01:58Z">
           <params>
             <param index="0">
               <value>
@@ -337,7 +70,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="39076" started-at="2019-07-25T10:49:39Z" data-provider="data" finished-at="2019-07-25T10:50:18Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="31539" started-at="2019-07-25T13:01:58Z" data-provider="data" finished-at="2019-07-25T13:02:29Z">
           <params>
             <param index="0">
               <value>
@@ -358,7 +91,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="38362" started-at="2019-07-25T10:50:18Z" data-provider="data" finished-at="2019-07-25T10:50:56Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="32255" started-at="2019-07-25T13:02:29Z" data-provider="data" finished-at="2019-07-25T13:03:01Z">
           <params>
             <param index="0">
               <value>
@@ -379,7 +112,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="21433" started-at="2019-07-25T10:50:56Z" data-provider="data" finished-at="2019-07-25T10:51:18Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="17569" started-at="2019-07-25T13:03:01Z" data-provider="data" finished-at="2019-07-25T13:03:19Z">
           <params>
             <param index="0">
               <value>
@@ -400,7 +133,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="40137" started-at="2019-07-25T10:51:18Z" data-provider="data" finished-at="2019-07-25T10:51:58Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="33020" started-at="2019-07-25T13:03:19Z" data-provider="data" finished-at="2019-07-25T13:03:52Z">
           <params>
             <param index="0">
               <value>
@@ -421,7 +154,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="27559" started-at="2019-07-25T10:51:58Z" data-provider="data" finished-at="2019-07-25T10:52:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="18604" started-at="2019-07-25T13:03:52Z" data-provider="data" finished-at="2019-07-25T13:04:11Z">
           <params>
             <param index="0">
               <value>
@@ -442,7 +175,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="22535" started-at="2019-07-25T10:52:25Z" data-provider="data" finished-at="2019-07-25T10:52:48Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="17043" started-at="2019-07-25T13:04:11Z" data-provider="data" finished-at="2019-07-25T13:04:28Z">
           <params>
             <param index="0">
               <value>
@@ -470,7 +203,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [PAResStatus] expected [I] but found [U]
 at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
 at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -500,7 +234,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="37168" started-at="2019-07-25T10:52:48Z" data-provider="data" finished-at="2019-07-25T10:53:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20576" started-at="2019-07-25T13:04:28Z" data-provider="data" finished-at="2019-07-25T13:04:48Z">
           <params>
             <param index="0">
               <value>
@@ -521,7 +255,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="22366" started-at="2019-07-25T10:53:25Z" data-provider="data" finished-at="2019-07-25T10:53:48Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="17473" started-at="2019-07-25T13:04:48Z" data-provider="data" finished-at="2019-07-25T13:05:06Z">
           <params>
             <param index="0">
               <value>
@@ -542,7 +276,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="27290" started-at="2019-07-25T10:53:48Z" data-provider="data" finished-at="2019-07-25T10:54:15Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="25887" started-at="2019-07-25T13:05:06Z" data-provider="data" finished-at="2019-07-25T13:05:32Z">
           <params>
             <param index="0">
               <value>
@@ -563,7 +297,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="25667" started-at="2019-07-25T10:54:15Z" data-provider="data" finished-at="2019-07-25T10:54:41Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20104" started-at="2019-07-25T13:05:32Z" data-provider="data" finished-at="2019-07-25T13:05:52Z">
           <params>
             <param index="0">
               <value>
@@ -584,7 +318,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="21142" started-at="2019-07-25T10:54:41Z" data-provider="data" finished-at="2019-07-25T10:55:02Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="17183" started-at="2019-07-25T13:05:52Z" data-provider="data" finished-at="2019-07-25T13:06:09Z">
           <params>
             <param index="0">
               <value>
@@ -605,7 +339,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="31577" started-at="2019-07-25T10:55:02Z" data-provider="data" finished-at="2019-07-25T10:55:33Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20231" started-at="2019-07-25T13:06:09Z" data-provider="data" finished-at="2019-07-25T13:06:29Z">
           <params>
             <param index="0">
               <value>
@@ -633,7 +367,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [EciFlag] expected [01] but found [00]
 at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
 at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -663,7 +398,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="23941" started-at="2019-07-25T10:55:33Z" data-provider="data" finished-at="2019-07-25T10:55:57Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20739" started-at="2019-07-25T13:06:29Z" data-provider="data" finished-at="2019-07-25T13:06:50Z">
           <params>
             <param index="0">
               <value>
@@ -691,7 +426,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [Enrolled] expected [] but found [U]
 at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
 at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -721,7 +457,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="37159" started-at="2019-07-25T10:55:57Z" data-provider="data" finished-at="2019-07-25T10:56:34Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="29779" started-at="2019-07-25T13:06:50Z" data-provider="data" finished-at="2019-07-25T13:07:20Z">
           <params>
             <param index="0">
               <value>
@@ -781,7 +517,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="28235" started-at="2019-07-25T10:56:34Z" data-provider="data" finished-at="2019-07-25T10:57:03Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="19862" started-at="2019-07-25T13:07:20Z" data-provider="data" finished-at="2019-07-25T13:07:39Z">
           <params>
             <param index="0">
               <value>
@@ -802,7 +538,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="43189" started-at="2019-07-25T10:57:03Z" data-provider="data" finished-at="2019-07-25T10:57:46Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="36411" started-at="2019-07-25T13:07:39Z" data-provider="data" finished-at="2019-07-25T13:08:16Z">
           <params>
             <param index="0">
               <value>
@@ -823,7 +559,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="37498" started-at="2019-07-25T10:57:46Z" data-provider="data" finished-at="2019-07-25T10:58:23Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="31102" started-at="2019-07-25T13:08:16Z" data-provider="data" finished-at="2019-07-25T13:08:47Z">
           <params>
             <param index="0">
               <value>
@@ -841,51 +577,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-[expected_results_authentication] expected [NA] but found [value],
-[PAResStatus] expected [C] but found [N],
-[EciFlag] expected [00] but found [07]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-[expected_results_authentication] expected [NA] but found [value],
-[PAResStatus] expected [C] but found [N],
-[EciFlag] expected [00] but found [07]
-at automation.project3ds.MySoftAssertAll.assertAll(MySoftAssertAll.java:57)
-at automation.project3ds.testBrickURL.execute(testBrickURL.java:315)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="44471" started-at="2019-07-25T10:58:23Z" data-provider="data" finished-at="2019-07-25T10:59:08Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="34953" started-at="2019-07-25T13:08:47Z" data-provider="data" finished-at="2019-07-25T13:09:22Z">
           <params>
             <param index="0">
               <value>
@@ -906,7 +601,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="39761" started-at="2019-07-25T10:59:08Z" data-provider="data" finished-at="2019-07-25T10:59:48Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="30940" started-at="2019-07-25T13:09:22Z" data-provider="data" finished-at="2019-07-25T13:09:53Z">
           <params>
             <param index="0">
               <value>
@@ -964,7 +659,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="42674" started-at="2019-07-25T10:59:48Z" data-provider="data" finished-at="2019-07-25T11:00:30Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="35189" started-at="2019-07-25T13:09:53Z" data-provider="data" finished-at="2019-07-25T13:10:28Z">
           <params>
             <param index="0">
               <value>
@@ -985,7 +680,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="24332" started-at="2019-07-25T11:00:30Z" data-provider="data" finished-at="2019-07-25T11:00:55Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20307" started-at="2019-07-25T13:10:28Z" data-provider="data" finished-at="2019-07-25T13:10:48Z">
           <params>
             <param index="0">
               <value>
@@ -1006,7 +701,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="43809" started-at="2019-07-25T11:00:55Z" data-provider="data" finished-at="2019-07-25T11:01:38Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="35652" started-at="2019-07-25T13:10:48Z" data-provider="data" finished-at="2019-07-25T13:11:24Z">
           <params>
             <param index="0">
               <value>
@@ -1027,7 +722,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="25723" started-at="2019-07-25T11:01:38Z" data-provider="data" finished-at="2019-07-25T11:02:04Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20074" started-at="2019-07-25T13:11:24Z" data-provider="data" finished-at="2019-07-25T13:11:44Z">
           <params>
             <param index="0">
               <value>
@@ -1048,7 +743,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="execute" duration-ms="23945" started-at="2019-07-25T11:02:04Z" data-provider="data" finished-at="2019-07-25T11:02:28Z">
+        <test-method status="FAIL" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="execute" duration-ms="20328" started-at="2019-07-25T13:11:44Z" data-provider="data" finished-at="2019-07-25T13:12:04Z">
           <params>
             <param index="0">
               <value>
@@ -1106,11 +801,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.testBrickURL@3f49dace]" name="tearDown" is-config="true" duration-ms="788" started-at="2019-07-25T11:02:28Z" finished-at="2019-07-25T11:02:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.testBrickURL@490ab905]" name="tearDown" is-config="true" duration-ms="787" started-at="2019-07-25T13:12:04Z" finished-at="2019-07-25T13:12:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.project3ds.testBrickURL -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- testBrickURL -->
+  </suite> <!-- testBrickURL -->
 </testng-results>

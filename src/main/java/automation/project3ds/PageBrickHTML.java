@@ -74,8 +74,8 @@ public class PageBrickHTML {
 		return str;
 	}
 
-	private void clickProcessButton() {
-
+	private void clickProcessButton() throws Exception {
+		Thread.sleep(2000);
 		element = driver.getElement(processBtn);
 		element.click();
 	}

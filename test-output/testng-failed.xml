@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [testBrickURL]">
+<suite name="Failed suite [testAa]">
   <listeners>
     <listener class-name="automation.project3ds.ExtentListener"/>
   </listeners>
-  <test thread-count="5" name="testBrickURL(failed)">
+  <test thread-count="5" name="testTest(failed)">
     <classes>
-      <class name="automation.project3ds.testBrickURL">
+      <class name="automation.project3ds.aSample">
         <methods>
-          <include name="execute" invocation-numbers="8 14 15 16 21 26"/>
-          <include name="tearDown"/>
+          <include name="sample"/>
         </methods>
-      </class> <!-- automation.project3ds.testBrickURL -->
+      </class> <!-- automation.project3ds.aSample -->
     </classes>
-  </test> <!-- testBrickURL(failed) -->
-</suite> <!-- Failed suite [testBrickURL] -->
+  </test> <!-- testTest(failed) -->
+</suite> <!-- Failed suite [testAa] -->

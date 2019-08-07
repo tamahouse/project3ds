@@ -46,7 +46,7 @@ public class ExtentListener implements ITestListener{
 			
 		}
 		String displayName = suiteName+" ("+lastName+" )";
-		ExtentManager.startTest(displayName);
+		ExtentManager.startTest(suiteName, displayName);
 		ExtentManager.getTest().assignCategory(suiteName);
 		if(map != null) {
 			ExtentManager.getTest().info("Params: " + map);

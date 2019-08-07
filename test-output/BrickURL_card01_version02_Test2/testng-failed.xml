@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BrickURL_card01_version02_Test2]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="BrickURL_card01_version02_Test2(failed)">
+    <classes>
+      <class name="automation.project3ds.BrickURL_card01_version02_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="execute" invocation-numbers="4"/>
+        </methods>
+      </class> <!-- automation.project3ds.BrickURL_card01_version02_Test -->
+    </classes>
+  </test> <!-- BrickURL_card01_version02_Test2(failed) -->
+</suite> <!-- Failed suite [BrickURL_card01_version02_Test2] -->

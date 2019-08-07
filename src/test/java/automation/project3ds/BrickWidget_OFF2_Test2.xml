@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="BrickWidget_OFF2_Test">
+	<test name="BrickWidget_OFF2_Test">
+		 <classes>
+       <class name="automation.project3ds.BrickWidget_OFF2_Test" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

@@ -8,6 +8,8 @@ public class ConfigFile {
 	public static String name = "chase";
 	public static String password = "Conchon11#";
 	
+	// "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
+	
 	public static String getWorkspacePath() {
 		String str = getProjectPath();
 		int index = str.lastIndexOf("\\", str.lastIndexOf("\\")-1);

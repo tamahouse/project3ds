@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>TestNG:  BrickWidget_OFF1_Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>BrickWidget_OFF1_Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 07 16:49:50 ICT 2019</td>
+</tr>
+<tr><td>Total time:</td><td>453 seconds (453818 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000007, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = Y
+SignatureVerification = Y
+EciFlag = 02
+Xid = <Xid Value>
+Cavv = <Cavv Value>
+ErrorNo = 0
+ErrorDesc = <blank>, EciFlag2=02, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=Y, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000007, ACSUrl=value, testName=Test Case 1: Successful Authentication}</td>
+<td></td>
+<td>55</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000015, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = Y
+SignatureVerification = N
+EciFlag = 02
+Xid = <Xid Value>
+Cavv = <Cavv Value>
+ErrorNo = 0
+ErrorDesc = <blank>, EciFlag2=02, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=Y, ErrorNo=0, ErrorNo2=0, SignitureVerification2=N, Payload=value, PAN=5200000000000015, ACSUrl=value, testName=Test Case 2: Failed Signature}</td>
+<td></td>
+<td>60</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000023, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = N
+SignatureVerification = Y
+EciFlag = 00
+Xid = <Xid Value>
+Cavv = <blank>
+ErrorNo = 0
+ErrorDesc = <blank>, EciFlag2=00, Cavv2=blank, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=N, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000023, ACSUrl=value, testName=Test Case 3: Failed Authentication}</td>
+<td></td>
+<td>34</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000908, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = A
+SignatureVerification = Y
+EciFlag = 01
+Xid = <Xid Value>
+Cavv = <Cavv Value>
+ErrorNo = 0
+ErrorDesc = <blank>, EciFlag2=01, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=A, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000908, ACSUrl=value, testName=Test Case 4: Attempts/Non-Participating}</td>
+<td></td>
+<td>39</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000056, {Enrolled=N, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200000000000056, ACSUrl=blank, testName=Test Case 7: Not Enrolled}</td>
+<td></td>
+<td>31</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000064, {Enrolled=U, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200000000000064, ACSUrl=blank, testName=Test Case 8: Unavailable}</td>
+<td></td>
+<td>23</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000072, {Enrolled=U, EciFlag=00, ErrorDesc=value, expected_results_authentication=NA, ErrorNo=value, Payload=blank, PAN=5200000000000072, ACSUrl=blank, testName=Test Case 9: Merchant Not Active}</td>
+<td></td>
+<td>26</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000080, {Enrolled=U, EciFlag=00, ErrorDesc=value, expected_results_authentication=NA, ErrorNo=value, Payload=blank, PAN=5200000000000080, ACSUrl=blank, testName=Test Case 10: cmpi_lookup error}</td>
+<td></td>
+<td>23</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000098, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = <blank>
+SignatureVerification = <blank>
+EciFlag = 00
+Xid = <blank>
+Cavv = <blank>
+ErrorNo = Refer to the 3DS Error Codes and Descriptions Guide
+ErrorDesc = Refer to the 3DS Error Codes and Descriptions Guide, EciFlag2=00, Cavv2=blank, ErrorDesc2=value, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=blank, ErrorNo=0, ErrorNo2=value, SignitureVerification2=blank, Payload=value, PAN=5200000000000098, ACSUrl=value, testName=Test Case 11: cmpi_authenticate error}</td>
+<td></td>
+<td>32</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200000000000031, {expected_results_authentication=cmpi_authenticate response
+PAResStatus = U
+SignatureVerification = Y
+EciFlag = 00
+Xid = <Xid Value>
+Cavv = <blank>
+ErrorNo = 0
+ErrorDesc = <blank>, EciFlag2=00, Cavv2=blank, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=U, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000031, ACSUrl=value, testName=Test Case 12: Authentication Unavailable}</td>
+<td></td>
+<td>32</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+<tr>
+<td title='automation.project3ds.BrickWidget_OFF1_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.BrickWidget_OFF1_Test<br>Parameters: 5200990000000009, {Enrolled=B, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200990000000009, ACSUrl=blank, testName=Test Case 13: Bypassed Authentication}</td>
+<td></td>
+<td>28</td>
+<td>automation.project3ds.BrickWidget_OFF1_Test@57fffcd7</td></tr>
+</table><p>
+</body>
+</html>

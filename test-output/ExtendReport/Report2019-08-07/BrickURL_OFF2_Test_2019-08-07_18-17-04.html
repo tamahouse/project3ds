@@ -1,0 +1,2712 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Aug 7, 2019 06:17:04 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>BrickURL_OFF2_Test</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>18</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001005, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:17:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:17:04 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:17:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+67ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:04 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=THREEDS, expected_results_authentication=NA, Enrolled=Y, EciFlag=02, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001005, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Mastercard 1: Successful Frictionless Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:04 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001005
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:25 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567051",
+    "created" : 1565176638,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1005",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "73175c50a3ca80340489c15f034b3e09"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:33 PM</td>
+				<td class='step-details'>
+						t_id: 40128
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:35 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>UBOZKwzXrZrdcUmaAkT0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010335307280256</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:35 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:35 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001013, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:17:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:17:35 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:17:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+945ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:35 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001013, SignitureVerification=Y, ACSUrl=blank, PAResStatus=N, testName=Test Mastercard 2: Failed Frictionless Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:35 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001013
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:45 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567052",
+    "created" : 1565176660,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1013",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "011efd20a2d48e651977c39c43ef1d15"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:50 PM</td>
+				<td class='step-details'>
+						t_id: 40129
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:52 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>Y0pZQ3eFKD3gGclOO2N0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010295087301914</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:52 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:52 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001021, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:17:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:17:52 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:18:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+748ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:52 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=THREEDS_ATTEMPT, expected_results_authentication=NA, Enrolled=Y, EciFlag=01, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001021, SignitureVerification=Y, ACSUrl=blank, PAResStatus=A, testName=Test Mastercard 3: Attempts Frictionless Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:17:52 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001021
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:03 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567053",
+    "created" : 1565176676,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1021",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "afd46edbaae9c10326eddc340c6fb78d"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:09 PM</td>
+				<td class='step-details'>
+						t_id: 40130
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:11 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>DK4id2dJ6lFVuC1Dc9j0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010524636031551</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:11 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:11 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001039, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:18:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:18:11 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:18:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+558ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:11 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001039, SignitureVerification=Y, ACSUrl=blank, PAResStatus=U, testName=Test Mastercard 4: Unavailable Frictionless Authentication from the Issuer}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:11 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001039
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:18 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567054",
+    "created" : 1565176694,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1039",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "13dee0f1978f076a414ee96a40bcf9d9"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:23 PM</td>
+				<td class='step-details'>
+						t_id: 40131
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:25 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>ePcHJzPJa1mzSr4gQLg0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010699542205240</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:25 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:25 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001047, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:18:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:18:25 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:18:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+978ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:25 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=NA, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001047, SignitureVerification=Y, ACSUrl=blank, PAResStatus=R, testName=Test Mastercard 5: Rejected Frictionless Authentication by the Issuer}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:25 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001047
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:37 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567055",
+    "created" : 1565176709,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1047",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "a697c8aa40c8c8cd3d2787bf8de52895"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:43 PM</td>
+				<td class='step-details'>
+						t_id: 40132
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:45 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>CVqxnEb1OjO2jDzTFu80</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010780703634244</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:45 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:45 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001054, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:18:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:18:45 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:19:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+828ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:45 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=U, EciFlag=01, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001054, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 6: Authentication Not Available on Lookup}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:45 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001054
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:53 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567056",
+    "created" : 1565176728,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1054",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "6345640f3b98623fdc60fd17f0562797"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:58 PM</td>
+				<td class='step-details'>
+						t_id: 40133
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:00 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>7TcNFdsFi6I3MzZjgvT0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010071052857937</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:00 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:00 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001062, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:19:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:19:00 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:19:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+116ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:00 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=00, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=5200000000001062, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 7: Error on Lookup}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:00 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001062
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:10 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567057",
+    "created" : 1565176745,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1062",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "7a7b1d1db473cb40ed6f26e16609b0b4"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:15 PM</td>
+				<td class='step-details'>
+						t_id: 40134
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:17 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>laUCwZ4rs8uT12A2wh60</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010188594074761</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:17 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:17 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001070, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:19:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:19:17 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:19:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+875ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:17 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=blank, EciFlag=blank, WhiteListStatus=null, ErrorDesc=value, WhiteListStatusSource=null, ErrorNo=value, Payload=blank, PAN=5200000000001070, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 8: Timeout on cmpi_lookup Transaction}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:17 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001070
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:29 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567058",
+    "created" : 1565176761,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1070",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "062f877b9779c5719f2492867f7ebdb6"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:34 PM</td>
+				<td class='step-details'>
+						t_id: 40135
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:36 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>2CIKQgR1yeo2NsdZ7jn0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010726289150709</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:36 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:36 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001088, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:19:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:19:36 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:19:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+984ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:36 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=NA, Enrolled=B, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001088, SignitureVerification=blank, ACSUrl=blank, PAResStatus=blank, testName=Test Mastercard 9: Bypassed Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:36 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001088
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:44 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567059",
+    "created" : 1565176780,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1088",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "1ddf18ed019f1c1aa4c1b88f4b15b24c"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:51 PM</td>
+				<td class='step-details'>
+						t_id: 40136
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:53 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>dg0SdaVr3O6hN4mOQNJ0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010562176229177</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:53 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:53 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001096, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:19:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:19:53 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:20:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+464ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:53 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=THREEDS, expected_results_authentication=value, EciFlag2=02, Cavv2=value, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=Y, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001096, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 10: Successful Step Up Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:53 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001096
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:07 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567060",
+    "created" : 1565176797,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1096",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "7c7124412de98115872fdbe77c82bda8"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:13 PM</td>
+				<td class='step-details'>
+						t_id: 40137
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:16 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>XdJsZGUD1cjJ5GJ92BF0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010626430641764</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:16 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:16 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001104, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:20:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:20:16 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:20:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+787ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:16 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=N, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001104, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 11: Failed Step Up Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:16 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001104
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:28 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567061",
+    "created" : 1565176819,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1104",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "ba23e98a25f9dc64dbf45f6e49fe8567"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:34 PM</td>
+				<td class='step-details'>
+						t_id: 40138
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:36 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>6UOCo9JUMW52XpgV9Tu0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010617411869003</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:37 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:37 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001112, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:20:37 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:20:37 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:21:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+660ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:37 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=YES_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=00, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=U, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001112, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 12: Step Up Authentication is Unavailable}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:37 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001112
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:52 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567062",
+    "created" : 1565176844,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1112",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "738b251521dc2dc8773f41ced6b7239c"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:58 PM</td>
+				<td class='step-details'>
+						t_id: 40139
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:00 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>SglDzBN1RuvhCkNrwdu0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010248290108808</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:00 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:00 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001120, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:21:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:21:00 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:21:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+660ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:00 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=NO_REQUEST, expected_results_authentication=value, EciFlag2=00, Cavv2=blank, ErrorDesc2=value, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=blank, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=value, SignitureVerification2=blank, Payload=value, PAN=5200000000001120, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 13: Error on Authentication}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:00 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001120
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:29 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567063",
+    "created" : 1565176871,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1120",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "2a49b6b70ef0b6b127b1036e04147ab2"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:36 PM</td>
+				<td class='step-details'>
+						t_id: 40140
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:38 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>U5LeoeyT6pgVKELINZg0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010036787856843</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:38 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:38 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001138, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:21:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:21:38 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:22:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+734ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:38 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=CVV2, expected_results_authentication=value, EciFlag2=value, Cavv2=blank, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=B, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000001138, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 14: Step Up Authentication with Merchant Bypass}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:38 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001138
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:56 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567064",
+    "created" : 1565176904,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1138",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "37aa864fa34ad27cfa0255dce7f94d1b"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:02 PM</td>
+				<td class='step-details'>
+						t_id: 40141
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:05 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>IK5Zqb1TkxyZGtDuKWw0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010840968917716</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:05 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:05 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000001146, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:22:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:22:05 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:22:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+418ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:05 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000001146, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Mastercard 15: Require MethodURL}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:05 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000001146
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:23 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567065",
+    "created" : 1565176929,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "1146",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "04ba86ec7608157a86843dcb81c3e605"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:29 PM</td>
+				<td class='step-details'>
+						t_id: 40142
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:31 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>d11OoJzVGZCMxwkDO6j0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010141542364453</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:31 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:31 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000002003, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:22:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:22:31 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:22:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+268ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:31 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=blank, cardholderVerificationMethod=value, expected_results_authentication=value, EciFlag2=value, Cavv2=value, ErrorDesc2=Success, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, PAResStatus2=Y, WhiteListStatusSource=null, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000002003, SignitureVerification=Y, ACSUrl=value, PAResStatus=C, testName=Test Mastercard 16: Prompt for Whitelist}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:31 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002003
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:48 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567066",
+    "created" : 1565176958,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "2003",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "598afcb1242934e8bdeab6ac083b1055"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						t_id: 40143
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:56 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>1cR0ehEjvSrEZz0rnW90</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010090277251627</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:56 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:56 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000002011, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:22:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:22:56 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:23:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+713ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:56 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=Y, ErrorDesc=blank, WhiteListStatusSource=value, ErrorNo=0, Payload=blank, PAN=5200000000002011, SignitureVerification=Y, ACSUrl=blank, PAResStatus=Y, testName=Test Mastercard 17: Pre-Whitelisted}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:56 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002011
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:14 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567067",
+    "created" : 1565176981,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "2011",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "afc055a27d4f9991acbfe67cff19ecb7"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:20 PM</td>
+				<td class='step-details'>
+						t_id: 40144
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:22 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>3GeMUAELL9XovowbVwA0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010012539949996</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:22 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:23:22 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>BrickURL_OFF2_Test (5200000000002029, http://feature-pwg-1108.wallap... )</span>
+						<span class='test-time'>Aug 7, 2019 06:23:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 7, 2019 06:23:22 PM</span>
+	<span class='label end-time'>Aug 7, 2019 06:23:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+757ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>BrickURL_OFF2_Test</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:22 PM</td>
+				<td class='step-details'>
+						Params: {Cavv=value, cardholderVerificationMethod=value, expected_results_authentication=NA, Enrolled=Y, EciFlag=value, WhiteListStatus=null, ErrorDesc=blank, WhiteListStatusSource=null, ErrorNo=0, Payload=blank, PAN=5200000000002029, SignitureVerification=Y, ACSUrl=blank, PAResStatus=I, testName=Test Mastercard 18: Support TransStatus I}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:22 PM</td>
+				<td class='step-details'>
+						CardNumber: 5200000000002029
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:36 PM</td>
+				<td class='step-details'>
+						Response:<br /><pre>{
+  "success" : true,
+  "data" : {
+    "object" : "charge",
+    "id" : "65567068",
+    "created" : 1565177008,
+    "amount" : "9.99",
+    "currency" : "USD",
+    "refunded" : false,
+    "captured" : true,
+    "risk" : "approved",
+    "card" : {
+      "last4" : "2029",
+      "type" : "Mastercard",
+      "exp_month" : "01",
+      "exp_year" : "2022",
+      "country" : "MY",
+      "name" : "",
+      "token" : "b6449d6204dbde7c0fe3061536795063"
+    },
+    "secure" : false,
+    "support_link" : "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/api/account/email-viewer?key=96f19e38e2e1db5166b7808c5ba13eb8&uid=71233532&widget=c1&sign_version=2&flow=payments&sign=78bd90760706e55c6a37add516d16d2b",
+    "amount_paid" : "7.83",
+    "currency_paid" : "EUR"
+  }
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:42 PM</td>
+				<td class='step-details'>
+						t_id: 40145
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:44 PM</td>
+				<td class='step-details'>
+						lookup_response: <pre><xmp><?xml version="1.0" encoding="UTF-8"?><CardinalMPI>
+     <AuthenticationPath>RIBA</AuthenticationPath>
+     <CardBin>520000</CardBin>
+     <ThreeDSVersion>1.0.2</ThreeDSVersion>
+     <ErrorDesc/>
+     <ACSUrl/>
+     <ErrorNo>0</ErrorNo>
+     <Payload/>
+     <EciFlag>00</EciFlag>
+     <Enrolled>U</Enrolled>
+     <TransactionId>o2cw6C45ePipmjI3UlR0</TransactionId>
+     <UCAFIndicator>0</UCAFIndicator>
+     <OrderId>8010888886999480</OrderId>
+     <CardBrand>MASTERCARD</CardBrand>
+</CardinalMPI>
+</xmp></pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:23:44 PM</td>
+				<td class='step-details'>
+						null expected {1} to equal to actual {1}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:23:44 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>BrickURL_OFF2_Test</span>
+						<span class='category-status right'>
+						<span class='label pass'>18</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 18</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 7, 2019 06:17:04 PM</td>
+										<td class='linked' test-id='1'>BrickURL_OFF2_Test (5200000000001005, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:17:35 PM</td>
+										<td class='linked' test-id='2'>BrickURL_OFF2_Test (5200000000001013, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:17:52 PM</td>
+										<td class='linked' test-id='3'>BrickURL_OFF2_Test (5200000000001021, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:18:11 PM</td>
+										<td class='linked' test-id='4'>BrickURL_OFF2_Test (5200000000001039, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:18:25 PM</td>
+										<td class='linked' test-id='5'>BrickURL_OFF2_Test (5200000000001047, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:18:45 PM</td>
+										<td class='linked' test-id='6'>BrickURL_OFF2_Test (5200000000001054, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:19:00 PM</td>
+										<td class='linked' test-id='7'>BrickURL_OFF2_Test (5200000000001062, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:19:17 PM</td>
+										<td class='linked' test-id='8'>BrickURL_OFF2_Test (5200000000001070, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:19:36 PM</td>
+										<td class='linked' test-id='9'>BrickURL_OFF2_Test (5200000000001088, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:19:53 PM</td>
+										<td class='linked' test-id='10'>BrickURL_OFF2_Test (5200000000001096, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:20:16 PM</td>
+										<td class='linked' test-id='11'>BrickURL_OFF2_Test (5200000000001104, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:20:37 PM</td>
+										<td class='linked' test-id='12'>BrickURL_OFF2_Test (5200000000001112, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:21:00 PM</td>
+										<td class='linked' test-id='13'>BrickURL_OFF2_Test (5200000000001120, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:21:38 PM</td>
+										<td class='linked' test-id='14'>BrickURL_OFF2_Test (5200000000001138, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:22:05 PM</td>
+										<td class='linked' test-id='15'>BrickURL_OFF2_Test (5200000000001146, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:22:31 PM</td>
+										<td class='linked' test-id='16'>BrickURL_OFF2_Test (5200000000002003, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:22:56 PM</td>
+										<td class='linked' test-id='17'>BrickURL_OFF2_Test (5200000000002011, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 7, 2019 06:23:22 PM</td>
+										<td class='linked' test-id='18'>BrickURL_OFF2_Test (5200000000002029, http://feature-pwg-1108.wallap... )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>18</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Aug 7, 2019 06:17:04 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Aug 7, 2019 06:23:45 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 6m 41s+171ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>BrickURL_OFF2_Test</td>
+							<td>18</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 18,
+				passParent: 18,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "BrickURL_OFF2_Test (5200000000001005, http://feature-pwg-1108.wallap... )":31.067,"BrickURL_OFF2_Test (5200000000001013, http://feature-pwg-1108.wallap... )":16.945,"BrickURL_OFF2_Test (5200000000001021, http://feature-pwg-1108.wallap... )":18.748,"BrickURL_OFF2_Test (5200000000001039, http://feature-pwg-1108.wallap... )":14.558,"BrickURL_OFF2_Test (5200000000001047, http://feature-pwg-1108.wallap... )":19.978,"BrickURL_OFF2_Test (5200000000001054, http://feature-pwg-1108.wallap... )":14.828,"BrickURL_OFF2_Test (5200000000001062, http://feature-pwg-1108.wallap... )":17.116,"BrickURL_OFF2_Test (5200000000001070, http://feature-pwg-1108.wallap... )":18.875,"BrickURL_OFF2_Test (5200000000001088, http://feature-pwg-1108.wallap... )":16.984,"BrickURL_OFF2_Test (5200000000001096, http://feature-pwg-1108.wallap... )":22.464,"BrickURL_OFF2_Test (5200000000001104, http://feature-pwg-1108.wallap... )":20.787,"BrickURL_OFF2_Test (5200000000001112, http://feature-pwg-1108.wallap... )":23.66,"BrickURL_OFF2_Test (5200000000001120, http://feature-pwg-1108.wallap... )":37.66,"BrickURL_OFF2_Test (5200000000001138, http://feature-pwg-1108.wallap... )":26.734,"BrickURL_OFF2_Test (5200000000001146, http://feature-pwg-1108.wallap... )":26.418,"BrickURL_OFF2_Test (5200000000002003, http://feature-pwg-1108.wallap... )":25.268,"BrickURL_OFF2_Test (5200000000002011, http://feature-pwg-1108.wallap... )":25.713,"BrickURL_OFF2_Test (5200000000002029, http://feature-pwg-1108.wallap... )":21.757
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

@@ -1,70 +1,71 @@
 package automation.project3ds;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 
+import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc;
+import automation.project3ds.PageBrickHTML.VisaPurchaseIframe.AuthWindow;
+
 public class PageBrickHTML {
 
-	Driver driver;
-	Element element;
+	static Driver driver = AnnotationPage.getDriver();
+	static Element element;
 
-	By cardholderNameTxb = By.id("brick-cardholder");
-	By cardNumberTxb = By.id("brick-card-number");
-	By expiryDateTxb = By.id("brick-card-expiration");
-	By cvvTxb = By.id("brick-card-cvv");
-	By zipcodeTxb = By.id("brick-zip");
-	By emailTxb = By.id("brick-email");
-	By payBtn = By.xpath("//button[contains(@class, 'button js-brick-submit')]");
-	By refIDForm = By.xpath("//form[@id = '3ds-submission-form']/input[@name='MD']");
+	static By cardholderNameTxb = By.id("brick-cardholder");
+	static By cardNumberTxb = By.id("brick-card-number");
+	static By expiryDateTxb = By.id("brick-card-expiration");
+	static By cvvTxb = By.id("brick-card-cvv");
+	static By zipcodeTxb = By.id("brick-zip");
+	static By emailTxb = By.id("brick-email");
+	static By payBtn = By.xpath("//button[contains(@class, 'button js-brick-submit')]");
+	static By refIDForm = By.xpath("//form[@id = '3ds-submission-form']/input[@name='MD']");
 
-	By processBtn = By.xpath("//button[contains(@class, 'button button--100 button-secure')]");
-	By otpTxb = By.name("challengeDataEntry");
-	By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");
-	By successBtn = By.xpath("//button[@class = 'button js-brick-submit brick-is-success']");
+	static By processBtn = By.xpath("//button[contains(@class, 'button button--100 button-secure')]");
+	static By otpTxb = By.name("challengeDataEntry");
+	static By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");
+	static By successBtn = By.xpath("//button[@class = 'button js-brick-submit brick-is-success']");
 
-	public PageBrickHTML(Driver driver) {
-		this.driver = driver;
-	}
-
-	public void setCardholderName() {
+	public static void setCardholderName() {
 		element = driver.getElement(cardholderNameTxb);
 		element.sendKeys("Payment Wall");
 	}
 
-	public void setCardnumber(String cardNumber) {
+	public static void setCardnumber(String cardNumber) {
 		element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
 
-	public void setExpiryDate() {
+	public static void setExpiryDate() {
 		element = driver.getElement(expiryDateTxb);
 		element.sendKeys("0122");
 	}
 
-	public void setCvv() {
+	public static void setCvv() {
 		element = driver.getElement(cvvTxb);
 		element.sendKeys("123");
 	}
 
-	public void setZipcode() {
+	public static void setZipcode() {
 		element = driver.getElement(zipcodeTxb);
 		element.sendKeys("32043");
 	}
 
-	public void setEmail() {
+	public static void setEmail() {
 		element = driver.getElement(emailTxb);
 		element.sendKeys("meo@spam4.me");
 	}
 
-	public void clickPayButton() throws Exception {
+	public static void clickPayButton() throws Exception {
 //		Thread.sleep(10000);
 		element = driver.getElement(payBtn);
 		element.click();
 	}
 
-	public String getRefId() {
+	public static String getRefId() {
 		String str = null;
 		if (driver.isExist(refIDForm, 20) == true) {
 			element = driver.getElement(refIDForm);
@@ -74,19 +75,19 @@ public class PageBrickHTML {
 		return str;
 	}
 
-	private void clickProcessButton() throws Exception {
+	private static void clickProcessButton() throws Exception {
 		Thread.sleep(2000);
 		element = driver.getElement(processBtn);
 		element.click();
 	}
 
-	public VisaPurchaseIframe getPurchaseFrame() {
+	public static VisaPurchaseIframe getPurchaseFrame() {
 		Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
 		driver.switchTo().frame(iframe.getWebElement());
 		return new VisaPurchaseIframe(driver);
 	}
 
-	public class VisaPurchaseIframe {
+	public static class VisaPurchaseIframe {
 		Driver driver;
 
 		public VisaPurchaseIframe(Driver driver) {
@@ -96,7 +97,7 @@ public class PageBrickHTML {
 		private void setOTP() throws Exception {
 			Element otpTextbox = driver.getElement(otpTxb);
 			otpTextbox.moveToView();
-			otpTextbox.sendKeysSlow(30,"1234");
+			otpTextbox.sendKeysSlow(30, "1234");
 		}
 
 		private void clickOTPSubmitButton() throws Exception {
@@ -104,32 +105,94 @@ public class PageBrickHTML {
 			optSubmitButton.highlight();
 			optSubmitButton.click();
 		}
+
+		private String getVersionCase() throws Exception {
+			Map<By, String> map = new HashMap<By, String>();
+			map.put(otpTxb, "V2");
+			map.put(By.id("authWindow"), "V1");
+			return driver.getSelection(map);
+		}
+
+		public AuthWindow getAuthWindow() {
+			Element iframe = driver.getElement(By.id("authWindow"));
+			driver.switchTo().frame(iframe.getWebElement());
+			return new AuthWindow(driver);
+		}
+
+		public class AuthWindow {
+			Driver driver;
+
+			By password = By.id("password");
+			By submitBtn = By.xpath("//input[@value = 'Submit']");
+
+			public AuthWindow(Driver driver) {
+				this.driver = driver;
+			}
+
+			private void setPassword() {
+				Element element = driver.getElement(password);
+				element.sendKeys("1234");
+			}
+
+			private void clickSubmit() {
+				Element element = driver.getElement(submitBtn);
+				element.click();
+			}
+
+		}
+	}
+	
+	public static AuthWindow getAuthWindow() {
+		Element iframe = driver.getElement(By.id("authWindow"));
+		driver.switchTo().frame(iframe.getWebElement());
+		return new AuthWindow(driver);
 	}
 
-	private String getSelectedCase() throws Exception {
+	public static class AuthWindow {
+		Driver driver;
+
+		By password = By.id("password");
+		By submitBtn = By.xpath("//input[@value = 'Submit']");
+
+		public AuthWindow(Driver driver) {
+			this.driver = driver;
+		}
+
+		private void setPassword() {
+			Element element = driver.getElement(password);
+			element.sendKeys("1234");
+		}
+
+		private void clickSubmit() {
+			Element element = driver.getElement(submitBtn);
+			element.click();
+		}
+
+	}
+
+	private static String getSelectedCase() throws Exception {
 		Map<By, String> map = new HashMap<By, String>();
 		map.put(successBtn, "PASSBY_THREEDS");
 		map.put(By.xpath("//li[@class = 'errors__error']"), "ERROR");
-		map.put(By.xpath("//*[@class='brick-step brick-step-3dsecure js-brick-step-3dsecure is-active']"),
-				"OTP");
+		map.put(By.xpath("//*[@class='brick-step brick-step-3dsecure js-brick-step-3dsecure is-active']"), "PURCHASE");
 		return driver.getSelection(map);
 	}
 
-	private String getSelectedCaseAfterOTP() throws Exception {
+	private static String getSelectedCaseAfterOTP() throws Exception {
 		Map<By, String> map = new HashMap<By, String>();
 		map.put(successBtn, "THREEDS_SUCCESS");
 		map.put(By.xpath("//li[@class = 'errors__error']"), "THREEDS_FAILED");
 		return driver.getSelection(map);
 	}
 
-	public String returnRefID(String cardNumber) throws Exception {
-		this.setCardnumber(cardNumber);
-		this.setExpiryDate();
-		this.setCardholderName();
-		this.setCvv();
-		this.setZipcode();
-		this.setEmail();
-		this.clickPayButton();
+	public static String returnRefID(String cardNumber) throws Exception {
+		setCardnumber(cardNumber);
+		setExpiryDate();
+		setCardholderName();
+		setCvv();
+		setZipcode();
+		setEmail();
+		clickPayButton();
 
 //		refID = this.getRefId();
 
@@ -139,26 +202,57 @@ public class PageBrickHTML {
 //			
 //		}
 
-		String caseKey = this.getSelectedCase();
+		String caseKey = getSelectedCase();
 		if (caseKey.equals("PASSBY_THREEDS")) {
-				return "PASSBY_THREEDS";
-		} else if (caseKey.equals("OTP")) {
-			this.clickProcessButton();
-			VisaPurchaseIframe purchaseFrame = this.getPurchaseFrame();
-			purchaseFrame.setOTP();
-			purchaseFrame.clickOTPSubmitButton();
-			String caseKeyAfterOTP = this.getSelectedCaseAfterOTP();
-			if (caseKeyAfterOTP.equals("THREEDS_SUCCESS")) {
-				return "THREEDS_SUCCESS";
-			} else if (caseKeyAfterOTP.equals("THREEDS_FAILED")) {
-				return "THREEDS_FAILED";
-			}else {
-				throw new Exception ("After OTP case is null");
+			return "PASSBY_THREEDS";
+		} else if (caseKey.equals("PURCHASE")) {
+			clickProcessButton();
+			Thread.sleep(1000);
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+			if (tabs.size() == 1) {
+				VisaPurchaseIframe purchaseFrame = getPurchaseFrame();
+				String versionKey = purchaseFrame.getVersionCase();
+				if (versionKey.equals("V2")) {
+					purchaseFrame.setOTP();
+					purchaseFrame.clickOTPSubmitButton();
+					driver.switchTo().defaultContent();
+				} else if (versionKey.equals("V1")) {
+					automation.project3ds.PageBrickHTML.VisaPurchaseIframe.AuthWindow authWindow = purchaseFrame.getAuthWindow();
+					authWindow.setPassword();
+					authWindow.clickSubmit();
+					driver.switchTo().defaultContent();
+				}
+			} else if (tabs.size() == 2) {
+				Thread.sleep(3000);
+				tabs = new ArrayList<String>(driver.getWindowHandles());
+				if(tabs.size() == 2) {
+				driver.switchTo().window(tabs.get(1));
+				if(driver.isExist(By.id("authWindow"),2000)) {
+					AuthWindow authWindow = getAuthWindow();
+					authWindow.setPassword();
+					authWindow.clickSubmit();
+					driver.switchTo().window(tabs.get(0));
+				}else {
+				driver.getElement(By.xpath("//input[@value='Submit']")).click();
+				driver.switchTo().window(tabs.get(0));
+				}
+				}else {
+					
+				}
 			}
+				String caseKeyAfterOTP = getSelectedCaseAfterOTP();
+				if (caseKeyAfterOTP.equals("THREEDS_SUCCESS")) {
+					return "THREEDS_SUCCESS";
+				} else if (caseKeyAfterOTP.equals("THREEDS_FAILED")) {
+					return "THREEDS_FAILED";
+				} else {
+					throw new Exception("After OTP case is null");
+				}
+			
 		} else if (caseKey.equals("ERROR")) {
 			return "ERROR";
-		}else {
-			throw new Exception ("OTP case is null");
+		} else {
+			throw new Exception("OTP case is null");
 		}
 //		
 //		

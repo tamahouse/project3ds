@@ -254,7 +254,7 @@ public class MySoftAssert implements IAssertLifecycle {
 				String assertType = AssertType.EQUAL;
 				if (actual instanceof BigDecimal) {
 						actualS = (BigDecimal) actual;
-				}else if (!(actual instanceof String)) {
+				}else if (actual instanceof String) {
 					actualS = new BigDecimal((String) actual);
 				}
 

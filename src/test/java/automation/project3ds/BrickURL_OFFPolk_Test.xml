@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="BrickURL_OFFPolk_Test">
+	<test name="BrickURL_OFFPolk_Test">
+		 <classes>
+       <class name="automation.project3ds.BrickURL_Polk_Test" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

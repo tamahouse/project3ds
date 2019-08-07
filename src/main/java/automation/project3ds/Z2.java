@@ -1,5 +1,6 @@
 package automation.project3ds;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -17,6 +18,7 @@ public class Z2 {
 		Statement statement = tunnel.getStatement("z2");
 		return statement;
 	}
+	
 	
 	public static String get_t_id() throws SQLException, Exception {
 		String query = "select t_id from processor_log order by t_id desc limit 1";
@@ -112,6 +114,7 @@ public class Z2 {
 		public String ErrorDesc;
 		public String WhiteListStatusSource = "null";
 		public String WhiteListStatus = "null";
+		public String ThreeDSVersion;
 
 		public String getEnrolled() {
 			return this.Enrolled;
@@ -155,6 +158,10 @@ public class Z2 {
 
 		public String getWhiteListStatus() {
 			return this.WhiteListStatus;
+		}
+		
+		public String getVersion() {
+			return this.ThreeDSVersion;
 		}
 	}
 

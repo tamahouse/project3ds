@@ -18,17 +18,21 @@ public class ExtentManager {
 	private static ExtentTest test;
 	private static String folderPath;
 
-	public synchronized static ExtentReports getReporter() {
+	public synchronized static ExtentReports getReporter(String suiteName) {
 		if (extent == null) {
 			String[] time = getTime();
 			folderPath = "test-output\\ExtendReport\\";
 			String folderName = "Report"+time[0];
-			String reportName = folderName+"_"+time[1] ;
+			String reportName = suiteName +"_"+ time[0]+"_"+time[1] ;
 			String reportPath = folderPath +folderName+"\\" + reportName + ".html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(reportPath);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 		}
+		return extent;
+	}
+	
+	public synchronized static ExtentReports getReporter() {
 		return extent;
 	}
 	
@@ -74,9 +78,17 @@ public class ExtentManager {
 			index.flush();
 			
 	}
+	
+	public static void logInfo(String info) {
+		try {
+			ExtentManager.getTest().info(info);
+		}catch(Exception ignore) {
+			
+		}
+	}
 
-	public static synchronized ExtentTest startTest(String testName) {
-		test = getReporter().createTest(testName);
+	public static synchronized ExtentTest startTest(String suiteName, String testName) {
+		test = getReporter(suiteName).createTest(testName);
 //		extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
 		return test;
 	}

@@ -28,7 +28,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class Driver implements WebDriver {
 
 	WebDriver driver;
-	public static String browser = Browser.Firefox;
+	public static String browser = Browser.Chrome;
 
 	public static class Browser {
 		static final String Chrome = "Chrome";
@@ -159,7 +159,7 @@ public class Driver implements WebDriver {
 			Element element = new Element(webElement);
 			element.setDriver(this);
 			String str = this.getXpathString(by);
-			str = "(" + str + ")[" + i + "]";
+			str = "(" + str + ")[" + (i+1) + "]";
 			element.setBy(By.xpath(str));
 //			element.highlight();
 			list.add(element);

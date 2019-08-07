@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="BrickHTML_Card2_OFF_Test">
+	<test name="BrickHTML_Card2_OFF_Test">
+		 <classes>
+       <class name="automation.project3ds.BrickHTML_Card2_OFF_Test" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

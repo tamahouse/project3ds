@@ -14,6 +14,7 @@ public class PageBrickHTML {
 
 	static Driver driver = AnnotationPage.getDriver();
 	static Element element;
+	static String email;
 
 	static By cardholderNameTxb = By.id("brick-cardholder");
 	static By cardNumberTxb = By.id("brick-card-number");
@@ -53,10 +54,17 @@ public class PageBrickHTML {
 		element = driver.getElement(zipcodeTxb);
 		element.sendKeys("32043");
 	}
+	
+	private static String getEmail() {
+		String timestamp = String.valueOf(System.currentTimeMillis());
+		String email = "meo"+timestamp+"@spam4.me";
+		return email;
+	}
 
 	public static void setEmail() {
 		element = driver.getElement(emailTxb);
-		element.sendKeys("meo@spam4.me");
+		email = getEmail();
+		element.sendKeys(email);
 	}
 
 	public static void clickPayButton() throws Exception {

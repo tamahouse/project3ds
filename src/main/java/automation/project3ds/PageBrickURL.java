@@ -14,6 +14,7 @@ public class PageBrickURL {
 
 	static Driver driver = AnnotationPage.getDriver();
 	static Element element;
+	static String email;
 
 	static By emailTxb = By.id("email");
 	static By cardNumberTxb = By.id("card-number");
@@ -26,11 +27,17 @@ public class PageBrickURL {
 
 	static By otpTxb = By.name("challengeDataEntry");
 	static By otpSummitBtn = By.xpath("//input[@type='submit' and @class='button primary' and @value ='SUBMIT']");
+	
+	private static String getEmail() {
+		String timestamp = String.valueOf(System.currentTimeMillis());
+		String email = "meo"+timestamp+"@spam4.me";
+		return email;
+	}
 
-	private static void setEmail() throws Exception {
+	public static void setEmail() {
 		element = driver.getElement(emailTxb);
-		element.click();
-		element.sendKeys("meo@spam4.me");
+		email = getEmail();
+		element.sendKeys(email);
 	}
 
 	private static void setCardNumber(String cardNumber) throws Exception {

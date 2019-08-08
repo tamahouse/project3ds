@@ -81,10 +81,12 @@ public class BrickURL_OFF1_Test {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		PageBrickURL.submitInformation(cardNumber);
+		String refID = Pslog.get_cl_id_email(PageBrickURL.email);
+		String t_id = Pslog.getTID(refID);
 		
-		String t_id = Z2.get_t_id();
-		
-		String refID = Pslog.get_cl_id(t_id);
+//		String t_id = Z2.get_t_id();
+//		
+//		String refID = Pslog.get_cl_id(t_id);
 		System.out.println(cardNumber + " : " + refID + " : " + t_id);
 		
 		ExtentManager.logInfo("t_id: " + t_id);

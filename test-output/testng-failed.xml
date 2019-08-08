@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [BrickURL_ON2_Test]">
+<suite name="Failed suite [BrickWidget_OFFPolk_Test]">
   <listeners>
     <listener class-name="automation.project3ds.ExtentListener"/>
   </listeners>
-  <test thread-count="5" name="BrickURL_ON2_Test(failed)">
+  <test thread-count="5" name="BrickWidget_OFFPolk_Test(failed)">
     <classes>
-      <class name="automation.project3ds.BrickURL_ON2_Test">
+      <class name="automation.project3ds.BrickWidget_Polk_Test">
         <methods>
           <include name="tearDown"/>
-          <include name="execute" invocation-numbers="5 6 7 12 17"/>
+          <include name="execute" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.project3ds.BrickURL_ON2_Test -->
+      </class> <!-- automation.project3ds.BrickWidget_Polk_Test -->
     </classes>
-  </test> <!-- BrickURL_ON2_Test(failed) -->
-</suite> <!-- Failed suite [BrickURL_ON2_Test] -->
+  </test> <!-- BrickWidget_OFFPolk_Test(failed) -->
+</suite> <!-- Failed suite [BrickWidget_OFFPolk_Test] -->

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BrickHTML_Polk_OFF_Test]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="BrickHTML_Polk_OFF_Test(failed)">
+    <classes>
+      <class name="automation.project3ds.BrickHTML_Polk_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="execute" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- automation.project3ds.BrickHTML_Polk_Test -->
+    </classes>
+  </test> <!-- BrickHTML_Polk_OFF_Test(failed) -->
+</suite> <!-- Failed suite [BrickHTML_Polk_OFF_Test] -->

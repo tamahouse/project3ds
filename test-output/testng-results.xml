@@ -1,290 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="BrickURL_ON1_Test" duration-ms="306753" started-at="2019-08-07T11:26:08Z" finished-at="2019-08-07T11:31:15Z">
+  <suite name="Default suite" duration-ms="52257" started-at="2019-08-08T13:01:03Z" finished-at="2019-08-08T13:01:55Z">
     <groups>
     </groups>
-    <test name="BrickURL_ON1_Test" duration-ms="306753" started-at="2019-08-07T11:26:08Z" finished-at="2019-08-07T11:31:15Z">
-      <class name="automation.project3ds.BrickURL_ON1_Test">
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="51877" started-at="2019-08-07T11:26:09Z" data-provider="data" finished-at="2019-08-07T11:27:01Z">
+    <test name="Default test" duration-ms="52257" started-at="2019-08-08T13:01:03Z" finished-at="2019-08-08T13:01:55Z">
+      <class name="automation.project3ds.BrickWidget_Polk_Test">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String)[pri:0, instance:automation.project3ds.BrickWidget_Polk_Test@f6c48ac]" name="execute" duration-ms="38454" started-at="2019-08-08T13:01:16Z" data-provider="data" finished-at="2019-08-08T13:01:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[5200000000000007]]>
+                <![CDATA[4012001037141112]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = Y
-SignatureVerification = Y
-EciFlag = 02
-Xid = <Xid Value>
-Cavv = <Cavv Value>
-ErrorNo = 0
-ErrorDesc = <blank>, EciFlag2=02, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=Y, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000007, ACSUrl=value, testName=Test Case 1: Successful Authentication}]]>
+                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+Polk+%28Test+Company%29%5B99907%5D&data%5Ba_id%5D=99907&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bps%5D=gateway&data%5Bag_type%5D=fixed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="27710" started-at="2019-08-07T11:27:01Z" data-provider="data" finished-at="2019-08-07T11:27:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000015]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = Y
-SignatureVerification = N
-EciFlag = 02
-Xid = <Xid Value>
-Cavv = <Cavv Value>
-ErrorNo = 0
-ErrorDesc = <blank>, EciFlag2=02, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=Y, ErrorNo=0, ErrorNo2=0, SignitureVerification2=N, Payload=value, PAN=5200000000000015, ACSUrl=value, testName=Test Case 2: Failed Signature}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="32343" started-at="2019-08-07T11:27:29Z" data-provider="data" finished-at="2019-08-07T11:28:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000023]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = N
-SignatureVerification = Y
-EciFlag = 00
-Xid = <Xid Value>
-Cavv = <blank>
-ErrorNo = 0
-ErrorDesc = <blank>, EciFlag2=00, Cavv2=blank, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=N, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000023, ACSUrl=value, testName=Test Case 3: Failed Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="29858" started-at="2019-08-07T11:28:01Z" data-provider="data" finished-at="2019-08-07T11:28:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000908]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = A
-SignatureVerification = Y
-EciFlag = 01
-Xid = <Xid Value>
-Cavv = <Cavv Value>
-ErrorNo = 0
-ErrorDesc = <blank>, EciFlag2=01, Cavv2=value, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=A, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000908, ACSUrl=value, testName=Test Case 4: Attempts/Non-Participating}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="29271" started-at="2019-08-07T11:28:31Z" data-provider="data" finished-at="2019-08-07T11:29:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000056]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Enrolled=N, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200000000000056, ACSUrl=blank, testName=Test Case 7: Not Enrolled}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="19796" started-at="2019-08-07T11:29:00Z" data-provider="data" finished-at="2019-08-07T11:29:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000064]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Enrolled=U, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200000000000064, ACSUrl=blank, testName=Test Case 8: Unavailable}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="16685" started-at="2019-08-07T11:29:20Z" data-provider="data" finished-at="2019-08-07T11:29:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000072]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Enrolled=U, EciFlag=00, ErrorDesc=value, expected_results_authentication=NA, ErrorNo=value, Payload=blank, PAN=5200000000000072, ACSUrl=blank, testName=Test Case 9: Merchant Not Active}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="17938" started-at="2019-08-07T11:29:37Z" data-provider="data" finished-at="2019-08-07T11:29:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000080]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Enrolled=U, EciFlag=00, ErrorDesc=value, expected_results_authentication=NA, ErrorNo=value, Payload=blank, PAN=5200000000000080, ACSUrl=blank, testName=Test Case 10: cmpi_lookup error}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="21977" started-at="2019-08-07T11:29:55Z" data-provider="data" finished-at="2019-08-07T11:30:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000098]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = <blank>
-SignatureVerification = <blank>
-EciFlag = 00
-Xid = <blank>
-Cavv = <blank>
-ErrorNo = Refer to the 3DS Error Codes and Descriptions Guide
-ErrorDesc = Refer to the 3DS Error Codes and Descriptions Guide, EciFlag2=00, Cavv2=blank, ErrorDesc2=value, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=blank, ErrorNo=0, ErrorNo2=value, SignitureVerification2=blank, Payload=value, PAN=5200000000000098, ACSUrl=value, testName=Test Case 11: cmpi_authenticate error}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="34325" started-at="2019-08-07T11:30:17Z" data-provider="data" finished-at="2019-08-07T11:30:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200000000000031]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{expected_results_authentication=cmpi_authenticate response
-PAResStatus = U
-SignatureVerification = Y
-EciFlag = 00
-Xid = <Xid Value>
-Cavv = <blank>
-ErrorNo = 0
-ErrorDesc = <blank>, EciFlag2=00, Cavv2=blank, ErrorDesc2=blank, Enrolled=Y, EciFlag=value, Xid=, ErrorDesc=blank, PAResStatus2=U, ErrorNo=0, ErrorNo2=0, SignitureVerification2=Y, Payload=value, PAN=5200000000000031, ACSUrl=value, testName=Test Case 12: Authentication Unavailable}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String, java.util.Map)[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="execute" duration-ms="23077" started-at="2019-08-07T11:30:51Z" data-provider="data" finished-at="2019-08-07T11:31:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5200990000000009]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{Enrolled=B, EciFlag=00, ErrorDesc=blank, expected_results_authentication=NA, ErrorNo=0, Payload=blank, PAN=5200990000000009, ACSUrl=blank, testName=Test Case 13: Bypassed Authentication}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.BrickURL_ON1_Test@490ab905]" name="tearDown" is-config="true" duration-ms="728" started-at="2019-08-07T11:31:14Z" finished-at="2019-08-07T11:31:15Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.BrickWidget_Polk_Test@f6c48ac]" name="tearDown" is-config="true" duration-ms="769" started-at="2019-08-08T13:01:55Z" finished-at="2019-08-08T13:01:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.project3ds.BrickURL_ON1_Test -->
-    </test> <!-- BrickURL_ON1_Test -->
-  </suite> <!-- BrickURL_ON1_Test -->
+      </class> <!-- automation.project3ds.BrickWidget_Polk_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

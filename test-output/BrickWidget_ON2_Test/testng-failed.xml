@@ -10,7 +10,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="execute" invocation-numbers="5 6 7 12 13 17"/>
+          <include name="execute" invocation-numbers="5 6 7 12 17"/>
         </methods>
       </class> <!-- automation.project3ds.BrickWidget_ON2_Test -->
     </classes>

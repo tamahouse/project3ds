@@ -12,6 +12,8 @@ import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc.PurchaseIframe;
 import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc.PurchaseIframe.AuthWindow;
 
 public class BrickWidgetHome {
+	
+	public static String email;
 
 	private static Driver driver = AnnotationPage.getDriver();
 
@@ -129,11 +131,17 @@ public class BrickWidgetHome {
 				zipTextbox.sendKeys("32043");
 //				this.clickImage();
 			}
+			
+			private String getEmail() {
+				String timestamp = String.valueOf(System.currentTimeMillis());
+				String email = "meo"+timestamp+"@spam4.me";
+				return email;
+			}
 
-			private void setEmail() throws Exception {
-				Element emailTextbox = driver.getElement(emailTxb);
-				emailTextbox.sendKeys("meo@spam4.me");
-//				this.clickImage();
+			public void setEmail() {
+				Element element = driver.getElement(emailTxb);
+				email = getEmail();
+				element.sendKeys(email);
 			}
 
 			private void clickBuyButton() throws Exception {

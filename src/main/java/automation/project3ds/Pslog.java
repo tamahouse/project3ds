@@ -32,6 +32,14 @@ public class Pslog {
 		}
 		return null;
 	}
+	
+	public static String get_cl_id_email(String email) throws Exception {
+		String query = "select * from ps_logs where log_data like '%"+email+"%' and log_data like '%check3DSecure%'";
+		ResultSet resultSet = getStatement().executeQuery(query);
+		resultSet.next();
+		String cl_id = resultSet.getString("cl_id");
+		return cl_id;
+	}
 
 	public static String getTID(String clickId) throws Exception {
 		ResultSet resultSet = getStatement().executeQuery("select log_data from ps_logs where cl_id = '" + clickId

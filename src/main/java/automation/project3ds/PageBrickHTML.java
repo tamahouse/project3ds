@@ -54,10 +54,10 @@ public class PageBrickHTML {
 		element = driver.getElement(zipcodeTxb);
 		element.sendKeys("32043");
 	}
-	
+
 	private static String getEmail() {
 		String timestamp = String.valueOf(System.currentTimeMillis());
-		String email = "meo"+timestamp+"@spam4.me";
+		String email = "meo" + timestamp + "@spam4.me";
 		return email;
 	}
 
@@ -149,7 +149,7 @@ public class PageBrickHTML {
 
 		}
 	}
-	
+
 	public static AuthWindow getAuthWindow() {
 		Element iframe = driver.getElement(By.id("authWindow"));
 		driver.switchTo().frame(iframe.getWebElement());
@@ -225,7 +225,8 @@ public class PageBrickHTML {
 					purchaseFrame.clickOTPSubmitButton();
 					driver.switchTo().defaultContent();
 				} else if (versionKey.equals("V1")) {
-					automation.project3ds.PageBrickHTML.VisaPurchaseIframe.AuthWindow authWindow = purchaseFrame.getAuthWindow();
+					automation.project3ds.PageBrickHTML.VisaPurchaseIframe.AuthWindow authWindow = purchaseFrame
+							.getAuthWindow();
 					authWindow.setPassword();
 					authWindow.clickSubmit();
 					driver.switchTo().defaultContent();
@@ -233,30 +234,30 @@ public class PageBrickHTML {
 			} else if (tabs.size() == 2) {
 				Thread.sleep(3000);
 				tabs = new ArrayList<String>(driver.getWindowHandles());
-				if(tabs.size() == 2) {
-				driver.switchTo().window(tabs.get(1));
-				if(driver.isExist(By.id("authWindow"),2000)) {
-					AuthWindow authWindow = getAuthWindow();
-					authWindow.setPassword();
-					authWindow.clickSubmit();
-					driver.switchTo().window(tabs.get(0));
-				}else {
-				driver.getElement(By.xpath("//input[@value='Submit']")).click();
-				driver.switchTo().window(tabs.get(0));
-				}
-				}else {
-					
+				if (tabs.size() == 2) {
+					driver.switchTo().window(tabs.get(1));
+					if (driver.isExist(By.id("authWindow"), 2000)) {
+						AuthWindow authWindow = getAuthWindow();
+						authWindow.setPassword();
+						authWindow.clickSubmit();
+						driver.switchTo().window(tabs.get(0));
+					} else {
+						driver.getElement(By.xpath("//input[@value='Submit']")).click();
+						driver.switchTo().window(tabs.get(0));
+					}
+				} else {
+
 				}
 			}
-				String caseKeyAfterOTP = getSelectedCaseAfterOTP();
-				if (caseKeyAfterOTP.equals("THREEDS_SUCCESS")) {
-					return "THREEDS_SUCCESS";
-				} else if (caseKeyAfterOTP.equals("THREEDS_FAILED")) {
-					return "THREEDS_FAILED";
-				} else {
-					throw new Exception("After OTP case is null");
-				}
-			
+			String caseKeyAfterOTP = getSelectedCaseAfterOTP();
+			if (caseKeyAfterOTP.equals("THREEDS_SUCCESS")) {
+				return "THREEDS_SUCCESS";
+			} else if (caseKeyAfterOTP.equals("THREEDS_FAILED")) {
+				return "THREEDS_FAILED";
+			} else {
+				throw new Exception("After OTP case is null");
+			}
+
 		} else if (caseKey.equals("ERROR")) {
 			return "ERROR";
 		} else {

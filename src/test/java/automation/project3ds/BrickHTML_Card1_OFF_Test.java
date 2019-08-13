@@ -27,7 +27,7 @@ public class BrickHTML_Card1_OFF_Test {
 
 //	final String host1107 = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=CC+Embarcadero+test+%28JammyWall%29%5B101601%5D&data%5Ba_id%5D=101601&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069cze3&data%5Bag_type%5D=fixed";
 //	final String host1108 = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&data%5Ba_id%5D=101607&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bag_type%5D=fixed";
-	final String host = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html";
+	final String host = "http://feature-brick-test.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html";
 //	final String hostNoSongbird = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick-polk.html";
 //	String hostReport = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
 	String filePath = "src\\main\\java\\utility\\cardNumber_v1.xlsx";

@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
 
 import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc;
 import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc.PurchaseIframe;
@@ -352,9 +353,19 @@ public class BrickWidgetHome {
 						AuthWindow authWindow = getAuthWindow();
 						authWindow.setPassword();
 						authWindow.clickSubmit();
+						driver.switchTo().window(tabs.get(0));
+						mainIframe = getMainIframe();
+						iframecc = mainIframe.getIframecc();
+						String finalKey = iframecc.getSelectedCase();
+						Assert.assertEquals(finalKey, "SUCCESS");
 					} else {
-
 						driver.getElement(By.xpath("//input[@value='Submit']")).click();
+						driver.switchTo().window(tabs.get(0));
+						mainIframe = getMainIframe();
+						iframecc = mainIframe.getIframecc();
+						String finalKey = iframecc.getSelectedCase();
+						Assert.assertEquals(finalKey, "SUCCESS");
+						
 					}
 					driver.switchTo().window(tabs.get(0));
 				} else {

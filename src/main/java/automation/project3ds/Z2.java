@@ -37,10 +37,7 @@ public class Z2 {
 		try {
 			String result = resultSet.getString("pl_response");
 			String printResult = PrettyPrint.formatXML(result);
-			try {
-				ExtentManager.getTest().info("lookup_response: " + printResult);
-			}catch(Exception ignore) {
-			}
+			ExtentManager.logInfo("lookup_response: " + printResult);
 			XmlMapper xmlMapper = new XmlMapper();
 			response = xmlMapper.readValue(result, ResponseLookup.class);
 		} catch (SQLException ignore) {
@@ -67,6 +64,24 @@ public class Z2 {
 			}
 			jsonNode = jsonNode.get("Payload");
 			response = mapper.convertValue(jsonNode, ResponseAuth.class);
+		} catch (SQLException ignore) {
+		} catch(Exception e) {
+			throw e;
+		}
+		return response;
+	}
+	
+	public static ResponseLookup getAuthResponseV1(String t_id) throws Exception {
+		ResultSet resultSet = getStatement().executeQuery("select pl_response from processor_log where t_id = '" + t_id
+				+ "' and pl_response like '%Xid%' limit 1");
+		resultSet.next();
+		ResponseLookup response = null;
+		try {
+			String result = resultSet.getString("pl_response");
+			String printResult = PrettyPrint.formatXML(result);
+			ExtentManager.logInfo("lookup_response: " + printResult);
+			XmlMapper xmlMapper = new XmlMapper();
+			response = xmlMapper.readValue(result, ResponseLookup.class);;
 		} catch (SQLException ignore) {
 		} catch(Exception e) {
 			throw e;
@@ -115,6 +130,11 @@ public class Z2 {
 		public String WhiteListStatusSource = "null";
 		public String WhiteListStatus = "null";
 		public String ThreeDSVersion;
+		public String Xid;
+		
+		public String getXid() {
+			return this.Xid;
+		}
 
 		public String getEnrolled() {
 			return this.Enrolled;

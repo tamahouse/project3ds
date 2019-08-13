@@ -168,37 +168,38 @@ public class Action {
 		
 		String version = aVersion.substring(0,1);
 	
-//		ResponseAuth response2 = Z2.getAuthResponse(t_id);
+		ResponseLookup response2 = Z2.getAuthResponseV1(t_id);
 
 //		RequestAuth request3 = Z2.getAuthRequest(t_id);
 
 		MySoftAssertAll assertion = new MySoftAssertAll();
-//		String expected_results_authentication = map.get("expected_results_authentication");
-//		if (response2 == null) {
-//			assertion.assertString3DS(expected_results_authentication, "NA", "[expected_results_authentication]");
-//		} else {
-//			String aPAResStatus2 = response2.getPAResStatus();
-//			String aSignitureVerification2 = response2.getSignatureVerification();
-//			String aCavv2 = response2.getCavv();
-//			String aEciFlag2 = response2.getEciFlag();
-//			String aErrorNo2 = response2.getErrorNo();
-//			String aErrorDesc2 = response2.getErrorDesc();
-//			String PAResStatus2 = map.get("PAResStatus2");
-//			String SignitureVerification2 = map.get("SignitureVerification2");
-//			String Cavv2 = map.get("Cavv2");
-//			String EciFlag2 = map.get("EciFlag2");
-//			String Xid = map.get("Xid");
-//			String ErrorNo2 = map.get("ErrorNo2");
-//			String ErrorDesc2 = map.get("ErrorDesc2");
-//
-//			assertion.assertString3DS(aPAResStatus2, PAResStatus2, "[PAResStatus2]");
-//			assertion.assertString3DS(aSignitureVerification2, SignitureVerification2, "[SignitureVerification2]");
-//			assertion.assertString3DS(aCavv2, Cavv2, "[Cavv2]");
-//			assertion.assertString3DS(aEciFlag2, EciFlag2, "[EciFlag2]");
-//			assertion.assertString3DS(aErrorNo2, ErrorNo2, "[ErrorNo2]");
-//			assertion.assertString3DS(aErrorDesc2, ErrorDesc2, "[ErrorDesc2]");
-//			assertion.assertString3DS(Xid, ErrorDesc2, "[ErrorDesc2]");
-//		}
+		String expected_results_authentication = map.get("expected_results_authentication");
+		if (response2 == null) {
+			assertion.assertString3DS(expected_results_authentication, "NA", "[expected_results_authentication]");
+		} else {
+			String aPAResStatus2 = response2.getPAResStatus();
+			String aSignitureVerification2 = response2.getSignatureVerification();
+			String aCavv2 = response2.getCavv();
+			String aEciFlag2 = response2.getEciFlag();
+			String aErrorNo2 = response2.getErrorNo();
+			String aErrorDesc2 = response2.getErrorDesc();
+			String aXid = response2.getXid();
+			String PAResStatus2 = map.get("PAResStatus2");
+			String SignitureVerification2 = map.get("SignitureVerification2");
+			String Cavv2 = map.get("Cavv2");
+			String EciFlag2 = map.get("EciFlag2");
+			String Xid = map.get("Xid");
+			String ErrorNo2 = map.get("ErrorNo2");
+			String ErrorDesc2 = map.get("ErrorDesc2");
+
+			assertion.assertString3DS(aPAResStatus2, PAResStatus2, "[PAResStatus2]");
+			assertion.assertString3DS(aSignitureVerification2, SignitureVerification2, "[SignitureVerification2]");
+			assertion.assertString3DS(aCavv2, Cavv2, "[Cavv2]");
+			assertion.assertString3DS(aEciFlag2, EciFlag2, "[EciFlag2]");
+			assertion.assertString3DS(aErrorNo2, ErrorNo2, "[ErrorNo2]");
+			assertion.assertString3DS(aErrorDesc2, ErrorDesc2, "[ErrorDesc2]");
+			assertion.assertString3DS(aXid, Xid, "[Xid]");
+		}
 		assertion.assertEquals(version, "1","[Version]");
 		assertion.assertString3DS(aEnrolled, Enrolled, "[Enrolled]");
 		assertion.assertString3DS(aEciFlag, EciFlag, "[EciFlag]");

@@ -1,6 +1,5 @@
 package automation.project3ds;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,10 +11,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class Z2 {
+	
+	static MyTunnel tunnelWallapi;
+	static MyTunnel tunnelOldZ2;
 
 	private static Statement getStatement() throws Exception {
-		MyTunnel tunnel = new MyTunnel("wallapi");
-		Statement statement = tunnel.getStatement("z2");
+		if(tunnelWallapi == null || tunnelWallapi.isWorking() == false) {
+			tunnelWallapi = new MyTunnel("wallapi");
+		}
+		Statement statement = tunnelWallapi.getStatement("z2");
+		return statement;
+	}
+	
+	private static Statement getStatementOld() throws Exception {
+		if(tunnelOldZ2 == null || tunnelOldZ2.isWorking() == false) {
+			tunnelOldZ2 = new MyTunnel("old_z2");
+		}
+		Statement statement = tunnelOldZ2.getStatement("ccgateway");
 		return statement;
 	}
 	
@@ -29,9 +41,19 @@ public class Z2 {
 	}
 
 	public static ResponseLookup getLookupResponse(String t_id) throws Exception {
+		Statement statement = getStatement();
+		return getLookupResponse(t_id, statement);
+	}
+	
+	public static ResponseLookup getLookupResponse_1v5(String t_id) throws Exception {
+		Statement statement = getStatementOld();
+		return getLookupResponse(t_id, statement);
+	}
+	
+	public static ResponseLookup getLookupResponse(String t_id, Statement statement) throws Exception {
 		String query = "select pl_response from processor_log where t_id = '" + t_id
 				+ "' and pl_response like '%ErrorNo%' limit 1";
-		ResultSet resultSet = getStatement().executeQuery(query);
+		ResultSet resultSet = statement.executeQuery(query);
 		resultSet.next();
 		ResponseLookup response = null;
 		try {
@@ -72,7 +94,17 @@ public class Z2 {
 	}
 	
 	public static ResponseLookup getAuthResponseV1(String t_id) throws Exception {
-		ResultSet resultSet = getStatement().executeQuery("select pl_response from processor_log where t_id = '" + t_id
+		Statement statement = getStatement();
+		return getAuthResponseV1(t_id, statement);
+	}
+	
+	public static ResponseLookup getAuthResponseV1_1v5(String t_id) throws Exception {
+		Statement statement = getStatementOld();
+		return getAuthResponseV1(t_id, statement);
+	}
+	
+	public static ResponseLookup getAuthResponseV1(String t_id, Statement statement) throws Exception {
+		ResultSet resultSet = statement.executeQuery("select pl_response from processor_log where t_id = '" + t_id
 				+ "' and pl_response like '%Xid%' limit 1");
 		resultSet.next();
 		ResponseLookup response = null;

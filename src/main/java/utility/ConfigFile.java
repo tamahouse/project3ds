@@ -2,6 +2,9 @@ package utility;
 
 
 import java.io.File;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ConfigFile {
 
@@ -21,6 +24,16 @@ public class ConfigFile {
 		String str = new File(".").getAbsolutePath();
 		String newStr = str.substring(0, str.length()-1);
 		return newStr;
+	}
+	
+	public static String[] getTime() {
+		Timestamp stamp = new Timestamp(System.currentTimeMillis());
+		Date currentTime = new Date(stamp.getTime());
+		SimpleDateFormat sdfDate = new SimpleDateFormat("YYYY-MM-dd");
+		String date = sdfDate.format(currentTime);
+		SimpleDateFormat sdfTime = new SimpleDateFormat("HH-mm-ss");
+		String time = sdfTime.format(currentTime);
+		return new String[] {date, time};
 	}
 	
 	public static String filePath = getProjectPath() + "src\\main\\java\\utility\\cardNumber.xlsx";

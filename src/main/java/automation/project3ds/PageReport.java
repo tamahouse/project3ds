@@ -1,14 +1,5 @@
 package automation.project3ds;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-
 public class PageReport {
 
 //	Driver driver;

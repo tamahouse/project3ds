@@ -73,13 +73,13 @@ public class MySoftAssert implements IAssertLifecycle {
 	@Override
 	public void onAssertFailure(IAssert<?> assertCommand, AssertionError ex) {
 		onAssertFailure(assertCommand);
-		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "} and expected {"
+		System.out.println("*"+ assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "} and expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 	
 	public void onMyAssertFailure(MyIAssert<?> assertCommand, AssertionError ex) {
 		onAssertFailure(assertCommand);
-		System.out.println(assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"expected {"
+		System.out.println("*"+ assertCommand.getMessage() + " expect actual {" + assertCommand.getActual() + "}"+assertCommand.getAssertType()+"expected {"
 				+ assertCommand.getExpected() + "}");
 	}
 
@@ -110,6 +110,7 @@ public class MySoftAssert implements IAssertLifecycle {
 		static final String EQUAL = " to equal to ";
 		static final String NOT_EQUAL = " to not equal to ";
 		static final String CONTAIN = " to contain ";
+		static final String BECONTAIN = " to be contain by ";
 	}
 
 	abstract private static class SimpleAssert<T> implements MyIAssert<T> {
@@ -278,7 +279,41 @@ public class MySoftAssert implements IAssertLifecycle {
 
 	}
 	
-	public <T> void assertContain(final T actualChild, final T expectedParent, final String message) {
+	public <T> void assertBeContains(final T actualChild, final T expectedParent, final String message) {
+
+		doAssert(new SimpleAssert<T>(actualChild, expectedParent, message, AssertType.BECONTAIN) {
+			@Override
+			public void doAssert() {
+				String actual = null;
+				String expected = null;
+				String assertType = AssertType.BECONTAIN;
+				if (actualChild instanceof String) {
+						actual = (String) actualChild;
+				}else if (!(actualChild instanceof String)) {
+					actual = String.valueOf(actualChild);
+				}
+
+				 if (expectedParent instanceof String) {
+						expected = (String) expectedParent;
+				}else if (expected instanceof String) {
+					expected = String.valueOf(expectedParent);
+				}
+
+				if ((expected == null) && (actual == null)) {
+					return;
+				}
+				if (expected == null ^ actual == null) {
+					failNotEqualsCopiedTestngAssert(actual, expected, message, assertType);
+				} else if (expected.contains(actual)) {
+					return;
+				}
+				failNotEqualsCopiedTestngAssert(actual, expected, message, assertType);
+			}
+		});
+
+	}
+	
+	public <T> void assertContains(final T actualChild, final T expectedParent, final String message) {
 
 		doAssert(new SimpleAssert<T>(actualChild, expectedParent, message, AssertType.CONTAIN) {
 			@Override
@@ -303,7 +338,7 @@ public class MySoftAssert implements IAssertLifecycle {
 				}
 				if (expected == null ^ actual == null) {
 					failNotEqualsCopiedTestngAssert(actual, expected, message, assertType);
-				} else if (expected.contains(actual)) {
+				} else if (actual.contains(expected)) {
 					return;
 				}
 				failNotEqualsCopiedTestngAssert(actual, expected, message, assertType);

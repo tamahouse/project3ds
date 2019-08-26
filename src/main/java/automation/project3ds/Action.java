@@ -152,6 +152,17 @@ public class Action {
 	
 	public static void assertResultV1(String t_id, Map<String, String> map) throws Exception {
 		ResponseLookup response = Z2.getLookupResponse(t_id);
+		ResponseLookup response2 = Z2.getAuthResponseV1(t_id);
+		assertResultV1(t_id, map, response, response2);
+	}
+	
+	public static void assertResult_1v5(String t_id, Map<String, String> map) throws Exception {
+		ResponseLookup response = Z2.getLookupResponse_1v5(t_id);
+		ResponseLookup response2 = Z2.getAuthResponseV1_1v5(t_id);
+		assertResultV1(t_id, map, response, response2);
+	}
+	
+	public static void assertResultV1(String t_id, Map<String, String> map, ResponseLookup response, ResponseLookup response2) throws Exception {
 		String aEnrolled = response.getEnrolled();
 		String aEciFlag = response.getEciFlag();
 		String aACSUrl = response.getACSUrl();
@@ -168,8 +179,6 @@ public class Action {
 		
 		String version = aVersion.substring(0,1);
 	
-		ResponseLookup response2 = Z2.getAuthResponseV1(t_id);
-
 //		RequestAuth request3 = Z2.getAuthRequest(t_id);
 
 		MySoftAssertAll assertion = new MySoftAssertAll();
@@ -185,7 +194,7 @@ public class Action {
 			String aErrorDesc2 = response2.getErrorDesc();
 			String aXid = response2.getXid();
 			String PAResStatus2 = map.get("PAResStatus2");
-			String SignitureVerification2 = map.get("SignitureVerification2");
+			String SignitureVerification2 = map.get("SignatureVerification2");
 			String Cavv2 = map.get("Cavv2");
 			String EciFlag2 = map.get("EciFlag2");
 			String Xid = map.get("Xid");
@@ -319,48 +328,58 @@ public class Action {
 	public static List<Map<String, String>> getTestData(String filePath) throws Exception{
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection(filePath);
-		Recordset record = connection.executeQuery("SELECT * FROM data WHERE Available = '1'");
+		Recordset record = connection.executeQuery("SELECT * FROM data where Enable = '1'");
 		List<Map<String, String>> mapList = new ArrayList<Map<String, String>>();
-		while (record.next()) {
-			Map<String, String> map = new HashMap<String, String>();
-			String PAN = record.getField("PAN");
-			String testName = record.getField("testName");
-			String Enrolled = record.getField("Enrolled");
-			String EciFlag = record.getField("EciFlag");
-			String ACSUrl = record.getField("ACSUrl");
-			String Payload = record.getField("Payload");
-			String ErrorNo = record.getField("ErrorNo");
-			String ErrorDesc = record.getField("ErrorDesc");
-//			String cardholderVerificationMethod = record.getField("cardholderVerificationMethod");
-			map.put("PAN", PAN);
-			map.put("testName", testName);
-			map.put("Enrolled", Enrolled);
-			map.put("EciFlag", EciFlag);
-			map.put("ACSUrl", ACSUrl);
-			map.put("Payload", Payload);
-			map.put("ErrorNo", ErrorNo);
-			map.put("ErrorDesc", ErrorDesc);
-//			map.put("cardholderVerificationMethod", cardholderVerificationMethod);
-			String expected_results_authentication = record.getField("expected_results_authentication");
-			map.put("expected_results_authentication", expected_results_authentication);
-			if (!expected_results_authentication.equals("NA")) {
-				String PAResStatus2 = record.getField("PAResStatus2");
-				String SignitureVerification2 = record.getField("SignatureVerification2");
-				String Cavv2 = record.getField("Cavv2");
-				String EciFlag2 = record.getField("EciFlag2");
-				String ErrorNo2 = record.getField("ErrorNo2");
-				String ErrorDesc2 = record.getField("ErrorDesc2");
-				String Xid = record.getField("Xid");
-				map.put("PAResStatus2", PAResStatus2);
-				map.put("SignitureVerification2", SignitureVerification2);
-				map.put("Cavv2", Cavv2);
-				map.put("EciFlag2", EciFlag2);
-				map.put("ErrorNo2", ErrorNo2);
-				map.put("ErrorDesc2", ErrorDesc2);
-				map.put("Xid", Xid);
+			
+			List <String> fieldNames = record.getFieldNames();
+			while (record.next()) {
+				Map<String, String> map = new HashMap<String, String>();
+				for(String fieldName: fieldNames) {
+					String value = record.getField(fieldName);
+					map.put(fieldName, value);
+				}
+				mapList.add(map);   
 			}
-			mapList.add(map);
-		}
+			
+//			Map<String, String> map = new HashMap<String, String>();
+//			String PAN = record.getField("PAN");
+//			String testName = record.getField("testName");
+//			String Enrolled = record.getField("Enrolled");
+//			String EciFlag = record.getField("EciFlag");
+//			String ACSUrl = record.getField("ACSUrl");
+//			String Payload = record.getField("Payload");
+//			String ErrorNo = record.getField("ErrorNo");
+//			String ErrorDesc = record.getField("ErrorDesc");
+////			String cardholderVerificationMethod = record.getField("cardholderVerificationMethod");
+//			map.put("PAN", PAN);
+//			map.put("testName", testName);
+//			map.put("Enrolled", Enrolled);
+//			map.put("EciFlag", EciFlag);
+//			map.put("ACSUrl", ACSUrl);
+//			map.put("Payload", Payload);
+//			map.put("ErrorNo", ErrorNo);
+//			map.put("ErrorDesc", ErrorDesc);
+////			map.put("cardholderVerificationMethod", cardholderVerificationMethod);
+//			String expected_results_authentication = record.getField("expected_results_authentication");
+//			map.put("expected_results_authentication", expected_results_authentication);
+//			if (!expected_results_authentication.equals("NA")) {
+//				String PAResStatus2 = record.getField("PAResStatus2");
+//				String SignitureVerification2 = record.getField("SignatureVerification2");
+//				String Cavv2 = record.getField("Cavv2");
+//				String EciFlag2 = record.getField("EciFlag2");
+//				String ErrorNo2 = record.getField("ErrorNo2");
+//				String ErrorDesc2 = record.getField("ErrorDesc2");
+//				String Xid = record.getField("Xid");
+//				map.put("PAResStatus2", PAResStatus2);
+//				map.put("SignitureVerification2", SignitureVerification2);
+//				map.put("Cavv2", Cavv2);
+//				map.put("EciFlag2", EciFlag2);
+//				map.put("ErrorNo2", ErrorNo2);
+//				map.put("ErrorDesc2", ErrorDesc2);
+//				map.put("Xid", Xid);
+//			}
+//			mapList.add(map);
+//		}
 		connection.close();
 		return mapList;
 	}

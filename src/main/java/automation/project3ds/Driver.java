@@ -3,27 +3,30 @@ package automation.project3ds;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Driver implements WebDriver {
 
@@ -31,14 +34,68 @@ public class Driver implements WebDriver {
 	public static String browser = Browser.Chrome;
 
 	public static class Browser {
-		static final String Chrome = "Chrome";
-		static final String Firefox = "Firefox";
+		public static final String Chrome = "Chrome";
+		public static final String Firefox = "Firefox";
+		public static final String IE = "IE";
 	}
 
 	public Driver() {
 		this(browser);
 	}
 	
+	public void screenShot(String filePath) {
+		
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		 File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		 File DestFile=new File(filePath);
+		 Boolean x = DestFile.exists();
+		 int i = 0;
+		 while(x == true) {
+		 DestFile=new File(filePath.replace(".png", ++i+".png"));
+		 x = DestFile.exists();
+		 }
+		 try {
+			FileUtils.copyFile(SrcFile, DestFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void screenShot() {
+		String[] time = utility.ConfigFile.getTime();
+		String folder = "screenShot/"+time[0]+"_"+time[1]+".png";
+		screenShot(folder);
+	}
+	
+	public void waitForNumberOfElement(By by, int number, int milisecond) throws Exception {
+		int timeout = 100;
+		int trialTimes = milisecond/timeout;
+		List<WebElement> webElements = null;
+		for(int i = 0; i < trialTimes;i++) {
+			webElements = driver.findElements(by);
+			if(webElements.size() == number) {
+				return;
+			}
+			this.sleep(timeout);
+		}
+		throw new Exception("expect to have "+number+" but found "+webElements.size()+"");
+	}
+	
+	public List<String> waitForNewTab(int numberOfTab) throws Exception {
+		for(int i =0; i<200; i++) {
+			List<String> list = new ArrayList<>(driver.getWindowHandles());
+			if(list.size() == numberOfTab +1) {
+				return list;
+			}
+			Thread.sleep(100);
+		}
+		return null;
+	}
+	
+	public List<String> waitForNewTab() throws Exception {
+		return this.waitForNewTab(1);
+	}
 
 	public String getXpathString(By by) {
 		String str = by.toString();
@@ -61,9 +118,16 @@ public class Driver implements WebDriver {
 			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 			driver = new FirefoxDriver();
+		}else if(browser.equals(Browser.IE)) {
+//			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+//			capabilities.setCapability("requireWindowFocus", true);
+			driver = new InternetExplorerDriver();
 		}
-
+		try {
 		driver.manage().window().setPosition(p);
+		}catch (Exception ignore) {
+			
+		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	}
@@ -165,6 +229,17 @@ public class Driver implements WebDriver {
 			list.add(element);
 		}
 		return list;
+	}
+	
+	public void waitUrlNotBlank() throws Exception {
+		for(int i = 0; i < 200; i++) {
+			String url = driver.getCurrentUrl();
+			if(url.contains("http")) {
+				return;
+			}else {
+				Thread.sleep(100);
+			}
+		}
 	}
 
 	public WebDriver getWebDriver() {

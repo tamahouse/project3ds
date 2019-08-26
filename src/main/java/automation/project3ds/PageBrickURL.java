@@ -8,13 +8,11 @@ import org.openqa.selenium.By;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import automation.project3ds.PageBrickURL.VisaPurchaseIframe.AuthWindow;
-
 public class PageBrickURL {
 
 	static Driver driver = AnnotationPage.getDriver();
 	static Element element;
-	static String email;
+	public static String email;
 
 	static By emailTxb = By.id("email");
 	static By cardNumberTxb = By.id("card-number");

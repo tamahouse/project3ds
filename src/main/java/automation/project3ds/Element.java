@@ -30,6 +30,12 @@ public class Element implements WebElement{
 		driver.sleep(500);
 	}
 	
+	public void moveToDown(int y) {
+		y = 0-y;
+		((JavascriptExecutor) this.driver.driver).executeScript("window.scrollBy(0," + y + ")", "");
+		driver.sleep(500);
+	}
+	
 	public void moveUnderNavigationBar(By byNavigationBar) {
 			Element navigationBar = driver.getElement(byNavigationBar,7000);
 			Boolean x = element.getLocation()

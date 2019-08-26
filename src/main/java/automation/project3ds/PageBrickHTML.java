@@ -3,12 +3,8 @@ package automation.project3ds;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import org.openqa.selenium.By;
-
-import automation.project3ds.BrickWidgetHome.MainIframe.Iframecc;
-import automation.project3ds.PageBrickHTML.VisaPurchaseIframe.AuthWindow;
 
 public class PageBrickHTML {
 

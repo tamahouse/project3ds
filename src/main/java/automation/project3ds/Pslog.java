@@ -7,9 +7,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Pslog {
+	
+	static MyTunnel tunnel;
 
 	private static Statement getStatement() throws Exception {
-		MyTunnel tunnel = new MyTunnel("wallapi");
+		if(tunnel == null || tunnel.isWorking() == false) {
+			tunnel = new MyTunnel("wallapi");
+		}
 		Statement statement = tunnel.getStatement("paymentwall_umi");
 		return statement;
 	}

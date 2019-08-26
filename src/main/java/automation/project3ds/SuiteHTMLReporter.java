@@ -2,6 +2,16 @@ package automation.project3ds;
 
 import static org.testng.internal.Utils.isStringNotEmpty;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+
 import org.testng.IInvokedMethod;
 import org.testng.IReporter;
 import org.testng.ISuite;
@@ -16,16 +26,6 @@ import org.testng.internal.Utils;
 import org.testng.log4testng.Logger;
 import org.testng.reporters.HtmlHelper;
 import org.testng.xml.XmlSuite;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
 
 /**
  * This class implements an HTML reporter for suites.

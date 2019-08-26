@@ -57,5 +57,24 @@ public class MySoftAssertAll extends MySoftAssert {
 			throw new AssertionError(sb.toString());
 		}
 	}
+	
+	public String assertAllWithoutThrow() {
+		if (!m_errors.isEmpty()) {
+			StringBuilder sb = new StringBuilder("The following asserts failed:");
+			boolean first = true;
+			for (Map.Entry<AssertionError, IAssert<?>> ae : m_errors.entrySet()) {
+				if (first) {
+					first = false;
+				} else {
+					sb.append(",");
+				}
+				sb.append("\n\t");
+				sb.append(ae.getKey().getMessage());
+			}
+			return sb.toString();
+		}
+		return null;
+	}
+	
 
 }

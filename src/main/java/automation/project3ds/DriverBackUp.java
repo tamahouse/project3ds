@@ -53,8 +53,6 @@ import org.openqa.selenium.support.events.internal.EventFiringKeyboard;
 import org.openqa.selenium.support.events.internal.EventFiringMouse;
 import org.openqa.selenium.support.events.internal.EventFiringTouch;
 
-import utility.ConfigFile;
-
 /**
  * A wrapper around an arbitrary {@link WebDriver} instance which supports
  * registering of a {@link WebDriverEventListener}, e&#46;g&#46; for logging

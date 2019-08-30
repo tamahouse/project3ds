@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="testAa">
+	<test name="testTest">
+	<parameter name="type" value="t3" />
+		 <classes>
+       <class name="WidgetBrick_1v6_Test_tab_boletobancario_Boleto" />
+       <class name="WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint" />
+       <class name="WidgetBrick_1v6_Test_tab_idealpayments_Ideal" />
+       <class name="WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo" />
+       <class name="WidgetBrick_1v6_Test_ValidateCardNumber" />
+       <class name="WidgetBrick_1v6_Test_ValidateExpirationDate" />
+       <class name="WidgetBrick_1v6_Test_ValidateOthers" />
+    </classes>
+    </test>
+</suite>
+

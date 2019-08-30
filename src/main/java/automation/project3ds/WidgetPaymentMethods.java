@@ -100,7 +100,7 @@ public class WidgetPaymentMethods extends WidgetMainFrame {
 		static By error = By.xpath("//*[@id='error_message' and contains(@style,'block')]");
 		static By spinner = By.xpath("//*[@id='preloader_container' and not(contains(@style,'none'))]");
 		static By print = By.xpath(
-				"//*[@id='ps_content']/*[contains(@id,'step') and not(contains(@style,'none'))]//*[@id ='step2_link']");
+				"//*[contains(@id,'step') and not(contains(@style,'none'))]//*[@id ='step2_link']");
 
 		static String TYPE = "personal";
 		static String CPF = "43622652101";
@@ -252,6 +252,7 @@ public class WidgetPaymentMethods extends WidgetMainFrame {
 	public static class tab_idealpayments_Ideal {
 		static By paymentOptions = By.xpath("//*[@id='payment-options']/*[@class='payment-method']");
 		static By thankyou = By.xpath("//*[./h3[text()='Thank you for your purchase!']]");
+		
 
 		public static List<String> getListBankIds() {
 			List<String> list = new ArrayList<String>();
@@ -267,10 +268,6 @@ public class WidgetPaymentMethods extends WidgetMainFrame {
 		public static void clickBank(String data_id) {
 			By by = By.xpath("//*[@id='payment-options']//*[@data-id='" + data_id + "']");
 			getFrame().getElement(by).click();
-		}
-
-		public static Element getThankyou() {
-			return getFrame().getElement(thankyou);
 		}
 
 		public static void finishPaymentStep() throws Exception {

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo">
+      <class name="automation.project3ds.oldTest.aSample">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="enterPinInvalid"/>
+          <include name="test1Title"/>
         </methods>
-      </class> <!-- WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo -->
+      </class> <!-- automation.project3ds.oldTest.aSample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

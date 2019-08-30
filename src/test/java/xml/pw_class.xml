@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="testAa">
+	<test name="testTest">
+	<parameter name="type" value="pw" />
+		 <classes>
+       <class name="WidgetBrick_1v6_Test_EmptyTextbox" />
+    </classes>
+    </test>
+</suite>
+

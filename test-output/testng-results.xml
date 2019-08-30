@@ -1,25 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29327" started-at="2019-08-26T06:03:37Z" finished-at="2019-08-26T06:04:06Z">
+  <suite name="Default suite" duration-ms="98" started-at="2019-08-30T09:40:10Z" finished-at="2019-08-30T09:40:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29327" started-at="2019-08-26T06:03:37Z" finished-at="2019-08-26T06:04:06Z">
-      <class name="WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo@13deb50e]" name="setUp" is-config="true" duration-ms="14472" started-at="2019-08-26T06:03:37Z" finished-at="2019-08-26T06:03:51Z">
+    <test name="Default test" duration-ms="98" started-at="2019-08-30T09:40:10Z" finished-at="2019-08-30T09:40:10Z">
+      <class name="automation.project3ds.oldTest.aSample">
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="11" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.08]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="term()[pri:0, instance:WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo@13deb50e]" name="term" duration-ms="11590" started-at="2019-08-26T06:03:51Z" finished-at="2019-08-26T06:04:03Z">
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="2" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.081]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- term -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo@13deb50e]" name="tearDown" is-config="true" duration-ms="3226" started-at="2019-08-26T06:04:03Z" finished-at="2019-08-26T06:04:06Z">
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="3" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.085]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo -->
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="3" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.086]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="4" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[24]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.092]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="4" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[36]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.098]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="2" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[48]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1Title -->
+        <test-method status="PASS" signature="test1Title(int, double)[pri:0, instance:automation.project3ds.oldTest.aSample@5622fdf]" name="test1Title" duration-ms="2" started-at="2019-08-30T09:40:10Z" data-provider="data" finished-at="2019-08-30T09:40:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0.102]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1Title -->
+      </class> <!-- automation.project3ds.oldTest.aSample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

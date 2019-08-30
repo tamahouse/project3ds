@@ -32,6 +32,7 @@ public class Driver implements WebDriver {
 
 	WebDriver driver;
 	public static String browser = Browser.Chrome;
+	
 
 	public static class Browser {
 		public static final String Chrome = "Chrome";
@@ -43,7 +44,11 @@ public class Driver implements WebDriver {
 		this(browser);
 	}
 	
-	public void screenShot(String filePath) {
+	public static String timestamp() {
+		return String.valueOf(System.currentTimeMillis());
+	}
+	
+	public static void screenShot(WebDriver driver, String filePath) {
 		
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		 File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
@@ -60,6 +65,10 @@ public class Driver implements WebDriver {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void screenShot(String filePath) {
+		screenShot(driver, filePath);
 	}
 	
 	public void screenShot() {
@@ -81,6 +90,7 @@ public class Driver implements WebDriver {
 		}
 		throw new Exception("expect to have "+number+" but found "+webElements.size()+"");
 	}
+	
 	
 	public List<String> waitForNewTab(int numberOfTab) throws Exception {
 		for(int i =0; i<200; i++) {

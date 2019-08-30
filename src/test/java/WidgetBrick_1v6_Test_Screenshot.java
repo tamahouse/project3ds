@@ -3,6 +3,7 @@ import java.util.Map;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.codoid.products.fillo.Connection;
@@ -17,12 +18,16 @@ import automation.project3ds.WidgetMainFrame;
 
 public class WidgetBrick_1v6_Test_Screenshot {
 
-	String host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
-
+	String host;
+	String type;
+	
 	static Driver driver;
 
+	@Parameters({"type"})
 	@BeforeClass
-	public void setUp() throws Exception {
+	public void setUp(String type) throws Exception {
+		this.type = type;
+		host = AnnotationPage.hostMap.get(type);
 		Login.login(host);
 	}
 
@@ -42,24 +47,33 @@ public class WidgetBrick_1v6_Test_Screenshot {
 		List<Map<String, String>> list = MyTunnel.getMap(record);
 		for (Map<String, String> map : list) {
 			String co_id = map.get("co_id");
-			System.out.println(co_id);
-			String type = map.get("paymentMethod");
-			host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D="
+			String paymentMethod = map.get(type+"_paymentMethod");
+			System.out.println(paymentMethod);
+			host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D="+type+"&data%5Bco_id%5D="
 					+ co_id
 					+ "&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
 			driver.get(host);
-			WidgetMainFrame.clickPaymentMethod(type);
-			WidgetMainFrame.clickBuyButton();
-			driver.screenShot("screenShot/" + timestamp + "/" + type + ".png");
+			WidgetMainFrame.waitSpinner();
+			WidgetMainFrame.clickPaymentMethod(type,paymentMethod);
+			WidgetMainFrame.clickBuyButton(type);
+			driver.screenShot("screenShot/" + timestamp + "/" + paymentMethod + ".png");
 			List<String> tabs = WidgetMainFrame.getRedirectWindows();
-			if (tabs != null) {
-				for (int i = 1; i < tabs.size(); i++) {
+			if (tabs != null && tabs.size() != 1) {
+				int currentIndex = -1;
+				for (int i = 0; i < tabs.size(); i++) {
 					String tab = tabs.get(i);
 					driver.switchTo().window(tab);
-					driver.screenShot("screenShot/" + timestamp + "/" + type + ".png");
-					driver.close();
+					driver.waitUrlNotBlank();
+					String url = driver.getCurrentUrl();
+					if(url.contains("test-offerwall")){
+						currentIndex = i;
+					}else {
+						driver.screenShot("screenShot/" + timestamp + "/" + paymentMethod + ".png");
+						System.out.println(driver.getCurrentUrl());
+						driver.close();
+					}
 				}
-				driver.switchTo().window(tabs.get(0));
+				driver.switchTo().window(tabs.get(currentIndex));
 			}
 			
 		}

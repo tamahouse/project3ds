@@ -51,7 +51,7 @@ public class BrickWidgetHome_1v5 {
 	public static String returnRefID(String cardNumber) throws Exception {
 		String refID = null;
 		Thread.sleep(1000);
-		WidgetMainFrame.clickBuyButton();
+//		WidgetMainFrame.clickBuyButton();
 		WidgetIframeccBackup.createPayment(cardNumber);
 		refID = WidgetIframecc.getRefId();
 		ExtentManager.logInfo("refID: " + refID);
@@ -111,7 +111,7 @@ public class BrickWidgetHome_1v5 {
 //						
 //					}
 					driver.switchTo().window(tabs.get(0));
-					WidgetMainFrame.getCompleteMessage();
+//					WidgetMainFrame.getCompleteMessage();
 					
 				} else {
 

@@ -1,16 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [testAa]">
-  <listeners>
-    <listener class-name="automation.project3ds.ExtentListener"/>
-  </listeners>
   <test thread-count="5" name="testTest(failed)">
+    <parameter name="type" value="p1"/>
     <classes>
-      <class name="automation.project3ds.aSample">
+      <class name="WidgetBrick_1v6_Test_Error">
         <methods>
-          <include name="sample"/>
+          <include name="authorizationFailed"/>
+          <include name="setUp"/>
+          <include name="captureFailed"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.project3ds.aSample -->
+      </class> <!-- WidgetBrick_1v6_Test_Error -->
+      <class name="WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo">
+        <methods>
+          <include name="enterPinSuccess"/>
+          <include name="term"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="enterPinInvalid"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo -->
+      <class name="WidgetBrick_1v6_Test_ValidateExpirationDate">
+        <methods>
+          <include name="todayValue"/>
+          <include name="pastValue"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="futureValueLong"/>
+          <include name="futureValueShort"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_ValidateExpirationDate -->
+      <class name="WidgetBrick_1v6_Test_3ds">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
+          <include name="full3ds"/>
+          <include name="optional3ds"/>
+          <include name="no3ds"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_3ds -->
+      <class name="WidgetBrick_1v6_Test_tab_idealpayments_Ideal">
+        <methods>
+          <include name="paymentSuccess"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_idealpayments_Ideal -->
+      <class name="WidgetBrick_1v6_Test_EmptyTextbox">
+        <methods>
+          <include name="emptyTextboxClick"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="emptyTextboxSubmit"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_EmptyTextbox -->
+      <class name="WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint">
+        <methods>
+          <include name="tearDown"/>
+          <include name="pinCurrency"/>
+          <include name="setUp"/>
+          <include name="buyMintLinkBuyForm"/>
+          <include name="priceTag"/>
+          <include name="buyMintLink"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint -->
+      <class name="WidgetBrick_1v6_Test_tab_boletobancario_Boleto">
+        <methods>
+          <include name="paymentBussinessSuccess"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="paymentPersonalSuccess"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_boletobancario_Boleto -->
+      <class name="WidgetBrick_1v6_Test_Screenshot">
+        <methods>
+          <include name="setUp"/>
+          <include name="saveScreenshot"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_Screenshot -->
+      <class name="WidgetBrick_1v6_Test_ValidateCardNumber">
+        <methods>
+          <include name="setUp"/>
+          <include name="invalidValue"/>
+          <include name="masterCard"/>
+          <include name="supportedBrandButInvalidValue"/>
+          <include name="visaCard"/>
+          <include name="tearDown"/>
+          <include name="unsupportedBrand"/>
+          <include name="amexCard"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_ValidateCardNumber -->
+      <class name="WidgetBrick_1v6_Test_StaticLink">
+        <methods>
+          <include name="tearDown"/>
+          <include name="storedCardSwitch"/>
+          <include name="setUp"/>
+          <include name="privacyPolicy"/>
+          <include name="tryAgain"/>
+          <include name="processToBank"/>
+          <include name="terms"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_StaticLink -->
+      <class name="WidgetBrick_1v6_Test_ValidateOthers">
+        <methods>
+          <include name="emailWithOutDot"/>
+          <include name="tearDown"/>
+          <include name="emailWithOutAt"/>
+          <include name="firstNameAsNumber"/>
+          <include name="nameAsNumber"/>
+          <include name="setUp"/>
+          <include name="lastNameAsNumber"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_ValidateOthers -->
     </classes>
   </test> <!-- testTest(failed) -->
 </suite> <!-- Failed suite [testAa] -->

@@ -44,6 +44,19 @@ public class Driver implements WebDriver {
 		this(browser);
 	}
 	
+	public String switchToWindows(String containsInUrl, Boolean x) {
+		List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+		for(String tab: tabs) {
+			driver.switchTo().window(tab);
+			String url = driver.getCurrentUrl();
+			if(x == true && url.contains(containsInUrl)) {
+					return tab;
+			}else if(x == false && !url.contains(containsInUrl)) {
+				return tab;
+			}
+		}
+		return null;
+	}
 	public static String timestamp() {
 		return String.valueOf(System.currentTimeMillis());
 	}

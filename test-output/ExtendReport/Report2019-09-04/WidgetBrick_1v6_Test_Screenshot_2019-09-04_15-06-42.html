@@ -1,0 +1,1297 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 4, 2019 03:06:42 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>WidgetBrick_1v6_Test_Screenshot</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>WidgetBrick_1v6_Test_Screenshot ( )</span>
+						<span class='test-time'>Sep 4, 2019 03:06:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 4, 2019 03:06:42 PM</span>
+	<span class='label end-time'>Sep 4, 2019 03:30:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 23m 23s+113ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>WidgetBrick_1v6_Test_Screenshot</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:06:59 PM</td>
+				<td class='step-details'>
+						tab_epinpaymentsystem
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584418848tab_epinpaymentsystem.png' src='image\1567584418848tab_epinpaymentsystem.png' data-src='image\1567584418848tab_epinpaymentsystem.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:07:16 PM</td>
+				<td class='step-details'>
+						tab_gateway
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584432667tab_gateway.png' src='image\1567584432667tab_gateway.png' data-src='image\1567584432667tab_gateway.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:07:30 PM</td>
+				<td class='step-details'>
+						tab_mobilegateway
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584450054tab_mobilegateway.png' src='image\1567584450054tab_mobilegateway.png' data-src='image\1567584450054tab_mobilegateway.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:07:45 PM</td>
+				<td class='step-details'>
+						tab_sofortbanktransfer
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584464689tab_sofortbanktransfer.png' src='image\1567584464689tab_sofortbanktransfer.png' data-src='image\1567584464689tab_sofortbanktransfer.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:07:51 PM</td>
+				<td class='step-details'>
+						tab_sofortbanktransfer
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584470643tab_sofortbanktransfer.png' src='image\1567584470643tab_sofortbanktransfer.png' data-src='image\1567584470643tab_sofortbanktransfer.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:05 PM</td>
+				<td class='step-details'>
+						tab_boletobancario
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584484910tab_boletobancario.png' src='image\1567584484910tab_boletobancario.png' data-src='image\1567584484910tab_boletobancario.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:18 PM</td>
+				<td class='step-details'>
+						tab_idealpayments
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584498580tab_idealpayments.png' src='image\1567584498580tab_idealpayments.png' data-src='image\1567584498580tab_idealpayments.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:35 PM</td>
+				<td class='step-details'>
+						tab_webmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584515064tab_webmoney.png' src='image\1567584515064tab_webmoney.png' data-src='image\1567584515064tab_webmoney.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:41 PM</td>
+				<td class='step-details'>
+						tab_webmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584520899tab_webmoney.png' src='image\1567584520899tab_webmoney.png' data-src='image\1567584520899tab_webmoney.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:45 PM</td>
+				<td class='step-details'>
+						tab_webmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584525460tab_webmoney.png' src='image\1567584525460tab_webmoney.png' data-src='image\1567584525460tab_webmoney.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:08:58 PM</td>
+				<td class='step-details'>
+						tab_neosurf
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584538139tab_neosurf.png' src='image\1567584538139tab_neosurf.png' data-src='image\1567584538139tab_neosurf.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:12 PM</td>
+				<td class='step-details'>
+						tab_yamoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584551564tab_yamoney.png' src='image\1567584551564tab_yamoney.png' data-src='image\1567584551564tab_yamoney.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:17 PM</td>
+				<td class='step-details'>
+						tab_yamoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584557321tab_yamoney.png' src='image\1567584557321tab_yamoney.png' data-src='image\1567584557321tab_yamoney.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:30 PM</td>
+				<td class='step-details'>
+						tab_onecard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584569936tab_onecard.png' src='image\1567584569936tab_onecard.png' data-src='image\1567584569936tab_onecard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:36 PM</td>
+				<td class='step-details'>
+						tab_onecard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584575815tab_onecard.png' src='image\1567584575815tab_onecard.png' data-src='image\1567584575815tab_onecard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:40 PM</td>
+				<td class='step-details'>
+						tab_onecard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584580323tab_onecard.png' src='image\1567584580323tab_onecard.png' data-src='image\1567584580323tab_onecard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:53 PM</td>
+				<td class='step-details'>
+						tab_qiwiwallet
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584592886tab_qiwiwallet.png' src='image\1567584592886tab_qiwiwallet.png' data-src='image\1567584592886tab_qiwiwallet.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:09:59 PM</td>
+				<td class='step-details'>
+						tab_qiwiwallet
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584598642tab_qiwiwallet.png' src='image\1567584598642tab_qiwiwallet.png' data-src='image\1567584598642tab_qiwiwallet.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:10:12 PM</td>
+				<td class='step-details'>
+						tab_ticketsurf
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584611808tab_ticketsurf.png' src='image\1567584611808tab_ticketsurf.png' data-src='image\1567584611808tab_ticketsurf.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:10:27 PM</td>
+				<td class='step-details'>
+						tab_safetypay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584626850tab_safetypay.png' src='image\1567584626850tab_safetypay.png' data-src='image\1567584626850tab_safetypay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:10:33 PM</td>
+				<td class='step-details'>
+						tab_safetypay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584632620tab_safetypay.png' src='image\1567584632620tab_safetypay.png' data-src='image\1567584632620tab_safetypay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:10:47 PM</td>
+				<td class='step-details'>
+						tab_cherrycredits
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584646573tab_cherrycredits.png' src='image\1567584646573tab_cherrycredits.png' data-src='image\1567584646573tab_cherrycredits.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:03 PM</td>
+				<td class='step-details'>
+						tab_cherrycredits
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584662958tab_cherrycredits.png' src='image\1567584662958tab_cherrycredits.png' data-src='image\1567584662958tab_cherrycredits.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:07 PM</td>
+				<td class='step-details'>
+						tab_cherrycredits
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584667481tab_cherrycredits.png' src='image\1567584667481tab_cherrycredits.png' data-src='image\1567584667481tab_cherrycredits.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:21 PM</td>
+				<td class='step-details'>
+						tab_sepadirectdebit
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584681508tab_sepadirectdebit.png' src='image\1567584681508tab_sepadirectdebit.png' data-src='image\1567584681508tab_sepadirectdebit.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:34 PM</td>
+				<td class='step-details'>
+						tab_mycardcard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584694539tab_mycardcard.png' src='image\1567584694539tab_mycardcard.png' data-src='image\1567584694539tab_mycardcard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:48 PM</td>
+				<td class='step-details'>
+						tab_mycardwallet
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584708050tab_mycardwallet.png' src='image\1567584708050tab_mycardwallet.png' data-src='image\1567584708050tab_mycardwallet.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:11:54 PM</td>
+				<td class='step-details'>
+						tab_mycardwallet
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584713864tab_mycardwallet.png' src='image\1567584713864tab_mycardwallet.png' data-src='image\1567584713864tab_mycardwallet.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:06 PM</td>
+				<td class='step-details'>
+						tab_dollargeneral
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584725928tab_dollargeneral.png' src='image\1567584725928tab_dollargeneral.png' data-src='image\1567584725928tab_dollargeneral.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:12 PM</td>
+				<td class='step-details'>
+						tab_dollargeneral
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584731641tab_dollargeneral.png' src='image\1567584731641tab_dollargeneral.png' data-src='image\1567584731641tab_dollargeneral.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:24 PM</td>
+				<td class='step-details'>
+						tab_subway
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584744157tab_subway.png' src='image\1567584744157tab_subway.png' data-src='image\1567584744157tab_subway.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:33 PM</td>
+				<td class='step-details'>
+						tab_subway
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584753383tab_subway.png' src='image\1567584753383tab_subway.png' data-src='image\1567584753383tab_subway.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						tab_bancontact
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584767142tab_bancontact.png' src='image\1567584767142tab_bancontact.png' data-src='image\1567584767142tab_bancontact.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:53 PM</td>
+				<td class='step-details'>
+						tab_bancontact
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584772891tab_bancontact.png' src='image\1567584772891tab_bancontact.png' data-src='image\1567584772891tab_bancontact.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:13:06 PM</td>
+				<td class='step-details'>
+						tab_unionpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584785686tab_unionpay.png' src='image\1567584785686tab_unionpay.png' data-src='image\1567584785686tab_unionpay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:13:16 PM</td>
+				<td class='step-details'>
+						tab_unionpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584796156tab_unionpay.png' src='image\1567584796156tab_unionpay.png' data-src='image\1567584796156tab_unionpay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:13:29 PM</td>
+				<td class='step-details'>
+						tab_maxima
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584808940tab_maxima.png' src='image\1567584808940tab_maxima.png' data-src='image\1567584808940tab_maxima.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:13:42 PM</td>
+				<td class='step-details'>
+						tab_polipayments
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584822024tab_polipayments.png' src='image\1567584822024tab_polipayments.png' data-src='image\1567584822024tab_polipayments.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:13:48 PM</td>
+				<td class='step-details'>
+						tab_polipayments
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584827866tab_polipayments.png' src='image\1567584827866tab_polipayments.png' data-src='image\1567584827866tab_polipayments.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:01 PM</td>
+				<td class='step-details'>
+						tab_kbc
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584840755tab_kbc.png' src='image\1567584840755tab_kbc.png' data-src='image\1567584840755tab_kbc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:06 PM</td>
+				<td class='step-details'>
+						tab_kbc
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584846551tab_kbc.png' src='image\1567584846551tab_kbc.png' data-src='image\1567584846551tab_kbc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:21 PM</td>
+				<td class='step-details'>
+						tab_cbc
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584860662tab_cbc.png' src='image\1567584860662tab_cbc.png' data-src='image\1567584860662tab_cbc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:26 PM</td>
+				<td class='step-details'>
+						tab_cbc
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584866409tab_cbc.png' src='image\1567584866409tab_cbc.png' data-src='image\1567584866409tab_cbc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:39 PM</td>
+				<td class='step-details'>
+						tab_mercadopago
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584879369tab_mercadopago.png' src='image\1567584879369tab_mercadopago.png' data-src='image\1567584879369tab_mercadopago.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:53 PM</td>
+				<td class='step-details'>
+						tab_pagseguro
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584892710tab_pagseguro.png' src='image\1567584892710tab_pagseguro.png' data-src='image\1567584892710tab_pagseguro.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:14:58 PM</td>
+				<td class='step-details'>
+						tab_pagseguro
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584898406tab_pagseguro.png' src='image\1567584898406tab_pagseguro.png' data-src='image\1567584898406tab_pagseguro.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:15:12 PM</td>
+				<td class='step-details'>
+						tab_ebanxtransfer
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584912174tab_ebanxtransfer.png' src='image\1567584912174tab_ebanxtransfer.png' data-src='image\1567584912174tab_ebanxtransfer.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:15:27 PM</td>
+				<td class='step-details'>
+						tab_ccbrazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584926964tab_ccbrazil.png' src='image\1567584926964tab_ccbrazil.png' data-src='image\1567584926964tab_ccbrazil.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:15:42 PM</td>
+				<td class='step-details'>
+						tab_ccbrazilhipercard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584941629tab_ccbrazilhipercard.png' src='image\1567584941629tab_ccbrazilhipercard.png' data-src='image\1567584941629tab_ccbrazilhipercard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:15:55 PM</td>
+				<td class='step-details'>
+						tab_redcompra
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584954726tab_redcompra.png' src='image\1567584954726tab_redcompra.png' data-src='image\1567584954726tab_redcompra.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:16:08 PM</td>
+				<td class='step-details'>
+						tab_servipagchile
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584967816tab_servipagchile.png' src='image\1567584967816tab_servipagchile.png' data-src='image\1567584967816tab_servipagchile.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:16:21 PM</td>
+				<td class='step-details'>
+						tab_sencillito
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584980995tab_sencillito.png' src='image\1567584980995tab_sencillito.png' data-src='image\1567584980995tab_sencillito.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:16:34 PM</td>
+				<td class='step-details'>
+						tab_btcolombia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567584994538tab_btcolombia.png' src='image\1567584994538tab_btcolombia.png' data-src='image\1567584994538tab_btcolombia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:16:48 PM</td>
+				<td class='step-details'>
+						tab_baloto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585008109tab_baloto.png' src='image\1567585008109tab_baloto.png' data-src='image\1567585008109tab_baloto.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:17:02 PM</td>
+				<td class='step-details'>
+						tab_gana
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585021704tab_gana.png' src='image\1567585021704tab_gana.png' data-src='image\1567585021704tab_gana.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:17:14 PM</td>
+				<td class='step-details'>
+						tab_pse
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585034448tab_pse.png' src='image\1567585034448tab_pse.png' data-src='image\1567585034448tab_pse.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:17:28 PM</td>
+				<td class='step-details'>
+						tab_efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585048559tab_efecty.png' src='image\1567585048559tab_efecty.png' data-src='image\1567585048559tab_efecty.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:17:43 PM</td>
+				<td class='step-details'>
+						tab_davivienda
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585063122tab_davivienda.png' src='image\1567585063122tab_davivienda.png' data-src='image\1567585063122tab_davivienda.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:17:58 PM</td>
+				<td class='step-details'>
+						tab_psecolombia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585077625tab_psecolombia.png' src='image\1567585077625tab_psecolombia.png' data-src='image\1567585077625tab_psecolombia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:18:11 PM</td>
+				<td class='step-details'>
+						tab_btestonia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585090869tab_btestonia.png' src='image\1567585090869tab_btestonia.png' data-src='image\1567585090869tab_btestonia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:18:24 PM</td>
+				<td class='step-details'>
+						tab_giropay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585104030tab_giropay.png' src='image\1567585104030tab_giropay.png' data-src='image\1567585104030tab_giropay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:18:37 PM</td>
+				<td class='step-details'>
+						tab_gudangvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585117549tab_gudangvoucher.png' src='image\1567585117549tab_gudangvoucher.png' data-src='image\1567585117549tab_gudangvoucher.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:18:50 PM</td>
+				<td class='step-details'>
+						tab_wavegame
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585130213tab_wavegame.png' src='image\1567585130213tab_wavegame.png' data-src='image\1567585130213tab_wavegame.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:18:56 PM</td>
+				<td class='step-details'>
+						tab_wavegame
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585136061tab_wavegame.png' src='image\1567585136061tab_wavegame.png' data-src='image\1567585136061tab_wavegame.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:19:09 PM</td>
+				<td class='step-details'>
+						tab_indomog
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585148844tab_indomog.png' src='image\1567585148844tab_indomog.png' data-src='image\1567585148844tab_indomog.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:19:15 PM</td>
+				<td class='step-details'>
+						tab_indomog
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585154674tab_indomog.png' src='image\1567585154674tab_indomog.png' data-src='image\1567585154674tab_indomog.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:19:29 PM</td>
+				<td class='step-details'>
+						tab_banktransferlatvia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585168737tab_banktransferlatvia.png' src='image\1567585168737tab_banktransferlatvia.png' data-src='image\1567585168737tab_banktransferlatvia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:19:43 PM</td>
+				<td class='step-details'>
+						tab_paypost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585182854tab_paypost.png' src='image\1567585182854tab_paypost.png' data-src='image\1567585182854tab_paypost.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:19:57 PM</td>
+				<td class='step-details'>
+						tab_perlas
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585197307tab_perlas.png' src='image\1567585197307tab_perlas.png' data-src='image\1567585197307tab_perlas.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:20:12 PM</td>
+				<td class='step-details'>
+						tab_narvesen
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585211909tab_narvesen.png' src='image\1567585211909tab_narvesen.png' data-src='image\1567585211909tab_narvesen.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:20:25 PM</td>
+				<td class='step-details'>
+						tab_webcash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585225066tab_webcash.png' src='image\1567585225066tab_webcash.png' data-src='image\1567585225066tab_webcash.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:20:38 PM</td>
+				<td class='step-details'>
+						tab_todito
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585238148tab_todito.png' src='image\1567585238148tab_todito.png' data-src='image\1567585238148tab_todito.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:20:51 PM</td>
+				<td class='step-details'>
+						tab_banktransfermexico
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585250956tab_banktransfermexico.png' src='image\1567585250956tab_banktransfermexico.png' data-src='image\1567585250956tab_banktransfermexico.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:21:04 PM</td>
+				<td class='step-details'>
+						tab_btperu
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585264202tab_btperu.png' src='image\1567585264202tab_btperu.png' data-src='image\1567585264202tab_btperu.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:21:17 PM</td>
+				<td class='step-details'>
+						tab_dragonpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585277282tab_dragonpay.png' src='image\1567585277282tab_dragonpay.png' data-src='image\1567585277282tab_dragonpay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:21:30 PM</td>
+				<td class='step-details'>
+						tab_przelewy24
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585290123tab_przelewy24.png' src='image\1567585290123tab_przelewy24.png' data-src='image\1567585290123tab_przelewy24.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:21:43 PM</td>
+				<td class='step-details'>
+						tab_dotpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585303319tab_dotpay.png' src='image\1567585303319tab_dotpay.png' data-src='image\1567585303319tab_dotpay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:21:56 PM</td>
+				<td class='step-details'>
+						tab_evroset
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585316592tab_evroset.png' src='image\1567585316592tab_evroset.png' data-src='image\1567585316592tab_evroset.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:22:11 PM</td>
+				<td class='step-details'>
+						tab_svyasnoi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585330950tab_svyasnoi.png' src='image\1567585330950tab_svyasnoi.png' data-src='image\1567585330950tab_svyasnoi.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:22:24 PM</td>
+				<td class='step-details'>
+						tab_redpagos
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585343965tab_redpagos.png' src='image\1567585343965tab_redpagos.png' data-src='image\1567585343965tab_redpagos.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:22:37 PM</td>
+				<td class='step-details'>
+						tab_vtctelcocard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585357172tab_vtctelcocard.png' src='image\1567585357172tab_vtctelcocard.png' data-src='image\1567585357172tab_vtctelcocard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:22:50 PM</td>
+				<td class='step-details'>
+						tab_vcoincard
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585370208tab_vcoincard.png' src='image\1567585370208tab_vcoincard.png' data-src='image\1567585370208tab_vcoincard.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:23:03 PM</td>
+				<td class='step-details'>
+						tab_mol
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585383554tab_mol.png' src='image\1567585383554tab_mol.png' data-src='image\1567585383554tab_mol.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:25:11 PM</td>
+				<td class='step-details'>
+						tab_alipay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585510723tab_alipay.png' src='image\1567585510723tab_alipay.png' data-src='image\1567585510723tab_alipay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:25:24 PM</td>
+				<td class='step-details'>
+						tab_ipay88
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585523778tab_ipay88.png' src='image\1567585523778tab_ipay88.png' data-src='image\1567585523778tab_ipay88.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:25:37 PM</td>
+				<td class='step-details'>
+						tab_btczech
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585536828tab_btczech.png' src='image\1567585536828tab_btczech.png' data-src='image\1567585536828tab_btczech.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:25:50 PM</td>
+				<td class='step-details'>
+						tab_banktransferestonia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585549835tab_banktransferestonia.png' src='image\1567585549835tab_banktransferestonia.png' data-src='image\1567585549835tab_banktransferestonia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:26:04 PM</td>
+				<td class='step-details'>
+						tab_unipinwallet
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585564169tab_unipinwallet.png' src='image\1567585564169tab_unipinwallet.png' data-src='image\1567585564169tab_unipinwallet.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:26:17 PM</td>
+				<td class='step-details'>
+						tab_btlatvia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585577277tab_btlatvia.png' src='image\1567585577277tab_btlatvia.png' data-src='image\1567585577277tab_btlatvia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:26:30 PM</td>
+				<td class='step-details'>
+						tab_btlithuania
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585589887tab_btlithuania.png' src='image\1567585589887tab_btlithuania.png' data-src='image\1567585589887tab_btlithuania.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:26:44 PM</td>
+				<td class='step-details'>
+						tab_banktransferlithuania
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585603865tab_banktransferlithuania.png' src='image\1567585603865tab_banktransferlithuania.png' data-src='image\1567585603865tab_banktransferlithuania.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:26:57 PM</td>
+				<td class='step-details'>
+						tab_btslovakia
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585617096tab_btslovakia.png' src='image\1567585617096tab_btslovakia.png' data-src='image\1567585617096tab_btslovakia.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:28:33 PM</td>
+				<td class='step-details'>
+						tab_pinhall
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585630107tab_pinhall.png' src='image\1567585630107tab_pinhall.png' data-src='image\1567585630107tab_pinhall.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:28:56 PM</td>
+				<td class='step-details'>
+						tab_fasterpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585726139tab_fasterpay.png' src='image\1567585726139tab_fasterpay.png' data-src='image\1567585726139tab_fasterpay.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:29:34 PM</td>
+				<td class='step-details'>
+						tab_vtc
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567585773779tab_vtc.png' src='image\1567585773779tab_vtc.png' data-src='image\1567585773779tab_vtc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:30:05 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":""}
+  (Session info: chrome=76.0.3809.132)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PW-HAN-063', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\chase\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63038}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.132, webStorageEnabled: true}
+Session ID: 97f4cf9838b5d487135f26b30448b3ea
+*** Element info: {Using=id, value=}
+	at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at automation.project3ds.Driver.getElement(Driver.java:220)
+	at automation.project3ds.Driver.getElement(Driver.java:224)
+	at automation.project3ds.WidgetMainFrame.clickPaymentMethod(WidgetMainFrame.java:64)
+	at WidgetBrick_1v6_Test_Screenshot.saveScreenshot(WidgetBrick_1v6_Test_Screenshot.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:30:05 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>WidgetBrick_1v6_Test_Screenshot</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 4, 2019 03:06:42 PM</td>
+										<td class='linked' test-id='1'>WidgetBrick_1v6_Test_Screenshot ( )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 4, 2019 03:06:42 PM</td>
+										<td class='linked' test-id='1'>WidgetBrick_1v6_Test_Screenshot ( )</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":""}
+  (Session info: chrome=76.0.3809.132)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PW-HAN-063', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\chase\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63038}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 76.0.3809.132, webStorageEnabled: true}
+Session ID: 97f4cf9838b5d487135f26b30448b3ea
+*** Element info: {Using=id, value=}
+	at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at automation.project3ds.Driver.getElement(Driver.java:220)
+	at automation.project3ds.Driver.getElement(Driver.java:224)
+	at automation.project3ds.WidgetMainFrame.clickPaymentMethod(WidgetMainFrame.java:64)
+	at WidgetBrick_1v6_Test_Screenshot.saveScreenshot(WidgetBrick_1v6_Test_Screenshot.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 4, 2019 03:06:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 4, 2019 03:30:07 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 23m 24s+787ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>WidgetBrick_1v6_Test_Screenshot</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "WidgetBrick_1v6_Test_Screenshot ( )":1403.113
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

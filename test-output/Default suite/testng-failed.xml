@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.project3ds.oldTest.aSample">
+      <class name="WidgetBrick_1v6_Test_Screenshot">
         <methods>
-          <include name="test1Title"/>
+          <include name="setUp"/>
+          <include name="saveScreenshot"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.project3ds.oldTest.aSample -->
+      </class> <!-- WidgetBrick_1v6_Test_Screenshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

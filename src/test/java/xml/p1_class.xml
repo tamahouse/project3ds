@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="testAa">
-	<test name="testTest">
+<suite name="WidgetBrick_1v6_Test_EmptyTextbox">
+	<test name="WidgetBrick_1v6_Test_EmptyTextbox">
 	<parameter name="type" value="p1" />
 		 <classes>
-       <class name="WidgetBrick_1v6_Test_Screenshot" />
+       <class name="WidgetBrick_1v6_Test_EmptyTextbox" />
     </classes>
+            	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
     </test>
 </suite>
 

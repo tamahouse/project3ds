@@ -6,6 +6,9 @@
 		 <packages>
        <package name="" />
     </packages>
+                	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
     </test>
 </suite>
 

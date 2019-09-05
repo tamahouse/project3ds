@@ -18,10 +18,10 @@ public class aSample {
 	double increase;
 
 	public void setUp(int space, double ib) {
-		year = 25;
+		year = 22;
 		l = 0.03; 
 		interest = ib-l;
-		increase = 1000;
+		increase = 10;
 	}
 	
 	@DataProvider(name = "data")
@@ -49,7 +49,7 @@ public class aSample {
 	}
 	
 	
-	@Test (dataProvider = "data")
+	
 	public void test1Title(int space, double ib) {
 		this.setUp(space, ib);
 		double base= increase + 0;
@@ -60,7 +60,7 @@ public class aSample {
 		System.out.println(space + " " + ib + " " +base);
 	}
 	
-	
+	@Test (dataProvider = "data")
 	public void test2Continuos(int space, double ib) {
 		
 		this.setUp(space, ib);

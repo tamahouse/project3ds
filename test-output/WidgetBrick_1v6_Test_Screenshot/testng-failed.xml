@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [WidgetBrick_1v6_Test_Screenshot]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="WidgetBrick_1v6_Test_Screenshot(failed)">
+    <parameter name="type" value="p1"/>
+    <classes>
+      <class name="WidgetBrick_1v6_Test_Screenshot">
+        <methods>
+          <include name="setUp"/>
+          <include name="saveScreenshot"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_Screenshot -->
+    </classes>
+  </test> <!-- WidgetBrick_1v6_Test_Screenshot(failed) -->
+</suite> <!-- Failed suite [WidgetBrick_1v6_Test_Screenshot] -->

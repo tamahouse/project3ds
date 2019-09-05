@@ -96,11 +96,11 @@ public class WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo {
 		WidgetMainFrame.clickBuyButton(type);
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.clickTerm();
 		List<String> list = driver.waitForNewTab();
-		driver.switchTo().window(list.get(1));
+		driver.switchToWindows("test-offerwall", false);
 		driver.waitUrlNotBlank();
 		String url = driver.getCurrentUrl();
 		driver.close();
-		driver.switchTo().window(list.get(0));
+		driver.switchToWindows("test-offerwall", true);
 		Assertion.get().assertEquals(url, "https://www.mobiamo.com/terms#privacy", "[Term]");
 		Assertion.end();
 	}

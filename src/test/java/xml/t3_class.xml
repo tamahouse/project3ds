@@ -12,6 +12,9 @@
        <class name="WidgetBrick_1v6_Test_ValidateExpirationDate" />
        <class name="WidgetBrick_1v6_Test_ValidateOthers" />
     </classes>
+                	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
     </test>
 </suite>
 

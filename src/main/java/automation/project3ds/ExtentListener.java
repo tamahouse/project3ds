@@ -45,7 +45,7 @@ public class ExtentListener implements ITestListener{
 		}catch(Exception ignore) {
 			
 		}
-		String displayName = suiteName+" ("+lastName+" )";
+		String displayName = result.getMethod().getMethodName()+" ("+lastName+" )";
 		ExtentManager.startTest(suiteName, displayName);
 		ExtentManager.getTest().assignCategory(suiteName);
 		if(map != null) {

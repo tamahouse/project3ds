@@ -43,8 +43,7 @@ public class WidgetBrick_1v6_Test_StaticLink {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPrivacyPolicy();
-		List<String> tabs = driver.waitForNewTab();
-		driver.switchTo().window(tabs.get(1));
+		driver.switchToWindows("test-offerwall", false);
 		String url = driver.getCurrentUrl();
 		Assertion.get().assertEquals(url, "https://www.paymentwall.com/en/privacypolicy", "[Privacy Policy]");
 		Assertion.end();
@@ -57,8 +56,7 @@ public class WidgetBrick_1v6_Test_StaticLink {
 		WidgetMainFrame.clickBuyButton(type);
 		WidgetIframecc.clickUserDifferentCard();
 		WidgetIframecc.clickTerms();
-		List<String> tabs = driver.waitForNewTab();
-		driver.switchTo().window(tabs.get(1));
+		driver.switchToWindows("test-offerwall", false);
 		String url = driver.getCurrentUrl();
 		Assertion.get().assertEquals(url, "https://www.paymentwall.com/en/terms", "[Term]");
 		Assertion.end();
@@ -76,13 +74,6 @@ public class WidgetBrick_1v6_Test_StaticLink {
 		WidgetIframecc.replace("cardNumber", cardNumber).create();
 		String cl_id = WidgetIframecc.getRefId();
 		System.out.println(cardNumber + " " +cl_id );
-		for(int i = 0; i< 5; i++) {
-			WidgetIframecc.clickProcessButton();
-			List<String> tabs = driver.waitForNewTab();
-			driver.switchTo().window(tabs.get(1));
-			driver.close();
-			driver.switchTo().window(tabs.get(0));
-		}
 		WidgetIframecc.clickProcessButton();
 		Widget3dsNoIframe.success3ds();
 		Boolean x = WidgetMainFrame.getCompleteMessage(type);

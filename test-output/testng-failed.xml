@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [testSuiteT3]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="testSuiteT3(failed)">
+    <parameter name="type" value="t3"/>
     <classes>
-      <class name="automation.project3ds.oldTest.aSample">
+      <class name="WidgetBrick_1v6_Test_3ds">
         <methods>
-          <include name="test1Title"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
+          <include name="full3ds"/>
         </methods>
-      </class> <!-- automation.project3ds.oldTest.aSample -->
+      </class> <!-- WidgetBrick_1v6_Test_3ds -->
+      <class name="WidgetBrick_1v6_Test_Screenshot">
+        <methods>
+          <include name="setUp"/>
+          <include name="saveScreenshot"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_Screenshot -->
+      <class name="WidgetBrick_1v6_Test_EmptyTextbox">
+        <methods>
+          <include name="emptyTextboxClick"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_EmptyTextbox -->
+      <class name="WidgetBrick_1v6_Test_tab_idealpayments_Ideal">
+        <methods>
+          <include name="paymentSuccess"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_idealpayments_Ideal -->
+      <class name="WidgetBrick_1v6_Test_ValidateOthers">
+        <methods>
+          <include name="tearDown"/>
+          <include name="nameAsNumber"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_ValidateOthers -->
+      <class name="WidgetBrick_1v6_Test_Error">
+        <methods>
+          <include name="authorizationFailed"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_Error -->
+      <class name="WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint">
+        <methods>
+          <include name="tearDown"/>
+          <include name="pinCurrency"/>
+          <include name="setUp"/>
+          <include name="priceTag"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint -->
+      <class name="WidgetBrick_1v6_Test_StaticLink">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="privacyPolicy"/>
+          <include name="tryAgain"/>
+        </methods>
+      </class> <!-- WidgetBrick_1v6_Test_StaticLink -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- testSuiteT3(failed) -->
+</suite> <!-- Failed suite [testSuiteT3] -->

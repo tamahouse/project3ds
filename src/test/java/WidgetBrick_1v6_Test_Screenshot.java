@@ -12,6 +12,7 @@ import com.codoid.products.fillo.Recordset;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Driver;
+import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
 import automation.project3ds.MyTunnel;
 import automation.project3ds.WidgetMainFrame;
@@ -39,7 +40,6 @@ public class WidgetBrick_1v6_Test_Screenshot {
 
 	@Test
 	public void saveScreenshot() throws Exception {
-		String timestamp = String.valueOf(System.currentTimeMillis());
 		driver = AnnotationPage.getDriver();
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection("src\\main\\java\\utility\\paymentMethodByCountry.xlsx");
@@ -54,9 +54,14 @@ public class WidgetBrick_1v6_Test_Screenshot {
 					+ "&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
 			driver.get(host);
 			WidgetMainFrame.waitSpinner();
+			try {
 			WidgetMainFrame.clickPaymentMethod(type,paymentMethod);
 			WidgetMainFrame.clickBuyButton(type);
-			driver.screenShot("screenShot/" + timestamp + "/" + paymentMethod + ".png");
+			}catch (Exception e) {
+				
+			}
+			Thread.sleep(3000);
+			ExtentManager.addScreenshot(paymentMethod);
 			List<String> tabs = WidgetMainFrame.getRedirectWindows();
 			if (tabs != null && tabs.size() != 1) {
 				int currentIndex = -1;
@@ -68,8 +73,7 @@ public class WidgetBrick_1v6_Test_Screenshot {
 					if(url.contains("test-offerwall")){
 						currentIndex = i;
 					}else {
-						driver.screenShot("screenShot/" + timestamp + "/" + paymentMethod + ".png");
-						System.out.println(driver.getCurrentUrl());
+						ExtentManager.addScreenshot(paymentMethod);
 						driver.close();
 					}
 				}

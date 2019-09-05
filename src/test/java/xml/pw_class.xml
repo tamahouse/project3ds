@@ -6,6 +6,9 @@
 		 <classes>
        <class name="WidgetBrick_1v6_Test_EmptyTextbox" />
     </classes>
+                	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
     </test>
 </suite>
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testSuiteP1]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="testP1(failed)">
+    <parameter name="type" value="p1"/>
+    <classes>
+      <class name="report.WidgetBrick_1v6_Test_EmptyTextbox">
+        <methods>
+          <include name="emptyTextboxClick"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- report.WidgetBrick_1v6_Test_EmptyTextbox -->
+    </classes>
+  </test> <!-- testP1(failed) -->
+</suite> <!-- Failed suite [testSuiteP1] -->

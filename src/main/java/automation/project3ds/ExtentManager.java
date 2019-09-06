@@ -20,6 +20,7 @@ import com.aventstack.extentreports.model.Media;
 import com.aventstack.extentreports.model.MediaType;
 import com.aventstack.extentreports.model.ScreenCapture;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
@@ -39,6 +40,7 @@ public class ExtentManager {
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(folderPathDaily+ reportName);
 			reporter.config().setCSS("textarea { height: 20rem; }");
 			reporter.config().setCSS(".r-img { width: 30%; }");
+			reporter.config().setTheme(Theme.DARK);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 		}

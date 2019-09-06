@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="42" ignored="0" total="46" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="99854" started-at="2019-09-06T09:50:22Z" finished-at="2019-09-06T09:52:02Z">
+  <suite name="Logo" duration-ms="103645" started-at="2019-09-06T10:08:03Z" finished-at="2019-09-06T10:09:47Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="99854" started-at="2019-09-06T09:50:22Z" finished-at="2019-09-06T09:52:02Z">
+    <test name="Logo" duration-ms="103645" started-at="2019-09-06T10:08:03Z" finished-at="2019-09-06T10:09:47Z">
       <class name="Logo">
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3228" started-at="2019-09-06T09:50:23Z" data-provider="data" finished-at="2019-09-06T09:50:26Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3371" started-at="2019-09-06T10:08:04Z" data-provider="data" finished-at="2019-09-06T10:08:07Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2969" started-at="2019-09-06T09:50:26Z" data-provider="data" finished-at="2019-09-06T09:50:29Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3268" started-at="2019-09-06T10:08:07Z" data-provider="data" finished-at="2019-09-06T10:08:11Z">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2428" started-at="2019-09-06T09:50:29Z" data-provider="data" finished-at="2019-09-06T09:50:31Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2432" started-at="2019-09-06T10:08:11Z" data-provider="data" finished-at="2019-09-06T10:08:13Z">
           <params>
             <param index="0">
               <value>
@@ -139,7 +139,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2098" started-at="2019-09-06T09:50:31Z" data-provider="data" finished-at="2019-09-06T09:50:33Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2261" started-at="2019-09-06T10:08:13Z" data-provider="data" finished-at="2019-09-06T10:08:15Z">
           <params>
             <param index="0">
               <value>
@@ -155,7 +155,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2271" started-at="2019-09-06T09:50:33Z" data-provider="data" finished-at="2019-09-06T09:50:36Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2274" started-at="2019-09-06T10:08:15Z" data-provider="data" finished-at="2019-09-06T10:08:18Z">
           <params>
             <param index="0">
               <value>
@@ -211,7 +211,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2479" started-at="2019-09-06T09:50:36Z" data-provider="data" finished-at="2019-09-06T09:50:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2811" started-at="2019-09-06T10:08:18Z" data-provider="data" finished-at="2019-09-06T10:08:20Z">
           <params>
             <param index="0">
               <value>
@@ -275,7 +275,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2305" started-at="2019-09-06T09:50:38Z" data-provider="data" finished-at="2019-09-06T09:50:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2375" started-at="2019-09-06T10:08:20Z" data-provider="data" finished-at="2019-09-06T10:08:23Z">
           <params>
             <param index="0">
               <value>
@@ -331,7 +331,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1818" started-at="2019-09-06T09:50:40Z" data-provider="data" finished-at="2019-09-06T09:50:42Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2037" started-at="2019-09-06T10:08:23Z" data-provider="data" finished-at="2019-09-06T10:08:25Z">
           <params>
             <param index="0">
               <value>
@@ -387,7 +387,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1862" started-at="2019-09-06T09:50:42Z" data-provider="data" finished-at="2019-09-06T09:50:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1938" started-at="2019-09-06T10:08:25Z" data-provider="data" finished-at="2019-09-06T10:08:27Z">
           <params>
             <param index="0">
               <value>
@@ -443,7 +443,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1962" started-at="2019-09-06T09:50:44Z" data-provider="data" finished-at="2019-09-06T09:50:46Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2782" started-at="2019-09-06T10:08:27Z" data-provider="data" finished-at="2019-09-06T10:08:30Z">
           <params>
             <param index="0">
               <value>
@@ -503,7 +503,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2055" started-at="2019-09-06T09:50:46Z" data-provider="data" finished-at="2019-09-06T09:50:48Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2315" started-at="2019-09-06T10:08:30Z" data-provider="data" finished-at="2019-09-06T10:08:32Z">
           <params>
             <param index="0">
               <value>
@@ -519,7 +519,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2592" started-at="2019-09-06T09:50:48Z" data-provider="data" finished-at="2019-09-06T09:50:51Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2731" started-at="2019-09-06T10:08:32Z" data-provider="data" finished-at="2019-09-06T10:08:35Z">
           <params>
             <param index="0">
               <value>
@@ -583,7 +583,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2990" started-at="2019-09-06T09:50:51Z" data-provider="data" finished-at="2019-09-06T09:50:54Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2946" started-at="2019-09-06T10:08:35Z" data-provider="data" finished-at="2019-09-06T10:08:38Z">
           <params>
             <param index="0">
               <value>
@@ -647,7 +647,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2961" started-at="2019-09-06T09:50:54Z" data-provider="data" finished-at="2019-09-06T09:50:57Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3094" started-at="2019-09-06T10:08:38Z" data-provider="data" finished-at="2019-09-06T10:08:41Z">
           <params>
             <param index="0">
               <value>
@@ -711,7 +711,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3131" started-at="2019-09-06T09:50:57Z" data-provider="data" finished-at="2019-09-06T09:51:00Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2994" started-at="2019-09-06T10:08:41Z" data-provider="data" finished-at="2019-09-06T10:08:44Z">
           <params>
             <param index="0">
               <value>
@@ -775,7 +775,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2977" started-at="2019-09-06T09:51:00Z" data-provider="data" finished-at="2019-09-06T09:51:03Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3073" started-at="2019-09-06T10:08:44Z" data-provider="data" finished-at="2019-09-06T10:08:47Z">
           <params>
             <param index="0">
               <value>
@@ -839,7 +839,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2978" started-at="2019-09-06T09:51:03Z" data-provider="data" finished-at="2019-09-06T09:51:06Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2958" started-at="2019-09-06T10:08:47Z" data-provider="data" finished-at="2019-09-06T10:08:50Z">
           <params>
             <param index="0">
               <value>
@@ -902,7 +902,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="15" started-at="2019-09-06T09:51:06Z" data-provider="data" finished-at="2019-09-06T09:51:06Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="13" started-at="2019-09-06T10:08:50Z" data-provider="data" finished-at="2019-09-06T10:08:50Z">
           <params>
             <param index="0">
               <value>
@@ -957,7 +957,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2420" started-at="2019-09-06T09:51:06Z" data-provider="data" finished-at="2019-09-06T09:51:08Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2448" started-at="2019-09-06T10:08:50Z" data-provider="data" finished-at="2019-09-06T10:08:52Z">
           <params>
             <param index="0">
               <value>
@@ -1012,7 +1012,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2029" started-at="2019-09-06T09:51:08Z" data-provider="data" finished-at="2019-09-06T09:51:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2292" started-at="2019-09-06T10:08:52Z" data-provider="data" finished-at="2019-09-06T10:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1067,7 +1067,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="4" started-at="2019-09-06T09:51:10Z" data-provider="data" finished-at="2019-09-06T09:51:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:08:55Z" data-provider="data" finished-at="2019-09-06T10:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1124,7 +1124,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2718" started-at="2019-09-06T09:51:10Z" data-provider="data" finished-at="2019-09-06T09:51:13Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2527" started-at="2019-09-06T10:08:55Z" data-provider="data" finished-at="2019-09-06T10:08:57Z">
           <params>
             <param index="0">
               <value>
@@ -1183,7 +1183,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3101" started-at="2019-09-06T09:51:13Z" data-provider="data" finished-at="2019-09-06T09:51:16Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3349" started-at="2019-09-06T10:08:57Z" data-provider="data" finished-at="2019-09-06T10:09:00Z">
           <params>
             <param index="0">
               <value>
@@ -1252,7 +1252,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2953" started-at="2019-09-06T09:51:16Z" data-provider="data" finished-at="2019-09-06T09:51:19Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3201" started-at="2019-09-06T10:09:00Z" data-provider="data" finished-at="2019-09-06T10:09:04Z">
           <params>
             <param index="0">
               <value>
@@ -1315,7 +1315,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3374" started-at="2019-09-06T09:51:19Z" data-provider="data" finished-at="2019-09-06T09:51:22Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3423" started-at="2019-09-06T10:09:04Z" data-provider="data" finished-at="2019-09-06T10:09:07Z">
           <params>
             <param index="0">
               <value>
@@ -1378,7 +1378,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3030" started-at="2019-09-06T09:51:22Z" data-provider="data" finished-at="2019-09-06T09:51:26Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3032" started-at="2019-09-06T10:09:07Z" data-provider="data" finished-at="2019-09-06T10:09:10Z">
           <params>
             <param index="0">
               <value>
@@ -1441,7 +1441,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="13" started-at="2019-09-06T09:51:26Z" data-provider="data" finished-at="2019-09-06T09:51:26Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="11" started-at="2019-09-06T10:09:10Z" data-provider="data" finished-at="2019-09-06T10:09:10Z">
           <params>
             <param index="0">
               <value>
@@ -1496,7 +1496,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3083" started-at="2019-09-06T09:51:26Z" data-provider="data" finished-at="2019-09-06T09:51:29Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3025" started-at="2019-09-06T10:09:10Z" data-provider="data" finished-at="2019-09-06T10:09:13Z">
           <params>
             <param index="0">
               <value>
@@ -1559,7 +1559,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3055" started-at="2019-09-06T09:51:29Z" data-provider="data" finished-at="2019-09-06T09:51:32Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3124" started-at="2019-09-06T10:09:13Z" data-provider="data" finished-at="2019-09-06T10:09:16Z">
           <params>
             <param index="0">
               <value>
@@ -1622,7 +1622,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3017" started-at="2019-09-06T09:51:32Z" data-provider="data" finished-at="2019-09-06T09:51:35Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3096" started-at="2019-09-06T10:09:16Z" data-provider="data" finished-at="2019-09-06T10:09:19Z">
           <params>
             <param index="0">
               <value>
@@ -1685,7 +1685,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3114" started-at="2019-09-06T09:51:35Z" data-provider="data" finished-at="2019-09-06T09:51:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3073" started-at="2019-09-06T10:09:19Z" data-provider="data" finished-at="2019-09-06T10:09:22Z">
           <params>
             <param index="0">
               <value>
@@ -1748,7 +1748,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3055" started-at="2019-09-06T09:51:38Z" data-provider="data" finished-at="2019-09-06T09:51:41Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3079" started-at="2019-09-06T10:09:22Z" data-provider="data" finished-at="2019-09-06T10:09:26Z">
           <params>
             <param index="0">
               <value>
@@ -1811,7 +1811,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3005" started-at="2019-09-06T09:51:41Z" data-provider="data" finished-at="2019-09-06T09:51:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3001" started-at="2019-09-06T10:09:26Z" data-provider="data" finished-at="2019-09-06T10:09:29Z">
           <params>
             <param index="0">
               <value>
@@ -1874,7 +1874,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3055" started-at="2019-09-06T09:51:44Z" data-provider="data" finished-at="2019-09-06T09:51:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3211" started-at="2019-09-06T10:09:29Z" data-provider="data" finished-at="2019-09-06T10:09:32Z">
           <params>
             <param index="0">
               <value>
@@ -1933,7 +1933,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3060" started-at="2019-09-06T09:51:47Z" data-provider="data" finished-at="2019-09-06T09:51:50Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3087" started-at="2019-09-06T10:09:32Z" data-provider="data" finished-at="2019-09-06T10:09:35Z">
           <params>
             <param index="0">
               <value>
@@ -1996,7 +1996,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3137" started-at="2019-09-06T09:51:50Z" data-provider="data" finished-at="2019-09-06T09:51:53Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3189" started-at="2019-09-06T10:09:35Z" data-provider="data" finished-at="2019-09-06T10:09:38Z">
           <params>
             <param index="0">
               <value>
@@ -2059,7 +2059,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3036" started-at="2019-09-06T09:51:53Z" data-provider="data" finished-at="2019-09-06T09:51:56Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3051" started-at="2019-09-06T10:09:38Z" data-provider="data" finished-at="2019-09-06T10:09:41Z">
           <params>
             <param index="0">
               <value>
@@ -2122,7 +2122,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2944" started-at="2019-09-06T09:51:56Z" data-provider="data" finished-at="2019-09-06T09:51:59Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3132" started-at="2019-09-06T10:09:41Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
           <params>
             <param index="0">
               <value>
@@ -2181,7 +2181,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="8" started-at="2019-09-06T09:51:59Z" data-provider="data" finished-at="2019-09-06T09:51:59Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="14" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
           <params>
             <param index="0">
               <value>
@@ -2236,7 +2236,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="12" started-at="2019-09-06T09:51:59Z" data-provider="data" finished-at="2019-09-06T09:51:59Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
           <params>
             <param index="0">
               <value>
@@ -2291,7 +2291,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2327" started-at="2019-09-06T09:51:59Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2278" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>
@@ -2307,7 +2307,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="4" started-at="2019-09-06T09:52:02Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="4" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>
@@ -2362,7 +2362,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T09:52:02Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>
@@ -2417,7 +2417,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T09:52:02Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>
@@ -2472,7 +2472,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="4" started-at="2019-09-06T09:52:02Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>
@@ -2527,7 +2527,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T09:52:02Z" data-provider="data" finished-at="2019-09-06T09:52:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="10" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
           <params>
             <param index="0">
               <value>

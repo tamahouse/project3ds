@@ -1,0 +1,3216 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			.r-img { width: 30%; }
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 6, 2019 03:12:42 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>46</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>efectycolombia</span>
+						<span class='test-time'>Sep 6, 2019 03:12:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:42 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+497ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562432Efecty' src='image\1567757562432Efecty' data-src='image\1567757562432Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562525Efecty' src='image\1567757562525Efecty' data-src='image\1567757562525Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562590Efecty' src='image\1567757562590Efecty' data-src='image\1567757562590Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562643Efecty' src='image\1567757562643Efecty' data-src='image\1567757562643Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562665Efecty' src='image\1567757562665Efecty' data-src='image\1567757562665Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562713Efecty' src='image\1567757562713Efecty' data-src='image\1567757562713Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562760Efecty' src='image\1567757562760Efecty' data-src='image\1567757562760Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562787Efecty' src='image\1567757562787Efecty' data-src='image\1567757562787Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:42 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757562822Efecty' src='image\1567757562822Efecty' data-src='image\1567757562822Efecty'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>pse</span>
+						<span class='test-time'>Sep 6, 2019 03:12:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:43 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+198ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563701PSE' src='image\1567757563701PSE' data-src='image\1567757563701PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563721PSE' src='image\1567757563721PSE' data-src='image\1567757563721PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563747PSE' src='image\1567757563747PSE' data-src='image\1567757563747PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563771PSE' src='image\1567757563771PSE' data-src='image\1567757563771PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563789PSE' src='image\1567757563789PSE' data-src='image\1567757563789PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563811PSE' src='image\1567757563811PSE' data-src='image\1567757563811PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563840PSE' src='image\1567757563840PSE' data-src='image\1567757563840PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563859PSE' src='image\1567757563859PSE' data-src='image\1567757563859PSE'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:43 PM</td>
+				<td class='step-details'>
+						PSE
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757563875PSE' src='image\1567757563875PSE' data-src='image\1567757563875PSE'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>boletobancario</span>
+						<span class='test-time'>Sep 6, 2019 03:12:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:44 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+187ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564257Boleto' src='image\1567757564257Boleto' data-src='image\1567757564257Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564291Boleto' src='image\1567757564291Boleto' data-src='image\1567757564291Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564333Boleto' src='image\1567757564333Boleto' data-src='image\1567757564333Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564351Boleto' src='image\1567757564351Boleto' data-src='image\1567757564351Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564374Boleto' src='image\1567757564374Boleto' data-src='image\1567757564374Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564408Boleto' src='image\1567757564408Boleto' data-src='image\1567757564408Boleto'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>santandermexico</span>
+						<span class='test-time'>Sep 6, 2019 03:12:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:44 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+266ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564482Santander' src='image\1567757564482Santander' data-src='image\1567757564482Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564505Santander' src='image\1567757564505Santander' data-src='image\1567757564505Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564542Santander' src='image\1567757564542Santander' data-src='image\1567757564542Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564586Santander' src='image\1567757564586Santander' data-src='image\1567757564586Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564603Santander' src='image\1567757564603Santander' data-src='image\1567757564603Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564626Santander' src='image\1567757564626Santander' data-src='image\1567757564626Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564653Santander' src='image\1567757564653Santander' data-src='image\1567757564653Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564675Santander' src='image\1567757564675Santander' data-src='image\1567757564675Santander'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:44 PM</td>
+				<td class='step-details'>
+						Santander
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757564699Santander' src='image\1567757564699Santander' data-src='image\1567757564699Santander'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>oxxo</span>
+						<span class='test-time'>Sep 6, 2019 03:12:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+185ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565085OXXO' src='image\1567757565085OXXO' data-src='image\1567757565085OXXO'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565113OXXO' src='image\1567757565113OXXO' data-src='image\1567757565113OXXO'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565152OXXO' src='image\1567757565152OXXO' data-src='image\1567757565152OXXO'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565172OXXO' src='image\1567757565172OXXO' data-src='image\1567757565172OXXO'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565202OXXO' src='image\1567757565202OXXO' data-src='image\1567757565202OXXO'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						OXXO
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565237OXXO' src='image\1567757565237OXXO' data-src='image\1567757565237OXXO'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>ccbrazil</span>
+						<span class='test-time'>Sep 6, 2019 03:12:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>ccbrazilhipercard</span>
+						<span class='test-time'>Sep 6, 2019 03:12:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+289ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565532Hiperbank' src='image\1567757565532Hiperbank' data-src='image\1567757565532Hiperbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565567Hiperbank' src='image\1567757565567Hiperbank' data-src='image\1567757565567Hiperbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565605Hiperbank' src='image\1567757565605Hiperbank' data-src='image\1567757565605Hiperbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565623Hiperbank' src='image\1567757565623Hiperbank' data-src='image\1567757565623Hiperbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565673Hiperbank' src='image\1567757565673Hiperbank' data-src='image\1567757565673Hiperbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Hiperbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565725Hiperbank' src='image\1567757565725Hiperbank' data-src='image\1567757565725Hiperbank'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>itaubrazil</span>
+						<span class='test-time'>Sep 6, 2019 03:12:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+157ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565841Itau' src='image\1567757565841Itau' data-src='image\1567757565841Itau'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565865Itau' src='image\1567757565865Itau' data-src='image\1567757565865Itau'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565888Itau' src='image\1567757565888Itau' data-src='image\1567757565888Itau'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565903Itau' src='image\1567757565903Itau' data-src='image\1567757565903Itau'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565924Itau' src='image\1567757565924Itau' data-src='image\1567757565924Itau'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Itau
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565948Itau' src='image\1567757565948Itau' data-src='image\1567757565948Itau'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>bancobrazil</span>
+						<span class='test-time'>Sep 6, 2019 03:12:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:45 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+124ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:45 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565977Banco do Brazil' src='image\1567757565977Banco do Brazil' data-src='image\1567757565977Banco do Brazil'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757565996Banco do Brazil' src='image\1567757565996Banco do Brazil' data-src='image\1567757565996Banco do Brazil'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566018Banco do Brazil' src='image\1567757566018Banco do Brazil' data-src='image\1567757566018Banco do Brazil'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566034Banco do Brazil' src='image\1567757566034Banco do Brazil' data-src='image\1567757566034Banco do Brazil'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566057Banco do Brazil' src='image\1567757566057Banco do Brazil' data-src='image\1567757566057Banco do Brazil'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banco do Brazil
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566080Banco do Brazil' src='image\1567757566080Banco do Brazil' data-src='image\1567757566080Banco do Brazil'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='61'>
+					<div class='test-heading'>
+						<span class='test-name'>banrisulbrazil</span>
+						<span class='test-time'>Sep 6, 2019 03:12:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+174ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566151Banrisul' src='image\1567757566151Banrisul' data-src='image\1567757566151Banrisul'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566184Banrisul' src='image\1567757566184Banrisul' data-src='image\1567757566184Banrisul'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566208Banrisul' src='image\1567757566208Banrisul' data-src='image\1567757566208Banrisul'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566224Banrisul' src='image\1567757566224Banrisul' data-src='image\1567757566224Banrisul'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566243Banrisul' src='image\1567757566243Banrisul' data-src='image\1567757566243Banrisul'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Banrisul
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566268Banrisul' src='image\1567757566268Banrisul' data-src='image\1567757566268Banrisul'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>efecty</span>
+						<span class='test-time'>Sep 6, 2019 03:12:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+246ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566301Efecty' src='image\1567757566301Efecty' data-src='image\1567757566301Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566325Efecty' src='image\1567757566325Efecty' data-src='image\1567757566325Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566351Efecty' src='image\1567757566351Efecty' data-src='image\1567757566351Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566384Efecty' src='image\1567757566384Efecty' data-src='image\1567757566384Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566405Efecty' src='image\1567757566405Efecty' data-src='image\1567757566405Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566433Efecty' src='image\1567757566433Efecty' data-src='image\1567757566433Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566474Efecty' src='image\1567757566474Efecty' data-src='image\1567757566474Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566495Efecty' src='image\1567757566495Efecty' data-src='image\1567757566495Efecty'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						Efecty
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566520Efecty' src='image\1567757566520Efecty' data-src='image\1567757566520Efecty'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='80'>
+					<div class='test-heading'>
+						<span class='test-name'>dotpaymt</span>
+						<span class='test-time'>Sep 6, 2019 03:12:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+106ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566835mBank' src='image\1567757566835mBank' data-src='image\1567757566835mBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566853mBank' src='image\1567757566853mBank' data-src='image\1567757566853mBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566869mBank' src='image\1567757566869mBank' data-src='image\1567757566869mBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566881mBank' src='image\1567757566881mBank' data-src='image\1567757566881mBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566894mBank' src='image\1567757566894mBank' data-src='image\1567757566894mBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						mBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566912mBank' src='image\1567757566912mBank' data-src='image\1567757566912mBank'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='81'>
+					<div class='test-heading'>
+						<span class='test-name'>dotpaybzwbk</span>
+						<span class='test-time'>Sep 6, 2019 03:12:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:46 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+129ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566937WBK' src='image\1567757566937WBK' data-src='image\1567757566937WBK'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566961WBK' src='image\1567757566961WBK' data-src='image\1567757566961WBK'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:46 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757566991WBK' src='image\1567757566991WBK' data-src='image\1567757566991WBK'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567003WBK' src='image\1567757567003WBK' data-src='image\1567757567003WBK'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567018WBK' src='image\1567757567018WBK' data-src='image\1567757567018WBK'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						WBK
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567042WBK' src='image\1567757567042WBK' data-src='image\1567757567042WBK'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='82'>
+					<div class='test-heading'>
+						<span class='test-name'>dotpayingb</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+166ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567072ING' src='image\1567757567072ING' data-src='image\1567757567072ING'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567109ING' src='image\1567757567109ING' data-src='image\1567757567109ING'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567144ING' src='image\1567757567144ING' data-src='image\1567757567144ING'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567160ING' src='image\1567757567160ING' data-src='image\1567757567160ING'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567183ING' src='image\1567757567183ING' data-src='image\1567757567183ING'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						ING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567210ING' src='image\1567757567210ING' data-src='image\1567757567210ING'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='83'>
+					<div class='test-heading'>
+						<span class='test-name'>dotpayinteligo</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+158ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567239Inteligo' src='image\1567757567239Inteligo' data-src='image\1567757567239Inteligo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567272Inteligo' src='image\1567757567272Inteligo' data-src='image\1567757567272Inteligo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567307Inteligo' src='image\1567757567307Inteligo' data-src='image\1567757567307Inteligo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567320Inteligo' src='image\1567757567320Inteligo' data-src='image\1567757567320Inteligo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567342Inteligo' src='image\1567757567342Inteligo' data-src='image\1567757567342Inteligo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Inteligo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567372Inteligo' src='image\1567757567372Inteligo' data-src='image\1567757567372Inteligo'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='84'>
+					<div class='test-heading'>
+						<span class='test-name'>dotpayingbacc</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+265ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567411Dotpay Place z ING Bank Slaski' src='image\1567757567411Dotpay Place z ING Bank Slaski' data-src='image\1567757567411Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567498Dotpay Place z ING Bank Slaski' src='image\1567757567498Dotpay Place z ING Bank Slaski' data-src='image\1567757567498Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567539Dotpay Place z ING Bank Slaski' src='image\1567757567539Dotpay Place z ING Bank Slaski' data-src='image\1567757567539Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567559Dotpay Place z ING Bank Slaski' src='image\1567757567559Dotpay Place z ING Bank Slaski' data-src='image\1567757567559Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567602Dotpay Place z ING Bank Slaski' src='image\1567757567602Dotpay Place z ING Bank Slaski' data-src='image\1567757567602Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Dotpay Place z ING Bank Slaski
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567638Dotpay Place z ING Bank Slaski' src='image\1567757567638Dotpay Place z ING Bank Slaski' data-src='image\1567757567638Dotpay Place z ING Bank Slaski'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='85'>
+					<div class='test-heading'>
+						<span class='test-name'>happyvoucher</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+146ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567669Happyvoucher' src='image\1567757567669Happyvoucher' data-src='image\1567757567669Happyvoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567701Happyvoucher' src='image\1567757567701Happyvoucher' data-src='image\1567757567701Happyvoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567725Happyvoucher' src='image\1567757567725Happyvoucher' data-src='image\1567757567725Happyvoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567740Happyvoucher' src='image\1567757567740Happyvoucher' data-src='image\1567757567740Happyvoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567761Happyvoucher' src='image\1567757567761Happyvoucher' data-src='image\1567757567761Happyvoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Happyvoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567790Happyvoucher' src='image\1567757567790Happyvoucher' data-src='image\1567757567790Happyvoucher'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='86'>
+					<div class='test-heading'>
+						<span class='test-name'>teencash</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='87'>
+					<div class='test-heading'>
+						<span class='test-name'>oncash</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+147ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567835Oncash' src='image\1567757567835Oncash' data-src='image\1567757567835Oncash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567860Oncash' src='image\1567757567860Oncash' data-src='image\1567757567860Oncash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567893Oncash' src='image\1567757567893Oncash' data-src='image\1567757567893Oncash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567908Oncash' src='image\1567757567908Oncash' data-src='image\1567757567908Oncash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567924Oncash' src='image\1567757567924Oncash' data-src='image\1567757567924Oncash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Oncash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567952Oncash' src='image\1567757567952Oncash' data-src='image\1567757567952Oncash'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='88'>
+					<div class='test-heading'>
+						<span class='test-name'>eggmoney</span>
+						<span class='test-time'>Sep 6, 2019 03:12:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:47 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+128ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:47 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757567981Eggmoney' src='image\1567757567981Eggmoney' data-src='image\1567757567981Eggmoney'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568005Eggmoney' src='image\1567757568005Eggmoney' data-src='image\1567757568005Eggmoney'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568030Eggmoney' src='image\1567757568030Eggmoney' data-src='image\1567757568030Eggmoney'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568043Eggmoney' src='image\1567757568043Eggmoney' data-src='image\1567757568043Eggmoney'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568061Eggmoney' src='image\1567757568061Eggmoney' data-src='image\1567757568061Eggmoney'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Eggmoney
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568086Eggmoney' src='image\1567757568086Eggmoney' data-src='image\1567757568086Eggmoney'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='89'>
+					<div class='test-heading'>
+						<span class='test-name'>culturevoucher</span>
+						<span class='test-time'>Sep 6, 2019 03:12:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='90'>
+					<div class='test-heading'>
+						<span class='test-name'>allthegate</span>
+						<span class='test-time'>Sep 6, 2019 03:12:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+183ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568120Payletter AlltheGate' src='image\1567757568120Payletter AlltheGate' data-src='image\1567757568120Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568140Payletter AlltheGate' src='image\1567757568140Payletter AlltheGate' data-src='image\1567757568140Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568166Payletter AlltheGate' src='image\1567757568166Payletter AlltheGate' data-src='image\1567757568166Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568194Payletter AlltheGate' src='image\1567757568194Payletter AlltheGate' data-src='image\1567757568194Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568207Payletter AlltheGate' src='image\1567757568207Payletter AlltheGate' data-src='image\1567757568207Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568224Payletter AlltheGate' src='image\1567757568224Payletter AlltheGate' data-src='image\1567757568224Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568247Payletter AlltheGate' src='image\1567757568247Payletter AlltheGate' data-src='image\1567757568247Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568264Payletter AlltheGate' src='image\1567757568264Payletter AlltheGate' data-src='image\1567757568264Payletter AlltheGate'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Payletter AlltheGate
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568282Payletter AlltheGate' src='image\1567757568282Payletter AlltheGate' data-src='image\1567757568282Payletter AlltheGate'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='91'>
+					<div class='test-heading'>
+						<span class='test-name'>bookculture</span>
+						<span class='test-time'>Sep 6, 2019 03:12:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+248ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568318BookGiftVoucher' src='image\1567757568318BookGiftVoucher' data-src='image\1567757568318BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568357BookGiftVoucher' src='image\1567757568357BookGiftVoucher' data-src='image\1567757568357BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568380BookGiftVoucher' src='image\1567757568380BookGiftVoucher' data-src='image\1567757568380BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568396BookGiftVoucher' src='image\1567757568396BookGiftVoucher' data-src='image\1567757568396BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568438BookGiftVoucher' src='image\1567757568438BookGiftVoucher' data-src='image\1567757568438BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568479BookGiftVoucher' src='image\1567757568479BookGiftVoucher' data-src='image\1567757568479BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568506BookGiftVoucher' src='image\1567757568506BookGiftVoucher' data-src='image\1567757568506BookGiftVoucher'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						BookGiftVoucher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568532BookGiftVoucher' src='image\1567757568532BookGiftVoucher' data-src='image\1567757568532BookGiftVoucher'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='92'>
+					<div class='test-heading'>
+						<span class='test-name'>idealpayments</span>
+						<span class='test-time'>Sep 6, 2019 03:12:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+191ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568588PPRO IDEAL' src='image\1567757568588PPRO IDEAL' data-src='image\1567757568588PPRO IDEAL'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568623PPRO IDEAL' src='image\1567757568623PPRO IDEAL' data-src='image\1567757568623PPRO IDEAL'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568653PPRO IDEAL' src='image\1567757568653PPRO IDEAL' data-src='image\1567757568653PPRO IDEAL'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568671PPRO IDEAL' src='image\1567757568671PPRO IDEAL' data-src='image\1567757568671PPRO IDEAL'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568696PPRO IDEAL' src='image\1567757568696PPRO IDEAL' data-src='image\1567757568696PPRO IDEAL'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						PPRO IDEAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568734PPRO IDEAL' src='image\1567757568734PPRO IDEAL' data-src='image\1567757568734PPRO IDEAL'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='93'>
+					<div class='test-heading'>
+						<span class='test-name'>gameon</span>
+						<span class='test-time'>Sep 6, 2019 03:12:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:48 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+314ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568809Game On' src='image\1567757568809Game On' data-src='image\1567757568809Game On'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568868Game On' src='image\1567757568868Game On' data-src='image\1567757568868Game On'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568922Game On' src='image\1567757568922Game On' data-src='image\1567757568922Game On'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:48 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568945Game On' src='image\1567757568945Game On' data-src='image\1567757568945Game On'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757568989Game On' src='image\1567757568989Game On' data-src='image\1567757568989Game On'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Game On
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569049Game On' src='image\1567757569049Game On' data-src='image\1567757569049Game On'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='94'>
+					<div class='test-heading'>
+						<span class='test-name'>culturevoucherkr</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+194ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569104Culture land' src='image\1567757569104Culture land' data-src='image\1567757569104Culture land'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569138Culture land' src='image\1567757569138Culture land' data-src='image\1567757569138Culture land'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569173Culture land' src='image\1567757569173Culture land' data-src='image\1567757569173Culture land'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569198Culture land' src='image\1567757569198Culture land' data-src='image\1567757569198Culture land'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569224Culture land' src='image\1567757569224Culture land' data-src='image\1567757569224Culture land'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Culture land
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569252Culture land' src='image\1567757569252Culture land' data-src='image\1567757569252Culture land'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='95'>
+					<div class='test-heading'>
+						<span class='test-name'>teencashkr</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='96'>
+					<div class='test-heading'>
+						<span class='test-name'>banktransfercn</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+209ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569298Umpay' src='image\1567757569298Umpay' data-src='image\1567757569298Umpay'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569341Umpay' src='image\1567757569341Umpay' data-src='image\1567757569341Umpay'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569386Umpay' src='image\1567757569386Umpay' data-src='image\1567757569386Umpay'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569408Umpay' src='image\1567757569408Umpay' data-src='image\1567757569408Umpay'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569432Umpay' src='image\1567757569432Umpay' data-src='image\1567757569432Umpay'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Umpay
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569470Umpay' src='image\1567757569470Umpay' data-src='image\1567757569470Umpay'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='97'>
+					<div class='test-heading'>
+						<span class='test-name'>boletobr</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+170ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569504Boleto' src='image\1567757569504Boleto' data-src='image\1567757569504Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569543Boleto' src='image\1567757569543Boleto' data-src='image\1567757569543Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569579Boleto' src='image\1567757569579Boleto' data-src='image\1567757569579Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569595Boleto' src='image\1567757569595Boleto' data-src='image\1567757569595Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569617Boleto' src='image\1567757569617Boleto' data-src='image\1567757569617Boleto'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Boleto
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569643Boleto' src='image\1567757569643Boleto' data-src='image\1567757569643Boleto'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='98'>
+					<div class='test-heading'>
+						<span class='test-name'>idealnl</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+141ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569673Ideal' src='image\1567757569673Ideal' data-src='image\1567757569673Ideal'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569700Ideal' src='image\1567757569700Ideal' data-src='image\1567757569700Ideal'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569725Ideal' src='image\1567757569725Ideal' data-src='image\1567757569725Ideal'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569740Ideal' src='image\1567757569740Ideal' data-src='image\1567757569740Ideal'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569758Ideal' src='image\1567757569758Ideal' data-src='image\1567757569758Ideal'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Ideal
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569790Ideal' src='image\1567757569790Ideal' data-src='image\1567757569790Ideal'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='99'>
+					<div class='test-heading'>
+						<span class='test-name'>yandexmoney</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+176ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569817Yandex' src='image\1567757569817Yandex' data-src='image\1567757569817Yandex'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569851Yandex' src='image\1567757569851Yandex' data-src='image\1567757569851Yandex'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569888Yandex' src='image\1567757569888Yandex' data-src='image\1567757569888Yandex'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569905Yandex' src='image\1567757569905Yandex' data-src='image\1567757569905Yandex'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569922Yandex' src='image\1567757569922Yandex' data-src='image\1567757569922Yandex'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:49 PM</td>
+				<td class='step-details'>
+						Yandex
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757569957Yandex' src='image\1567757569957Yandex' data-src='image\1567757569957Yandex'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='100'>
+					<div class='test-heading'>
+						<span class='test-name'>sberbankonline</span>
+						<span class='test-time'>Sep 6, 2019 03:12:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:49 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+202ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570001Sberbank' src='image\1567757570001Sberbank' data-src='image\1567757570001Sberbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570046Sberbank' src='image\1567757570046Sberbank' data-src='image\1567757570046Sberbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570090Sberbank' src='image\1567757570090Sberbank' data-src='image\1567757570090Sberbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570115Sberbank' src='image\1567757570115Sberbank' data-src='image\1567757570115Sberbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570140Sberbank' src='image\1567757570140Sberbank' data-src='image\1567757570140Sberbank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Sberbank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570170Sberbank' src='image\1567757570170Sberbank' data-src='image\1567757570170Sberbank'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='101'>
+					<div class='test-heading'>
+						<span class='test-name'>alfaclickya</span>
+						<span class='test-time'>Sep 6, 2019 03:12:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+165ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570198AlfaBank' src='image\1567757570198AlfaBank' data-src='image\1567757570198AlfaBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570228AlfaBank' src='image\1567757570228AlfaBank' data-src='image\1567757570228AlfaBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570278AlfaBank' src='image\1567757570278AlfaBank' data-src='image\1567757570278AlfaBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570292AlfaBank' src='image\1567757570292AlfaBank' data-src='image\1567757570292AlfaBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570312AlfaBank' src='image\1567757570312AlfaBank' data-src='image\1567757570312AlfaBank'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						AlfaBank
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570340AlfaBank' src='image\1567757570340AlfaBank' data-src='image\1567757570340AlfaBank'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='102'>
+					<div class='test-heading'>
+						<span class='test-name'>tinkoff</span>
+						<span class='test-time'>Sep 6, 2019 03:12:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+260ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570369Tinkoff' src='image\1567757570369Tinkoff' data-src='image\1567757570369Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570404Tinkoff' src='image\1567757570404Tinkoff' data-src='image\1567757570404Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570440Tinkoff' src='image\1567757570440Tinkoff' data-src='image\1567757570440Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570481Tinkoff' src='image\1567757570481Tinkoff' data-src='image\1567757570481Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570505Tinkoff' src='image\1567757570505Tinkoff' data-src='image\1567757570505Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570530Tinkoff' src='image\1567757570530Tinkoff' data-src='image\1567757570530Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570564Tinkoff' src='image\1567757570564Tinkoff' data-src='image\1567757570564Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570591Tinkoff' src='image\1567757570591Tinkoff' data-src='image\1567757570591Tinkoff'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						Tinkoff
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570607Tinkoff' src='image\1567757570607Tinkoff' data-src='image\1567757570607Tinkoff'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='120'>
+					<div class='test-heading'>
+						<span class='test-name'>yacash</span>
+						<span class='test-time'>Sep 6, 2019 03:12:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:50 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+193ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:50 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570912YandexCash' src='image\1567757570912YandexCash' data-src='image\1567757570912YandexCash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757570947YandexCash' src='image\1567757570947YandexCash' data-src='image\1567757570947YandexCash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571011YandexCash' src='image\1567757571011YandexCash' data-src='image\1567757571011YandexCash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571026YandexCash' src='image\1567757571026YandexCash' data-src='image\1567757571026YandexCash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571045YandexCash' src='image\1567757571045YandexCash' data-src='image\1567757571045YandexCash'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						YandexCash
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571076YandexCash' src='image\1567757571076YandexCash' data-src='image\1567757571076YandexCash'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='121'>
+					<div class='test-heading'>
+						<span class='test-name'>walmart</span>
+						<span class='test-time'>Sep 6, 2019 03:12:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+217ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571112Walmart moneygram' src='image\1567757571112Walmart moneygram' data-src='image\1567757571112Walmart moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571155Walmart moneygram' src='image\1567757571155Walmart moneygram' data-src='image\1567757571155Walmart moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571205Walmart moneygram' src='image\1567757571205Walmart moneygram' data-src='image\1567757571205Walmart moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571225Walmart moneygram' src='image\1567757571225Walmart moneygram' data-src='image\1567757571225Walmart moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571249Walmart moneygram' src='image\1567757571249Walmart moneygram' data-src='image\1567757571249Walmart moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Walmart moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571291Walmart moneygram' src='image\1567757571291Walmart moneygram' data-src='image\1567757571291Walmart moneygram'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='122'>
+					<div class='test-heading'>
+						<span class='test-name'>moneygram</span>
+						<span class='test-time'>Sep 6, 2019 03:12:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+188ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571327Moneygram' src='image\1567757571327Moneygram' data-src='image\1567757571327Moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571366Moneygram' src='image\1567757571366Moneygram' data-src='image\1567757571366Moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571407Moneygram' src='image\1567757571407Moneygram' data-src='image\1567757571407Moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571435Moneygram' src='image\1567757571435Moneygram' data-src='image\1567757571435Moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571455Moneygram' src='image\1567757571455Moneygram' data-src='image\1567757571455Moneygram'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Moneygram
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571485Moneygram' src='image\1567757571485Moneygram' data-src='image\1567757571485Moneygram'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='123'>
+					<div class='test-heading'>
+						<span class='test-name'>canadapost</span>
+						<span class='test-time'>Sep 6, 2019 03:12:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+192ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571515Canadapost' src='image\1567757571515Canadapost' data-src='image\1567757571515Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571536Canadapost' src='image\1567757571536Canadapost' data-src='image\1567757571536Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571562Canadapost' src='image\1567757571562Canadapost' data-src='image\1567757571562Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571588Canadapost' src='image\1567757571588Canadapost' data-src='image\1567757571588Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571602Canadapost' src='image\1567757571602Canadapost' data-src='image\1567757571602Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571629Canadapost' src='image\1567757571629Canadapost' data-src='image\1567757571629Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571656Canadapost' src='image\1567757571656Canadapost' data-src='image\1567757571656Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571674Canadapost' src='image\1567757571674Canadapost' data-src='image\1567757571674Canadapost'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:51 PM</td>
+				<td class='step-details'>
+						Canadapost
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757571686Canadapost' src='image\1567757571686Canadapost' data-src='image\1567757571686Canadapost'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='141'>
+					<div class='test-heading'>
+						<span class='test-name'>banktransferth</span>
+						<span class='test-time'>Sep 6, 2019 03:12:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='142'>
+					<div class='test-heading'>
+						<span class='test-name'>gateway</span>
+						<span class='test-time'>Sep 6, 2019 03:12:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='143'>
+					<div class='test-heading'>
+						<span class='test-name'>gateway</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+159ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572022AMEX' src='image\1567757572022AMEX' data-src='image\1567757572022AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572039AMEX' src='image\1567757572039AMEX' data-src='image\1567757572039AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572057AMEX' src='image\1567757572057AMEX' data-src='image\1567757572057AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572075AMEX' src='image\1567757572075AMEX' data-src='image\1567757572075AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572095AMEX' src='image\1567757572095AMEX' data-src='image\1567757572095AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572110AMEX' src='image\1567757572110AMEX' data-src='image\1567757572110AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572134AMEX' src='image\1567757572134AMEX' data-src='image\1567757572134AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572149AMEX' src='image\1567757572149AMEX' data-src='image\1567757572149AMEX'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:12:52 PM</td>
+				<td class='step-details'>
+						AMEX
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1567757572162AMEX' src='image\1567757572162AMEX' data-src='image\1567757572162AMEX'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='161'>
+					<div class='test-heading'>
+						<span class='test-name'>epspayments</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='162'>
+					<div class='test-heading'>
+						<span class='test-name'>mol</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='163'>
+					<div class='test-heading'>
+						<span class='test-name'>multibanco</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='164'>
+					<div class='test-heading'>
+						<span class='test-name'>epinpaymentsystem</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='165'>
+					<div class='test-heading'>
+						<span class='test-name'>cvspharmacy</span>
+						<span class='test-time'>Sep 6, 2019 03:12:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label end-time'>Sep 6, 2019 03:12:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>46</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 6, 2019 03:12:42 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 6, 2019 03:12:52 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 10s+293ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 46,
+				passParent: 46,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "efectycolombia":0.497,"pse":0.198,"boletobancario":0.187,"santandermexico":0.266,"oxxo":0.185,"ccbrazil":0,"ccbrazilhipercard":0.289,"itaubrazil":0.157,"bancobrazil":0.124,"banrisulbrazil":0.174,"efecty":0.246,"dotpaymt":0.106,"dotpaybzwbk":0.129,"dotpayingb":0.166,"dotpayinteligo":0.158,"dotpayingbacc":0.265,"happyvoucher":0.146,"teencash":0,"oncash":0.147,"eggmoney":0.128,"culturevoucher":0,"allthegate":0.183,"bookculture":0.248,"idealpayments":0.191,"gameon":0.314,"culturevoucherkr":0.194,"teencashkr":0,"banktransfercn":0.209,"boletobr":0.17,"idealnl":0.141,"yandexmoney":0.176,"sberbankonline":0.202,"alfaclickya":0.165,"tinkoff":0.26,"yacash":0.193,"walmart":0.217,"moneygram":0.188,"canadapost":0.192,"banktransferth":0,"gateway":0,"gateway":0.159,"epspayments":0,"mol":0,"multibanco":0,"epinpaymentsystem":0,"cvspharmacy":0
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

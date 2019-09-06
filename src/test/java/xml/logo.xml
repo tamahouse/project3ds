@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Logo">
+	<test name="Logo">
+		 <classes>
+       <class name="Logo" />
+    </classes>
+            	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+</suite>
+

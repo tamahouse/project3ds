@@ -1,5 +1,6 @@
 package automation.project3ds;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -8,6 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
+
+import javax.imageio.ImageIO;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -28,11 +31,14 @@ public class ExtentManager {
 	private static String[] time = getTime();
 	private static String folderPath = "test-output\\ExtendReport\\";
 	private static String folderPathDaily = folderPath +"Report"+time[0]+"\\";;
+	
 
 	public synchronized static ExtentReports getReporter(String suiteName) {
 		if (extent == null) {
 			String reportName = suiteName +"_"+ time[0]+"_"+time[1] + ".html" ;
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(folderPathDaily+ reportName);
+			reporter.config().setCSS("textarea { height: 20rem; }");
+			reporter.config().setCSS(".r-img { width: 30%; }");
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
 		}
@@ -111,13 +117,39 @@ public class ExtentManager {
 	
 	public static void addScreenshot(String title, String imageName) {
 		try {
-			String imagePath = "image\\"+ Driver.timestamp() + imageName + ".png";
+			imageName =  Driver.timestamp() + imageName + ".png";
+			String imagePath = "screenShot\\"+ imageName;
 			String createdPath = folderPathDaily + imagePath;
+			String folderPath = createdPath.replace(imageName, "");
+			File folder = new File(folderPath);
+			if(!folder.exists()) {
+				folder.mkdirs();
+			}
 			AnnotationPage.screenShot(createdPath);
 			ScreenCapture media = new ScreenCapture();
 			media.setPath(imagePath);
 			MediaEntityModelProvider provider = new MediaEntityModelProvider(media);
 			ExtentManager.getTest().info(title, provider);
+		}catch(Exception ignore) {
+		}
+	}
+	
+	public static void addImage(BufferedImage image, String imageName) {
+		try {
+			String imageFileName =  Driver.timestamp() + imageName;
+			String imagePath = "image\\"+ imageFileName;
+			String createdPath = folderPathDaily + imagePath;
+			String folderPath = createdPath.replace(imageFileName, "");
+			File folder = new File(folderPath);
+			if(!folder.exists()) {
+				folder.mkdirs();
+			}
+			ImageIO.write(image, "PNG", new File(createdPath));
+			ScreenCapture media = new ScreenCapture();
+			media.setPath(imagePath);
+			MediaEntityModelProvider provider = new MediaEntityModelProvider(media);
+			ExtentManager.getTest().info(imageName, provider);
+//			ExtentManager.getTest().info("<a href =\"image\">ImageFolder</a>");
 		}catch(Exception ignore) {
 		}
 	}

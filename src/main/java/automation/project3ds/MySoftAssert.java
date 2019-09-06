@@ -357,6 +357,8 @@ public class MySoftAssert implements IAssertLifecycle {
 //	    });
 //	  }
   
+ 
+	
 	  public void assertEquals(final String actual, final String expected) {
 	    doAssert(new SimpleAssert<String>(actual, expected, AssertType.EQUAL) {
 	      @Override

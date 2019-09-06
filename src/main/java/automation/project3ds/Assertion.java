@@ -2,6 +2,8 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 
+import com.aventstack.extentreports.Status;
+
 public class Assertion {
 
 	static MySoftAssertAll assertion;
@@ -11,6 +13,8 @@ public class Assertion {
 	public static String BORDER_GREEN = "rgb(102, 199, 0) #66c700";
 	public static String BACKGROUND_WHITE = "rgba(255, 255, 255, 1)";
 	public static String TEXT_GREY = "rgba(51, 51, 51, 0.5)";
+	
+	public static Status status = Status.PASS;
 
 	public static void end() {
 		if (assertion != null) {
@@ -18,6 +22,7 @@ public class Assertion {
 			assertion = null;
 			if (sb == null) {
 			} else {
+				status = Status.FAIL;
 				throw new AssertionError(sb);
 			}
 		}

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="42" ignored="0" total="46" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="103645" started-at="2019-09-06T10:08:03Z" finished-at="2019-09-06T10:09:47Z">
+  <suite name="Logo" duration-ms="80190" started-at="2019-09-06T10:48:22Z" finished-at="2019-09-06T10:49:43Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="103645" started-at="2019-09-06T10:08:03Z" finished-at="2019-09-06T10:09:47Z">
+    <test name="Logo" duration-ms="80190" started-at="2019-09-06T10:48:22Z" finished-at="2019-09-06T10:49:43Z">
       <class name="Logo">
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3371" started-at="2019-09-06T10:08:04Z" data-provider="data" finished-at="2019-09-06T10:08:07Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3556" started-at="2019-09-06T10:48:24Z" data-provider="data" finished-at="2019-09-06T10:48:27Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3268" started-at="2019-09-06T10:08:07Z" data-provider="data" finished-at="2019-09-06T10:08:11Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3123" started-at="2019-09-06T10:48:27Z" data-provider="data" finished-at="2019-09-06T10:48:30Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,7 +83,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2432" started-at="2019-09-06T10:08:11Z" data-provider="data" finished-at="2019-09-06T10:08:13Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2514" started-at="2019-09-06T10:48:30Z" data-provider="data" finished-at="2019-09-06T10:48:33Z">
           <params>
             <param index="0">
               <value>
@@ -107,7 +107,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][6] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,7 +139,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2261" started-at="2019-09-06T10:08:13Z" data-provider="data" finished-at="2019-09-06T10:08:15Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2172" started-at="2019-09-06T10:48:33Z" data-provider="data" finished-at="2019-09-06T10:48:35Z">
           <params>
             <param index="0">
               <value>
@@ -155,7 +155,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2274" started-at="2019-09-06T10:08:15Z" data-provider="data" finished-at="2019-09-06T10:08:18Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2103" started-at="2019-09-06T10:48:35Z" data-provider="data" finished-at="2019-09-06T10:48:37Z">
           <params>
             <param index="0">
               <value>
@@ -179,7 +179,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][6] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -211,7 +211,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2811" started-at="2019-09-06T10:08:18Z" data-provider="data" finished-at="2019-09-06T10:08:20Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="948" started-at="2019-09-06T10:48:37Z" data-provider="data" finished-at="2019-09-06T10:48:38Z">
           <params>
             <param index="0">
               <value>
@@ -228,22 +228,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NAME] expected [name] but found [ps-ebanx-d@2x],
+[NAME] expected [name] but found [pm-ps-ebanx],
+[NAME] expected [name] but found [ps-ebanx],
+[NAME] expected [name] but found [ps-ebanx-d],
+[NAME] expected [name] but found [ps-ebanx-d@3x],
 [NAME] expected [name] but found [ps-ebanx-@2x],
+[NAME] expected [name] but found [ps-ebanx-@3x],
+[NAME] expected [name] but found [pm-ps-ebanx-big],
+[NAME] expected [name] but found [pm-ps-ebanx-merchantareav7-(flag)],
+[NAME] expected [name] but found [pm-ps-ebanx-merchantareav5],
+[NumberOfTypeImage] expected [9] but found [4],
 [ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NAME] expected [name] but found [ps-ebanx-d@2x],
+[NAME] expected [name] but found [pm-ps-ebanx],
+[NAME] expected [name] but found [ps-ebanx],
+[NAME] expected [name] but found [ps-ebanx-d],
+[NAME] expected [name] but found [ps-ebanx-d@3x],
 [NAME] expected [name] but found [ps-ebanx-@2x],
+[NAME] expected [name] but found [ps-ebanx-@3x],
+[NAME] expected [name] but found [pm-ps-ebanx-big],
+[NAME] expected [name] but found [pm-ps-ebanx-merchantareav7-(flag)],
+[NAME] expected [name] but found [pm-ps-ebanx-merchantareav5],
+[NumberOfTypeImage] expected [9] but found [4],
 [ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -275,7 +289,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2375" started-at="2019-09-06T10:08:20Z" data-provider="data" finished-at="2019-09-06T10:08:23Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="12" started-at="2019-09-06T10:48:38Z" data-provider="data" finished-at="2019-09-06T10:48:38Z">
           <params>
             <param index="0">
               <value>
@@ -292,14 +306,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NAME] expected [name] but found [_ps-hipercard-@2x],
+[NAME] expected [name] but found [ps-hipercard-d],
+[NAME] expected [name] but found [ps-hipercard-@3x],
+[NAME] expected [name] but found [_ps-hipercard-d@2x],
+[NAME] expected [name] but found [ps-hipercard-d@3x],
+[NAME] expected [name] but found [ps-hipercard],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NAME] expected [name] but found [_ps-hipercard-@2x],
+[NAME] expected [name] but found [ps-hipercard-d],
+[NAME] expected [name] but found [ps-hipercard-@3x],
+[NAME] expected [name] but found [_ps-hipercard-d@2x],
+[NAME] expected [name] but found [ps-hipercard-d@3x],
+[NAME] expected [name] but found [ps-hipercard],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -331,7 +357,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2037" started-at="2019-09-06T10:08:23Z" data-provider="data" finished-at="2019-09-06T10:08:25Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2176" started-at="2019-09-06T10:48:38Z" data-provider="data" finished-at="2019-09-06T10:48:40Z">
           <params>
             <param index="0">
               <value>
@@ -355,7 +381,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][6] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -387,7 +413,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1938" started-at="2019-09-06T10:08:25Z" data-provider="data" finished-at="2019-09-06T10:08:27Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:48:40Z" data-provider="data" finished-at="2019-09-06T10:48:40Z">
           <params>
             <param index="0">
               <value>
@@ -404,14 +430,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NAME] expected [name] but found [_ps-bancodobrazil-@2x],
+[NAME] expected [name] but found [ps-bancodobrazil-@3x],
+[NAME] expected [name] but found [ps-bancodobrazil],
+[NAME] expected [name] but found [_ps-bancodobrazil-d@2x],
+[NAME] expected [name] but found [ps-bancodobrazil-d],
+[NAME] expected [name] but found [ps-bancodobrazil-d@3x],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NAME] expected [name] but found [_ps-bancodobrazil-@2x],
+[NAME] expected [name] but found [ps-bancodobrazil-@3x],
+[NAME] expected [name] but found [ps-bancodobrazil],
+[NAME] expected [name] but found [_ps-bancodobrazil-d@2x],
+[NAME] expected [name] but found [ps-bancodobrazil-d],
+[NAME] expected [name] but found [ps-bancodobrazil-d@3x],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -443,7 +481,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2782" started-at="2019-09-06T10:08:27Z" data-provider="data" finished-at="2019-09-06T10:08:30Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2213" started-at="2019-09-06T10:48:40Z" data-provider="data" finished-at="2019-09-06T10:48:42Z">
           <params>
             <param index="0">
               <value>
@@ -471,7 +509,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NAME] expected [name] but found [ps-banrisul-@2x],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -503,7 +541,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2315" started-at="2019-09-06T10:08:30Z" data-provider="data" finished-at="2019-09-06T10:08:32Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2222" started-at="2019-09-06T10:48:42Z" data-provider="data" finished-at="2019-09-06T10:48:45Z">
           <params>
             <param index="0">
               <value>
@@ -519,7 +557,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2731" started-at="2019-09-06T10:08:32Z" data-provider="data" finished-at="2019-09-06T10:08:35Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2673" started-at="2019-09-06T10:48:45Z" data-provider="data" finished-at="2019-09-06T10:48:47Z">
           <params>
             <param index="0">
               <value>
@@ -551,7 +589,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -583,7 +621,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2946" started-at="2019-09-06T10:08:35Z" data-provider="data" finished-at="2019-09-06T10:08:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2999" started-at="2019-09-06T10:48:47Z" data-provider="data" finished-at="2019-09-06T10:48:50Z">
           <params>
             <param index="0">
               <value>
@@ -615,7 +653,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -647,7 +685,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3094" started-at="2019-09-06T10:08:38Z" data-provider="data" finished-at="2019-09-06T10:08:41Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3156" started-at="2019-09-06T10:48:50Z" data-provider="data" finished-at="2019-09-06T10:48:54Z">
           <params>
             <param index="0">
               <value>
@@ -679,7 +717,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -711,7 +749,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2994" started-at="2019-09-06T10:08:41Z" data-provider="data" finished-at="2019-09-06T10:08:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3053" started-at="2019-09-06T10:48:54Z" data-provider="data" finished-at="2019-09-06T10:48:57Z">
           <params>
             <param index="0">
               <value>
@@ -743,7 +781,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -775,7 +813,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3073" started-at="2019-09-06T10:08:44Z" data-provider="data" finished-at="2019-09-06T10:08:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:48:57Z" data-provider="data" finished-at="2019-09-06T10:48:57Z">
           <params>
             <param index="0">
               <value>
@@ -792,22 +830,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d@3x],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-@3x],
+[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-d@2x],
+[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-@2x],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d@3x],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d],
+[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-@3x],
+[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-d@2x],
+[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-@2x],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -839,7 +881,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2958" started-at="2019-09-06T10:08:47Z" data-provider="data" finished-at="2019-09-06T10:08:50Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2972" started-at="2019-09-06T10:48:57Z" data-provider="data" finished-at="2019-09-06T10:49:00Z">
           <params>
             <param index="0">
               <value>
@@ -871,7 +913,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -902,7 +944,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="13" started-at="2019-09-06T10:08:50Z" data-provider="data" finished-at="2019-09-06T10:08:50Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="16" started-at="2019-09-06T10:49:00Z" data-provider="data" finished-at="2019-09-06T10:49:00Z">
           <params>
             <param index="0">
               <value>
@@ -926,7 +968,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -957,7 +999,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2448" started-at="2019-09-06T10:08:50Z" data-provider="data" finished-at="2019-09-06T10:08:52Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2379" started-at="2019-09-06T10:49:00Z" data-provider="data" finished-at="2019-09-06T10:49:02Z">
           <params>
             <param index="0">
               <value>
@@ -981,7 +1023,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][6] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1012,7 +1054,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2292" started-at="2019-09-06T10:08:52Z" data-provider="data" finished-at="2019-09-06T10:08:55Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2041" started-at="2019-09-06T10:49:02Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
           <params>
             <param index="0">
               <value>
@@ -1036,7 +1078,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][6] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [6]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1067,7 +1109,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:08:55Z" data-provider="data" finished-at="2019-09-06T10:08:55Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
           <params>
             <param index="0">
               <value>
@@ -1093,7 +1135,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NAME] expected [name] but found [culture voucher_original],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1124,7 +1166,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2527" started-at="2019-09-06T10:08:55Z" data-provider="data" finished-at="2019-09-06T10:08:57Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="29" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
           <params>
             <param index="0">
               <value>
@@ -1140,19 +1182,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NAME] expected [name] but found [_ps-payletterallthegate-@2x],
+[NAME] expected [name] but found [pm-psallthegate-merchantareav5],
+[NAME] expected [name] but found [ps-payletterallthegate-d@3x],
+[NAME] expected [name] but found [ps-payletterallthegate-d],
+[NAME] expected [name] but found [ps-payletterallthegate@3x],
+[NAME] expected [name] but found [pm-pspayletterallthegate-big],
+[NAME] expected [name] but found [pm-ps-payletterallthegate],
+[NAME] expected [name] but found [_ps-payletterallthegate-d@2x],
+[NAME] expected [name] but found [ps-payletterallthegate],
+[NAME] expected [name] but found [pm-ps-alltregate (noflag)],
+[NumberOfTypeImage] expected [9] but found [1]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NAME] expected [name] but found [_ps-payletterallthegate-@2x],
+[NAME] expected [name] but found [pm-psallthegate-merchantareav5],
+[NAME] expected [name] but found [ps-payletterallthegate-d@3x],
+[NAME] expected [name] but found [ps-payletterallthegate-d],
+[NAME] expected [name] but found [ps-payletterallthegate@3x],
+[NAME] expected [name] but found [pm-pspayletterallthegate-big],
+[NAME] expected [name] but found [pm-ps-payletterallthegate],
+[NAME] expected [name] but found [_ps-payletterallthegate-d@2x],
+[NAME] expected [name] but found [ps-payletterallthegate],
+[NAME] expected [name] but found [pm-ps-alltregate (noflag)],
+[NumberOfTypeImage] expected [9] but found [1]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1183,7 +1239,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3349" started-at="2019-09-06T10:08:57Z" data-provider="data" finished-at="2019-09-06T10:09:00Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2804" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:07Z">
           <params>
             <param index="0">
               <value>
@@ -1221,7 +1277,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1252,7 +1308,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3201" started-at="2019-09-06T10:09:00Z" data-provider="data" finished-at="2019-09-06T10:09:04Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3056" started-at="2019-09-06T10:49:07Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
           <params>
             <param index="0">
               <value>
@@ -1284,7 +1340,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1315,7 +1371,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3423" started-at="2019-09-06T10:09:04Z" data-provider="data" finished-at="2019-09-06T10:09:07Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="19" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
           <params>
             <param index="0">
               <value>
@@ -1332,22 +1388,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NAME] expected [name] but found [_ps-game-on-@2x],
+[NAME] expected [name] but found [ps-game-on-@3x],
+[NAME] expected [name] but found [ps-game-on-d],
+[NAME] expected [name] but found [ps-game-on-d@3x],
+[NAME] expected [name] but found [_ps-game-on-d@2x],
+[NAME] expected [name] but found [ps-game-on],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NAME] expected [name] but found [_ps-game-on-@2x],
+[NAME] expected [name] but found [ps-game-on-@3x],
+[NAME] expected [name] but found [ps-game-on-d],
+[NAME] expected [name] but found [ps-game-on-d@3x],
+[NAME] expected [name] but found [_ps-game-on-d@2x],
+[NAME] expected [name] but found [ps-game-on],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1378,7 +1438,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3032" started-at="2019-09-06T10:09:07Z" data-provider="data" finished-at="2019-09-06T10:09:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
           <params>
             <param index="0">
               <value>
@@ -1395,22 +1455,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NAME] expected [name] but found [_ps-culture-land-@2x],
+[NAME] expected [name] but found [ps-culture-land-d@3x],
+[NAME] expected [name] but found [ps-culture-land],
+[NAME] expected [name] but found [ps-culture-land-@3x],
+[NAME] expected [name] but found [ps-culture-land-d],
+[NAME] expected [name] but found [_ps-culture-land-d@2x],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NAME] expected [name] but found [_ps-culture-land-@2x],
+[NAME] expected [name] but found [ps-culture-land-d@3x],
+[NAME] expected [name] but found [ps-culture-land],
+[NAME] expected [name] but found [ps-culture-land-@3x],
+[NAME] expected [name] but found [ps-culture-land-d],
+[NAME] expected [name] but found [_ps-culture-land-d@2x],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1441,7 +1505,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="11" started-at="2019-09-06T10:09:10Z" data-provider="data" finished-at="2019-09-06T10:09:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="13" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
           <params>
             <param index="0">
               <value>
@@ -1465,7 +1529,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1496,7 +1560,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3025" started-at="2019-09-06T10:09:10Z" data-provider="data" finished-at="2019-09-06T10:09:13Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2987" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:13Z">
           <params>
             <param index="0">
               <value>
@@ -1528,7 +1592,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1559,7 +1623,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3124" started-at="2019-09-06T10:09:13Z" data-provider="data" finished-at="2019-09-06T10:09:16Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3029" started-at="2019-09-06T10:49:13Z" data-provider="data" finished-at="2019-09-06T10:49:16Z">
           <params>
             <param index="0">
               <value>
@@ -1591,7 +1655,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1622,7 +1686,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3096" started-at="2019-09-06T10:09:16Z" data-provider="data" finished-at="2019-09-06T10:09:19Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2972" started-at="2019-09-06T10:49:16Z" data-provider="data" finished-at="2019-09-06T10:49:19Z">
           <params>
             <param index="0">
               <value>
@@ -1654,7 +1718,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1685,7 +1749,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3073" started-at="2019-09-06T10:09:19Z" data-provider="data" finished-at="2019-09-06T10:09:22Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3032" started-at="2019-09-06T10:49:19Z" data-provider="data" finished-at="2019-09-06T10:49:22Z">
           <params>
             <param index="0">
               <value>
@@ -1717,7 +1781,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1748,7 +1812,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3079" started-at="2019-09-06T10:09:22Z" data-provider="data" finished-at="2019-09-06T10:09:26Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3107" started-at="2019-09-06T10:49:22Z" data-provider="data" finished-at="2019-09-06T10:49:25Z">
           <params>
             <param index="0">
               <value>
@@ -1780,7 +1844,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1811,7 +1875,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3001" started-at="2019-09-06T10:09:26Z" data-provider="data" finished-at="2019-09-06T10:09:29Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3069" started-at="2019-09-06T10:49:25Z" data-provider="data" finished-at="2019-09-06T10:49:28Z">
           <params>
             <param index="0">
               <value>
@@ -1843,7 +1907,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1874,7 +1938,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3211" started-at="2019-09-06T10:09:29Z" data-provider="data" finished-at="2019-09-06T10:09:32Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3128" started-at="2019-09-06T10:49:28Z" data-provider="data" finished-at="2019-09-06T10:49:31Z">
           <params>
             <param index="0">
               <value>
@@ -1902,7 +1966,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1933,7 +1997,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3087" started-at="2019-09-06T10:09:32Z" data-provider="data" finished-at="2019-09-06T10:09:35Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3116" started-at="2019-09-06T10:49:31Z" data-provider="data" finished-at="2019-09-06T10:49:35Z">
           <params>
             <param index="0">
               <value>
@@ -1965,7 +2029,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1996,7 +2060,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3189" started-at="2019-09-06T10:09:35Z" data-provider="data" finished-at="2019-09-06T10:09:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="18" started-at="2019-09-06T10:49:35Z" data-provider="data" finished-at="2019-09-06T10:49:35Z">
           <params>
             <param index="0">
               <value>
@@ -2013,22 +2077,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <message>
               <![CDATA[The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NAME] expected [name] but found [ps-walmartmoneygram-@3x],
+[NAME] expected [name] but found [_ps-walmartmoneygram-d@2x],
+[NAME] expected [name] but found [ps-walmartmoneygram-d@3x],
+[NAME] expected [name] but found [_ps-walmartmoneygram-@2x],
+[NAME] expected [name] but found [ps-walmartmoneygram],
+[NAME] expected [name] but found [ps-walmartmoneygram-d],
+[NumberOfTypeImage] expected [9] but found [0]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
 [NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NAME] expected [name] but found [ps-walmartmoneygram-@3x],
+[NAME] expected [name] but found [_ps-walmartmoneygram-d@2x],
+[NAME] expected [name] but found [ps-walmartmoneygram-d@3x],
+[NAME] expected [name] but found [_ps-walmartmoneygram-@2x],
+[NAME] expected [name] but found [ps-walmartmoneygram],
+[NAME] expected [name] but found [ps-walmartmoneygram-d],
+[NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2059,7 +2127,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3051" started-at="2019-09-06T10:09:38Z" data-provider="data" finished-at="2019-09-06T10:09:41Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3084" started-at="2019-09-06T10:49:35Z" data-provider="data" finished-at="2019-09-06T10:49:38Z">
           <params>
             <param index="0">
               <value>
@@ -2091,7 +2159,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2122,7 +2190,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3132" started-at="2019-09-06T10:09:41Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2451" started-at="2019-09-06T10:49:38Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
           <params>
             <param index="0">
               <value>
@@ -2138,6 +2206,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
+[NAME] expected [name] but found [ps-canada-post-d],
+[NAME] expected [name] but found [ps-canada-post],
+[NAME] expected [name] but found [pm-ps-canada-big],
+[NumberOfTypeImage] expected [9] but found [6],
 [ImageNotFound] expected [] but found [dark2],
 [ImageNotFound] expected [] but found [dark3],
 [ImageNotFound] expected [] but found [light3],
@@ -2145,12 +2217,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
+[NAME] expected [name] but found [ps-canada-post-d],
+[NAME] expected [name] but found [ps-canada-post],
+[NAME] expected [name] but found [pm-ps-canada-big],
+[NumberOfTypeImage] expected [9] but found [6],
 [ImageNotFound] expected [] but found [dark2],
 [ImageNotFound] expected [] but found [dark3],
 [ImageNotFound] expected [] but found [light3],
 [ImageNotFound] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2181,7 +2257,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="14" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="18" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
           <params>
             <param index="0">
               <value>
@@ -2205,7 +2281,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2236,7 +2312,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:44Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
           <params>
             <param index="0">
               <value>
@@ -2260,7 +2336,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2291,7 +2367,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2278" started-at="2019-09-06T10:09:44Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2377" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2307,7 +2383,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="4" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2331,7 +2407,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2362,7 +2438,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="6" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2386,7 +2462,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2417,7 +2493,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="11" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2441,7 +2517,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2472,7 +2548,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="8" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2496,7 +2572,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2527,7 +2603,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="10" started-at="2019-09-06T10:09:47Z" data-provider="data" finished-at="2019-09-06T10:09:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
           <params>
             <param index="0">
               <value>
@@ -2551,7 +2627,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 [NumberImage][0] expected [true] but found [false],
 [NumberOfTypeImage] expected [9] but found [0]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:209)
+at Logo.getLogoFile(Logo.java:210)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)

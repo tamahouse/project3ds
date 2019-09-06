@@ -75,6 +75,7 @@ public class ExtentManager {
 	private static void createIndexPage() {
 		String indexReportPath = folderPath +"index.html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(indexReportPath);
+			reporter.config().setTheme(Theme.DARK);
 			ExtentReports index = new ExtentReports();
 			index.attachReporter(reporter);
 			File[] directories = new File(folderPath).listFiles(File::isDirectory);

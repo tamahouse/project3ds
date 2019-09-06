@@ -94,6 +94,7 @@ public class Logo {
 		Assertion.get().assertEquals(files.length > 8, true, "[NumberImage]" + "[" + files.length + "]");
 		for (File file : files) {
 			String name = file.getName().toLowerCase().replace(".png", "");
+			String lFolderName = folderName.toLowerCase();
 			String first2 = name.substring(0, 2);
 			String first3 = name.substring(0, 3);
 			String last3 = name.substring(name.length() - 3, name.length());
@@ -102,27 +103,27 @@ public class Logo {
 				last14 = name.substring(name.length() - 14, name.length());
 			} catch (StringIndexOutOfBoundsException ignore) {
 			}
-			if (first2.equals("pm") && !last3.equals("big") && !last14.equals("merchantareav5")) {
+			if (name.contains(lFolderName) && first2.equals("pm") && !last3.equals("big") && !last14.equals("merchantareav5")) {
 				logoMap.put("multi", file);
-			} else if (first2.equals("pm") && last3.equals("big") && !last14.equals("merchantareav5")) {
+			} else if (name.contains(lFolderName) && first2.equals("pm") && last3.equals("big") && !last14.equals("merchantareav5")) {
 				logoMap.put("uni", file);
-			} else if (first2.equals("pm") && !last3.equals("big") && last14.equals("merchantareav5")) {
+			} else if (name.contains(lFolderName) && first2.equals("pm") && !last3.equals("big") && last14.equals("merchantareav5")) {
 				logoMap.put("v5", file);
-			} else if (first2.equals("ps") && !last3.equals("@2x") && !last3.equals("@3x")) {
+			} else if (name.contains(lFolderName) && first2.equals("ps") && !last3.equals("@2x") && !last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 2, name.length());
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light", file);
 				} else {
 					logoMap.put("dark", file);
 				}
-			} else if (first3.equals("_ps") && last3.equals("@2x") && !last3.equals("@3x")) {
+			} else if (name.contains(lFolderName) && first3.equals("_ps") && last3.equals("@2x") && !last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light2", file);
 				} else {
 					logoMap.put("dark2", file);
 				}
-			} else if (first2.equals("ps") && !last3.equals("@2x") && last3.equals("@3x")) {
+			} else if (name.contains(lFolderName) && first2.equals("ps") && !last3.equals("@2x") && last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light3", file);

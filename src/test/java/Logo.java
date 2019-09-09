@@ -1,4 +1,6 @@
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FilenameFilter;
@@ -43,9 +45,8 @@ public class Logo {
 		ruleMap.put("dark2", new Pair<>(200, 80));
 		ruleMap.put("dark3", new Pair<>(300, 120));
 	}
-	
+
 	String host = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com";
-	
 
 	private List<Map<String, String>> importData() throws Exception {
 		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
@@ -91,10 +92,10 @@ public class Logo {
 				return name.toLowerCase().endsWith(".png");
 			}
 		});
-		Assertion.get().assertEquals(files.length > 8, true, "[NumberImage]" + "[" + files.length + "]");
+//		Assertion.get().assertEquals(files.length > 8, true, "[NumberImage]" + "[" + files.length + "]");
 		for (File file : files) {
 			String name = file.getName().toLowerCase().replace(".png", "");
-			String lFolderName = folderName.toLowerCase();
+			String called_name = map.get("called_name");
 			String first2 = name.substring(0, 2);
 			String first3 = name.substring(0, 3);
 			String last3 = name.substring(name.length() - 3, name.length());
@@ -103,27 +104,33 @@ public class Logo {
 				last14 = name.substring(name.length() - 14, name.length());
 			} catch (StringIndexOutOfBoundsException ignore) {
 			}
-			if (name.contains(lFolderName) && first2.equals("pm") && !last3.equals("big") && !last14.equals("merchantareav5")) {
+			if (name.contains(called_name) && first2.equals("pm") && !last3.equals("big")
+					&& !last14.equals("merchantareav5")) {
 				logoMap.put("multi", file);
-			} else if (name.contains(lFolderName) && first2.equals("pm") && last3.equals("big") && !last14.equals("merchantareav5")) {
+			} else if (name.contains(called_name) && first2.equals("pm") && last3.equals("big")
+					&& !last14.equals("merchantareav5")) {
 				logoMap.put("uni", file);
-			} else if (name.contains(lFolderName) && first2.equals("pm") && !last3.equals("big") && last14.equals("merchantareav5")) {
+			} else if (name.contains(called_name) && first2.equals("pm") && !last3.equals("big")
+					&& last14.equals("merchantareav5")) {
 				logoMap.put("v5", file);
-			} else if (name.contains(lFolderName) && first2.equals("ps") && !last3.equals("@2x") && !last3.equals("@3x")) {
+			} else if (name.contains(called_name) && first2.equals("ps") && !last3.equals("@2x")
+					&& !last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 2, name.length());
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light", file);
 				} else {
 					logoMap.put("dark", file);
 				}
-			} else if (name.contains(lFolderName) && first3.equals("_ps") && last3.equals("@2x") && !last3.equals("@3x")) {
+			} else if (name.contains(called_name) && first3.equals("_ps") && last3.equals("@2x")
+					&& !last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light2", file);
 				} else {
 					logoMap.put("dark2", file);
 				}
-			} else if (name.contains(lFolderName) && first2.equals("ps") && !last3.equals("@2x") && last3.equals("@3x")) {
+			} else if (name.contains(called_name) && first2.equals("ps") && !last3.equals("@2x")
+					&& last3.equals("@3x")) {
 				String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 				if (!sublast2.equals("-d")) {
 					logoMap.put("light3", file);
@@ -131,7 +138,7 @@ public class Logo {
 					logoMap.put("dark3", file);
 				}
 			} else {
-				Assertion.get().assertEquals(name, "name", "[NAME]");
+				Assertion.get().assertEquals(name, "name", "[NamedWrong]");
 				if (first2.equals("ps") && last3.equals("@2x") && !last3.equals("@3x")) {
 					String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 					if (!sublast2.equals("-d")) {
@@ -146,70 +153,84 @@ public class Logo {
 				}
 			}
 		}
-		Assertion.get().assertEquals(files.length >= logoMap.size(), true,"[ImageNotMatchType]"+"["+files.length+"]");
-		Assertion.get().assertEquals(logoMap.size(), 9, "[NumberOfTypeImage]");
-		if(logoMap.size() != 9) {
-			String missingType = "Missing type: ";
-			for(Entry<String, Pair<Integer, Integer>> entry : ruleMap.entrySet()) {
-				if(logoMap.get(entry.getKey())== null) {
-					missingType = missingType + " "+entry.getKey();
-				}
-				
-			}
-			ExtentManager.getTest().log(Status.FAIL, missingType);
-		}
-		
+//		Assertion.get().assertEquals(files.length >= logoMap.size(), true,"[ImageNotMatchType]"+"["+files.length+"]");
+
+//		if (logoMap.size() != 9) {
+//			String missingType = "Missing type: ";
+//			for (Entry<String, Pair<Integer, Integer>> entry : ruleMap.entrySet()) {
+//				if (logoMap.get(entry.getKey()) == null) {
+//					missingType = missingType + " " + entry.getKey();
+//				}
+//
+//			}
+//			Assertion.get().assertEquals(logoMap.size(), 9, "[NotEnoughDesign]" + "[" + missingType + "]");
+//			ExtentManager.getTest().log(Status.FAIL, missingType);
+//		}
+
 		for (Map.Entry<String, File> entry : logoMap.entrySet()) {
 			String name = entry.getKey();
 			File file = entry.getValue();
 			BufferedImage image = ImageIO.read(file);
-			ExtentManager.addImage(image, name +"-"+ file.getName());
-			Assertion.get().assertEquals(image.getWidth(), ruleMap.get(name).getKey(), "["+name+"]"+"[Width]");
-			Assertion.get().assertEquals(image.getHeight(), ruleMap.get(name).getValue(), "["+name+"]"+"[Height]");
-		
+//			ExtentManager.addImage(image, name +"-"+ file.getName());
+			Assertion.get().assertEquals(image.getWidth(), ruleMap.get(name).getKey(), "[" + name + "]" + "[Width]");
+			Assertion.get().assertEquals(image.getHeight(), ruleMap.get(name).getValue(),
+					"[" + name + "]" + "[Height]");
+
 		}
-		
+
 		Map<String, String> hostName = new HashMap<String, String>();
 		hostName.put("multi", null);
 		hostName.put("uni", null);
 		hostName.put("v5", null);
-		hostName.put("light","/images/ps_logos/v2/"+shortcode+".png" );
-		hostName.put("light2","/images/ps_logos/v2/"+shortcode+"@2x.png" );
-		hostName.put("light3","/images/ps_logos/v2/"+shortcode+"@3x.png" );
-		hostName.put("dark","/images/ps_logos/v2/"+shortcode+".png" );
-		hostName.put("dark2","/images/ps_logos/v2/"+shortcode+"_d@2x.png" );
-		hostName.put("dark3","/images/ps_logos/v2/"+shortcode+"_d@3x.png" );
-		
-		String imageNotFound = "ImageNotFound: ";
+		hostName.put("light", "/images/ps_logos/v2/" + shortcode + ".png");
+		hostName.put("light2", "/images/ps_logos/v2/" + shortcode + "@2x.png");
+		hostName.put("light3", "/images/ps_logos/v2/" + shortcode + "@3x.png");
+		hostName.put("dark", "/images/ps_logos/v2/" + shortcode + "_d.png");
+		hostName.put("dark2", "/images/ps_logos/v2/" + shortcode + "_d@2x.png");
+		hostName.put("dark3", "/images/ps_logos/v2/" + shortcode + "_d@3x.png");
 
-		for (Map.Entry<String, File> entry : logoMap.entrySet()) {
+		for (Map.Entry<String, String> entry : hostName.entrySet()) {
 			String name = entry.getKey();
-			File file = entry.getValue();
-			if(!"multi uni v5".contains(name)) {
+			File file = logoMap.get(name);
+			BufferedImage actualImage = null;
+			BufferedImage expectedImage = null;
+			try {
+			expectedImage = ImageIO.read(file);
+			}catch(IllegalArgumentException e) {
+				Assertion.get().assertEquals(name, "isMissing", "[NotEnoughDesign]");
+				int width = ruleMap.get(name).getKey();
+				int height = ruleMap.get(name).getValue();
+				expectedImage = generateBlankImage(width, height);
+			}
 			try {
 
-			URL url  = new URL (host + hostName.get(name));
-			System.out.println(url);
-			
-			BufferedImage expectedImage = ImageIO.read(file);
-			BufferedImage actualImage = ImageIO.read(url);
-			
-			BufferedImage combined = combineImage(expectedImage, actualImage);
-			ExtentManager.addImage(combined, name);
-			}catch(IIOException e) {
-				Assertion.get().assertEquals(name, "","[ImageNotFound]");
-			}
-			}
+				URL url = new URL(host + hostName.get(name));
+				System.out.println(url);
+				actualImage = ImageIO.read(url);
+				BufferedImage combined = combineImage(expectedImage, actualImage);
+				ExtentManager.addImage(combined, name);
+			} catch (IIOException e) {
+				if(!"multi uni v5".contains(name)) {
+				Assertion.get().assertEquals(name, "", "[ImageNotReplaced]");
+				}
+				actualImage = generateBlankImage(expectedImage.getWidth(), expectedImage.getWidth());
+				BufferedImage combined = combineImage(expectedImage, actualImage);
+				ExtentManager.addImage(combined, name);
+				}
 		}
 
-		
-		
-	
-
-
 		Assertion.end();
-	}
 
+	}
+	
+	private static BufferedImage generateBlankImage(int width, int height) {
+		BufferedImage actualImage = new BufferedImage(width, height,
+				BufferedImage.TYPE_BYTE_GRAY);
+		Graphics2D g2d = actualImage.createGraphics();
+		g2d.setColor(Color.WHITE);
+		g2d.fillRect(0, 0,width , height );
+		return actualImage;
+	}
 
 	private static BufferedImage combineImage(BufferedImage expectedImage, BufferedImage actualImage)
 			throws IOException {

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="42" ignored="0" total="46" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="80190" started-at="2019-09-06T10:48:22Z" finished-at="2019-09-06T10:49:43Z">
+  <suite name="Logo" duration-ms="114240" started-at="2019-09-06T12:01:22Z" finished-at="2019-09-06T12:03:17Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="80190" started-at="2019-09-06T10:48:22Z" finished-at="2019-09-06T10:49:43Z">
+    <test name="Logo" duration-ms="114240" started-at="2019-09-06T12:01:22Z" finished-at="2019-09-06T12:03:17Z">
       <class name="Logo">
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3556" started-at="2019-09-06T10:48:24Z" data-provider="data" finished-at="2019-09-06T10:48:27Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3092" started-at="2019-09-06T12:01:23Z" data-provider="data" finished-at="2019-09-06T12:01:26Z">
           <params>
             <param index="0">
               <value>
@@ -16,14 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payvalida/Efecty, folder=Efecty, shortcode=efectycolombia}]]>
+                <![CDATA[{psname=Payvalida/Efecty, folder=Efecty, shortcode=efectycolombia, called_name=efecty}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3123" started-at="2019-09-06T10:48:27Z" data-provider="data" finished-at="2019-09-06T10:48:30Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3270" started-at="2019-09-06T12:01:26Z" data-provider="data" finished-at="2019-09-06T12:01:30Z">
           <params>
             <param index="0">
               <value>
@@ -32,26 +32,28 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payvalida/PSE, folder=PSE, shortcode=pse}]]>
+                <![CDATA[{psname=Payvalida/PSE, folder=PSE, shortcode=pse, called_name=pse}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,7 +85,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2514" started-at="2019-09-06T10:48:30Z" data-provider="data" finished-at="2019-09-06T10:48:33Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2356" started-at="2019-09-06T12:01:30Z" data-provider="data" finished-at="2019-09-06T12:01:32Z">
           <params>
             <param index="0">
               <value>
@@ -92,22 +94,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx, folder=Boleto, shortcode=boletobancario}]]>
+                <![CDATA[{psname=Ebanx, folder=Boleto, shortcode=boletobancario, called_name=boleto}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,7 +143,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2172" started-at="2019-09-06T10:48:33Z" data-provider="data" finished-at="2019-09-06T10:48:35Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2459" started-at="2019-09-06T12:01:32Z" data-provider="data" finished-at="2019-09-06T12:01:35Z">
           <params>
             <param index="0">
               <value>
@@ -148,14 +152,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Astropay/Santander Mexico, folder=Santander, shortcode=santandermexico}]]>
+                <![CDATA[{psname=Astropay/Santander Mexico, folder=Santander, shortcode=santandermexico, called_name=santander}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2103" started-at="2019-09-06T10:48:35Z" data-provider="data" finished-at="2019-09-06T10:48:37Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2151" started-at="2019-09-06T12:01:35Z" data-provider="data" finished-at="2019-09-06T12:01:37Z">
           <params>
             <param index="0">
               <value>
@@ -164,22 +168,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Astropay/OXXO, folder=OXXO, shortcode=oxxo}]]>
+                <![CDATA[{psname=Astropay/OXXO, folder=OXXO, shortcode=oxxo, called_name=oxxo}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -211,7 +217,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="948" started-at="2019-09-06T10:48:37Z" data-provider="data" finished-at="2019-09-06T10:48:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3199" started-at="2019-09-06T12:01:37Z" data-provider="data" finished-at="2019-09-06T12:01:40Z">
           <params>
             <param index="0">
               <value>
@@ -220,44 +226,32 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx CC, folder=Ebanx\\Ebanx (Visa,Mastercard only), shortcode=ccbrazil}]]>
+                <![CDATA[{psname=Ebanx CC, folder=Ebanx\\Ebanx (Visa,Mastercard only), shortcode=ccbrazil, called_name=ebanx}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NAME] expected [name] but found [ps-ebanx-d@2x],
-[NAME] expected [name] but found [pm-ps-ebanx],
-[NAME] expected [name] but found [ps-ebanx],
-[NAME] expected [name] but found [ps-ebanx-d],
-[NAME] expected [name] but found [ps-ebanx-d@3x],
-[NAME] expected [name] but found [ps-ebanx-@2x],
-[NAME] expected [name] but found [ps-ebanx-@3x],
-[NAME] expected [name] but found [pm-ps-ebanx-big],
-[NAME] expected [name] but found [pm-ps-ebanx-merchantareav7-(flag)],
-[NAME] expected [name] but found [pm-ps-ebanx-merchantareav5],
-[NumberOfTypeImage] expected [9] but found [4],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [light2]]]>
+[NamedWrong] expected [name] but found [ps-ebanx-d@2x],
+[NamedWrong] expected [name] but found [ps-ebanx-@2x],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NAME] expected [name] but found [ps-ebanx-d@2x],
-[NAME] expected [name] but found [pm-ps-ebanx],
-[NAME] expected [name] but found [ps-ebanx],
-[NAME] expected [name] but found [ps-ebanx-d],
-[NAME] expected [name] but found [ps-ebanx-d@3x],
-[NAME] expected [name] but found [ps-ebanx-@2x],
-[NAME] expected [name] but found [ps-ebanx-@3x],
-[NAME] expected [name] but found [pm-ps-ebanx-big],
-[NAME] expected [name] but found [pm-ps-ebanx-merchantareav7-(flag)],
-[NAME] expected [name] but found [pm-ps-ebanx-merchantareav5],
-[NumberOfTypeImage] expected [9] but found [4],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [light2]
+[NamedWrong] expected [name] but found [ps-ebanx-d@2x],
+[NamedWrong] expected [name] but found [ps-ebanx-@2x],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -289,7 +283,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="12" started-at="2019-09-06T10:48:38Z" data-provider="data" finished-at="2019-09-06T10:48:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2343" started-at="2019-09-06T12:01:40Z" data-provider="data" finished-at="2019-09-06T12:01:42Z">
           <params>
             <param index="0">
               <value>
@@ -298,34 +292,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx CC Hipercard, folder=Hiperbank, shortcode=ccbrazilhipercard}]]>
+                <![CDATA[{psname=Ebanx CC Hipercard, folder=Hiperbank, shortcode=ccbrazilhipercard, called_name=hipercard}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-hipercard-@2x],
-[NAME] expected [name] but found [ps-hipercard-d],
-[NAME] expected [name] but found [ps-hipercard-@3x],
-[NAME] expected [name] but found [_ps-hipercard-d@2x],
-[NAME] expected [name] but found [ps-hipercard-d@3x],
-[NAME] expected [name] but found [ps-hipercard],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-hipercard-@2x],
-[NAME] expected [name] but found [ps-hipercard-d],
-[NAME] expected [name] but found [ps-hipercard-@3x],
-[NAME] expected [name] but found [_ps-hipercard-d@2x],
-[NAME] expected [name] but found [ps-hipercard-d@3x],
-[NAME] expected [name] but found [ps-hipercard],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -357,7 +341,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2176" started-at="2019-09-06T10:48:38Z" data-provider="data" finished-at="2019-09-06T10:48:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1920" started-at="2019-09-06T12:01:42Z" data-provider="data" finished-at="2019-09-06T12:01:44Z">
           <params>
             <param index="0">
               <value>
@@ -366,22 +350,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx/Banco Itau, folder=Itau, shortcode=itaubrazil}]]>
+                <![CDATA[{psname=Ebanx/Banco Itau, folder=Itau, shortcode=itaubrazil, called_name=itau}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -413,7 +399,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:48:40Z" data-provider="data" finished-at="2019-09-06T10:48:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1946" started-at="2019-09-06T12:01:44Z" data-provider="data" finished-at="2019-09-06T12:01:46Z">
           <params>
             <param index="0">
               <value>
@@ -422,34 +408,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx/Banco do Brazil, folder=Banco do Brazil, shortcode=bancobrazil}]]>
+                <![CDATA[{psname=Ebanx/Banco do Brazil, folder=Banco do Brazil, shortcode=bancobrazil, called_name=bancodobrazil}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-bancodobrazil-@2x],
-[NAME] expected [name] but found [ps-bancodobrazil-@3x],
-[NAME] expected [name] but found [ps-bancodobrazil],
-[NAME] expected [name] but found [_ps-bancodobrazil-d@2x],
-[NAME] expected [name] but found [ps-bancodobrazil-d],
-[NAME] expected [name] but found [ps-bancodobrazil-d@3x],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-bancodobrazil-@2x],
-[NAME] expected [name] but found [ps-bancodobrazil-@3x],
-[NAME] expected [name] but found [ps-bancodobrazil],
-[NAME] expected [name] but found [_ps-bancodobrazil-d@2x],
-[NAME] expected [name] but found [ps-bancodobrazil-d],
-[NAME] expected [name] but found [ps-bancodobrazil-d@3x],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -481,7 +457,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2213" started-at="2019-09-06T10:48:40Z" data-provider="data" finished-at="2019-09-06T10:48:42Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2052" started-at="2019-09-06T12:01:46Z" data-provider="data" finished-at="2019-09-06T12:01:48Z">
           <params>
             <param index="0">
               <value>
@@ -490,26 +466,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Ebanx/Banco Banrisul, folder=Banrisul, shortcode=banrisulbrazil}]]>
+                <![CDATA[{psname=Ebanx/Banco Banrisul, folder=Banrisul, shortcode=banrisulbrazil, called_name=banrisul}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-banrisul-d@2x],
-[NAME] expected [name] but found [ps-banrisul-@2x],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NamedWrong] expected [name] but found [ps-banrisul-d@2x],
+[NamedWrong] expected [name] but found [ps-banrisul-@2x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-banrisul-d@2x],
-[NAME] expected [name] but found [ps-banrisul-@2x],
-[NumberOfTypeImage] expected [9] but found [6]
+[NamedWrong] expected [name] but found [ps-banrisul-d@2x],
+[NamedWrong] expected [name] but found [ps-banrisul-@2x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -541,7 +519,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2222" started-at="2019-09-06T10:48:42Z" data-provider="data" finished-at="2019-09-06T10:48:45Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2108" started-at="2019-09-06T12:01:48Z" data-provider="data" finished-at="2019-09-06T12:01:50Z">
           <params>
             <param index="0">
               <value>
@@ -550,14 +528,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Astropay/Efecty, folder=Efecty, shortcode=efecty}]]>
+                <![CDATA[{psname=Astropay/Efecty, folder=Efecty, shortcode=efecty, called_name=efecty}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2673" started-at="2019-09-06T10:48:45Z" data-provider="data" finished-at="2019-09-06T10:48:47Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3068" started-at="2019-09-06T12:01:50Z" data-provider="data" finished-at="2019-09-06T12:01:53Z">
           <params>
             <param index="0">
               <value>
@@ -566,30 +544,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Dotpay/mTransfer, folder=mBank, shortcode=dotpaymt}]]>
+                <![CDATA[{psname=Dotpay/mTransfer, folder=mBank, shortcode=dotpaymt, called_name=mbank}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -621,7 +603,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2999" started-at="2019-09-06T10:48:47Z" data-provider="data" finished-at="2019-09-06T10:48:50Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3268" started-at="2019-09-06T12:01:53Z" data-provider="data" finished-at="2019-09-06T12:01:57Z">
           <params>
             <param index="0">
               <value>
@@ -630,30 +612,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Dotpay/Bank Zachodni WBK, folder=WBK, shortcode=dotpaybzwbk}]]>
+                <![CDATA[{psname=Dotpay/Bank Zachodni WBK, folder=WBK, shortcode=dotpaybzwbk, called_name=wbk}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -685,7 +671,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3156" started-at="2019-09-06T10:48:50Z" data-provider="data" finished-at="2019-09-06T10:48:54Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3334" started-at="2019-09-06T12:01:57Z" data-provider="data" finished-at="2019-09-06T12:02:00Z">
           <params>
             <param index="0">
               <value>
@@ -694,30 +680,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Dotpay/ING Bank Slaski, folder=ING, shortcode=dotpayingb}]]>
+                <![CDATA[{psname=Dotpay/ING Bank Slaski, folder=ING, shortcode=dotpayingb, called_name=ing}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -749,7 +739,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3053" started-at="2019-09-06T10:48:54Z" data-provider="data" finished-at="2019-09-06T10:48:57Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3537" started-at="2019-09-06T12:02:00Z" data-provider="data" finished-at="2019-09-06T12:02:04Z">
           <params>
             <param index="0">
               <value>
@@ -758,30 +748,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Dotpay/Inteligo, folder=Inteligo, shortcode=dotpayinteligo}]]>
+                <![CDATA[{psname=Dotpay/Inteligo, folder=Inteligo, shortcode=dotpayinteligo, called_name=inteligo}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -813,7 +807,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:48:57Z" data-provider="data" finished-at="2019-09-06T10:48:57Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3381" started-at="2019-09-06T12:02:04Z" data-provider="data" finished-at="2019-09-06T12:02:07Z">
           <params>
             <param index="0">
               <value>
@@ -822,34 +816,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Dotpay/Place z ING Bank Slaski, folder=Dotpay Place z ING Bank Slaski, shortcode=dotpayingbacc}]]>
+                <![CDATA[{psname=Dotpay/Place z ING Bank Slaski, folder=Dotpay Place z ING Bank Slaski, shortcode=dotpayingbacc, called_name=dotpay ing bank slaski}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d@3x],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-@3x],
-[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-d@2x],
-[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-@2x],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d@3x],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-d],
-[NAME] expected [name] but found [ps-dotpay ing bank slaski ing-@3x],
-[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-d@2x],
-[NAME] expected [name] but found [_ps-dotpay ing bank slaski ing-@2x],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -881,7 +875,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2972" started-at="2019-09-06T10:48:57Z" data-provider="data" finished-at="2019-09-06T10:49:00Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3168" started-at="2019-09-06T12:02:07Z" data-provider="data" finished-at="2019-09-06T12:02:10Z">
           <params>
             <param index="0">
               <value>
@@ -890,30 +884,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/Happy Voucher, folder=Happyvoucher, shortcode=happyvoucher}]]>
+                <![CDATA[{psname=Payletter/Happy Voucher, folder=Happyvoucher, shortcode=happyvoucher, called_name=happyvoucher}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -944,7 +942,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="16" started-at="2019-09-06T10:49:00Z" data-provider="data" finished-at="2019-09-06T10:49:00Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2116" started-at="2019-09-06T12:02:10Z" data-provider="data" finished-at="2019-09-06T12:02:12Z">
           <params>
             <param index="0">
               <value>
@@ -953,22 +951,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/TeenCash, folder=Teencash, shortcode=teencash}]]>
+                <![CDATA[{psname=Payletter/TeenCash, folder=Teencash, shortcode=teencash, called_name=teencash}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -999,7 +1011,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2379" started-at="2019-09-06T10:49:00Z" data-provider="data" finished-at="2019-09-06T10:49:02Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1820" started-at="2019-09-06T12:02:12Z" data-provider="data" finished-at="2019-09-06T12:02:14Z">
           <params>
             <param index="0">
               <value>
@@ -1008,22 +1020,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/OnCash, folder=Oncash, shortcode=oncash}]]>
+                <![CDATA[{psname=Payletter/OnCash, folder=Oncash, shortcode=oncash, called_name=oncash}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1054,7 +1068,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2041" started-at="2019-09-06T10:49:02Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1945" started-at="2019-09-06T12:02:14Z" data-provider="data" finished-at="2019-09-06T12:02:16Z">
           <params>
             <param index="0">
               <value>
@@ -1063,22 +1077,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/Eggmoney, folder=Eggmoney, shortcode=eggmoney}]]>
+                <![CDATA[{psname=Payletter/Eggmoney, folder=Eggmoney, shortcode=eggmoney, called_name=eggmoney}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1109,7 +1125,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2785" started-at="2019-09-06T12:02:16Z" data-provider="data" finished-at="2019-09-06T12:02:19Z">
           <params>
             <param index="0">
               <value>
@@ -1118,24 +1134,48 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/Culture Voucher, folder=Culture voucher, shortcode=culturevoucher}]]>
+                <![CDATA[{psname=Payletter/Culture Voucher, folder=Culture voucher, shortcode=culturevoucher, called_name=culture voucher}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][1] expected [true] but found [false],
-[NAME] expected [name] but found [culture voucher_original],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NamedWrong] expected [name] but found [culture voucher_original],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][1] expected [true] but found [false],
-[NAME] expected [name] but found [culture voucher_original],
-[NumberOfTypeImage] expected [9] but found [0]
+[NamedWrong] expected [name] but found [culture voucher_original],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1166,7 +1206,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="29" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:04Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3353" started-at="2019-09-06T12:02:19Z" data-provider="data" finished-at="2019-09-06T12:02:22Z">
           <params>
             <param index="0">
               <value>
@@ -1175,40 +1215,32 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/AllTheGate CC, folder=Payletter AlltheGate, shortcode=allthegate}]]>
+                <![CDATA[{psname=Payletter/AllTheGate CC, folder=Payletter AlltheGate, shortcode=allthegate, called_name=payletterallthegate}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NAME] expected [name] but found [_ps-payletterallthegate-@2x],
-[NAME] expected [name] but found [pm-psallthegate-merchantareav5],
-[NAME] expected [name] but found [ps-payletterallthegate-d@3x],
-[NAME] expected [name] but found [ps-payletterallthegate-d],
-[NAME] expected [name] but found [ps-payletterallthegate@3x],
-[NAME] expected [name] but found [pm-pspayletterallthegate-big],
-[NAME] expected [name] but found [pm-ps-payletterallthegate],
-[NAME] expected [name] but found [_ps-payletterallthegate-d@2x],
-[NAME] expected [name] but found [ps-payletterallthegate],
-[NAME] expected [name] but found [pm-ps-alltregate (noflag)],
-[NumberOfTypeImage] expected [9] but found [1]]]>
+[NamedWrong] expected [name] but found [pm-psallthegate-merchantareav5],
+[NamedWrong] expected [name] but found [pm-ps-alltregate (noflag)],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NAME] expected [name] but found [_ps-payletterallthegate-@2x],
-[NAME] expected [name] but found [pm-psallthegate-merchantareav5],
-[NAME] expected [name] but found [ps-payletterallthegate-d@3x],
-[NAME] expected [name] but found [ps-payletterallthegate-d],
-[NAME] expected [name] but found [ps-payletterallthegate@3x],
-[NAME] expected [name] but found [pm-pspayletterallthegate-big],
-[NAME] expected [name] but found [pm-ps-payletterallthegate],
-[NAME] expected [name] but found [_ps-payletterallthegate-d@2x],
-[NAME] expected [name] but found [ps-payletterallthegate],
-[NAME] expected [name] but found [pm-ps-alltregate (noflag)],
-[NumberOfTypeImage] expected [9] but found [1]
+[NamedWrong] expected [name] but found [pm-psallthegate-merchantareav5],
+[NamedWrong] expected [name] but found [pm-ps-alltregate (noflag)],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1239,7 +1271,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2804" started-at="2019-09-06T10:49:04Z" data-provider="data" finished-at="2019-09-06T10:49:07Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3008" started-at="2019-09-06T12:02:22Z" data-provider="data" finished-at="2019-09-06T12:02:25Z">
           <params>
             <param index="0">
               <value>
@@ -1248,36 +1280,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Payletter/Book Gift Voucher, folder=BookGiftVoucher, shortcode=bookculture}]]>
+                <![CDATA[{psname=Payletter/Book Gift Voucher, folder=BookGiftVoucher, shortcode=bookculture, called_name=bookgiftvoucher}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NAME] expected [name] but found [book voucher v5],
-[NAME] expected [name] but found [book voucher v7],
-[NAME] expected [name] but found [book voucher_original],
-[NumberOfTypeImage] expected [9] but found [8],
+[NamedWrong] expected [name] but found [book voucher v5],
+[NamedWrong] expected [name] but found [book voucher v7],
+[NamedWrong] expected [name] but found [book voucher_original],
 [multi][Height] expected [43] but found [44],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NAME] expected [name] but found [book voucher v5],
-[NAME] expected [name] but found [book voucher v7],
-[NAME] expected [name] but found [book voucher_original],
-[NumberOfTypeImage] expected [9] but found [8],
+[NamedWrong] expected [name] but found [book voucher v5],
+[NamedWrong] expected [name] but found [book voucher v7],
+[NamedWrong] expected [name] but found [book voucher_original],
 [multi][Height] expected [43] but found [44],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1308,7 +1332,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3056" started-at="2019-09-06T10:49:07Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2029" started-at="2019-09-06T12:02:25Z" data-provider="data" finished-at="2019-09-06T12:02:27Z">
           <params>
             <param index="0">
               <value>
@@ -1317,30 +1341,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=PPRO/iDeal, folder=PPRO IDEAL, shortcode=idealpayments}]]>
+                <![CDATA[{psname=PPRO/iDeal, folder=PPRO IDEAL, shortcode=idealpayments, called_name=ppro ideal}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1371,7 +1389,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="19" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3376" started-at="2019-09-06T12:02:27Z" data-provider="data" finished-at="2019-09-06T12:02:31Z">
           <params>
             <param index="0">
               <value>
@@ -1380,34 +1398,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Game-ON, folder=Game On, shortcode=gameon}]]>
+                <![CDATA[{psname=Game-ON, folder=Game On, shortcode=gameon, called_name=game-on}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-game-on-@2x],
-[NAME] expected [name] but found [ps-game-on-@3x],
-[NAME] expected [name] but found [ps-game-on-d],
-[NAME] expected [name] but found [ps-game-on-d@3x],
-[NAME] expected [name] but found [_ps-game-on-d@2x],
-[NAME] expected [name] but found [ps-game-on],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-game-on-@2x],
-[NAME] expected [name] but found [ps-game-on-@3x],
-[NAME] expected [name] but found [ps-game-on-d],
-[NAME] expected [name] but found [ps-game-on-d@3x],
-[NAME] expected [name] but found [_ps-game-on-d@2x],
-[NAME] expected [name] but found [ps-game-on],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[ImageNotReplaced] expected [] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1438,7 +1456,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="7" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3057" started-at="2019-09-06T12:02:31Z" data-provider="data" finished-at="2019-09-06T12:02:34Z">
           <params>
             <param index="0">
               <value>
@@ -1447,34 +1465,58 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Culture Voucher, folder=Culture land, shortcode=culturevoucherkr}]]>
+                <![CDATA[{psname=Culture Voucher, folder=Culture land, shortcode=culturevoucherkr, called_name=culture land}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-culture-land-@2x],
-[NAME] expected [name] but found [ps-culture-land-d@3x],
-[NAME] expected [name] but found [ps-culture-land],
-[NAME] expected [name] but found [ps-culture-land-@3x],
-[NAME] expected [name] but found [ps-culture-land-d],
-[NAME] expected [name] but found [_ps-culture-land-d@2x],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NamedWrong] expected [name] but found [_ps-culture-land-@2x],
+[NamedWrong] expected [name] but found [ps-culture-land-d@3x],
+[NamedWrong] expected [name] but found [ps-culture-land],
+[NamedWrong] expected [name] but found [ps-culture-land-@3x],
+[NamedWrong] expected [name] but found [ps-culture-land-d],
+[NamedWrong] expected [name] but found [_ps-culture-land-d@2x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [_ps-culture-land-@2x],
-[NAME] expected [name] but found [ps-culture-land-d@3x],
-[NAME] expected [name] but found [ps-culture-land],
-[NAME] expected [name] but found [ps-culture-land-@3x],
-[NAME] expected [name] but found [ps-culture-land-d],
-[NAME] expected [name] but found [_ps-culture-land-d@2x],
-[NumberOfTypeImage] expected [9] but found [0]
+[NamedWrong] expected [name] but found [_ps-culture-land-@2x],
+[NamedWrong] expected [name] but found [ps-culture-land-d@3x],
+[NamedWrong] expected [name] but found [ps-culture-land],
+[NamedWrong] expected [name] but found [ps-culture-land-@3x],
+[NamedWrong] expected [name] but found [ps-culture-land-d],
+[NamedWrong] expected [name] but found [_ps-culture-land-d@2x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1505,7 +1547,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="13" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:10Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3091" started-at="2019-09-06T12:02:34Z" data-provider="data" finished-at="2019-09-06T12:02:37Z">
           <params>
             <param index="0">
               <value>
@@ -1514,22 +1556,46 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Teencash, folder=Teencash, shortcode=teencashkr}]]>
+                <![CDATA[{psname=Teencash, folder=Teencash, shortcode=teencashkr, called_name=teencash}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1560,7 +1626,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2987" started-at="2019-09-06T10:49:10Z" data-provider="data" finished-at="2019-09-06T10:49:13Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2329" started-at="2019-09-06T12:02:37Z" data-provider="data" finished-at="2019-09-06T12:02:39Z">
           <params>
             <param index="0">
               <value>
@@ -1569,30 +1635,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Umpay bank transfer, folder=Umpay, shortcode=banktransfercn}]]>
+                <![CDATA[{psname=Umpay bank transfer, folder=Umpay, shortcode=banktransfercn, called_name=umpay}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1623,7 +1683,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3029" started-at="2019-09-06T10:49:13Z" data-provider="data" finished-at="2019-09-06T10:49:16Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2020" started-at="2019-09-06T12:02:39Z" data-provider="data" finished-at="2019-09-06T12:02:41Z">
           <params>
             <param index="0">
               <value>
@@ -1632,30 +1692,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=MercadoPago/Boleto, folder=Boleto, shortcode=boletobr}]]>
+                <![CDATA[{psname=MercadoPago/Boleto, folder=Boleto, shortcode=boletobr, called_name=boleto}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1686,7 +1740,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2972" started-at="2019-09-06T10:49:16Z" data-provider="data" finished-at="2019-09-06T10:49:19Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2023" started-at="2019-09-06T12:02:41Z" data-provider="data" finished-at="2019-09-06T12:02:43Z">
           <params>
             <param index="0">
               <value>
@@ -1695,30 +1749,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Mollie/Ideal, folder=Ideal, shortcode=idealnl}]]>
+                <![CDATA[{psname=Mollie/Ideal, folder=Ideal, shortcode=idealnl, called_name=ideal}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1749,7 +1797,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3032" started-at="2019-09-06T10:49:19Z" data-provider="data" finished-at="2019-09-06T10:49:22Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2031" started-at="2019-09-06T12:02:43Z" data-provider="data" finished-at="2019-09-06T12:02:45Z">
           <params>
             <param index="0">
               <value>
@@ -1758,30 +1806,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Yandex/Yandex Money, folder=Yandex, shortcode=yandexmoney}]]>
+                <![CDATA[{psname=Yandex/Yandex Money, folder=Yandex, shortcode=yandexmoney, called_name=yandex}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1812,7 +1854,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3107" started-at="2019-09-06T10:49:22Z" data-provider="data" finished-at="2019-09-06T10:49:25Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2107" started-at="2019-09-06T12:02:45Z" data-provider="data" finished-at="2019-09-06T12:02:47Z">
           <params>
             <param index="0">
               <value>
@@ -1821,30 +1863,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Yandex/Sberbank Online, folder=Sberbank, shortcode=sberbankonline}]]>
+                <![CDATA[{psname=Yandex/Sberbank Online, folder=Sberbank, shortcode=sberbankonline, called_name=sberbank}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1875,7 +1911,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3069" started-at="2019-09-06T10:49:25Z" data-provider="data" finished-at="2019-09-06T10:49:28Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2040" started-at="2019-09-06T12:02:47Z" data-provider="data" finished-at="2019-09-06T12:02:49Z">
           <params>
             <param index="0">
               <value>
@@ -1884,30 +1920,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Yandex/Alfa Click, folder=AlfaBank, shortcode=alfaclickya}]]>
+                <![CDATA[{psname=Yandex/Alfa Click, folder=AlfaBank, shortcode=alfaclickya, called_name=alfabank}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -1938,7 +1968,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3128" started-at="2019-09-06T10:49:28Z" data-provider="data" finished-at="2019-09-06T10:49:31Z">
+        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2168" started-at="2019-09-06T12:02:49Z" data-provider="data" finished-at="2019-09-06T12:02:51Z">
           <params>
             <param index="0">
               <value>
@@ -1947,57 +1977,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Yandex/Tinkoff, folder=Tinkoff, shortcode=tinkoff}]]>
+                <![CDATA[{psname=Yandex/Tinkoff, folder=Tinkoff, shortcode=tinkoff, called_name=tinkoff}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
-at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3116" started-at="2019-09-06T10:49:31Z" data-provider="data" finished-at="2019-09-06T10:49:35Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2192" started-at="2019-09-06T12:02:51Z" data-provider="data" finished-at="2019-09-06T12:02:54Z">
           <params>
             <param index="0">
               <value>
@@ -2006,30 +1993,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Yandex/Cash, folder=YandexCash, shortcode=yacash}]]>
+                <![CDATA[{psname=Yandex/Cash, folder=YandexCash, shortcode=yacash, called_name=yandexcash}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2060,7 +2041,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="18" started-at="2019-09-06T10:49:35Z" data-provider="data" finished-at="2019-09-06T10:49:35Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2060" started-at="2019-09-06T12:02:54Z" data-provider="data" finished-at="2019-09-06T12:02:56Z">
           <params>
             <param index="0">
               <value>
@@ -2069,34 +2050,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Openbucks/Walmart, folder=Walmart moneygram, shortcode=walmart}]]>
+                <![CDATA[{psname=Openbucks/Walmart, folder=Walmart moneygram, shortcode=walmart, called_name=walmartmoneygram}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-walmartmoneygram-@3x],
-[NAME] expected [name] but found [_ps-walmartmoneygram-d@2x],
-[NAME] expected [name] but found [ps-walmartmoneygram-d@3x],
-[NAME] expected [name] but found [_ps-walmartmoneygram-@2x],
-[NAME] expected [name] but found [ps-walmartmoneygram],
-[NAME] expected [name] but found [ps-walmartmoneygram-d],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NAME] expected [name] but found [ps-walmartmoneygram-@3x],
-[NAME] expected [name] but found [_ps-walmartmoneygram-d@2x],
-[NAME] expected [name] but found [ps-walmartmoneygram-d@3x],
-[NAME] expected [name] but found [_ps-walmartmoneygram-@2x],
-[NAME] expected [name] but found [ps-walmartmoneygram],
-[NAME] expected [name] but found [ps-walmartmoneygram-d],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2127,7 +2098,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="3084" started-at="2019-09-06T10:49:35Z" data-provider="data" finished-at="2019-09-06T10:49:38Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1967" started-at="2019-09-06T12:02:56Z" data-provider="data" finished-at="2019-09-06T12:02:58Z">
           <params>
             <param index="0">
               <value>
@@ -2136,30 +2107,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Openbucks/MoneyGram, folder=Moneygram, shortcode=moneygram}]]>
+                <![CDATA[{psname=Openbucks/MoneyGram, folder=Moneygram, shortcode=moneygram, called_name=moneygram}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][6] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2190,7 +2155,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2451" started-at="2019-09-06T10:49:38Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1856" started-at="2019-09-06T12:02:58Z" data-provider="data" finished-at="2019-09-06T12:03:00Z">
           <params>
             <param index="0">
               <value>
@@ -2199,34 +2164,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Openbucks/Canada Post, folder=Canadapost, shortcode=canadapost}]]>
+                <![CDATA[{psname=Openbucks/Canada Post, folder=Canadapost, shortcode=canadapost, called_name=canadapost}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NAME] expected [name] but found [ps-canada-post-d],
-[NAME] expected [name] but found [ps-canada-post],
-[NAME] expected [name] but found [pm-ps-canada-big],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]]]>
+[NamedWrong] expected [name] but found [ps-canada-post-d],
+[NamedWrong] expected [name] but found [ps-canada-post],
+[NamedWrong] expected [name] but found [pm-ps-canada-big],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NAME] expected [name] but found [ps-canada-post-d],
-[NAME] expected [name] but found [ps-canada-post],
-[NAME] expected [name] but found [pm-ps-canada-big],
-[NumberOfTypeImage] expected [9] but found [6],
-[ImageNotFound] expected [] but found [dark2],
-[ImageNotFound] expected [] but found [dark3],
-[ImageNotFound] expected [] but found [light3],
-[ImageNotFound] expected [] but found [light2]
+[NamedWrong] expected [name] but found [ps-canada-post-d],
+[NamedWrong] expected [name] but found [ps-canada-post],
+[NamedWrong] expected [name] but found [pm-ps-canada-big],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2257,7 +2218,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="18" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2773" started-at="2019-09-06T12:03:00Z" data-provider="data" finished-at="2019-09-06T12:03:02Z">
           <params>
             <param index="0">
               <value>
@@ -2266,22 +2227,46 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Megapay / Bank transfer Thailand, folder=, shortcode=banktransferth}]]>
+                <![CDATA[{psname=Megapay / Bank transfer Thailand, folder=, shortcode=banktransferth, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2312,7 +2297,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:40Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2117" started-at="2019-09-06T12:03:02Z" data-provider="data" finished-at="2019-09-06T12:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -2321,22 +2306,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Gateway, folder=Gateway, shortcode=gateway}]]>
+                <![CDATA[{psname=Gateway, folder=Gateway, shortcode=gateway, called_name=Gateway}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2367,7 +2366,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="PASS" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2377" started-at="2019-09-06T10:49:40Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1803" started-at="2019-09-06T12:03:04Z" data-provider="data" finished-at="2019-09-06T12:03:06Z">
           <params>
             <param index="0">
               <value>
@@ -2376,14 +2375,83 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Gateway - AMEX only, folder=AMEX, shortcode=gateway}]]>
+                <![CDATA[{psname=Gateway - AMEX only, folder=AMEX, shortcode=gateway, called_name=AMEX}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+[NamedWrong] expected [name] but found [_ps-amex-@2x],
+[NamedWrong] expected [name] but found [ps-amex-d],
+[NamedWrong] expected [name] but found [pm-psamex-merchantareav5],
+[NamedWrong] expected [name] but found [ps-amex-d@3x],
+[NamedWrong] expected [name] but found [pm-ps-amex],
+[NamedWrong] expected [name] but found [ps-amex],
+[NamedWrong] expected [name] but found [_ps-amex-d@2x],
+[NamedWrong] expected [name] but found [pm-psamex-big],
+[NamedWrong] expected [name] but found [ps-amex-@3x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+[NamedWrong] expected [name] but found [_ps-amex-@2x],
+[NamedWrong] expected [name] but found [ps-amex-d],
+[NamedWrong] expected [name] but found [pm-psamex-merchantareav5],
+[NamedWrong] expected [name] but found [ps-amex-d@3x],
+[NamedWrong] expected [name] but found [pm-ps-amex],
+[NamedWrong] expected [name] but found [ps-amex],
+[NamedWrong] expected [name] but found [_ps-amex-d@2x],
+[NamedWrong] expected [name] but found [pm-psamex-big],
+[NamedWrong] expected [name] but found [ps-amex-@3x],
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [light2]
+at automation.project3ds.Assertion.end(Assertion.java:26)
+at Logo.getLogoFile(Logo.java:225)
+at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="9" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1850" started-at="2019-09-06T12:03:06Z" data-provider="data" finished-at="2019-09-06T12:03:08Z">
           <params>
             <param index="0">
               <value>
@@ -2392,22 +2460,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=PPRO/EPS, folder=, shortcode=epspayments}]]>
+                <![CDATA[{psname=PPRO/EPS, folder=, shortcode=epspayments, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2438,7 +2520,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="6" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1841" started-at="2019-09-06T12:03:08Z" data-provider="data" finished-at="2019-09-06T12:03:10Z">
           <params>
             <param index="0">
               <value>
@@ -2447,22 +2529,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=zGold-MOLPoints, folder=, shortcode=mol}]]>
+                <![CDATA[{psname=zGold-MOLPoints, folder=, shortcode=mol, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2493,7 +2589,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="11" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="1786" started-at="2019-09-06T12:03:10Z" data-provider="data" finished-at="2019-09-06T12:03:12Z">
           <params>
             <param index="0">
               <value>
@@ -2502,22 +2598,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=PPRO/Multibanco, folder=, shortcode=multibanco}]]>
+                <![CDATA[{psname=PPRO/Multibanco, folder=, shortcode=multibanco, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2548,7 +2658,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="8" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2764" started-at="2019-09-06T12:03:12Z" data-provider="data" finished-at="2019-09-06T12:03:15Z">
           <params>
             <param index="0">
               <value>
@@ -2557,22 +2667,46 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=MINT, folder=, shortcode=epinpaymentsystem}]]>
+                <![CDATA[{psname=MINT, folder=, shortcode=epinpaymentsystem, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[ImageNotReplaced] expected [] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[ImageNotReplaced] expected [] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[ImageNotReplaced] expected [] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[ImageNotReplaced] expected [] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2],
+[ImageNotReplaced] expected [] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
@@ -2603,7 +2737,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLogoFile -->
-        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="5" started-at="2019-09-06T10:49:43Z" data-provider="data" finished-at="2019-09-06T10:49:43Z">
+        <test-method status="FAIL" signature="getLogoFile(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="getLogoFile" duration-ms="2148" started-at="2019-09-06T12:03:15Z" data-provider="data" finished-at="2019-09-06T12:03:17Z">
           <params>
             <param index="0">
               <value>
@@ -2612,22 +2746,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[{psname=Openbucks/CVS Pharmacy, folder=, shortcode=cvspharmacy}]]>
+                <![CDATA[{psname=Openbucks/CVS Pharmacy, folder=, shortcode=cvspharmacy, called_name=}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]]]>
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-[NumberImage][0] expected [true] but found [false],
-[NumberOfTypeImage] expected [9] but found [0]
+[NotEnoughDesign] expected [isMissing] but found [uni],
+[NotEnoughDesign] expected [isMissing] but found [dark2],
+[NotEnoughDesign] expected [isMissing] but found [dark3],
+[NotEnoughDesign] expected [isMissing] but found [light],
+[NotEnoughDesign] expected [isMissing] but found [dark],
+[NotEnoughDesign] expected [isMissing] but found [light3],
+[NotEnoughDesign] expected [isMissing] but found [multi],
+[NotEnoughDesign] expected [isMissing] but found [v5],
+[NotEnoughDesign] expected [isMissing] but found [light2]
 at automation.project3ds.Assertion.end(Assertion.java:26)
-at Logo.getLogoFile(Logo.java:210)
+at Logo.getLogoFile(Logo.java:225)
 at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)

@@ -16,8 +16,9 @@ import automation.project3ds.WidgetMainFrame;
 
 public class FindMobiamo {
 
-	String host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1&data%5Bcustom%5D%5Ba%5D=dfsdfsdfsd";
+//	String host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1&data%5Bcustom%5D%5Ba%5D=dfsdfsdfsd";
 
+	String host = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894&data%5Bwidget%5D=t3_1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=dummy&data%5Bag_type%5D=fixed";
 	static Driver driver;
 
 	@BeforeClass
@@ -45,7 +46,7 @@ public class FindMobiamo {
 //			System.out.println(value + "-"+country);
 		}
 		for(String value: listValue) {
-			host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D="+value+"&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1&data%5Bcustom%5D%5Ba%5D=dfsdfsdfsd";
+			host = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894&data%5Bwidget%5D=t3_1&data%5Bco_id%5D="+value+"&data%5Buid%5D=21806921d21d2&data%5Bps%5D=dummy&data%5Bag_type%5D=fixed";
 			driver.get(host);
 			List<String> listPayment = WidgetMainFrame.getListPayment();
 			String payment = "";

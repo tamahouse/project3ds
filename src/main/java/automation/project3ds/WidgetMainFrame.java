@@ -88,18 +88,31 @@ public class WidgetMainFrame {
 		return getFrame().isExistNow(mobiamoTab);
 	}
 
+//	BRICKJS
+//	public static List<String> getListPayment() {
+//		String support = getPaymentMethod();
+//		List<String> listString = new ArrayList<String>();
+//		if (support == null) {
+//		} else {
+//			List<Element> list = getFrame()
+//					.getElements(By.xpath("//*[@id='pay_methods']/*[@class='t-payment-option-inner']/a"));
+//			for (Element element : list) {
+//				String value = element.getAttribute("id");
+//				listString.add(value);
+//			}
+//		}
+//		return listString;
+//	}
+	
 	public static List<String> getListPayment() {
-		String support = getPaymentMethod();
 		List<String> listString = new ArrayList<String>();
-		if (support == null) {
-		} else {
+		getFrame().getElement(By.xpath("//*[@class='payment-options-wrapper']//*[@data-id]"));
 			List<Element> list = getFrame()
-					.getElements(By.xpath("//*[@id='pay_methods']/*[@class='t-payment-option-inner']/a"));
+					.getElements(By.xpath("//*[@class='payment-options-wrapper']//*[@data-id]"));
 			for (Element element : list) {
-				String value = element.getAttribute("id");
+				String value = element.getAttribute("data-id");
 				listString.add(value);
 			}
-		}
 		return listString;
 	}
 

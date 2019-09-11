@@ -15,6 +15,7 @@ import java.util.logging.Level;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
@@ -38,6 +39,11 @@ public class Driver implements WebDriver {
 		public static final String Chrome = "Chrome";
 		public static final String Firefox = "Firefox";
 		public static final String IE = "IE";
+	}
+	
+	public String getStringJS(String script) {
+		 JavascriptExecutor js = (JavascriptExecutor)driver;
+		 return (String) js.executeScript(script);
 	}
 
 	public Driver() {
@@ -252,6 +258,17 @@ public class Driver implements WebDriver {
 			list.add(element);
 		}
 		return list;
+	}
+	
+	public void getCurrentUrl(String contains) {
+		for(int i = 0; i<200; i++) {
+			String url = getCurrentUrl();
+			if(url.contains(contains)) {
+				return;
+			}else {
+				sleep(100);
+			}
+		}
 	}
 	
 	public void waitUrlNotBlank() throws Exception {

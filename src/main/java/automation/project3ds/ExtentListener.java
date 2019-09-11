@@ -89,7 +89,7 @@ public class ExtentListener implements ITestListener{
 		// TODO Auto-generated method stub
 		this.printAttribute(result);
 		ExtentManager.getTest().log(Status.PASS, "Test passed");
-		
+		ExtentManager.endTest();
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class ExtentListener implements ITestListener{
 		this.printAttribute(result);
 		ExtentManager.getTest().log(Status.FAIL, result.getThrowable());
 		ExtentManager.getTest().log(Status.FAIL, "Test Failed");
-		
+		ExtentManager.endTest();
 		
 	}
 
@@ -107,7 +107,7 @@ public class ExtentListener implements ITestListener{
 		// TODO Auto-generated method stub
 		this.printAttribute(result);
 		ExtentManager.getTest().log(Status.SKIP, "Test Skipped");
-	
+		ExtentManager.endTest();
 	}
 
 	@Override

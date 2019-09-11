@@ -1,0 +1,3691 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			.r-img { width: 30%; }
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 11, 2019 06:41:27 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>Logo</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='9.091%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='90.909%'>10</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (efectycolombia )</span>
+						<span class='test-time'>Sep 11, 2019 06:41:27 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:41:27 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:42:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 59s+788ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:27 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_efectycolombia, ps_name=Payvalida/Efecty, folder=Efecty, enable=1, ps_id=90, called_name=efecty, co_id=45, shortcode=efectycolombia, co_name=Colombia}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:27 PM</td>
+				<td class='step-details'>
+						Missing design:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:34 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202094199uni.png' src='screenShot\1568202094199uni.png' data-src='screenShot\1568202094199uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:35 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/pm_efectycolombia_big.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:36 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:36 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:36 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:37 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:37 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:49 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202108771multi p1.png' src='screenShot\1568202108771multi p1.png' data-src='screenShot\1568202108771multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:49 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_efectycolombia.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:57 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202117262multi p10.png' src='screenShot\1568202117262multi p10.png' data-src='screenShot\1568202117262multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:41:58 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_efectycolombia.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:26 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202145676v5.png' src='screenShot\1568202145676v5.png' data-src='screenShot\1568202145676v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:26 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efectycolombia.png?16
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:26 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147116uni' src='image\1568202147116uni' data-src='image\1568202147116uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147151dark2' src='image\1568202147151dark2' data-src='image\1568202147151dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147182dark3' src='image\1568202147182dark3' data-src='image\1568202147182dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147221light' src='image\1568202147221light' data-src='image\1568202147221light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147235dark' src='image\1568202147235dark' data-src='image\1568202147235dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147247light3' src='image\1568202147247light3' data-src='image\1568202147247light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147287multi p1' src='image\1568202147287multi p1' data-src='image\1568202147287multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147298multi p10' src='image\1568202147298multi p10' data-src='image\1568202147298multi p10'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147310v5' src='image\1568202147310v5' data-src='image\1568202147310v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202147322light2' src='image\1568202147322light2' data-src='image\1568202147322light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@3x.png}<br />[NotActualReplaced][v5] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efectycolombia.png?16}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {109}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efectycolombia.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:42:27 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (pse )</span>
+						<span class='test-time'>Sep 11, 2019 06:42:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:42:28 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:43:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+841ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:28 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_pse, ps_name=Payvalida/PSE, folder=PSE\PSE, enable=1, ps_id=113, called_name=pse, co_id=45, shortcode=pse, co_name=Colombia}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:28 PM</td>
+				<td class='step-details'>
+						Missing design:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:33 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202152629uni.png' src='screenShot\1568202152629uni.png' data-src='screenShot\1568202152629uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/pm_pse_big.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:34 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:34 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:35 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:35 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:35 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:41 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202161064multi p1.png' src='screenShot\1568202161064multi p1.png' data-src='screenShot\1568202161064multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:42 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_pse.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:47 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202167561multi p10.png' src='screenShot\1568202167561multi p10.png' data-src='screenShot\1568202167561multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:42:49 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_pse.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:02 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202181611v5.png' src='screenShot\1568202181611v5.png' data-src='screenShot\1568202181611v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:02 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_pse.png?16
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:02 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202182968uni' src='image\1568202182968uni' data-src='image\1568202182968uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183001dark2' src='image\1568202183001dark2' data-src='image\1568202183001dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183029dark3' src='image\1568202183029dark3' data-src='image\1568202183029dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183064light' src='image\1568202183064light' data-src='image\1568202183064light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183075dark' src='image\1568202183075dark' data-src='image\1568202183075dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183083light3' src='image\1568202183083light3' data-src='image\1568202183083light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183102multi p1' src='image\1568202183102multi p1' data-src='image\1568202183102multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183111multi p10' src='image\1568202183111multi p10' data-src='image\1568202183111multi p10'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183120v5' src='image\1568202183120v5' data-src='image\1568202183120v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202183131light2' src='image\1568202183131light2' data-src='image\1568202183131light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@3x.png}<br />[NotActualReplaced][v5] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_pse.png?16}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {109}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_pse.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (boletobancario )</span>
+						<span class='test-time'>Sep 11, 2019 06:43:03 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:43:03 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:43:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+714ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_boletobancario, ps_name=Ebanx, folder=Boleto, enable=1, ps_id=165, called_name=boleto, co_id=1, shortcode=boletobancario, co_name=United States}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:03 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:04 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:04 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186132uni' src='image\1568202186132uni' data-src='image\1568202186132uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186147dark2' src='image\1568202186147dark2' data-src='image\1568202186147dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186181dark3' src='image\1568202186181dark3' data-src='image\1568202186181dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186210light' src='image\1568202186210light' data-src='image\1568202186210light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186219dark' src='image\1568202186219dark' data-src='image\1568202186219dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186227light3' src='image\1568202186227light3' data-src='image\1568202186227light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186247multi' src='image\1568202186247multi' data-src='image\1568202186247multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186251v5' src='image\1568202186251v5' data-src='image\1568202186251v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202186255light2' src='image\1568202186255light2' data-src='image\1568202186255light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {72}<br />[ActualHeight][light] expected {40} to equal to actual {40}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@2x.png],
+	[ActualWidth][light] expected [100] but found [72]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='64'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (santandermexico )</span>
+						<span class='test-time'>Sep 11, 2019 06:43:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:43:06 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:43:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+751ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_santandermexico, ps_name=Astropay/Santander Mexico, folder=Santander, enable=1, ps_id=191, called_name=santander, co_id=132, shortcode=santandermexico, co_name=Mexico}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:06 PM</td>
+				<td class='step-details'>
+						Missing design:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:10 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202189945uni.png' src='screenShot\1568202189945uni.png' data-src='screenShot\1568202189945uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:11 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/pm_santandermexico_big.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:11 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:11 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:12 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:12 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:12 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:19 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202199506multi p1.png' src='screenShot\1568202199506multi p1.png' data-src='screenShot\1568202199506multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:20 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_santandermexico.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:26 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202206154multi p10.png' src='screenShot\1568202206154multi p10.png' data-src='screenShot\1568202206154multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:27 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_santandermexico.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:41 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202220936v5.png' src='screenShot\1568202220936v5.png' data-src='screenShot\1568202220936v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:41 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_santandermexico.png?16
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:41 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222252uni' src='image\1568202222252uni' data-src='image\1568202222252uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222275dark2' src='image\1568202222275dark2' data-src='image\1568202222275dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222297dark3' src='image\1568202222297dark3' data-src='image\1568202222297dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222326light' src='image\1568202222326light' data-src='image\1568202222326light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222335dark' src='image\1568202222335dark' data-src='image\1568202222335dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222342light3' src='image\1568202222342light3' data-src='image\1568202222342light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222358multi p1' src='image\1568202222358multi p1' data-src='image\1568202222358multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222367multi p10' src='image\1568202222367multi p10' data-src='image\1568202222367multi p10'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222377v5' src='image\1568202222377v5' data-src='image\1568202222377v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202222386light2' src='image\1568202222386light2' data-src='image\1568202222386light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@3x.png}<br />[NotActualReplaced][v5] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_santandermexico.png?16}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@2x.png}<br />[ActualWidth][uni] expected {149} to equal to actual {130}<br />[ActualHeight][uni] expected {50} to equal to actual {45}<br />[ActualWidth][light] expected {100} to equal to actual {110}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {110}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {110}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_santandermexico.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@2x.png],
+	[ActualWidth][uni] expected [149] but found [130],
+	[ActualHeight][uni] expected [50] but found [45],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [110],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [110],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='85'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (oxxo )</span>
+						<span class='test-time'>Sep 11, 2019 06:43:42 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:43:42 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:43:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+653ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_oxxo, ps_name=Astropay/OXXO, folder=OXXO, enable=1, ps_id=193, called_name=oxxo, co_id=132, shortcode=oxxo, co_name=Mexico}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:42 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:43 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:43 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:44 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:44 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:44 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225222uni' src='image\1568202225222uni' data-src='image\1568202225222uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225229dark2' src='image\1568202225229dark2' data-src='image\1568202225229dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225245dark3' src='image\1568202225245dark3' data-src='image\1568202225245dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225266light' src='image\1568202225266light' data-src='image\1568202225266light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225276dark' src='image\1568202225276dark' data-src='image\1568202225276dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225281light3' src='image\1568202225281light3' data-src='image\1568202225281light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225300multi' src='image\1568202225300multi' data-src='image\1568202225300multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225304v5' src='image\1568202225304v5' data-src='image\1568202225304v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202225308light2' src='image\1568202225308light2' data-src='image\1568202225308light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {110}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='106'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (ccbrazil )</span>
+						<span class='test-time'>Sep 11, 2019 06:43:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:43:45 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:44:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+339ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_ccbrazil, ps_name=Ebanx CC, folder=Ebanx\Ebanx (Visa,Mastercard only), enable=1, ps_id=200, called_name=ebanx, co_id=30, shortcode=ccbrazil, co_name=Brazil}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:45 PM</td>
+				<td class='step-details'>
+						Missing design:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:49 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202229101uni.png' src='screenShot\1568202229101uni.png' data-src='screenShot\1568202229101uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:50 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/pm_ccbrazil_big.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:50 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:50 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:43:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:00 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202239931multi p1.png' src='screenShot\1568202239931multi p1.png' data-src='screenShot\1568202239931multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:00 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_ccbrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:07 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202247078multi p10.png' src='screenShot\1568202247078multi p10.png' data-src='screenShot\1568202247078multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:08 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_ccbrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202261635v5.png' src='screenShot\1568202261635v5.png' data-src='screenShot\1568202261635v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_ccbrazil.png?16
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazil@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262781uni' src='image\1568202262781uni' data-src='image\1568202262781uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262801dark2' src='image\1568202262801dark2' data-src='image\1568202262801dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262825dark3' src='image\1568202262825dark3' data-src='image\1568202262825dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262854light' src='image\1568202262854light' data-src='image\1568202262854light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262860dark' src='image\1568202262860dark' data-src='image\1568202262860dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262867light3' src='image\1568202262867light3' data-src='image\1568202262867light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262885multi p1' src='image\1568202262885multi p1' data-src='image\1568202262885multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262893multi p10' src='image\1568202262893multi p10' data-src='image\1568202262893multi p10'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262902v5' src='image\1568202262902v5' data-src='image\1568202262902v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202262908light2' src='image\1568202262908light2' data-src='image\1568202262908light2'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:44:22 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='127'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (ccbrazilhipercard )</span>
+						<span class='test-time'>Sep 11, 2019 06:44:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:44:23 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:44:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+629ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_ccbrazilhipercard, ps_name=Ebanx CC Hipercard, folder=Hiperbank, enable=1, ps_id=201, called_name=hipercard, co_id=30, shortcode=ccbrazilhipercard, co_name=Brazil}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:23 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:24 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:24 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265709uni' src='image\1568202265709uni' data-src='image\1568202265709uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265714dark2' src='image\1568202265714dark2' data-src='image\1568202265714dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265731dark3' src='image\1568202265731dark3' data-src='image\1568202265731dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265758light' src='image\1568202265758light' data-src='image\1568202265758light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265764dark' src='image\1568202265764dark' data-src='image\1568202265764dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265771light3' src='image\1568202265771light3' data-src='image\1568202265771light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265793multi' src='image\1568202265793multi' data-src='image\1568202265793multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265796v5' src='image\1568202265796v5' data-src='image\1568202265796v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202265800light2' src='image\1568202265800light2' data-src='image\1568202265800light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@3x.png}<br />[NotActualReplaced][light] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@2x.png}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@3x.png],
+	[NotActualReplaced][light] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@2x.png]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:25 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='148'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (itaubrazil )</span>
+						<span class='test-time'>Sep 11, 2019 06:44:26 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:44:26 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:44:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+577ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:26 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_itaubrazil, ps_name=Ebanx/Banco Itau, folder=Itau, enable=1, ps_id=221, called_name=itau, co_id=30, shortcode=itaubrazil, co_name=Brazil}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:44:26 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:26 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:26 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:27 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:27 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:27 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268560uni' src='image\1568202268560uni' data-src='image\1568202268560uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268579dark2' src='image\1568202268579dark2' data-src='image\1568202268579dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268598dark3' src='image\1568202268598dark3' data-src='image\1568202268598dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268611light' src='image\1568202268611light' data-src='image\1568202268611light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268617dark' src='image\1568202268617dark' data-src='image\1568202268617dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268622light3' src='image\1568202268622light3' data-src='image\1568202268622light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268634multi' src='image\1568202268634multi' data-src='image\1568202268634multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268637v5' src='image\1568202268637v5' data-src='image\1568202268637v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202268641light2' src='image\1568202268641light2' data-src='image\1568202268641light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {110}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='169'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (bancobrazil )</span>
+						<span class='test-time'>Sep 11, 2019 06:44:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:44:28 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:44:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+594ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_bancobrazil, ps_name=Ebanx/Banco do Brazil, folder=Banco do Brazil, enable=1, ps_id=223, called_name=bancodobrazil, co_id=30, shortcode=bancobrazil, co_name=Brazil}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:28 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:29 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:29 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:30 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:30 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:30 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271418uni' src='image\1568202271418uni' data-src='image\1568202271418uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271433dark2' src='image\1568202271433dark2' data-src='image\1568202271433dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271452dark3' src='image\1568202271452dark3' data-src='image\1568202271452dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271465light' src='image\1568202271465light' data-src='image\1568202271465light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271475dark' src='image\1568202271475dark' data-src='image\1568202271475dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271480light3' src='image\1568202271480light3' data-src='image\1568202271480light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271493multi' src='image\1568202271493multi' data-src='image\1568202271493multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271496v5' src='image\1568202271496v5' data-src='image\1568202271496v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202271500light2' src='image\1568202271500light2' data-src='image\1568202271500light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {110}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='190'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (banrisulbrazil )</span>
+						<span class='test-time'>Sep 11, 2019 06:44:31 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:44:31 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:44:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+652ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_banrisulbrazil, ps_name=Ebanx/Banco Banrisul, folder=Banrisul, enable=1, ps_id=224, called_name=banrisul, co_id=30, shortcode=banrisulbrazil, co_name=Brazil}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						Missing design: ,uni,multi,v5
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:31 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274262uni' src='image\1568202274262uni' data-src='image\1568202274262uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274271dark2' src='image\1568202274271dark2' data-src='image\1568202274271dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274292dark3' src='image\1568202274292dark3' data-src='image\1568202274292dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274318light' src='image\1568202274318light' data-src='image\1568202274318light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274330dark' src='image\1568202274330dark' data-src='image\1568202274330dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274336light3' src='image\1568202274336light3' data-src='image\1568202274336light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						multi
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274351multi' src='image\1568202274351multi' data-src='image\1568202274351multi'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274382v5' src='image\1568202274382v5' data-src='image\1568202274382v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202274386light2' src='image\1568202274386light2' data-src='image\1568202274386light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@3x.png}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {108}<br />[ActualHeight][light] expected {40} to equal to actual {19}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [108],
+	[ActualHeight][light] expected [40] but found [19]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='211'>
+					<div class='test-heading'>
+						<span class='test-name'>buildLogoReport (efecty )</span>
+						<span class='test-time'>Sep 11, 2019 06:44:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 11, 2019 06:44:34 PM</span>
+	<span class='label end-time'>Sep 11, 2019 06:45:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+979ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Logo</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_efecty, ps_name=Astropay/Efecty, folder=Efecty, enable=1, ps_id=238, called_name=efecty, co_id=45, shortcode=efecty, co_name=Colombia}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:34 PM</td>
+				<td class='step-details'>
+						Missing design:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:38 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202277962uni.png' src='screenShot\1568202277962uni.png' data-src='screenShot\1568202277962uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:39 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/pm_efecty_big.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:39 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:39 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:40 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:40 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:40 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:47 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202287153multi p1.png' src='screenShot\1568202287153multi p1.png' data-src='screenShot\1568202287153multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:48 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_efecty.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:54 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202294398multi p10.png' src='screenShot\1568202294398multi p10.png' data-src='screenShot\1568202294398multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:44:56 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/pm_efecty.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:08 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1568202308080v5.png' src='screenShot\1568202308080v5.png' data-src='screenShot\1568202308080v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:08 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efecty.png?16
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309452uni' src='image\1568202309452uni' data-src='image\1568202309452uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309468dark2' src='image\1568202309468dark2' data-src='image\1568202309468dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309486dark3' src='image\1568202309486dark3' data-src='image\1568202309486dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309513light' src='image\1568202309513light' data-src='image\1568202309513light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309525dark' src='image\1568202309525dark' data-src='image\1568202309525dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309538light3' src='image\1568202309538light3' data-src='image\1568202309538light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309565multi p1' src='image\1568202309565multi p1' data-src='image\1568202309565multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309577multi p10' src='image\1568202309577multi p10' data-src='image\1568202309577multi p10'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309588v5' src='image\1568202309588v5' data-src='image\1568202309588v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1568202309598light2' src='image\1568202309598light2' data-src='image\1568202309598light2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						[NotActualReplaced][dark2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@2x.png}<br />[NotActualReplaced][dark3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@3x.png}<br />[NotActualReplaced][dark] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d.png}<br />[NotActualReplaced][light3] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@3x.png}<br />[NotActualReplaced][v5] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efecty.png?16}<br />[NotActualReplaced][light2] expected {} to equal to actual {http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@2x.png}<br />[ActualWidth][light] expected {100} to equal to actual {109}<br />[ActualHeight][light] expected {40} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />[ActualWidth][multi] expected {107} to equal to actual {109}<br />[ActualHeight][multi] expected {43} to equal to actual {45}<br />
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efecty.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:45:09 PM</td>
+				<td class='step-details'>
+						Test Failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Logo</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 10</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 11, 2019 06:41:27 PM</td>
+										<td class='linked' test-id='1'>buildLogoReport (efectycolombia )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:42:28 PM</td>
+										<td class='linked' test-id='22'>buildLogoReport (pse )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:03 PM</td>
+										<td class='linked' test-id='43'>buildLogoReport (boletobancario )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:06 PM</td>
+										<td class='linked' test-id='64'>buildLogoReport (santandermexico )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:42 PM</td>
+										<td class='linked' test-id='85'>buildLogoReport (oxxo )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:45 PM</td>
+										<td class='linked' test-id='106'>buildLogoReport (ccbrazil )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:23 PM</td>
+										<td class='linked' test-id='127'>buildLogoReport (ccbrazilhipercard )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:26 PM</td>
+										<td class='linked' test-id='148'>buildLogoReport (itaubrazil )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:28 PM</td>
+										<td class='linked' test-id='169'>buildLogoReport (bancobrazil )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:31 PM</td>
+										<td class='linked' test-id='190'>buildLogoReport (banrisulbrazil )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:34 PM</td>
+										<td class='linked' test-id='211'>buildLogoReport (efecty )</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>10</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 11, 2019 06:41:27 PM</td>
+										<td class='linked' test-id='1'>buildLogoReport (efectycolombia )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efectycolombia.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efectycolombia@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:42:28 PM</td>
+										<td class='linked' test-id='22'>buildLogoReport (pse )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_pse.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/pse@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:03 PM</td>
+										<td class='linked' test-id='43'>buildLogoReport (boletobancario )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/boletobancario@2x.png],
+	[ActualWidth][light] expected [100] but found [72]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:06 PM</td>
+										<td class='linked' test-id='64'>buildLogoReport (santandermexico )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_santandermexico.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/santandermexico@2x.png],
+	[ActualWidth][uni] expected [149] but found [130],
+	[ActualHeight][uni] expected [50] but found [45],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [110],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [110],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:43:42 PM</td>
+										<td class='linked' test-id='85'>buildLogoReport (oxxo )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/oxxo@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:23 PM</td>
+										<td class='linked' test-id='127'>buildLogoReport (ccbrazilhipercard )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d@3x.png],
+	[NotActualReplaced][light] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/ccbrazilhipercard@2x.png]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:26 PM</td>
+										<td class='linked' test-id='148'>buildLogoReport (itaubrazil )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/itaubrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:28 PM</td>
+										<td class='linked' test-id='169'>buildLogoReport (bancobrazil )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/bancobrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [110],
+	[ActualHeight][light] expected [40] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:31 PM</td>
+										<td class='linked' test-id='190'>buildLogoReport (banrisulbrazil )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@3x.png],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/banrisulbrazil@2x.png],
+	[ActualWidth][light] expected [100] but found [108],
+	[ActualHeight][light] expected [40] but found [19]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Sep 11, 2019 06:44:34 PM</td>
+										<td class='linked' test-id='211'>buildLogoReport (efecty )</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The following asserts failed:
+	[NotActualReplaced][dark2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@2x.png],
+	[NotActualReplaced][dark3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d@3x.png],
+	[NotActualReplaced][dark] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty_d.png],
+	[NotActualReplaced][light3] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@3x.png],
+	[NotActualReplaced][v5] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/developers/pm_efecty.png?16],
+	[NotActualReplaced][light2] expected [] but found [http://feature-pwg-1129.wallapi.bamboo.stuffio.com/images/ps_logos/v2/efecty@2x.png],
+	[ActualWidth][light] expected [100] but found [109],
+	[ActualHeight][light] expected [40] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45],
+	[ActualWidth][multi] expected [107] but found [109],
+	[ActualHeight][multi] expected [43] but found [45]
+	at automation.project3ds.Assertion.end(Assertion.java:26)
+	at Logo.buildLogoReport(Logo.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>11</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 11, 2019 06:41:27 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 11, 2019 06:45:09 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 3m 42s+174ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>Logo</td>
+							<td>1</td>
+							<td>10</td>
+							<td>0</td>
+							<td>
+									9.091%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 11,
+				passParent: 1,
+				failParent: 10,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 10,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "buildLogoReport (efectycolombia )":59.788,"buildLogoReport (pse )":34.841,"buildLogoReport (boletobancario )":2.714,"buildLogoReport (santandermexico )":35.751,"buildLogoReport (oxxo )":2.653,"buildLogoReport (ccbrazil )":37.339,"buildLogoReport (ccbrazilhipercard )":2.629,"buildLogoReport (itaubrazil )":2.577,"buildLogoReport (bancobrazil )":2.594,"buildLogoReport (banrisulbrazil )":2.652,"buildLogoReport (efecty )":34.979
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

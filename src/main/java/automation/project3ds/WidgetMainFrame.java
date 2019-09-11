@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class WidgetMainFrame {
 
@@ -29,9 +30,10 @@ public class WidgetMainFrame {
 		getFrame().getElement(price);
 		return getFrame().getElements(price);
 	}
-	
+
 	public static void waitSpinner() throws Exception {
-		getFrame().waitForNumberOfElement(By.xpath("//*[contains(@class,'paylet-body-loader') and contains(@class,'is-active')]"), 0, 5000);
+		getFrame().waitForNumberOfElement(
+				By.xpath("//*[contains(@class,'paylet-body-loader') and contains(@class,'is-active')]"), 0, 5000);
 	}
 
 	public static List<String> getRedirectWindows() {
@@ -48,29 +50,29 @@ public class WidgetMainFrame {
 		return list;
 	}
 
-	public static void clickPaymentMethod(String type,String id) throws Exception {
+	public static void clickPaymentMethod(String type, String id) throws Exception {
 		Element element = null;
-		if(!type.equals("p1")) {
-			Boolean x = false;
-			for(int i = 0; i<200; i++) {
-			try {
-				getFrame().getElement(By.xpath("//*[@data-id='"+id+"']")).click();
-				i = 500;
-			} catch (Exception e) {
-				getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]")).click();
+		if (!(type.contains("multi") || type.contains("p1"))) {
+			for (int i = 0; i < 20; i++) {
+				try {
+					getFrame().getElement(By.xpath("//*[@data-id='" + id + "']")).click();
+					i = 500;
+				} catch (Exception e) {
+					getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]"))
+							.click();
+				}
 			}
-			}
-		}else {
+		} else {
 			element = getFrame().getElement(By.id(id));
-			try {
-				element.click();
-			} catch (Exception e) {
-				getFrame().getElement(By.id("ps_next")).click();
-				getFrame().getElement(By.id(id)).click();
+			for (int i = 0; i < 20; i++) {
+				try {
+					element.click();
+					i = 500;
+				} catch (Exception e) {
+					getFrame().getElement(By.id("ps_next")).click();
+				}
 			}
 		}
-		
-	
 
 	}
 
@@ -81,6 +83,39 @@ public class WidgetMainFrame {
 		} catch (Exception e) {
 			return null;
 		}
+	}
+
+	public static String getLogoUrl(String type, String tab_id_or_shortcode) throws Exception {
+
+		String url = null;
+		if (type.contains(AnnotationPage.Type.MULTI)) {
+			clickPaymentMethod(type, tab_id_or_shortcode);
+			ExtentManager.addScreenshot(type);
+//		Element tab = getFrame().getElement(By.id(tab_id));
+			String script = "return window.getComputedStyle(document.querySelector('" + tab_id_or_shortcode.replace("tab_", ".pm_")
+					+ "'),':after').getPropertyValue('background-image')";
+			url = getFrame().getStringJS(script);
+			if(!url.contains("http")) {
+				 url = getFrame().getElement(By.xpath("//*[@id='"+tab_id_or_shortcode+"']/b")).getCssValue("background-image");
+			}
+			url = url.substring(5,url.indexOf(".png")+4);
+
+		}else if(type.equals(AnnotationPage.Type.UNI)) {
+			ExtentManager.addScreenshot(type);
+			Element image = getFrame().getElement(By.xpath("//*[@class='t-img img']"));
+			url = image.getAttribute("src");
+		}else if(type.equals(AnnotationPage.Type.V5)) {
+			Driver driver = AnnotationPage.getDriver();
+			driver.switchTo().defaultContent();
+			
+			Element image = driver.getElement(By.xpath("//div[./*[@id='"+tab_id_or_shortcode+"_active']]//img"));
+			image.moveToTopView();
+			ExtentManager.addScreenshot(type);
+			url = image.getAttribute("src");
+		}
+		System.out.println(url);
+		ExtentManager.logInfo(url);
+		return url;
 	}
 
 	public static Boolean isMobiamo() {
@@ -103,16 +138,15 @@ public class WidgetMainFrame {
 //		}
 //		return listString;
 //	}
-	
+
 	public static List<String> getListPayment() {
 		List<String> listString = new ArrayList<String>();
 		getFrame().getElement(By.xpath("//*[@class='payment-options-wrapper']//*[@data-id]"));
-			List<Element> list = getFrame()
-					.getElements(By.xpath("//*[@class='payment-options-wrapper']//*[@data-id]"));
-			for (Element element : list) {
-				String value = element.getAttribute("data-id");
-				listString.add(value);
-			}
+		List<Element> list = getFrame().getElements(By.xpath("//*[@class='payment-options-wrapper']//*[@data-id]"));
+		for (Element element : list) {
+			String value = element.getAttribute("data-id");
+			listString.add(value);
+		}
 		return listString;
 	}
 
@@ -121,17 +155,17 @@ public class WidgetMainFrame {
 	}
 
 	public static void clickBuyButton(String type) throws Exception {
-		if(type.equals("p1")) {
-		getFrame().getElement(buyBtn, 5000).click();
+		if (type.equals("p1")) {
+			getFrame().getElement(buyBtn, 5000).click();
 		}
 		Thread.sleep(3000);
-		
+
 	}
 
 	public static Boolean getCompleteMessage(String type) {
-		if(type.equals("p1")) {
-		return getFrame().isExist(thankyou);
-		}else {
+		if (type.equals("p1")) {
+			return getFrame().isExist(thankyou);
+		} else {
 			return getFrame().isExist(thankyou2);
 		}
 	}

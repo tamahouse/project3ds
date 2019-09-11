@@ -8,8 +8,8 @@ import java.util.Date;
 
 public class ConfigFile {
 
-	public static String name = "chase";
-	public static String password = "Conchon11#";
+	public static String name = "doanhkaka";
+	public static String password = "maideudcnhi";
 	
 	// "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
 	

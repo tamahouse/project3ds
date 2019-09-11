@@ -72,7 +72,7 @@ public class ExtentManager {
 		return new String[] {date, time};
 	}
 	
-	private static void createIndexPage() {
+	public static void createIndexPage() {
 		String indexReportPath = folderPath +"index.html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(indexReportPath);
 			reporter.config().setTheme(Theme.DARK);
@@ -120,10 +120,10 @@ public class ExtentManager {
 	
 	public static void addScreenshot(String title, String imageName) {
 		try {
-			imageName =  Driver.timestamp() + imageName + ".png";
-			String imagePath = "screenShot\\"+ imageName;
+			String imageFileName =  Driver.timestamp() + imageName + ".png";
+			String imagePath = "screenShot\\"+ imageFileName;
 			String createdPath = folderPathDaily + imagePath;
-			String folderPath = createdPath.replace(imageName, "");
+			String folderPath = createdPath.replace(imageFileName, "");
 			File folder = new File(folderPath);
 			if(!folder.exists()) {
 				folder.mkdirs();

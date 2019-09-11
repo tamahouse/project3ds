@@ -8,6 +8,15 @@ import automation.project3ds.Driver.Browser;
 public class AnnotationPage {
 
 public static Driver driver;
+
+	public static class Type {
+		public static String P1 = "p1";
+		public static String T3 = "t3";
+		public static String PW = "pw";
+		public static String MULTI = "multi";
+		public static String UNI = "uni";
+		public static String V5 = "v5";
+	}
 	
 	public static Driver getDriver() {
 		if(driver == null) {

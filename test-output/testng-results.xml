@@ -2,28 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="88128" started-at="2019-09-16T04:12:12Z" finished-at="2019-09-16T04:13:40Z">
+  <suite name="BrickWidget_OFFPolk_Test" duration-ms="73902" started-at="2019-09-16T05:17:57Z" finished-at="2019-09-16T05:19:11Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="88128" started-at="2019-09-16T04:12:12Z" finished-at="2019-09-16T04:13:40Z">
-      <class name="Logo">
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:Logo@57baeedf]" name="buildLogoReport" duration-ms="64312" started-at="2019-09-16T04:12:35Z" data-provider="data" finished-at="2019-09-16T04:13:39Z">
+    <test name="BrickWidget_OFFPolk_Test" duration-ms="73902" started-at="2019-09-16T05:17:57Z" finished-at="2019-09-16T05:19:11Z">
+      <class name="automation.project3ds.oldTest.BrickWidget_Polk_Test">
+        <test-method status="PASS" signature="execute(java.lang.String, java.lang.String)[pri:0, instance:automation.project3ds.oldTest.BrickWidget_Polk_Test@754ba872]" name="execute" duration-ms="46000" started-at="2019-09-16T05:18:24Z" data-provider="data" finished-at="2019-09-16T05:19:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[epspayments]]>
+                <![CDATA[4012001037141112]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_epspayments, ps_name=PPRO/EPS, folder=EPS\Eps (from Vitalina), enable=1, ps_id=5, called_name=eps, co_id=1, shortcode=epspayments, co_name=United States}]]>
+                <![CDATA[http://feature-brick-test.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+Polk+%28Test+Company%29%5B99907%5D&data%5Ba_id%5D=99907&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bps%5D=gateway&data%5Bag_type%5D=fixed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-      </class> <!-- Logo -->
-    </test> <!-- Logo -->
-  </suite> <!-- Logo -->
+        </test-method> <!-- execute -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automation.project3ds.oldTest.BrickWidget_Polk_Test@754ba872]" name="tearDown" is-config="true" duration-ms="701" started-at="2019-09-16T05:19:11Z" finished-at="2019-09-16T05:19:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.project3ds.oldTest.BrickWidget_Polk_Test -->
+    </test> <!-- BrickWidget_OFFPolk_Test -->
+  </suite> <!-- BrickWidget_OFFPolk_Test -->
 </testng-results>

@@ -17,6 +17,7 @@ import automation.project3ds.MySoftAssert.MyIAssert;
 public class ExtentListener implements ITestListener{
 	
 	String suiteName;
+	String testName;
 	String map;
 
 	@Override
@@ -53,7 +54,7 @@ public class ExtentListener implements ITestListener{
 		}
 		String displayName = className+"." + result.getMethod().getMethodName()+" ("+lastName+" )";
 		ExtentManager.startTest(suiteName, displayName);
-		ExtentManager.getTest().assignCategory(suiteName);
+		ExtentManager.getTest().assignCategory(testName);
 		if(map != null) {
 			ExtentManager.getTest().info("Params: " + map);
 		}
@@ -126,6 +127,7 @@ public class ExtentListener implements ITestListener{
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 		suiteName = context.getSuite().getName();
+		testName = context.getName();
 	}
 
 	@Override

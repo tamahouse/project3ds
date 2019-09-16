@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [BrickURL_OFFPolk_Test]">
+<suite name="Failed suite [BrickWidget_3ds_OFF_Test]">
   <listeners>
     <listener class-name="automation.project3ds.ExtentListener"/>
   </listeners>
-  <test thread-count="5" name="BrickURL_OFFPolk_Test(failed)">
+  <test thread-count="5" name="BrickWidget_3ds_OFF1_Test(failed)">
     <classes>
-      <class name="automation.project3ds.oldTest.BrickURL_Polk_Test">
+      <class name="automation.project3ds.oldTest.BrickWidget_OFF1_Test">
         <methods>
-          <include name="execute" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="execute" invocation-numbers="4 16 17"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.project3ds.oldTest.BrickURL_Polk_Test -->
+      </class> <!-- automation.project3ds.oldTest.BrickWidget_OFF1_Test -->
     </classes>
-  </test> <!-- BrickURL_OFFPolk_Test(failed) -->
-</suite> <!-- Failed suite [BrickURL_OFFPolk_Test] -->
+  </test> <!-- BrickWidget_3ds_OFF1_Test(failed) -->
+  <test thread-count="5" name="BrickWidget_3ds_OFF2_Test(failed)">
+    <classes>
+      <class name="automation.project3ds.oldTest.BrickWidget_OFF2_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="execute"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- automation.project3ds.oldTest.BrickWidget_OFF2_Test -->
+    </classes>
+  </test> <!-- BrickWidget_3ds_OFF2_Test(failed) -->
+</suite> <!-- Failed suite [BrickWidget_3ds_OFF_Test] -->

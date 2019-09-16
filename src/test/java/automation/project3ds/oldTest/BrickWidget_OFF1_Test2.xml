@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="BrickWidget_3ds_OFF_Test">
-	<test name="BrickWidget_3ds_OFF_Test">
+	<test name="BrickWidget_3ds_OFF1_Test">
 		 <classes>
        <class name="automation.project3ds.oldTest.BrickWidget_OFF1_Test" />
+    </classes>
+    	<listeners>
+		<listener class-name="automation.project3ds.ExtentListener" />
+	</listeners>
+    </test>
+    	<test name="BrickWidget_3ds_OFF2_Test">
+		 <classes>
        <class name="automation.project3ds.oldTest.BrickWidget_OFF2_Test" />
     </classes>
     	<listeners>

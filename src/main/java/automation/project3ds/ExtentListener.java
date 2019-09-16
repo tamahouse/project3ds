@@ -45,7 +45,13 @@ public class ExtentListener implements ITestListener{
 		}catch(Exception ignore) {
 			
 		}
-		String displayName = result.getMethod().getMethodName()+" ("+lastName+" )";
+		String className = result.getInstanceName();
+		try {
+		className = className.substring(className.lastIndexOf(".")+1,className.length());
+		}catch(StringIndexOutOfBoundsException ignore) {
+			
+		}
+		String displayName = className+"." + result.getMethod().getMethodName()+" ("+lastName+" )";
 		ExtentManager.startTest(suiteName, displayName);
 		ExtentManager.getTest().assignCategory(suiteName);
 		if(map != null) {

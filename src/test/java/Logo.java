@@ -55,7 +55,8 @@ public class Logo {
 	Driver driver;
 
 	String host = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com";
-	String featureBranchOther = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com";
+//	String featureBranchOther = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com";
+	String featureBranchOther = "http://develop.wallapi.bamboo.stuffio.com";
 	
 //	String	host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
 //	String featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
@@ -78,17 +79,21 @@ public class Logo {
 			}
 			psname.add(map);
 		}
+		connection.close();
 		return psname;
 	}
 
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
-		String hostP1 = hostOther
-				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
+//		String hostP1 = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+//				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
+//		Login.login(hostP1);
+//		String hostP2 = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+//				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
+//		Login.login(hostP2);
+		String hostP1 = "http://develop.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
 		Login.login(hostP1);
-		String hostP2 = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
-				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
-		Login.login(hostP2);
 		List<Object[]> temp = new ArrayList<Object[]>();
 		List<Map<String, String>> list = this.importData();
 		for (Map<String, String> map : list) {
@@ -136,22 +141,40 @@ public class Logo {
 		String ps_id = excelMap.get("ps_id");
 		String ps_name = excelMap.get("ps_name");
 		if(shortcode.contains("gateway") && !ps_name.contains("Amex")) {
-			host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
+//			project_id = "99889";
+			host = "http://develop.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://develop.wallapi.bamboo.stuffio.com";
 			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
 			project_id = "99889";
 		}else if("200 19 132".contains(ps_id)) {
-			host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
+//			project_id = "99894";
+//			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
+			host = "http://develop.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://develop.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 		}else {
-			host = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com";
+//			host = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com";
+//			featureBranchOther = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com";
+//			project_id = "99894";
+//			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
+//			
+			host = "http://develop.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://develop.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
+			
 		}
 		
+		String urlShortcode = shortcode;
+		if(ps_name.contains("Amex") && shortcode.equals("gateway") ) {
+			urlShortcode = "gateway_amex";
+		}
 		Map<String, String> hostName = new HashMap<String, String>();
 		hostName.put("multi p1", hostOther
 				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D="
@@ -164,12 +187,12 @@ public class Logo {
 				+ co_id + "&data%5Buid%5D=21806921d21d2&data%5Bps%5D=" + shortcode);
 		hostName.put("v5",
 				featureBranchOther + "/admin/developers/login?id=86844&admin_login=true");
-		hostName.put("light", "/images/ps_logos/v2/" + shortcode + ".png");
-		hostName.put("light2", "/images/ps_logos/v2/" + shortcode + "@2x.png");
-		hostName.put("light3", "/images/ps_logos/v2/" + shortcode + "@3x.png");
-		hostName.put("dark", "/images/ps_logos/v2/" + shortcode + "_d.png");
-		hostName.put("dark2", "/images/ps_logos/v2/" + shortcode + "_d@2x.png");
-		hostName.put("dark3", "/images/ps_logos/v2/" + shortcode + "_d@3x.png");
+		hostName.put("light", "/images/ps_logos/v2/" + urlShortcode + ".png");
+		hostName.put("light2", "/images/ps_logos/v2/" + urlShortcode + "@2x.png");
+		hostName.put("light3", "/images/ps_logos/v2/" + urlShortcode + "@3x.png");
+		hostName.put("dark", "/images/ps_logos/v2/" + urlShortcode + "_d.png");
+		hostName.put("dark2", "/images/ps_logos/v2/" + urlShortcode + "_d@2x.png");
+		hostName.put("dark3", "/images/ps_logos/v2/" + urlShortcode + "_d@3x.png");
 
 		Map<String, BufferedImage> map = new HashMap<String, BufferedImage>();
 		for (Entry<String, Pair<Integer, Integer>> entry : ruleMap.entrySet()) {
@@ -299,7 +322,7 @@ public class Logo {
 			}
 			map.put(name, expectedImage);
 		}
-		if (!missing.equals("Missing design: ,uni,multi,v5")) {
+		if (!missing.equals("Missing design: ,uni,multi,v5") && !missing.equals("Missing design: ")) {
 			Assertion.get().assertEquals("", "png", "[NotEnoughDesign]"+"["+missing+"]");
 			ExtentManager.getTest().debug(missing);
 		}

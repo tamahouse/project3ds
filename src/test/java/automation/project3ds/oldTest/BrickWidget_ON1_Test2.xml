@@ -3,7 +3,7 @@
 <suite name="BrickWidget_ON1_Test">
 	<test name="BrickWidget_ON1_Test">
 		 <classes>
-       <class name="automation.project3ds.BrickWidget_ON1_Test" />
+       <class name="automation.project3ds.oldTest.BrickWidget_ON1_Test" />
     </classes>
     	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

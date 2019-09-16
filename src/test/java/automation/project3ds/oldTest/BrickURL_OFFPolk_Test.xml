@@ -3,7 +3,7 @@
 <suite name="BrickURL_OFFPolk_Test">
 	<test name="BrickURL_OFFPolk_Test">
 		 <classes>
-       <class name="automation.project3ds.BrickURL_Polk_Test" />
+       <class name="automation.project3ds.oldTest.BrickURL_Polk_Test" />
     </classes>
     	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

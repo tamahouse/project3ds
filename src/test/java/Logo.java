@@ -63,6 +63,7 @@ public class Logo {
 	String project_id = "99894";
 	String hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 
+	
 	private List<Map<String, String>> importData() throws Exception {
 		List<Map<String, String>> psname = new ArrayList<Map<String, String>>();
 		Fillo fillo = new Fillo();
@@ -95,8 +96,13 @@ public class Logo {
 //		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
 		
 //		**Host test bank transfer thailand pwl-1994
-		String hostP1 = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+//		String hostP1 = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+//		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
+		
+//		**Host test btue pwl-1996
+		String hostP1 = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
 		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
+		
 		Login.login(hostP1);
 		List<Object[]> temp = new ArrayList<Object[]>();
 		List<Map<String, String>> list = this.importData();
@@ -155,8 +161,8 @@ public class Logo {
 //			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
 //			project_id = "99889";
 			
-			host = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
 			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
 			project_id = "99889";
 		}else if("200 19 132".contains(ps_id)) {
@@ -170,8 +176,8 @@ public class Logo {
 //			project_id = "99894";
 //			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 		
-			host = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 		
@@ -187,8 +193,8 @@ public class Logo {
 //			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 			
 			
-			host = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 			

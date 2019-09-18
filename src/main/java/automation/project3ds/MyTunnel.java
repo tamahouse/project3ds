@@ -62,6 +62,8 @@ public class MyTunnel {
 		table.put("ccgateway", "db_Password", "");
 		table.put("paymentwall_umi", "db_Username", "chase");
 		table.put("paymentwall_umi", "db_Password", "hnu5EfFjLN19jC2oYFvF");
+		table.put("fp-pay-laravel", "db_Username", "chase");
+		table.put("fp-pay-laravel", "db_Password", "hnu5EfFjLN19jC2oYFvF");
 	}
 	
 	public MyTunnel(String sessionName) throws Exception {

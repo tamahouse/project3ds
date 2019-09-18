@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="BrickURL_OFF2_Test">
-	<test name="BrickURL_OFF2_Test">
+<suite name="BrickToFP">
+	<test name="BrickToFP_OFF2">
 		 <classes>
-       <class name="automation.project3ds.BrickURL_OFF2_Test" />
+       <class name="automation.project3ds.oldTest.BrickURL_OFF2_Test" />
     </classes>
     	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

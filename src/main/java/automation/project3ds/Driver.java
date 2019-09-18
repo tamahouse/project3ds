@@ -207,7 +207,7 @@ public class Driver implements WebDriver {
 	}
 	
 	public String getSelection(Map<By, String> map){
-		for(int i = 0; i < 200;i++) {
+		for(int i = 0; i < 600;i++) {
 			for (Map.Entry<By,String> entry : map.entrySet()) {
 				if (this.isExistNow(entry.getKey()) == true) {
 					String str =  entry.getValue();

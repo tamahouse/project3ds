@@ -10,7 +10,7 @@ public class PageBrickHTML {
 
 	static Driver driver = AnnotationPage.getDriver();
 	static Element element;
-	static String email;
+	public static String email;
 
 	static By cardholderNameTxb = By.id("brick-cardholder");
 	static By cardNumberTxb = By.id("brick-card-number");
@@ -53,7 +53,7 @@ public class PageBrickHTML {
 
 	private static String getEmail() {
 		String timestamp = String.valueOf(System.currentTimeMillis());
-		String email = "meo" + timestamp + "@spam4.me";
+		email = "meo" + timestamp + "@spam4.me";
 		return email;
 	}
 

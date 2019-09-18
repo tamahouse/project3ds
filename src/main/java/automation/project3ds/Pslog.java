@@ -62,5 +62,25 @@ public class Pslog {
 		return t_id;
 	}
 	
+	public static String get_cl_id_email_Fasterpay(String email) throws Exception {
+		String query = "select * from ps_logs where log_data like '%"+email+"%'";
+		ResultSet resultSet = getStatement().executeQuery(query);
+		resultSet.next();
+		String cl_id = resultSet.getString("cl_id");
+		return cl_id;
+	}
+	
+	public static String get_Fasterpay_payment_order_id(String clickId) throws Exception {
+		ResultSet resultSet = getStatement().executeQuery("select log_data from ps_logs where cl_id = '" + clickId
+				+ "' and log_data like '%createPaymentOrder%' limit 5");
+		resultSet.next();
+		String result = resultSet.getString("log_data");
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode jsonNode = mapper.readTree(result);
+		String f_id = jsonNode.path("response").path("data").get("id").asText();
+		return f_id;
+	}
+
+	
 
 }

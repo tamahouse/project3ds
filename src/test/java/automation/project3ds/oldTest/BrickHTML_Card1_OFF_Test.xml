@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="BrickHTML_Card1_OFF_Test">
-	<test name="BrickHTML_Card1_OFF_Test">
+<suite name="BrickToFP">
+	<test name="BrickToFP_OFF1">
 		 <classes>
-       <class name="automation.project3ds.BrickHTML_Card1_OFF_Test" />
+       <class name="automation.project3ds.oldTest.BrickHTML_Card1_OFF_Test" />
     </classes>
     	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

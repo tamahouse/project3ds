@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="5" name="BrickURL_ON2_Test(failed)">
     <classes>
-      <class name="automation.project3ds.BrickURL_ON2_Test">
+      <class name="automation.project3ds.oldTest.BrickURL_ON2_Test">
         <methods>
           <include name="tearDown"/>
-          <include name="execute" invocation-numbers="5 6 7 12 17"/>
+          <include name="execute" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35"/>
         </methods>
-      </class> <!-- automation.project3ds.BrickURL_ON2_Test -->
+      </class> <!-- automation.project3ds.oldTest.BrickURL_ON2_Test -->
     </classes>
   </test> <!-- BrickURL_ON2_Test(failed) -->
 </suite> <!-- Failed suite [BrickURL_ON2_Test] -->

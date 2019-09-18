@@ -14,6 +14,7 @@ import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Driver;
 import automation.project3ds.ExtentManager;
+import automation.project3ds.FasterPay;
 import automation.project3ds.PageBrickURL;
 import automation.project3ds.Pslog;
 
@@ -23,7 +24,7 @@ public class BrickURL_ON2_Test {
 //	final String host1108 = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+2.0+Bamboo+Test+%28JammyWall%29%5B101607%5D&data%5Ba_id%5D=101607&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bag_type%5D=fixed";
 //	final String hostBrickHTML = "http://feature-pwg-1108.wallapi.bamboo.stuffio.com/brick/test-staging/brick.html";
 	final String hostBrickURL = "http://feature-brick-test.wallapi.bamboo.stuffio.com/brick/test-staging/brick-custom.html";
-	String host = hostBrickURL;
+//	String host = hostBrickURL;
 //	String hostReport = "http://feature-pwg-1107.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction";
 	By nameTxb = By.id("login");
 	By passwordTxb = By.id("password");
@@ -33,6 +34,8 @@ public class BrickURL_ON2_Test {
 	Driver driver;
 	List<Map<String, String>> mapList;
 
+//	* Host for test brick to FP
+	String host = "http://feature-ccg-827.wallapi.bamboo.stuffio.com/test-staging-brick/brick-custom.html";
 
 	private void killRemain() throws Exception {
 		try {
@@ -77,16 +80,16 @@ public class BrickURL_ON2_Test {
 		driver.get(host);
 		PageBrickURL.submitInformation(cardNumber);
 		
-		String refID = Pslog.get_cl_id_email(PageBrickURL.email);
-		String t_id = Pslog.getTID(refID);
-		
-//		String t_id = Z2.get_t_id();
-//		
-//		String refID = Pslog.get_cl_id(t_id);
-		System.out.println(cardNumber + " : " + refID + " : " + t_id);
-		
-		ExtentManager.logInfo("t_id: " + t_id);
-		
+		String email = PageBrickURL.email;
+		String clickId = Pslog.get_cl_id_email_Fasterpay(email);
+		System.out.println(clickId);
+		ExtentManager.logInfo("cl_id : " + clickId);
+		String f_id = Pslog.get_Fasterpay_payment_order_id(clickId);
+		System.out.println(f_id);
+		ExtentManager.logInfo("f_id : " + f_id);
+		String t_id = FasterPay.getTID_Fasterpay(f_id);
+		System.out.println(cardNumber + " : " + clickId + " : " + f_id + " : " + t_id);
+		ExtentManager.logInfo(cardNumber + " : " + clickId + " : " + f_id + " : " + t_id);
 		
 		Action.assertResult(t_id, map);
 	}

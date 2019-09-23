@@ -1,17 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [BrickToFP]">
+<suite name="Failed suite [testSuiteT3]">
   <listeners>
     <listener class-name="automation.project3ds.ExtentListener"/>
   </listeners>
-  <test thread-count="5" name="BrickToFP_OFF1(failed)">
+  <test thread-count="5" name="testSuiteT3(failed)">
+    <parameter name="type" value="t3"/>
     <classes>
-      <class name="automation.project3ds.oldTest.BrickURL_OFF1_Test">
+      <class name="Case39_40_WidgetBrick_1v6_Test_3ds">
         <methods>
           <include name="tearDown"/>
-          <include name="execute" invocation-numbers="4 16"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
         </methods>
-      </class> <!-- automation.project3ds.oldTest.BrickURL_OFF1_Test -->
+      </class> <!-- Case39_40_WidgetBrick_1v6_Test_3ds -->
+      <class name="Case01_12_WidgetBrick_1v6_Test_EmptyTextbox">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="case01_06_emptyTextboxClick"/>
+        </methods>
+      </class> <!-- Case01_12_WidgetBrick_1v6_Test_EmptyTextbox -->
+      <class name="Case25_32_WidgetBrick_1v6_Test_ValidateOthers">
+        <methods>
+          <include name="tearDown"/>
+          <include name="nameAsNumber"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Case25_32_WidgetBrick_1v6_Test_ValidateOthers -->
+      <class name="Case41_42_WidgetBrick_1v6_Test_Error">
+        <methods>
+          <include name="authorizationFailed"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Case41_42_WidgetBrick_1v6_Test_Error -->
+      <class name="Case33_37_WidgetBrick_1v6_Test_StaticLink">
+        <methods>
+          <include name="privacyPolicy"/>
+          <include name="tearDown"/>
+          <include name="storedCardSwitch"/>
+          <include name="setUp"/>
+          <include name="tryAgain"/>
+        </methods>
+      </class> <!-- Case33_37_WidgetBrick_1v6_Test_StaticLink -->
     </classes>
-  </test> <!-- BrickToFP_OFF1(failed) -->
-</suite> <!-- Failed suite [BrickToFP] -->
+  </test> <!-- testSuiteT3(failed) -->
+</suite> <!-- Failed suite [testSuiteT3] -->

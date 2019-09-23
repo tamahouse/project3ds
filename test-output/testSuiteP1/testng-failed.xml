@@ -7,13 +7,41 @@
   <test thread-count="5" name="testP1(failed)">
     <parameter name="type" value="p1"/>
     <classes>
-      <class name="report.WidgetBrick_1v6_Test_EmptyTextbox">
+      <class name="Case39_40_WidgetBrick_1v6_Test_3ds">
         <methods>
-          <include name="emptyTextboxClick"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
+        </methods>
+      </class> <!-- Case39_40_WidgetBrick_1v6_Test_3ds -->
+      <class name="Case01_12_WidgetBrick_1v6_Test_EmptyTextbox">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="case01_06_emptyTextboxClick"/>
+        </methods>
+      </class> <!-- Case01_12_WidgetBrick_1v6_Test_EmptyTextbox -->
+      <class name="Case25_32_WidgetBrick_1v6_Test_ValidateOthers">
+        <methods>
+          <include name="tearDown"/>
+          <include name="nameAsNumber"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Case25_32_WidgetBrick_1v6_Test_ValidateOthers -->
+      <class name="Case41_42_WidgetBrick_1v6_Test_Error">
+        <methods>
+          <include name="authorizationFailed"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- report.WidgetBrick_1v6_Test_EmptyTextbox -->
+      </class> <!-- Case41_42_WidgetBrick_1v6_Test_Error -->
+      <class name="Case33_37_WidgetBrick_1v6_Test_StaticLink">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="tryAgain"/>
+        </methods>
+      </class> <!-- Case33_37_WidgetBrick_1v6_Test_StaticLink -->
     </classes>
   </test> <!-- testP1(failed) -->
 </suite> <!-- Failed suite [testSuiteP1] -->

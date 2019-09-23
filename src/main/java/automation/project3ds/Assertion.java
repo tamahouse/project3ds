@@ -46,11 +46,16 @@ public class Assertion {
 //		String eBorder = BORDER_RED ;
 //		String eBackground = BACKGROUND_RED;
 //		String eLabelColor = TEXT_RED;
+		String errorText = "";
 		if (eErrorText != null) {
+			try {
 			Element error = element
 					.getElement(By.xpath("./following-sibling::*[contains(@class,'brick-errors')]/*[text()]"));
+			errorText = error.getText();
+			}catch(Exception e) {
+			}
 //		String errorColor = error.getCssValue("color");
-			String errorText = error.getText();
+			
 //		get().assertEquals(errorColor, TEXT_RED, assertTitle+"[ErrorTextColor]");
 			get().assertEquals(errorText, eErrorText, assertTitle + "[ErrorTextValue]");
 		}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="WidgetBrick_1v6_Test_EmptyTextbox">
-	<test name="WidgetBrick_1v6_Test_EmptyTextbox">
+<suite name="Case41_42_WidgetBrick_1v6_Test_Error">
+	<test name="Case41_42_WidgetBrick_1v6_Test_Error">
 	<parameter name="type" value="p1" />
 		 <classes>
-       <class name="WidgetBrick_1v6_Test_EmptyTextbox" />
+       <class name="Case41_42_WidgetBrick_1v6_Test_Error" />
     </classes>
             	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

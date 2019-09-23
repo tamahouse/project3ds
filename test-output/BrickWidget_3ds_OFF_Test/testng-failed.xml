@@ -9,7 +9,7 @@
       <class name="automation.project3ds.oldTest.BrickWidget_OFF1_Test">
         <methods>
           <include name="setUp"/>
-          <include name="execute" invocation-numbers="4 16 17"/>
+          <include name="execute" invocation-numbers="4 16"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.project3ds.oldTest.BrickWidget_OFF1_Test -->

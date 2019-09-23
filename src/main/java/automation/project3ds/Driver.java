@@ -154,7 +154,7 @@ public class Driver implements WebDriver {
 		}
 		try {
 		driver.manage().window().setPosition(p);
-		}catch (Exception ignore) {
+		}catch (Exception e) {
 			
 		}
 		driver.manage().window().maximize();
@@ -236,6 +236,7 @@ public class Driver implements WebDriver {
 			this.sleep(timeout);
 		}
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
+		ExtentManager.addScreenshot("failedGetElement");
 		return new Element(driver.findElement(by));
 	}
 	

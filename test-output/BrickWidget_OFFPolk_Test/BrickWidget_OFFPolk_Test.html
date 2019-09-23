@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>BrickWidget_OFFPolk_Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 16 12:17:57 ICT 2019</td>
+<td>Started on:</td><td>Thu Sep 19 15:42:54 ICT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>73 seconds (73902 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47192 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,64 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.project3ds.oldTest.BrickWidget_Polk_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.oldTest.BrickWidget_Polk_Test<br>Parameters: 4012001037141112, http://feature-brick-test.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Brick+3DS+Polk+%28Test+Company%29%5B99907%5D&data%5Ba_id%5D=99907&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=218069&data%5Bps%5D=gateway&data%5Bag_type%5D=fixed</td>
-<td></td>
-<td>46</td>
-<td>automation.project3ds.oldTest.BrickWidget_Polk_Test@754ba872</td></tr>
+<td title='automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test.execute()'><b>execute</b><br>Test class: automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test<br>Parameters: 5444870724493746, http://feature-ccg-830.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Polk+test+%28JammyWall%29%5B101657%5D&data%5Ba_id%5D=101657&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806900&data%5Bps%5D=dummy&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=EUR&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=</td>
+<td><div><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:497)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:854)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:872)
+	at automation.project3ds.Pslog.getTID(Pslog.java:52)
+	at automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test.execute(BrickWidget_Polk_Disable3ds_Test.java:62)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1623287112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1623287112'><pre>java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:497)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:854)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:872)
+	at automation.project3ds.Pslog.getTID(Pslog.java:52)
+	at automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test.execute(BrickWidget_Polk_Disable3ds_Test.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>24</td>
+<td>automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test@754ba872</td></tr>
 </table><p>
 </body>
 </html>

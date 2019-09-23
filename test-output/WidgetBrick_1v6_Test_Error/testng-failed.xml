@@ -7,13 +7,13 @@
   <test thread-count="5" name="WidgetBrick_1v6_Test_Error(failed)">
     <parameter name="type" value="p1"/>
     <classes>
-      <class name="WidgetBrick_1v6_Test_Error">
+      <class name="Case39_40_WidgetBrick_1v6_Test_3ds">
         <methods>
-          <include name="authorizationFailed"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
         </methods>
-      </class> <!-- WidgetBrick_1v6_Test_Error -->
+      </class> <!-- Case39_40_WidgetBrick_1v6_Test_3ds -->
     </classes>
   </test> <!-- WidgetBrick_1v6_Test_Error(failed) -->
 </suite> <!-- Failed suite [WidgetBrick_1v6_Test_Error] -->

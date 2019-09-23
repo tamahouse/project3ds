@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="5" name="BrickToFP_OFF1(failed)">
     <classes>
-      <class name="automation.project3ds.oldTest.BrickURL_OFF1_Test">
+      <class name="automation.project3ds.oldTest.BrickHTML_Card1_OFF_Test">
         <methods>
           <include name="tearDown"/>
           <include name="execute" invocation-numbers="4 16"/>
         </methods>
-      </class> <!-- automation.project3ds.oldTest.BrickURL_OFF1_Test -->
+      </class> <!-- automation.project3ds.oldTest.BrickHTML_Card1_OFF_Test -->
     </classes>
   </test> <!-- BrickToFP_OFF1(failed) -->
 </suite> <!-- Failed suite [BrickToFP] -->

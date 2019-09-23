@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Case39_40_WidgetBrick_1v6_Test_3ds]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="Case39_40_WidgetBrick_1v6_Test_3ds(failed)">
+    <parameter name="type" value="p1"/>
+    <classes>
+      <class name="Case39_40_WidgetBrick_1v6_Test_3ds">
+        <methods>
+          <include name="optional3ds"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="failedOTP"/>
+        </methods>
+      </class> <!-- Case39_40_WidgetBrick_1v6_Test_3ds -->
+    </classes>
+  </test> <!-- Case39_40_WidgetBrick_1v6_Test_3ds(failed) -->
+</suite> <!-- Failed suite [Case39_40_WidgetBrick_1v6_Test_3ds] -->

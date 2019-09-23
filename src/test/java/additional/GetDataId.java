@@ -24,6 +24,11 @@ public class GetDataId {
 	String host;
 	String type;
 	
+//	**Host for get name
+	
+//	String host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894&data%5Bwidget%5D=t3&data%5Bco_id%5D=1&data%5Buid%5D=test_dark&data%5Bps%5D=dummy&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bversion%5D=1.2&data%5Bcustom%5D%5Btheme%5D=dark";
+	
+	
 	static Driver driver;
 
 	@Parameters({"type"})
@@ -51,7 +56,7 @@ public class GetDataId {
 		for (Map<String, String> map : list) {
 			String co_id = map.get("co_id");
 			String paymentMethod = map.get("paymentMethod");
-			host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D="+type+"&data%5Bco_id%5D="
+			host = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894&data%5Bwidget%5D=t3&data%5B"
 					+ co_id
 					+ "&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
 			driver.get(host);

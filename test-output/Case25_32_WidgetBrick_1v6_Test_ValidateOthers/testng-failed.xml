@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Case25_32_WidgetBrick_1v6_Test_ValidateOthers]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="Case25_32_WidgetBrick_1v6_Test_ValidateOthers(failed)">
+    <parameter name="type" value="p1"/>
+    <classes>
+      <class name="Case25_32_WidgetBrick_1v6_Test_ValidateOthers">
+        <methods>
+          <include name="tearDown"/>
+          <include name="nameAsNumber"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Case25_32_WidgetBrick_1v6_Test_ValidateOthers -->
+    </classes>
+  </test> <!-- Case25_32_WidgetBrick_1v6_Test_ValidateOthers(failed) -->
+</suite> <!-- Failed suite [Case25_32_WidgetBrick_1v6_Test_ValidateOthers] -->

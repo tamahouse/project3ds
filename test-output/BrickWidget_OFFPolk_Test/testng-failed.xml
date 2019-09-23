@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="5" name="BrickWidget_OFFPolk_Test(failed)">
     <classes>
-      <class name="automation.project3ds.BrickWidget_Polk_Test">
+      <class name="automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test">
         <methods>
           <include name="tearDown"/>
           <include name="execute" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.project3ds.BrickWidget_Polk_Test -->
+      </class> <!-- automation.project3ds.oldTest.BrickWidget_Polk_Disable3ds_Test -->
     </classes>
   </test> <!-- BrickWidget_OFFPolk_Test(failed) -->
 </suite> <!-- Failed suite [BrickWidget_OFFPolk_Test] -->

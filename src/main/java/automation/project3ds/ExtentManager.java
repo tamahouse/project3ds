@@ -39,7 +39,7 @@ public class ExtentManager {
 			String reportName = suiteName +"_"+ time[0]+"_"+time[1] + ".html" ;
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(folderPathDaily+ reportName);
 			reporter.config().setCSS("textarea { height: 20rem; }");
-			reporter.config().setCSS(".r-img { width: 30%; }");
+			reporter.config().setCSS(".r-img { width: 25rem; }");
 			reporter.config().setTheme(Theme.DARK);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);

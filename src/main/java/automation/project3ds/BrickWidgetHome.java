@@ -305,6 +305,8 @@ public class BrickWidgetHome {
 		String refID = null;
 		Thread.sleep(1000);
 		mainIframe.clickBuyButton();
+		Thread.sleep(2000);
+		ExtentManager.addScreenshot("brick version");
 		Iframecc iframecc = mainIframe.getIframecc();
 		iframecc.setCardNumber(cardNumber);
 		iframecc.setExpiredDate();
@@ -348,6 +350,7 @@ public class BrickWidgetHome {
 					driver.switchTo().window(tabs.get(1));
 					if (driver.isExist(By.id("authWindow"), 2000)) {
 						AuthWindow authWindow = getAuthWindow();
+						ExtentManager.addScreenshot("3ds");
 						try {
 						authWindow.setPassword();
 						authWindow.clickSubmit();
@@ -378,6 +381,7 @@ public class BrickWidgetHome {
 		}
 
 		System.out.println(cardNumber + " : " + refID);
+		ExtentManager.addScreenshot("3ds");
 		return refID;
 	}
 

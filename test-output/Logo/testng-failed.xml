@@ -6,11 +6,11 @@
   </listeners>
   <test thread-count="5" name="Logo(failed)">
     <classes>
-      <class name="Logo">
+      <class name="logo.Logo">
         <methods>
-          <include name="buildLogoReport" invocation-numbers="0"/>
+          <include name="buildLogoReport" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- Logo -->
+      </class> <!-- logo.Logo -->
     </classes>
   </test> <!-- Logo(failed) -->
 </suite> <!-- Failed suite [Logo] -->

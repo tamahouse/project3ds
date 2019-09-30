@@ -3,7 +3,7 @@
 <suite name="Logo">
 	<test name="Logo">
 		 <classes>
-       <class name="Logo" />
+       <class name="logo.Logo" />
     </classes>
             	<listeners>
 		<listener class-name="automation.project3ds.ExtentListener" />

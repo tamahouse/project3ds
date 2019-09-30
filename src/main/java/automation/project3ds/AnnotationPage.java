@@ -20,7 +20,7 @@ public static Driver driver;
 	
 	public static Driver getDriver() {
 		if(driver == null) {
-			driver = new Driver(Browser.IE);
+			driver = new Driver(Browser.Chrome);
 		}
 		return driver;
 	}

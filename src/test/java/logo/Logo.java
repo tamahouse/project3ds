@@ -19,6 +19,7 @@ import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.math3.exception.OutOfRangeException;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,6 +33,7 @@ import com.codoid.products.fillo.Recordset;
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
 import automation.project3ds.Driver;
+import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
 import automation.project3ds.Wallapi;
@@ -40,22 +42,11 @@ import javafx.util.Pair;
 
 public class Logo {
 
-	static Map<String, Pair<Integer, Integer>> ruleMap = new HashMap<String, Pair<Integer, Integer>>();
-	static {
-		ruleMap.put("multi", new Pair<>(107, 43));
-		ruleMap.put("uni", new Pair<>(149, 50));
-		ruleMap.put("v5", new Pair<>(140, 45));
-		ruleMap.put("light", new Pair<>(100, 40));
-		ruleMap.put("light2", new Pair<>(200, 80));
-		ruleMap.put("light3", new Pair<>(300, 120));
-		ruleMap.put("dark", new Pair<>(100, 40));
-		ruleMap.put("dark2", new Pair<>(200, 80));
-		ruleMap.put("dark3", new Pair<>(300, 120));
-	}
+	static Map<String, Pair<Integer, Integer>> ruleMap;
 
 	Driver driver;
 
-	String host = "http://feature-pwl-1986.wallapi.bamboo.stuffio.com";
+	String host = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
 //	String featureBranchOther = "http://feature-pwl-1986.t3payments.bamboo.stuffio.com";
 	String featureBranchOther = "http://develop.wallapi.bamboo.stuffio.com";
 	
@@ -100,8 +91,8 @@ public class Logo {
 //		String hostP1 = "http://feature-pwl-1994.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
 //		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
 		
-//		**Host test btue pwl-1996
-		String hostP1 = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
+//		**Host test btue pwl-2005
+		String hostP1 = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com" + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889"
 		+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago";
 		
 		Login.login(hostP1);
@@ -118,6 +109,26 @@ public class Logo {
 
 	@Test(dataProvider = "data")
 	public void buildLogoReport(String shortcode, Map<String, String> excelMap) throws IOException, Exception {
+		String logo = excelMap.get("logo");
+		ruleMap = new HashMap<String, Pair<Integer, Integer>>();
+			ruleMap.put("multi", new Pair<>(107, 43));
+			ruleMap.put("uni", new Pair<>(149, 50));
+			ruleMap.put("v5", new Pair<>(140, 45));
+			ruleMap.put("light", new Pair<>(100, 40));
+			ruleMap.put("light2", new Pair<>(200, 80));
+			ruleMap.put("light3", new Pair<>(300, 120));
+			ruleMap.put("dark", new Pair<>(100, 40));
+			ruleMap.put("dark2", new Pair<>(200, 80));
+			ruleMap.put("dark3", new Pair<>(300, 120));
+		
+		if(!logo.equals("")) {
+			ruleMap.put("lightLogo", new Pair<>(100, 40));
+			ruleMap.put("light2Logo", new Pair<>(200, 80));
+			ruleMap.put("light3Logo", new Pair<>(300, 120));
+			ruleMap.put("darkLogo", new Pair<>(100, 40));
+			ruleMap.put("dark2Logo", new Pair<>(200, 80));
+			ruleMap.put("dark3Logo", new Pair<>(300, 120));
+		}
 		Map<String, File> logoMap = this.distributeImageIntoType(excelMap);
 		Map<String, BufferedImage> expectedImages = this.checkMissingDesign(logoMap);
 		this.checkImageSize("Design", expectedImages);
@@ -151,6 +162,7 @@ public class Logo {
 		String shortcode = excelMap.get("shortcode");
 		String ps_id = excelMap.get("ps_id");
 		String ps_name = excelMap.get("ps_name");
+		String logo = excelMap.get("logo");
 		if(shortcode.contains("gateway") && !ps_name.contains("Amex")) {
 //			host = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
 //			featureBranchOther = "http://feature-pwg-1129.wallapi.bamboo.stuffio.com";
@@ -162,8 +174,8 @@ public class Logo {
 //			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
 //			project_id = "99889";
 			
-			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
 			hostOther = featureBranchOther + "/admin/test-offerwall?_application_name=1201+test+%28Payment%29%5B99889%5D&data%5Ba_id%5D=99889";
 			project_id = "99889";
 		}else if("200 19 132".contains(ps_id)) {
@@ -177,8 +189,8 @@ public class Logo {
 //			project_id = "99894";
 //			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 		
-			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 		
@@ -194,8 +206,8 @@ public class Logo {
 //			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 			
 			
-			host = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
-			featureBranchOther = "http://feature-pwl-1996.wallapi.bamboo.stuffio.com";
+			host = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
+			featureBranchOther = "http://feature-pwl-2005.wallapi.bamboo.stuffio.com";
 			project_id = "99894";
 			hostOther = featureBranchOther+ "/admin/test-offerwall?_application_name=Ajingon+%28Payment%29%5B99894%5D&data%5Ba_id%5D=99894";
 			
@@ -208,13 +220,13 @@ public class Logo {
 		Map<String, String> hostName = new HashMap<String, String>();
 		hostName.put("multi p1", hostOther
 				+ "&data%5Bwidget%5D=p1&data%5Bco_id%5D="
-				+ co_id + "&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago");
+				+ co_id + "&data%5Buid%5D=21806921d21d2&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=");
 		hostName.put("multi p10", hostOther
 				+ "&data%5Bwidget%5D=p10&data%5Bco_id%5D="
-				+ co_id + "&data%5Buid%5D=21806921d21d2&data%5Bps%5D=mercadopago");
+				+ co_id + "&data%5Buid%5D=21806921d21d2&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=");
 		hostName.put("uni", hostOther
 				+ "&data%5Bwidget%5D=p2&data%5Bco_id%5D="
-				+ co_id + "&data%5Buid%5D=21806921d21d2&data%5Bps%5D=" + shortcode);
+				+ co_id + "&data%5Buid%5D=21806921d21d2&data%5Bps%5D=" + shortcode+"&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1");
 		hostName.put("v5",
 				featureBranchOther + "/admin/developers/login?id=86844&admin_login=true");
 		hostName.put("light", "/images/ps_logos/v2/" + urlShortcode + ".png");
@@ -223,6 +235,18 @@ public class Logo {
 		hostName.put("dark", "/images/ps_logos/v2/" + urlShortcode + "_d.png");
 		hostName.put("dark2", "/images/ps_logos/v2/" + urlShortcode + "_d@2x.png");
 		hostName.put("dark3", "/images/ps_logos/v2/" + urlShortcode + "_d@3x.png");
+		String hostTerminal = hostOther
+				+ "&data%5Bwidget%5D=t3&data%5Bco_id%5D="
+				+ co_id + "&data%5Buid%5D=test_dark&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bversion%5D=1.2";
+		
+		if(!logo.equals("")) {
+		hostName.put("lightLogo", "/images/ps_logos/v2/" + logo + ".png");
+		hostName.put("light2Logo", "/images/ps_logos/v2/" + logo + "@2x.png");
+		hostName.put("light3Logo", "/images/ps_logos/v2/" + logo + "@3x.png");
+		hostName.put("darkLogo", "/images/ps_logos/v2/" + logo + "_d.png");
+		hostName.put("dark2Logo", "/images/ps_logos/v2/" + logo + "_d@2x.png");
+		hostName.put("dark3Logo", "/images/ps_logos/v2/" + logo + "_d@3x.png");
+		}
 
 		Map<String, BufferedImage> map = new HashMap<String, BufferedImage>();
 		for (Entry<String, Pair<Integer, Integer>> entry : ruleMap.entrySet()) {
@@ -232,38 +256,125 @@ public class Logo {
 
 			BufferedImage actualImage = null;
 			String hostP1 = null;
+			
 //			Map<Boolean, String> branchMap = new HashMap<Boolean, String>();
 //			branchMap.put(true, "p1");
 //			branchMap.put(false, "p10");
-			Boolean reLoop = false;
+
 			String newName = null;
 			URL url = null;
 			if (file == null) {
 				actualImage = generateBlankImage(name,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
 				map.put(name, actualImage);
 			} else {
-				try {
-
-					Boolean start = true;
-					while (start == true || reLoop == true) {
-						start = false;
-
-						if (!"multi uni v5".contains(name)) {
+				
+						if (!"multi uni v5".contains(name) && !name.contains("Logo")) {
+							try {
 							newName = name;
 							hostP1 = host + hostName.get(name);
 							url = new URL(hostP1);
 							System.out.println(url);
 							ExtentManager.logInfo(hostP1);
-						} else if (name.equals("multi")) {
-
-							if (reLoop == false) {
-								reLoop = true;
-								newName = "multi p1";
-							} else {
-								reLoop = false;
-								newName = "multi p10";
+							actualImage = ImageIO.read(url);
+							map.put(newName, actualImage);
+							} catch (IIOException e) {
+								Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+								actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+								map.put(newName, actualImage);
 							}
-							if (!co_id.equals("")) {
+							if(name.equals("light2")) {
+								String hostT = hostTerminal;
+								driver = AnnotationPage.getDriver();
+								driver.get(hostT);
+								Thread.sleep(2000);
+								for (int i = 0; i < 20; i++) {
+									try {
+							
+										Element element = WidgetMainFrame.getFrame().getElement(By.xpath("//*[@data-id='"+shortcode+"' or @data-id='"+logo+"']"));
+										element.click();
+										i = 500;
+										
+									} catch (Exception e) {
+										WidgetMainFrame.getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]"))
+												.click();
+									}
+								}
+								Thread.sleep(1000);
+								WidgetMainFrame.getFrame().getElement(By.xpath("//img[@src='"+hostP1+"']"));
+								ExtentManager.addScreenshot(name);
+							}else if(name.equals("dark2")) {
+								String hostT = hostTerminal + "&data%5Bcustom%5D%5Btheme%5D=dark";
+								driver = AnnotationPage.getDriver();
+								driver.get(hostT);
+								Thread.sleep(2000);
+								for (int i = 0; i < 20; i++) {
+									try {
+										Element element = WidgetMainFrame.getFrame().getElement(By.xpath("//img[@src='"+hostP1+"']"));
+										element.click();
+										i = 500;
+									} catch (Exception e) {
+										WidgetMainFrame.getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]"))
+												.click();
+									}
+								}
+								Thread.sleep(1000);
+								ExtentManager.addScreenshot(name);
+							}
+						}else if(!"multi uni v5".contains(name) && name.contains("Logo")) {
+								try {
+								newName = name;
+								hostP1 = host + hostName.get(name);
+								url = new URL(hostP1);
+								System.out.println(url);
+								ExtentManager.logInfo(hostP1);
+								actualImage = ImageIO.read(url);
+								map.put(newName, actualImage);
+								if(name.equals("light2Logo")) {
+									String hostT = hostTerminal;
+									driver = AnnotationPage.getDriver();
+									driver.get(hostT);
+									Thread.sleep(2000);
+									for (int i = 0; i < 20; i++) {
+										try {
+								
+											Element element = WidgetMainFrame.getFrame().getElement(By.xpath("//*[@data-id='"+shortcode+"' or @data-id='"+logo+"']"));
+											element.click();
+											i = 500;
+											
+										} catch (Exception e) {
+											WidgetMainFrame.getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]"))
+													.click();
+										}
+									}
+									Thread.sleep(1000);
+									WidgetMainFrame.getFrame().getElement(By.xpath("//img[@src='"+hostP1+"']"));
+									ExtentManager.addScreenshot(name);
+								}else if(name.equals("dark2Logo")) {
+									String hostT = hostTerminal + "&data%5Bcustom%5D%5Btheme%5D=dark";
+									driver = AnnotationPage.getDriver();
+									driver.get(hostT);
+									Thread.sleep(2000);
+									for (int i = 0; i < 20; i++) {
+										try {
+											Element element = WidgetMainFrame.getFrame().getElement(By.xpath("//img[@src='"+hostP1+"']"));
+											element.click();
+											i = 500;
+										} catch (Exception e) {
+											WidgetMainFrame.getFrame().getElement(By.xpath("//button[contains(@class,'payment-options-control-next')]"))
+													.click();
+										}
+									}
+									Thread.sleep(1000);
+									ExtentManager.addScreenshot(name);
+								}
+							} catch (IIOException e) {
+								Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+								actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+								map.put(newName, actualImage);
+							}
+						} else if (name.equals("multi")) {
+							try {
+								newName = "multi p1";
 								hostP1 = hostName.get(newName);
 								driver = AnnotationPage.getDriver();
 								driver.get(hostP1);
@@ -271,18 +382,50 @@ public class Logo {
 								String tab_id = excelMap.get("p1");
 								String imageUrl = WidgetMainFrame.getLogoUrl(type, tab_id);
 								url = new URL(imageUrl);
+								actualImage = ImageIO.read(url);
+								map.put(newName, actualImage);
+							} catch (IIOException e) {
+								Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+								actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+								map.put(newName, actualImage);
+							}
+							
+							try {
+								newName = "multi p10";
+								hostP1 = hostName.get(newName);
+								driver = AnnotationPage.getDriver();
+								driver.get(hostP1);
+								String type = newName;
+								String tab_id = excelMap.get("p1");
+								String imageUrl = WidgetMainFrame.getLogoUrl(type, tab_id);
+								url = new URL(imageUrl);
+								actualImage = ImageIO.read(url);
+								map.put(newName, actualImage);
+							} catch (IIOException e) {
+								Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+								actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+								map.put(newName, actualImage);
 							}
 						} else if (name.equals("uni")) {
 							newName = name;
 							if (!co_id.equals("")) {
+								try {
 								hostP1 = hostName.get(name);
 								driver = AnnotationPage.getDriver();
 								driver.get(hostP1);
 								String type = name;
 								String imageUrl = WidgetMainFrame.getLogoUrl(type, null);
 								url = new URL(imageUrl);
+								actualImage = ImageIO.read(url);
+								map.put(newName, actualImage);
+								} catch (IIOException e) {
+									Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+									actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+									map.put(newName, actualImage);
+								}
 							}
 						} else if (name.equals("v5")) {
+							try {
 							newName = name;
 							hostP1 = hostName.get(name);
 							driver = AnnotationPage.getDriver();
@@ -293,16 +436,14 @@ public class Logo {
 							String type = name;
 							String imageUrl = WidgetMainFrame.getLogoUrl(type, ps_id);
 							url = new URL(imageUrl);
+							actualImage = ImageIO.read(url);
+							map.put(newName, actualImage);
+							} catch (IIOException e) {
+								Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
+								actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
+								map.put(newName, actualImage);
+							}
 						}
-						actualImage = ImageIO.read(url);
-						map.put(newName, actualImage);
-					}
-				} catch (IIOException e) {
-					Assertion.get().assertEquals(url, "", "[NotActualReplaced]" + "[" + newName + "]");
-					actualImage = generateBlankImage(newName,ruleMap.get(name).getKey(), ruleMap.get(name).getValue());
-					map.put(newName, actualImage);
-				}
-				
 			}
 
 		}
@@ -317,7 +458,10 @@ public class Logo {
 			}
 			BufferedImage image = entry.getValue();
 			Boolean x = false;
-			if (image.getWidth() == ruleMap.get(name).getKey() && image.getHeight() == ruleMap.get(name).getValue()) {
+			if (image.getWidth()
+					== ruleMap.get(name).getKey() 
+					&& image.getHeight()
+					== ruleMap.get(name).getValue()) {
 				x = true;
 			}
 			if (image.getWidth() == (ruleMap.get(name).getKey() + 1)
@@ -351,6 +495,7 @@ public class Logo {
 				expectedImage = generateBlankImage(name, width, height);
 			}
 			map.put(name, expectedImage);
+			
 		}
 		if (!missing.equals("Missing design: ,uni,multi,v5") && !missing.equals("Missing design: ")) {
 			Assertion.get().assertEquals("", "png", "[NotEnoughDesign]"+"["+missing+"]");
@@ -360,6 +505,7 @@ public class Logo {
 	}
 
 	private Map<String, File> distributeImageIntoType(Map<String, String> excelMap) {
+		String logo = excelMap.get("logo");
 		String folderName = excelMap.get("folder");
 		String folderPath = "G:\\My Drive\\PS platform team\\PS logos resized\\" + folderName;
 		File folder = new File(folderPath);
@@ -385,16 +531,34 @@ public class Logo {
 					logoMap.put("v5", file);
 				} else if (name.contains("100x40") && !name.contains("dark")) {
 					logoMap.put("light", file);
+					if(!logo.equals("")) {
+						logoMap.put("lightLogo", file);
+					}
 				} else if (name.contains("100x40") && name.contains("dark")) {
 					logoMap.put("dark", file);
+					if(!logo.equals("")) {
+						logoMap.put("darkLogo", file);
+					}
 				} else if (name.contains("200x80") && !name.contains("dark")) {
 					logoMap.put("light2", file);
+					if(!logo.equals("")) {
+						logoMap.put("light2Logo", file);
+					}
 				} else if (name.contains("200x80") && name.contains("dark")) {
 					logoMap.put("dark2", file);
+					if(!logo.equals("")) {
+						logoMap.put("dark2Logo", file);
+					}
 				} else if (name.contains("300x120") && !name.contains("dark")) {
 					logoMap.put("light3", file);
+					if(!logo.equals("")) {
+						logoMap.put("light3Logo", file);
+					}
 				} else if (name.contains("300x120") && name.contains("dark")) {
 					logoMap.put("dark3", file);
+					if(!logo.equals("")) {
+						logoMap.put("dark3Logo", file);
+					}
 				}else if (name.contains("pm") && !name.contains("big") && !name.contains("merchantareav5")
 						&& !name.contains("@2x") && !name.contains("@3x")) {
 					logoMap.put("multi", file);
@@ -406,23 +570,41 @@ public class Logo {
 					String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 					if (!sublast2.equals("-d")) {
 						logoMap.put("light2", file);
+						if(!logo.equals("")) {
+							logoMap.put("light2Logo", file);
+						}
 					} else {
 						logoMap.put("dark2", file);
+						if(!logo.equals("")) {
+							logoMap.put("dark2Logo", file);
+						}
 					}
 				} else if (name.contains("@3x")) {
 					String sublast2 = name.substring(name.length() - 5, name.length() - 3);
 					if (!sublast2.equals("-d")) {
 						logoMap.put("light3", file);
+						if(!logo.equals("")) {
+							logoMap.put("light3Logo", file);
+						}
 					} else {
 						logoMap.put("dark3", file);
+						if(!logo.equals("")) {
+							logoMap.put("dark3Logo", file);
+						}
 					}
 				} else if (name.contains("ps") && !name.contains("pm") && !name.contains("big")
 						&& !name.contains("merchantareav5") && !name.contains("@2x") && !name.contains("@3x")) {
 					String sublast2 = name.substring(name.length() - 2, name.length());
 					if (sublast2.equals("-d") || name.contains("-d ")) {
 						logoMap.put("dark", file);
+						if(!logo.equals("")) {
+							logoMap.put("darkLogo", file);
+						}
 					} else {
 						logoMap.put("light", file);
+						if(!logo.equals("")) {
+							logoMap.put("lightLogo", file);
+						}
 					}
 				} else if (name.contains("v7")) {
 					logoMap.put("multi", file);

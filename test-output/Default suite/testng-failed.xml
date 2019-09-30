@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Case39_40_WidgetBrick_1v6_Test_3ds">
+      <class name="logo.Logo">
         <methods>
-          <include name="optional3ds"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="no3ds"/>
-          <include name="failedOTP"/>
+          <include name="buildLogoReport"/>
         </methods>
-      </class> <!-- Case39_40_WidgetBrick_1v6_Test_3ds -->
+      </class> <!-- logo.Logo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

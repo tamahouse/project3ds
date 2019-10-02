@@ -2,37 +2,37 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="156763" started-at="2019-09-30T11:48:49Z" finished-at="2019-09-30T11:51:25Z">
+  <suite name="Logo" duration-ms="248336" started-at="2019-10-02T05:47:18Z" finished-at="2019-10-02T05:51:26Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="156763" started-at="2019-09-30T11:48:49Z" finished-at="2019-09-30T11:51:25Z">
+    <test name="Logo" duration-ms="248336" started-at="2019-10-02T05:47:18Z" finished-at="2019-10-02T05:51:26Z">
       <class name="logo.Logo">
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@76508ed1]" name="buildLogoReport" duration-ms="82492" started-at="2019-09-30T11:49:10Z" data-provider="data" finished-at="2019-09-30T11:50:32Z">
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@39c0f4a]" name="buildLogoReport" duration-ms="120171" started-at="2019-10-02T05:47:44Z" data-provider="data" finished-at="2019-10-02T05:49:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[gateway]]>
+                <![CDATA[ccbrazil]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Amex, folder=Gateway\Gateway (with amex) (1), enable=1, ps_id=132, called_name=Gateway-wAmex, co_id=1, logo=, shortcode=gateway, co_name=United States}]]>
+                <![CDATA[{p1=tab_ccbrazil, ps_name=Ebanx CC, folder=Ebanx\Ebanx (Visa,Mastercard only), enable=1, ps_id=200, called_name=ebanx, co_id=30, logo=ccbrazil_flag, shortcode=ccbrazil, co_name=Brazil}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@76508ed1]" name="buildLogoReport" duration-ms="50952" started-at="2019-09-30T11:50:34Z" data-provider="data" finished-at="2019-09-30T11:51:25Z">
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@39c0f4a]" name="buildLogoReport" duration-ms="99650" started-at="2019-10-02T05:49:46Z" data-provider="data" finished-at="2019-10-02T05:51:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[gateway]]>
+                <![CDATA[allthegate]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway, folder=Gateway\Gateway (no amex), enable=1, ps_id=132, called_name=gateway, co_id=1, logo=, shortcode=gateway, co_name=United States}]]>
+                <![CDATA[{p1=tab_allthegate, ps_name=Payletter/AllTheGate CC, folder=Payletter AlltheGate, enable=1, ps_id=19, called_name=payletterallthegate, co_id=108, logo=allthegate_flag, shortcode=allthegate, co_name=Korea (Republic of)}]]>
               </value>
             </param>
           </params>

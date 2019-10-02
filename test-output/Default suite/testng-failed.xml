@@ -5,7 +5,7 @@
     <classes>
       <class name="logo.Logo">
         <methods>
-          <include name="buildLogoReport"/>
+          <include name="buildLogoReport" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- logo.Logo -->
     </classes>

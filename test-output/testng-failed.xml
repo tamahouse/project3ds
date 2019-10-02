@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Logo]">
-  <listeners>
-    <listener class-name="automation.project3ds.ExtentListener"/>
-  </listeners>
-  <test thread-count="5" name="Logo(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="logo.Logo">
         <methods>
@@ -12,5 +9,5 @@
         </methods>
       </class> <!-- logo.Logo -->
     </classes>
-  </test> <!-- Logo(failed) -->
-</suite> <!-- Failed suite [Logo] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

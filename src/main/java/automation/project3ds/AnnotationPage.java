@@ -39,4 +39,100 @@ public static Driver driver;
 	public static void screenShot(String filePath) {
 		Driver.screenShot(driver.getWebDriver(), filePath);
 	}
+	
+	public static class WallapiUrl{
+		String host = "http://develop.wallapi.bamboo.stuffio.com";
+		String a_id = "99894";
+		String widget = "p1";
+		String co_id = "1";
+		String uid = "000000";
+		Boolean isCustom = true;
+		Boolean isDark = false;
+		Boolean isBrick16 = false;
+		
+		String prefix = "&data%5B";
+		String suffix = "%5D=";
+		String custom = "&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=";
+		String brick_1_6 = "";
+		String theme = "";
+		String version = "";
+		String p = "";
+
+
+		
+		public WallapiUrl() {
+			
+		}
+		
+		public static WallapiUrl host(String host) {
+			WallapiUrl url = new WallapiUrl();
+			url.host = host;
+			return url;
+		}
+		
+		public WallapiUrl a_id(String a_id) {
+			this.a_id = a_id;
+			return this;
+		}
+		
+		public WallapiUrl t3() {
+			this.widget = "t3";
+			this.version = "&data%5Bcustom%5D%5Bversion%5D=1.2";
+			return this;
+		}
+		
+		public WallapiUrl uni(String shortcode) {
+			this.widget = "p2";
+			this.p = prefix + "ps" + suffix+shortcode;
+			return this;
+		}
+		
+		public WallapiUrl widget(String widget) {
+			this.widget = widget;
+			return this;
+		}
+		
+		public WallapiUrl co_id(String co_id) {
+			this.co_id = co_id;
+			return this;
+		}
+		
+		
+		public WallapiUrl uid(String uid) {
+			this.uid = uid;
+			return this;
+		}
+		
+		public WallapiUrl isCustom(Boolean isCustom) {
+			if(isCustom == false) {
+				custom = "";
+			}
+			return this;
+		}
+		
+		public WallapiUrl isDark(Boolean isDark) {
+			if(isDark == true) {
+				theme = "&data%5Bcustom%5D%5Btheme%5D=dark";
+			}
+			return this;
+		}
+		
+		public WallapiUrl isBrick16(Boolean isBrick16) {
+			if(isBrick16 == true) {
+				brick_1_6 = "&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
+			}
+			return this;
+		}
+		
+		public String generate() {
+			String h = this.host + "/admin/test-offerwall?";
+			String a = prefix+"a_id"+suffix+this.a_id;
+			String w = prefix + "widget" + suffix+ this.widget;
+			String co = prefix + "co_id" + suffix + this.co_id;
+			String u = prefix + "uid" + suffix+ this.uid;
+			String url = h + a+ w+ co+ u+p+this.custom+this.brick_1_6+this.theme+this.version;
+			return url;
+		}
+		
+	}
 }

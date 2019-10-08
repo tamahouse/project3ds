@@ -1,38 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="248336" started-at="2019-10-02T05:47:18Z" finished-at="2019-10-02T05:51:26Z">
+  <suite name="Logo" duration-ms="665973" started-at="2019-10-08T03:52:40Z" finished-at="2019-10-08T04:03:45Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="248336" started-at="2019-10-02T05:47:18Z" finished-at="2019-10-02T05:51:26Z">
+    <test name="Logo" duration-ms="665973" started-at="2019-10-08T03:52:40Z" finished-at="2019-10-08T04:03:45Z">
       <class name="logo.Logo">
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@39c0f4a]" name="buildLogoReport" duration-ms="120171" started-at="2019-10-02T05:47:44Z" data-provider="data" finished-at="2019-10-02T05:49:44Z">
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="93299" started-at="2019-10-08T03:53:08Z" data-provider="data" finished-at="2019-10-08T03:54:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ccbrazil]]>
+                <![CDATA[btfinland]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_ccbrazil, ps_name=Ebanx CC, folder=Ebanx\Ebanx (Visa,Mastercard only), enable=1, ps_id=200, called_name=ebanx, co_id=30, logo=ccbrazil_flag, shortcode=ccbrazil, co_name=Brazil}]]>
+                <![CDATA[{p1=, ps_name=PPRO/Bank Transfer Finland, folder=PPRO Bank Transfer Finland, enable=1, ps_id=6, called_name=PPRO-Bank-Transfer-Finland, co_id=70, logo=btfinland, shortcode=btfinland, co_name=Finland}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@39c0f4a]" name="buildLogoReport" duration-ms="99650" started-at="2019-10-02T05:49:46Z" data-provider="data" finished-at="2019-10-02T05:51:26Z">
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="57673" started-at="2019-10-08T03:54:43Z" data-provider="data" finished-at="2019-10-08T03:55:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[allthegate]]>
+                <![CDATA[kftc]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_allthegate, ps_name=Payletter/AllTheGate CC, folder=Payletter AlltheGate, enable=1, ps_id=19, called_name=payletterallthegate, co_id=108, logo=allthegate_flag, shortcode=allthegate, co_name=Korea (Republic of)}]]>
+                <![CDATA[{p1=, ps_name=Payletter/KFTC Internet Banking, folder=Payletter KFTC Internet Banking, enable=1, ps_id=23, called_name=Payletter-KFTC-Internet-Banking, co_id=108, logo=, shortcode=kftc, co_name=Korea (Republic of)}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="54873" started-at="2019-10-08T03:55:41Z" data-provider="data" finished-at="2019-10-08T03:56:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ipay88]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=iPay88, folder=iPay88, enable=1, ps_id=54, called_name=iPay88, co_id=124, logo=, shortcode=ipay88, co_name=Malaysia}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52865" started-at="2019-10-08T03:56:36Z" data-provider="data" finished-at="2019-10-08T03:57:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dragonpay]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=DragonPay, folder=DragonPay, enable=1, ps_id=55, called_name=DragonPay, co_id=162, logo=, shortcode=dragonpay, co_name=Philippines}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="55273" started-at="2019-10-08T03:57:29Z" data-provider="data" finished-at="2019-10-08T03:58:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[btcolombia]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Payvalida/Bank Transfer Colombia, folder=Payvalida Bank Transfer Colombia, enable=1, ps_id=107, called_name=Payvalida-Bank-Transfer-Colombia, co_id=45, logo=, shortcode=btcolombia, co_name=Colombia}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="49319" started-at="2019-10-08T03:58:25Z" data-provider="data" finished-at="2019-10-08T03:59:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[btperu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Payvalida/Bank Transfer Peru, folder=Payvalida Bank Transfer Peru, enable=1, ps_id=115, called_name=Payvalida-Bank-Transfer-Peru, co_id=161, logo=, shortcode=btperu, co_name=Peru}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52308" started-at="2019-10-08T03:59:15Z" data-provider="data" finished-at="2019-10-08T04:00:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[banktransfermexico]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Astropay/Bank Transfer Mexico, folder=Astropay Bank Transfer Mexico, enable=1, ps_id=188, called_name=Astropay-Bank-Transfer-Mexico, co_id=132, logo=, shortcode=banktransfermexico, co_name=Mexico}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="54563" started-at="2019-10-08T04:00:07Z" data-provider="data" finished-at="2019-10-08T04:01:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[banktransferargentina]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Astropay/Bank Transfer Argentina, folder=Astropay Bank Transfer Argentina, enable=1, ps_id=248, called_name=Astropay-Bank-Transfer-Argentina, co_id=11, logo=, shortcode=banktransferargentina, co_name=Argentina}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="58918" started-at="2019-10-08T04:01:02Z" data-provider="data" finished-at="2019-10-08T04:02:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[btpoland]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Transferuj, folder=Transferuj, enable=1, ps_id=251, called_name=Transferuj, co_id=164, logo=, shortcode=btpoland, co_name=Poland}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52308" started-at="2019-10-08T04:02:01Z" data-provider="data" finished-at="2019-10-08T04:02:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[banktransfercn]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Umpay bank transfer, folder=Umpay bank transfer, enable=1, ps_id=275, called_name=Umpay-bank-transfer, co_id=44, logo=, shortcode=banktransfercn, co_name=China}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildLogoReport -->
+        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="51386" started-at="2019-10-08T04:02:54Z" data-provider="data" finished-at="2019-10-08T04:03:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sofortbt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=PPRO / Sofort Bank Transfer, folder=sofortbt, enable=1, ps_id=289, called_name=sofortbt, co_id=76, logo=, shortcode=sofortbt, co_name=Germany}]]>
               </value>
             </param>
           </params>

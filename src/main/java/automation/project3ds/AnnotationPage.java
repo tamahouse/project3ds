@@ -25,9 +25,11 @@ public static Driver driver;
 		return driver;
 	}
 	
-	static String p1 = "http://feature-wid-105.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=p1&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
-	static String t3 = "http://feature-wid-105.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%2887535%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=t3&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1&data%5Bcustom%5D%5Bversion%5D=1.2";
-	static String pw = "http://feature-wid-105.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=pw&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
+	public static String host = "http://develop.wallapi.bamboo.stuffio.com";
+	
+	static String p1 = AnnotationPage.WallapiUrl.host(host).widget("p1").isUidTimeline().isBrick16().generate();
+	static String t3 = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%2887535%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=t3&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1&data%5Bcustom%5D%5Bversion%5D=1.2";
+	static String pw = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall?_application_name=QA+Test+Project+-+Digital+Goods+%28%29%5B101280%5D&data%5Ba_id%5D=101280&data%5Bwidget%5D=pw&data%5Bco_id%5D=1&data%5Buid%5D=test_user_chase&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
 	
 	public static Map<String, String> hostMap = new HashMap<String, String>();
 	static {
@@ -41,18 +43,18 @@ public static Driver driver;
 	}
 	
 	public static class WallapiUrl{
-		String host = "http://develop.wallapi.bamboo.stuffio.com";
+		String host = AnnotationPage.host;
 		String a_id = "99894";
 		String widget = "p1";
 		String co_id = "1";
-		String uid = "000000";
+		String uid = "218069";
 		Boolean isCustom = true;
 		Boolean isDark = false;
 		Boolean isBrick16 = false;
 		
 		String prefix = "&data%5B";
 		String suffix = "%5D=";
-		String custom = "&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=";
+		String custom = "";
 		String brick_1_6 = "";
 		String theme = "";
 		String version = "";
@@ -67,6 +69,11 @@ public static Driver driver;
 		public static WallapiUrl host(String host) {
 			WallapiUrl url = new WallapiUrl();
 			url.host = host;
+			return url;
+		}
+		
+		public static WallapiUrl host() {
+			WallapiUrl url = new WallapiUrl();
 			return url;
 		}
 		
@@ -103,26 +110,25 @@ public static Driver driver;
 			return this;
 		}
 		
-		public WallapiUrl isCustom(Boolean isCustom) {
-			if(isCustom == false) {
-				custom = "";
-			}
+		public WallapiUrl isCustom() {
+				custom = "&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=";
 			return this;
 		}
 		
-		public WallapiUrl isDark(Boolean isDark) {
-			if(isDark == true) {
+		public WallapiUrl isDark() {
 				theme = "&data%5Bcustom%5D%5Btheme%5D=dark";
-			}
 			return this;
 		}
 		
-		public WallapiUrl isBrick16(Boolean isBrick16) {
-			if(isBrick16 == true) {
+		public WallapiUrl isBrick16() {
 				brick_1_6 = "&data%5Bcustom%5D%5Bbrick_1_6%5D=1";
-			}
 			return this;
 		}
+		
+		public WallapiUrl isUidTimeline() {
+			uid = Driver.timestamp();
+		return this;
+	}
 		
 		public String generate() {
 			String h = this.host + "/admin/test-offerwall?";

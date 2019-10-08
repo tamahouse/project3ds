@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 
 public class WidgetMulti {
 	
+	private static By buyBtn = By.id("ps_psb");
+	private static By thankyou = By.xpath("//h3[text()='Thank you for your purchase!']");
+	
 	public static void get(String host) {
 		Driver driver = AnnotationPage.getDriver();
 		driver.get(host);
@@ -17,6 +20,10 @@ public class WidgetMulti {
 		driver.switchTo().frame(iframe.getWebElement());
 		return driver;
 	}
+	
+	public static Boolean getCompleteMessage() {
+		return getFrame().isExist(thankyou);
+}
 
 	public static String getLogoUrl(String shortcode) throws Exception {
 		String url = null;
@@ -30,6 +37,11 @@ public class WidgetMulti {
 		url = url.substring(5, url.indexOf(".png") + 4);
 
 		return url;
+	}
+	
+	public static void clickBuyButton() throws Exception {
+		getFrame().getElement(buyBtn, 5000).click();
+
 	}
 
 	public static void clickPaymentMethod(String shortcode) throws Exception {

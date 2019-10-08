@@ -1,6 +1,7 @@
 package automation.project3ds;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -27,6 +28,7 @@ public class WidgetIframecc {
 	static String zip = "32043";
 
 //	By img = By.xpath("//*[@data-card-name = 'mastercard' ]");
+	private static By brick = By.id("brick");
 	private static By cardHolderInput = By.id("brick-cardholder");
 //	private static By cardNumberContainer = By.id("brick-card-number");
 	private static By cardNumberInput = By.id("input");
@@ -53,6 +55,9 @@ public class WidgetIframecc {
 	public static By zipTxb = By.xpath("//div[contains(@class, 'is-active')]//div[@class='brick-form-row']/div/div[./descendant::*[contains(text(),'ZIP')]]");
 	public static By emailTxb = By.xpath("//div[contains(@class, 'is-active')]//div[@class='brick-form-row']/div/div[./descendant::*[contains(text(),'Email')]]");
 	
+	static By textboxList = By.xpath("//div[contains(@class, 'is-active')]//div[@class='brick-form-row']/div/div");
+	
+	
 	public static Driver getFrame() {
 		Driver driver = AnnotationPage.getDriver();
 		driver.switchTo().defaultContent();
@@ -60,10 +65,43 @@ public class WidgetIframecc {
 		driver.switchTo().frame(iframe.getWebElement());
 		iframe = driver.getElement(By.id("iframecc"));
 		driver.switchTo().frame(iframe.getWebElement());
+		driver.getElement(brick);
 		return driver;
 	}
 	
-	public static WidgetIframecc replace(String key, String value) {
+	
+	public static List<Element> getTextboxList(){
+		getFrame().getElement(cardHolderInput);
+		List<Element> list = getFrame().getElements(textboxList);
+		return list;
+	}
+	
+	public static void clickWhiteSpace() {
+		Element element = getFrame().getElement(white);
+		element.click();
+	}
+	
+	public static String getErrorMessage(Element textbox) {
+		Element label = textbox.getElement(By.xpath("./*[text()][1]"));
+		String labelText = label.getText();
+		String eText = null;
+		if (labelText.contains("Name on card")) {
+			eText = "Please enter your name on the card";
+		}else if(labelText.contains("Card number")) {
+			eText = "Please enter your card number";
+		}else if(labelText.contains("Expiration date")) {
+			eText = "Please enter an expiry date";
+		}else if(labelText.contains("CVV")) {
+			eText = "Please enter CVV code";
+		}else if(labelText.contains("ZIP / Postal code")) {
+			eText = "Please enter ZIP code";
+		}else if(labelText.contains("Email")) {
+			eText = "Please enter a valid email address";
+		}
+		return eText;
+	}
+	
+	public static WidgetIframecc payment(String key, String value) {
 		map.put(key, value);
 		return new WidgetIframecc();
 	}

@@ -13,7 +13,7 @@ public class Assertion {
 	public static String BORDER_GREEN = "rgb(102, 199, 0) #66c700";
 	public static String BACKGROUND_WHITE = "rgba(255, 255, 255, 1)";
 	public static String TEXT_GREY = "rgba(51, 51, 51, 0.5)";
-	
+
 	public static Status status = Status.PASS;
 
 	public static void end() {
@@ -35,37 +35,19 @@ public class Assertion {
 		return assertion;
 	}
 
-	public static void isInvalid(Element element, String eErrorText) throws Exception {
-		ExtentManager.addScreenshot("isInvalid");
+	public static void assertErrorText(Element element) throws Exception {
 		String title = element.getText().replace("\n", "");
 		String assertTitle = "[" + title + "]";
-//		String border = element.getCssValue("border-color");
-//		String background = element.getCssValue("background-color");
-//		Element label = element.getElement(By.xpath("./*[text()][1]"));
-//		String labelColor = label.getCssValue("color");
-//		String eBorder = BORDER_RED ;
-//		String eBackground = BACKGROUND_RED;
-//		String eLabelColor = TEXT_RED;
 		String errorText = "";
-		if (eErrorText != null) {
-			try {
+		try {
 			Element error = element
 					.getElement(By.xpath("./following-sibling::*[contains(@class,'brick-errors')]/*[text()]"));
 			errorText = error.getText();
-			}catch(Exception e) {
-			}
-//		String errorColor = error.getCssValue("color");
-			
-//		get().assertEquals(errorColor, TEXT_RED, assertTitle+"[ErrorTextColor]");
-			get().assertEquals(errorText, eErrorText, assertTitle + "[ErrorTextValue]");
+		} catch (Exception e) {
 		}
-//		get().assertBeContains(border, eBorder, assertTitle+"[BorderColor]");
-//		get().assertEquals(background, eBackground, assertTitle+"[BackgroundColor]");
-//		get().assertEquals(labelColor, eLabelColor, assertTitle+"[LabelColor]");
-	}
+		String eErrorText = WidgetIframecc.getErrorMessage(element);
+		get().assertEquals(errorText, eErrorText, assertTitle + "[ErrorTextValue]");
 
-	public static void isInvalid(Element element) throws Exception {
-		isInvalid(element, null);
 	}
 
 	public static void isFormError(Element formError, String value) throws Exception {
@@ -82,21 +64,7 @@ public class Assertion {
 		get().assertEquals(textValue, value, "[Text value]");
 	}
 
-	public static void isValid(Element element) throws Exception {
-		ExtentManager.addScreenshot("isValid");
-//		String title = element.getText();
-//		String assertTitle = "[" + title + "]";
-//		String border = element.getCssValue("border-color");
-//		String background = element.getCssValue("background-color");
-//		Element label = element.getElement(By.xpath("./*[text()][1]"));
-//		String labelColor = label.getCssValue("color");
-//		String eBorder = BORDER_GREEN ;
-//		String eBackground = BACKGROUND_WHITE;
-//		String eLabelColor = TEXT_GREY;
-//		get().assertBeContains(border, eBorder, assertTitle+"[BorderColor]");
-//		get().assertEquals(background, eBackground, assertTitle+"[BackgroundColor]");
-//		get().assertEquals(labelColor, eLabelColor, assertTitle+"[LabelColor]");
-	}
+
 
 	public static void isError(String title, String color) {
 		get().assertEquals(color, Assertion.TEXT_RED, title);

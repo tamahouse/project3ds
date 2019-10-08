@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="logo.Logo">
+      <class name="p1.Case39_40_WidgetBrick_1v6_Test_3ds">
         <methods>
-          <include name="buildLogoReport" invocation-numbers="0 1"/>
+          <include name="optional3ds_on"/>
+          <include name="optional3ds_off"/>
+          <include name="failedOTP"/>
+          <include name="no3ds_on"/>
+          <include name="no3ds_off"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- logo.Logo -->
+      </class> <!-- p1.Case39_40_WidgetBrick_1v6_Test_3ds -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

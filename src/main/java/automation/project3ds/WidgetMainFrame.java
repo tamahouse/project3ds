@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 
 public class WidgetMainFrame {
 
-	private static By buyBtn = By.id("ps_psb");
-	private static By thankyou = By.xpath("//h3[text()='Thank you for your purchase!']");
+	
+	
 	private static By thankyou2 = By.xpath("//h2[text()='Transaction was successful']");
 	private static By privacyPolicy = By.xpath("//*[contains(@class,'footer_copy_and_privacy')]/a");
 	private static By paymentMethodContainer = By.id("pay_methods_container");
@@ -154,21 +154,15 @@ public class WidgetMainFrame {
 		getFrame().getElement(privacyPolicy).click();
 	}
 
-	public static void clickBuyButton(String type) throws Exception {
-		if (type.equals("p1")) {
-			getFrame().getElement(buyBtn, 5000).click();
-		}
-		Thread.sleep(3000);
 
-	}
 
-	public static Boolean getCompleteMessage(String type) {
-		if (type.equals("p1")) {
-			return getFrame().isExist(thankyou);
-		} else {
-			return getFrame().isExist(thankyou2);
-		}
-	}
+//	public static Boolean getCompleteMessage(String type) {
+//		if (type.equals("p1")) {
+//			return getFrame().isExist(thankyou);
+//		} else {
+//			return getFrame().isExist(thankyou2);
+//		}
+//	}
 
 //	public static void clickProcessButton() {
 //		getFrame().getElement(processBtn).click();

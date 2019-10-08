@@ -50,7 +50,7 @@ public class Logo {
 
 	Driver driver;
 
-	String branch = "http://feature-pwl-2001.wallapi.bamboo.stuffio.com";
+	String branch = "http://feature-pwl-2014.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(branch).generate();
 
 	private List<Map<String, String>> importData() throws Exception {
@@ -209,7 +209,7 @@ public class Logo {
 	private Map<String, BufferedImage> checkMulti(Map<String, BufferedImage> map, String shortcode, String co_id,
 			String a_id) throws Exception {
 		try {
-			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p1").co_id(co_id).generate();
+			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p1").co_id(co_id).isCustom().generate();
 			WidgetMulti.get(host);
 			String imageUrl = WidgetMulti.getLogoUrl(shortcode);
 			ExtentManager.addScreenshot("multi p1");
@@ -225,7 +225,7 @@ public class Logo {
 		}
 
 		try {
-			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p10").co_id(co_id).generate();
+			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p10").co_id(co_id).isCustom().generate();
 			WidgetMulti.get(host);
 			String imageUrl = WidgetMulti.getLogoUrl(shortcode);
 			ExtentManager.addScreenshot("multi p10");
@@ -246,7 +246,7 @@ public class Logo {
 			String a_id) throws Exception {
 
 		try {
-			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).uni(shortcode).co_id(co_id).generate();
+			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).uni(shortcode).co_id(co_id).isCustom().generate();
 			WidgetUni.get(host);
 			String imageUrl = WidgetUni.getLogoUrl(shortcode);
 			ExtentManager.addScreenshot("uni");
@@ -296,7 +296,7 @@ public class Logo {
 		try {
 
 			if (name.contains("light2")) {
-				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().generate();
+				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom().generate();
 				WidgetTerminal.get(hostTerminal);
 				Thread.sleep(2000);
 				WidgetTerminal.clickPaymentMethod(shortcode, logo);
@@ -304,7 +304,7 @@ public class Logo {
 				WidgetTerminal.getFrame().getElement(By.xpath("//img[@src='" + branch + hostName.get(name) + "']"));
 				ExtentManager.addScreenshot(name);
 			} else if (name.contains("dark2")) {
-				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isDark(true).generate();
+				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isDark().isCustom().generate();
 				WidgetTerminal.get(hostTerminal);
 				Thread.sleep(2000);
 				WidgetTerminal.clickPaymentMethod(shortcode, logo);
@@ -436,7 +436,7 @@ public class Logo {
 					logoMap.put("v5", file);
 				} else if (name.contains("@2x")) {
 					String sublast2 = name.substring(name.length() - 5, name.length() - 3);
-					if (!sublast2.equals("-d")) {
+					if (!sublast2.equals("-d")&& !sublast2.equals("_d")) {
 						logoMap.put("light2", file);
 						if (!logo.equals("")) {
 							logoMap.put("light2Logo", file);
@@ -449,7 +449,7 @@ public class Logo {
 					}
 				} else if (name.contains("@3x")) {
 					String sublast2 = name.substring(name.length() - 5, name.length() - 3);
-					if (!sublast2.equals("-d")) {
+					if (!sublast2.equals("-d") && !sublast2.equals("_d")) {
 						logoMap.put("light3", file);
 						if (!logo.equals("")) {
 							logoMap.put("light3Logo", file);
@@ -463,7 +463,7 @@ public class Logo {
 				} else if (name.contains("ps") && !name.contains("pm") && !name.contains("big")
 						&& !name.contains("merchantareav5") && !name.contains("@2x") && !name.contains("@3x")) {
 					String sublast2 = name.substring(name.length() - 2, name.length());
-					if (sublast2.equals("-d") || name.contains("-d ")) {
+					if (sublast2.equals("-d") || name.contains("-d ") || sublast2.equals("_d") || name.contains("_d ")) {
 						logoMap.put("dark", file);
 						if (!logo.equals("")) {
 							logoMap.put("darkLogo", file);
@@ -478,6 +478,21 @@ public class Logo {
 					logoMap.put("multi", file);
 				} else if (name.contains("v5")) {
 					logoMap.put("v5", file);
+					
+					
+					
+				} else if (name.contains("_d@2x")) {
+					logoMap.put("dark2", file);
+				} else if (name.contains("_d@3x")) {
+					logoMap.put("dark3", file);
+				} else if (name.contains("@2x")) {
+					logoMap.put("light2", file);
+				} else if (name.contains("@3x")) {
+					logoMap.put("light3", file);
+				} else if (name.contains("_d")) {
+					logoMap.put("dark", file);
+				} else if (!name.contains("_d")) {
+					logoMap.put("light", file);
 				} else {
 					Assertion.get().assertEquals(name, "name", "[NotInType]");
 				}

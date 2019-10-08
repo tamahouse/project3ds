@@ -8,7 +8,7 @@
     <classes>
       <class name="logo.Logo">
         <methods>
-          <include name="buildLogoReport" invocation-numbers="0 1"/>
+          <include name="buildLogoReport" invocation-numbers="2"/>
         </methods>
       </class> <!-- logo.Logo -->
     </classes>

@@ -20,9 +20,10 @@ public class WidgetTerminal {
 
 
 	public static void clickPaymentMethod(String shortcode, String logo) throws Exception {
+		String by = "//*[./img[contains(@src,'"+shortcode+"') and contains(@src,'"+logo+"')]]";
 		for (int i = 0; i < 20; i++) {
 			try {
-				Element element = getFrame().getElement(By.xpath("//*[@data-id='"+shortcode+"' or @data-id='"+logo+"']"));
+				Element element = getFrame().getElement(By.xpath(by));
 				element.click();
 				i = 500;
 			} catch (Exception e) {

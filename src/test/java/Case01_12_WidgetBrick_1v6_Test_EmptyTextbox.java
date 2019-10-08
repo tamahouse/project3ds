@@ -16,16 +16,13 @@ import automation.project3ds.WidgetMainFrame;
 
 public class Case01_12_WidgetBrick_1v6_Test_EmptyTextbox {
 
-	String host;
-	String type;
-	
+	String host = AnnotationPage.hostMap.get("p1");
+
 	static Driver driver;
 
-	@Parameters({"type"})
+
 	@BeforeClass
-	public void setUp(String type) throws Exception {
-		this.type = type;
-		host = AnnotationPage.hostMap.get(type);
+	public void setUp() throws Exception {
 		Login.login(host);
 	}
 

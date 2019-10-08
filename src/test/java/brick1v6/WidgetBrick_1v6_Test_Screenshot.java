@@ -17,6 +17,7 @@ import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
 import automation.project3ds.MyTunnel;
 import automation.project3ds.WidgetMainFrame;
+import automation.project3ds.WidgetMulti;
 
 public class WidgetBrick_1v6_Test_Screenshot {
 
@@ -57,7 +58,7 @@ public class WidgetBrick_1v6_Test_Screenshot {
 			WidgetMainFrame.waitSpinner();
 			try {
 			WidgetMainFrame.clickPaymentMethod(type,paymentMethod);
-			WidgetMainFrame.clickBuyButton(type);
+			WidgetMulti.clickBuyButton();
 			}catch (Exception e) {
 				
 			}

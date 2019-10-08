@@ -30,7 +30,7 @@ public class Aa {
 	
 	@Test
 	public void makePayment() throws Exception {
-		String url = AnnotationPage.WallapiUrl.host(host).widget("t3").isDark(false).isBrick16(false).generate();
+		String url = AnnotationPage.WallapiUrl.host(host).widget("t3").isDark().isBrick16().generate();
 		System.out.println(url);
 	}
 	

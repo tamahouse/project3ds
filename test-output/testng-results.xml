@@ -1,189 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="665973" started-at="2019-10-08T03:52:40Z" finished-at="2019-10-08T04:03:45Z">
+  <suite name="Default suite" duration-ms="93359" started-at="2019-10-08T04:17:20Z" finished-at="2019-10-08T04:18:54Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="665973" started-at="2019-10-08T03:52:40Z" finished-at="2019-10-08T04:03:45Z">
-      <class name="logo.Logo">
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="93299" started-at="2019-10-08T03:53:08Z" data-provider="data" finished-at="2019-10-08T03:54:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[btfinland]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=PPRO/Bank Transfer Finland, folder=PPRO Bank Transfer Finland, enable=1, ps_id=6, called_name=PPRO-Bank-Transfer-Finland, co_id=70, logo=btfinland, shortcode=btfinland, co_name=Finland}]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="93359" started-at="2019-10-08T04:17:20Z" finished-at="2019-10-08T04:18:54Z">
+      <class name="p1.Case41_42_WidgetBrick_1v6_Test_Error">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="setUp" is-config="true" duration-ms="22358" started-at="2019-10-08T04:17:20Z" finished-at="2019-10-08T04:17:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="57673" started-at="2019-10-08T03:54:43Z" data-provider="data" finished-at="2019-10-08T03:55:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kftc]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Payletter/KFTC Internet Banking, folder=Payletter KFTC Internet Banking, enable=1, ps_id=23, called_name=Payletter-KFTC-Internet-Banking, co_id=108, logo=, shortcode=kftc, co_name=Korea (Republic of)}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openBrick()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="openBrick" is-config="true" duration-ms="18955" started-at="2019-10-08T04:17:43Z" finished-at="2019-10-08T04:18:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="54873" started-at="2019-10-08T03:55:41Z" data-provider="data" finished-at="2019-10-08T03:56:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ipay88]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=iPay88, folder=iPay88, enable=1, ps_id=54, called_name=iPay88, co_id=124, logo=, shortcode=ipay88, co_name=Malaysia}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- openBrick -->
+        <test-method status="FAIL" signature="authorizationFailed()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="authorizationFailed" duration-ms="35719" started-at="2019-10-08T04:18:02Z" finished-at="2019-10-08T04:18:37Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='brick-form-errors has-errors'][./following-sibling::*[./*[contains(@class,'brick-step-form') and contains(@class,'is-active')]]]"}
+  (Session info: chrome=77.0.3865.90)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PW-HAN-063', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\chase\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51054}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 77.0.3865.90, webStorageEnabled: true}
+Session ID: 0a237ee561108ec2209f1b75103ba3ab
+*** Element info: {Using=xpath, value=//*[@class='brick-form-errors has-errors'][./following-sibling::*[./*[contains(@class,'brick-step-form') and contains(@class,'is-active')]]]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='brick-form-errors has-errors'][./following-sibling::*[./*[contains(@class,'brick-step-form') and contains(@class,'is-active')]]]"}
+  (Session info: chrome=77.0.3865.90)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PW-HAN-063', ip: '192.168.10.136', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\chase\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51054}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 77.0.3865.90, webStorageEnabled: true}
+Session ID: 0a237ee561108ec2209f1b75103ba3ab
+*** Element info: {Using=xpath, value=//*[@class='brick-form-errors has-errors'][./following-sibling::*[./*[contains(@class,'brick-step-form') and contains(@class,'is-active')]]]}
+at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at automation.project3ds.Driver.getElement(Driver.java:240)
+at automation.project3ds.Driver.getElement(Driver.java:244)
+at automation.project3ds.WidgetIframecc.getFormError(WidgetIframecc.java:136)
+at p1.Case41_42_WidgetBrick_1v6_Test_Error.authorizationFailed(Case41_42_WidgetBrick_1v6_Test_Error.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52865" started-at="2019-10-08T03:56:36Z" data-provider="data" finished-at="2019-10-08T03:57:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dragonpay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=DragonPay, folder=DragonPay, enable=1, ps_id=55, called_name=DragonPay, co_id=162, logo=, shortcode=dragonpay, co_name=Philippines}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- authorizationFailed -->
+        <test-method status="PASS" signature="openBrick()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="openBrick" is-config="true" duration-ms="4389" started-at="2019-10-08T04:18:37Z" finished-at="2019-10-08T04:18:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="55273" started-at="2019-10-08T03:57:29Z" data-provider="data" finished-at="2019-10-08T03:58:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[btcolombia]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Payvalida/Bank Transfer Colombia, folder=Payvalida Bank Transfer Colombia, enable=1, ps_id=107, called_name=Payvalida-Bank-Transfer-Colombia, co_id=45, logo=, shortcode=btcolombia, co_name=Colombia}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- openBrick -->
+        <test-method status="PASS" signature="captureFailed()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="captureFailed" duration-ms="10965" started-at="2019-10-08T04:18:42Z" finished-at="2019-10-08T04:18:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="49319" started-at="2019-10-08T03:58:25Z" data-provider="data" finished-at="2019-10-08T03:59:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[btperu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Payvalida/Bank Transfer Peru, folder=Payvalida Bank Transfer Peru, enable=1, ps_id=115, called_name=Payvalida-Bank-Transfer-Peru, co_id=161, logo=, shortcode=btperu, co_name=Peru}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- captureFailed -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:p1.Case41_42_WidgetBrick_1v6_Test_Error@f6c48ac]" name="tearDown" is-config="true" duration-ms="938" started-at="2019-10-08T04:18:53Z" finished-at="2019-10-08T04:18:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52308" started-at="2019-10-08T03:59:15Z" data-provider="data" finished-at="2019-10-08T04:00:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[banktransfermexico]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Astropay/Bank Transfer Mexico, folder=Astropay Bank Transfer Mexico, enable=1, ps_id=188, called_name=Astropay-Bank-Transfer-Mexico, co_id=132, logo=, shortcode=banktransfermexico, co_name=Mexico}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="54563" started-at="2019-10-08T04:00:07Z" data-provider="data" finished-at="2019-10-08T04:01:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[banktransferargentina]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Astropay/Bank Transfer Argentina, folder=Astropay Bank Transfer Argentina, enable=1, ps_id=248, called_name=Astropay-Bank-Transfer-Argentina, co_id=11, logo=, shortcode=banktransferargentina, co_name=Argentina}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="58918" started-at="2019-10-08T04:01:02Z" data-provider="data" finished-at="2019-10-08T04:02:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[btpoland]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Transferuj, folder=Transferuj, enable=1, ps_id=251, called_name=Transferuj, co_id=164, logo=, shortcode=btpoland, co_name=Poland}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="52308" started-at="2019-10-08T04:02:01Z" data-provider="data" finished-at="2019-10-08T04:02:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[banktransfercn]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Umpay bank transfer, folder=Umpay bank transfer, enable=1, ps_id=275, called_name=Umpay-bank-transfer, co_id=44, logo=, shortcode=banktransfercn, co_name=China}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-        <test-method status="PASS" signature="buildLogoReport(java.lang.String, java.util.Map)[pri:0, instance:logo.Logo@548e7350]" name="buildLogoReport" duration-ms="51386" started-at="2019-10-08T04:02:54Z" data-provider="data" finished-at="2019-10-08T04:03:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sofortbt]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=PPRO / Sofort Bank Transfer, folder=sofortbt, enable=1, ps_id=289, called_name=sofortbt, co_id=76, logo=, shortcode=sofortbt, co_name=Germany}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buildLogoReport -->
-      </class> <!-- logo.Logo -->
-    </test> <!-- Logo -->
-  </suite> <!-- Logo -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- p1.Case41_42_WidgetBrick_1v6_Test_Error -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

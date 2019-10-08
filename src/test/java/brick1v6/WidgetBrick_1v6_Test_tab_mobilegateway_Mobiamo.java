@@ -16,6 +16,7 @@ import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.Login;
 import automation.project3ds.WidgetMainFrame;
+import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPaymentMethods;
 
 public class WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo {
@@ -52,7 +53,7 @@ public class WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.setPin();
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.clickContinue();
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.getSuccessBlock();
@@ -63,7 +64,7 @@ public class WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.setPin("ANYOTHER");
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.clickContinue();
 		Element error = WidgetPaymentMethods.tab_mobilegateway_Mobiamo.getPinErrorMessage();
@@ -94,7 +95,7 @@ public class WidgetBrick_1v6_Test_tab_mobilegateway_Mobiamo {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_mobilegateway_Mobiamo.clickTerm();
 		List<String> list = driver.waitForNewTab();
 		driver.switchToWindows("test-offerwall", false);

@@ -17,6 +17,7 @@ import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.Login;
 import automation.project3ds.WidgetMainFrame;
+import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPaymentMethods;
 
 public class WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint {
@@ -84,7 +85,7 @@ public class WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_epinpaymentsystem_Mint.clickBuyMint();
 		List<String> list = driver.waitForNewTab();
 		driver.switchToWindows("test-offerwall", false);
@@ -107,7 +108,7 @@ public class WidgetBrick_1v6_Test_tab_epinpaymentsystem_Mint {
 		if(priceValue.substring(priceValue.length()-1).equals("0")) {
 			priceValue = priceValue.substring(0, priceValue.length()-1);
 		}
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		String displayAmount = WidgetPaymentMethods.tab_epinpaymentsystem_Mint.getDisplayAmount();
 		Assertion.get().assertContains(displayAmount, "EUR", "[Currency]");
 		Assertion.get().assertContains(displayAmount, priceValue, "[priceValue]");

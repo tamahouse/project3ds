@@ -15,6 +15,7 @@ import automation.project3ds.AnnotationPage;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
 import automation.project3ds.WidgetMainFrame;
+import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPaymentMethods;
 
 public class WidgetBrick_1v6_Test_tab_idealpayments_Ideal {
@@ -51,13 +52,13 @@ public class WidgetBrick_1v6_Test_tab_idealpayments_Ideal {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		List<String> banks = WidgetPaymentMethods.tab_idealpayments_Ideal.getListBankIds();
 		Random random = new Random();
 		String bank = banks.get(random.nextInt(banks.size()));
 		WidgetPaymentMethods.tab_idealpayments_Ideal.clickBank(bank);
 		WidgetPaymentMethods.tab_idealpayments_Ideal.finishPaymentStep();
-		WidgetMainFrame.getCompleteMessage(type);
+//		WidgetMainFrame.getCompleteMessage(type);
 	}
 
 }

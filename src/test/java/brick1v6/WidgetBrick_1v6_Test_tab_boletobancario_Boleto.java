@@ -12,6 +12,7 @@ import automation.project3ds.AnnotationPage;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
 import automation.project3ds.WidgetMainFrame;
+import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPaymentMethods;
 
 public class WidgetBrick_1v6_Test_tab_boletobancario_Boleto {
@@ -49,7 +50,7 @@ public class WidgetBrick_1v6_Test_tab_boletobancario_Boleto {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_boletobancario_Boleto.createPersonalPayment();
 		WidgetPaymentMethods.tab_boletobancario_Boleto.getPrintButton();
 	}
@@ -59,7 +60,7 @@ public class WidgetBrick_1v6_Test_tab_boletobancario_Boleto {
 		driver = AnnotationPage.getDriver();
 		driver.get(host);
 		WidgetMainFrame.clickPaymentMethod(type,id);
-		WidgetMainFrame.clickBuyButton(type);
+		WidgetMulti.clickBuyButton();
 		WidgetPaymentMethods.tab_boletobancario_Boleto.createBussinessPayment();
 		WidgetPaymentMethods.tab_boletobancario_Boleto.getPrintButton();
 	}

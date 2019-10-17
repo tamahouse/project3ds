@@ -15,6 +15,7 @@ import automation.project3ds.Z2.ResponseLookup;
 
 public class Action {
 	
+	
 	public static void assertResult(String t_id, Map<String, String> map) throws Exception {
 		String finalEciFlag = null;
 		String finalEnrolled = null;
@@ -325,12 +326,11 @@ public class Action {
 		return mapList;
 	}
 	
-	public static List<Map<String, String>> getTestData(String filePath) throws Exception{
+	public static List<Map<String, String>> getTestData(String filePath, String sheetName) throws Exception{
 		Fillo fillo = new Fillo();
 		Connection connection = fillo.getConnection(filePath);
-		Recordset record = connection.executeQuery("SELECT * FROM data where Enable = '1'");
+		Recordset record = connection.executeQuery("SELECT * FROM "+sheetName);
 		List<Map<String, String>> mapList = new ArrayList<Map<String, String>>();
-			
 			List <String> fieldNames = record.getFieldNames();
 			while (record.next()) {
 				Map<String, String> map = new HashMap<String, String>();

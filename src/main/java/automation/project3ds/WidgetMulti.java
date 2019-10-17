@@ -1,5 +1,7 @@
 package automation.project3ds;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 
 public class WidgetMulti {
@@ -37,6 +39,14 @@ public class WidgetMulti {
 		url = url.substring(5, url.indexOf(".png") + 4);
 
 		return url;
+	}
+	
+	public static void clickPrice(int index) {
+		By byprice = By.xpath("//*[@id='ps_price']//tr");
+		getFrame().getElement(byprice);
+		List<Element> list = getFrame().getElements(byprice);
+		Element element = list.get(index);
+		element.click();
 	}
 	
 	public static void clickBuyButton() throws Exception {

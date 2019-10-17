@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="p1.Case41_42_WidgetBrick_1v6_Test_Error">
+      <class name="PS_ccbrazil_Test_3dsON">
         <methods>
-          <include name="openBrick"/>
           <include name="tearDown"/>
+          <include name="openBrick"/>
           <include name="setUp"/>
-          <include name="authorizationFailed"/>
+          <include name="execute"/>
         </methods>
-      </class> <!-- p1.Case41_42_WidgetBrick_1v6_Test_Error -->
+      </class> <!-- PS_ccbrazil_Test_3dsON -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

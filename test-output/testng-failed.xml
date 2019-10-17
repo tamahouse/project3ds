@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Logo]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="Logo(failed)">
     <classes>
-      <class name="p1.Case41_42_WidgetBrick_1v6_Test_Error">
+      <class name="logo.Logo">
         <methods>
-          <include name="openBrick"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="authorizationFailed"/>
+          <include name="buildLogoReport" invocation-numbers="0"/>
         </methods>
-      </class> <!-- p1.Case41_42_WidgetBrick_1v6_Test_Error -->
+      </class> <!-- logo.Logo -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Logo(failed) -->
+</suite> <!-- Failed suite [Logo] -->

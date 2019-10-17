@@ -16,6 +16,8 @@ public class WidgetMainFrame {
 	private static By mobiamoTab = By.id("tab_mobilegateway");
 	private static By redirectMessage = By.id("ps_new_window_popup");
 	private static By price = By.xpath("//tr[contains(@id,'price_')]");
+	
+	private static By thankyou = By.xpath("//*[@class='thankyou_widget']");
 
 	public static Driver getFrame() {
 		Driver driver = AnnotationPage.getDriver();
@@ -24,6 +26,10 @@ public class WidgetMainFrame {
 		iframe.moveToTopView();
 		driver.switchTo().frame(iframe.getWebElement());
 		return driver;
+	}
+	
+	public static void waitForThankYou() {
+		getFrame().getElement(thankyou,30000);
 	}
 
 	public static List<Element> getPrices() {

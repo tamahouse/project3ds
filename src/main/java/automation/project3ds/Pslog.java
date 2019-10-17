@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Pslog {
 	
 	static MyTunnel tunnel;
+	public static String pagseguro_id;
 
 	private static Statement getStatement() throws Exception {
 		if(tunnel == null || tunnel.isWorking() == false) {
@@ -67,6 +68,14 @@ public class Pslog {
 		ResultSet resultSet = getStatement().executeQuery(query);
 		resultSet.next();
 		String cl_id = resultSet.getString("cl_id");
+		try {
+		String log_data = resultSet.getString("log_data");
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode jsonNode = mapper.readTree(log_data);
+		pagseguro_id = jsonNode.path("instructions").path("form_params").path("code").asText();
+		}catch(Exception e) {
+			
+		}
 		return cl_id;
 	}
 	

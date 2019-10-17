@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [pagseguroSuite]">
+  <listeners>
+    <listener class-name="automation.project3ds.ExtentListener"/>
+  </listeners>
+  <test thread-count="5" name="pagseguro(failed)">
+    <classes>
+      <class name="PS_Pagseguro_Test">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="execute" invocation-numbers="3"/>
+        </methods>
+      </class> <!-- PS_Pagseguro_Test -->
+    </classes>
+  </test> <!-- pagseguro(failed) -->
+</suite> <!-- Failed suite [pagseguroSuite] -->

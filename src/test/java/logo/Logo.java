@@ -37,7 +37,7 @@ import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
-import automation.project3ds.Wallapi;
+import automation.project3ds.DBWallapi;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetTerminal;
@@ -50,7 +50,7 @@ public class Logo {
 
 	Driver driver;
 
-	String branch = "http://feature-pwl-2014.wallapi.bamboo.stuffio.com";
+	String branch = "http://feature-pwl-2033.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(branch).generate();
 
 	private List<Map<String, String>> importData() throws Exception {
@@ -428,7 +428,8 @@ public class Logo {
 						logoMap.put("dark3Logo", file);
 					}
 				} else if (name.contains("pm") && !name.contains("big") && !name.contains("merchantareav5")
-						&& !name.contains("@2x") && !name.contains("@3x")) {
+						&& !name.contains("@2x") && !name.contains("@3x")&& !name.contains("ps")
+						&& !name.contains("ma5")) {
 					logoMap.put("multi", file);
 				} else if (name.contains("big")) {
 					logoMap.put("uni", file);
@@ -480,7 +481,8 @@ public class Logo {
 					logoMap.put("v5", file);
 					
 					
-					
+				} else if (name.contains("ma5")) {
+					logoMap.put("v5", file);
 				} else if (name.contains("_d@2x")) {
 					logoMap.put("dark2", file);
 				} else if (name.contains("_d@3x")) {
@@ -532,7 +534,7 @@ public class Logo {
 	private void printCountryTable() throws Exception {
 
 		String project_id = "99894";
-		List<Map<String, String>> countryByPs = Wallapi.getCountryByPSID(project_id);
+		List<Map<String, String>> countryByPs = DBWallapi.getCountryByPSID(project_id);
 		List<Map<String, String>> psname = this.importData();
 		for (Map<String, String> excel : psname) {
 			Boolean x = false;

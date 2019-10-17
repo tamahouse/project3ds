@@ -134,7 +134,7 @@ public class Element implements WebElement{
 	}
 	
 	public void clickJS() {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver.getWebDriver();
 		executor.executeScript("arguments[0].click();", element);
 	}
 	

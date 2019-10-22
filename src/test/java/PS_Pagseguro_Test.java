@@ -85,7 +85,7 @@ public class PS_Pagseguro_Test {
 		}
 		this.openPS();
 		PS_Pagseguro.createPayment();
-		String transactionCode = PS_Pagseguro2.createBoletoPayment();
+		String transactionCode = PS_Pagseguro2.createCreditCardPayment();
 		for(int i=0; i< steps.size(); i++) {
 			String step = steps.get(i);
 			PS_Pagseguro_API.setStatus(transactionCode, step);

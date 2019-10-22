@@ -1,6 +1,7 @@
 package automation.project3ds;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 public class Widget3dsPolk {
 
@@ -13,8 +14,17 @@ public class Widget3dsPolk {
 	}
 	
 	public void clickSubmit() {
-		Element element = driver.getElement(submitButton);
-		element.click();
+		Element element = driver.getElement(submitButton,60000);
+		AnnotationPage.sleep(1000);
+		element.highlight();
+		element.clickJS();
+		AnnotationPage.sleep(1000);
+		try {
+			driver.switchTo().alert().accept();
+			AnnotationPage.sleep(1000);
+		}catch(Exception ignore) {
+			
+		}
 	}
 	
 }

@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PS_ccbrazil_Test_3dsON">
+      <class name="logo.LogoLatestNaming">
         <methods>
-          <include name="tearDown"/>
-          <include name="openBrick"/>
-          <include name="setUp"/>
-          <include name="execute"/>
+          <include name="execute" invocation-numbers="3"/>
         </methods>
-      </class> <!-- PS_ccbrazil_Test_3dsON -->
+      </class> <!-- logo.LogoLatestNaming -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

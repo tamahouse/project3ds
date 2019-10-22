@@ -68,7 +68,7 @@ public class PageBrickURL {
 		element.click();
 	}
 
-	private static void getResponse() throws Exception {
+	private static void finish3dsON() throws Exception {
 		element = driver.getElement(jsonBody);
 		String str = element.getText();
 		ObjectMapper mapper = new ObjectMapper();
@@ -129,7 +129,7 @@ public class PageBrickURL {
 		}
 	}
 	
-	private static void getResponsePolk() throws Exception {
+	private static void finish3dsPolkON() throws Exception {
 		element = driver.getElement(jsonBody);
 		String str = element.getText();
 		ObjectMapper mapper = new ObjectMapper();
@@ -167,94 +167,7 @@ public class PageBrickURL {
 		}
 	}
 
-	public static VisaPurchaseIframe getPurchaseFrame() {
-		Element iframe = driver.getElement(By.id("Cardinal-CCA-IFrame"));
-		driver.switchTo().frame(iframe.getWebElement());
-		return new VisaPurchaseIframe(driver);
-	}
-
-	public static AuthWindow getAuthWindow() {
-		Element iframe = driver.getElement(By.id("authWindow"));
-		driver.switchTo().frame(iframe.getWebElement());
-		return new AuthWindow(driver);
-	}
-
-	public static class AuthWindow {
-		Driver driver;
-
-		By password = By.id("password");
-		By submitBtn = By.xpath("//input[@value = 'Submit']");
-
-		public AuthWindow(Driver driver) {
-			this.driver = driver;
-		}
-
-		private void setPassword() {
-			Element element = driver.getElement(password);
-			element.sendKeys("1234");
-		}
-
-		private void clickSubmit() {
-			Element element = driver.getElement(submitBtn);
-			element.click();
-		}
-
-	}
-
-	public static class VisaPurchaseIframe {
-		Driver driver;
-
-		public VisaPurchaseIframe(Driver driver) {
-			this.driver = driver;
-		}
-
-		private void setOTP() throws Exception {
-			Element otpTextbox = driver.getElement(otpTxb);
-			otpTextbox.moveToView();
-			otpTextbox.sendKeys("1234");
-		}
-
-		private void clickOTPSubmitButton() throws Exception {
-			Element optSubmitButton = driver.getElement(otpSummitBtn);
-			optSubmitButton.highlight();
-			optSubmitButton.click();
-		}
-
-		private String getVersionCase() throws Exception {
-			Map<By, String> map = new HashMap<By, String>();
-			map.put(otpTxb, "V2");
-			map.put(By.id("authWindow"), "V1");
-			return driver.getSelection(map);
-		}
-
-		public AuthWindow getAuthWindow() {
-			Element iframe = driver.getElement(By.id("authWindow"));
-			driver.switchTo().frame(iframe.getWebElement());
-			return new AuthWindow(driver);
-		}
-
-		public class AuthWindow {
-			Driver driver;
-
-			By password = By.id("password");
-			By submitBtn = By.xpath("//input[@value = 'Submit']");
-
-			public AuthWindow(Driver driver) {
-				this.driver = driver;
-			}
-
-			private void setPassword() {
-				Element element = driver.getElement(password);
-				element.sendKeys("1234");
-			}
-
-			private void clickSubmit() {
-				Element element = driver.getElement(submitBtn);
-				element.click();
-			}
-
-		}
-	}
+	
 	
 	public static void createPayment(String cardNumber) throws Exception {
 		Thread.sleep(1000);

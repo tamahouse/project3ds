@@ -32,7 +32,7 @@ import org.openqa.selenium.remote.CapabilityType;
 public class Driver implements WebDriver {
 
 	WebDriver driver;
-	public static String browser = Browser.Chrome;
+	String browser = Browser.Chrome;
 	
 
 	public static class Browser {
@@ -45,9 +45,13 @@ public class Driver implements WebDriver {
 		 JavascriptExecutor js = (JavascriptExecutor)driver;
 		 return (String) js.executeScript(script);
 	}
+	
+	public String getBrowser() {
+		return this.browser;
+	}
 
 	public Driver() {
-		this(browser);
+		this(Browser.Chrome);
 	}
 	
 	public String switchToWindows(String containsInUrl, Boolean x) {
@@ -133,6 +137,7 @@ public class Driver implements WebDriver {
 	}
 
 	public Driver(String browser) {
+		this.browser = browser;
 		Point p = this.getLastScreenPosition();
 		if (browser.equals(Browser.Chrome)) {
 			LoggingPreferences logPrefs = new LoggingPreferences();

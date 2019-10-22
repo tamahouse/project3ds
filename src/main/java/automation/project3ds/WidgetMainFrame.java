@@ -21,7 +21,11 @@ public class WidgetMainFrame {
 
 	public static Driver getFrame() {
 		Driver driver = AnnotationPage.getDriver();
+		try {
 		driver.switchTo().defaultContent();
+		}catch(Exception ignore) {
+			
+		}
 		Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
 		iframe.moveToTopView();
 		driver.switchTo().frame(iframe.getWebElement());
@@ -29,7 +33,7 @@ public class WidgetMainFrame {
 	}
 	
 	public static void waitForThankYou() {
-		getFrame().getElement(thankyou,30000);
+		getFrame().getElement(thankyou,600000);
 	}
 
 	public static List<Element> getPrices() {

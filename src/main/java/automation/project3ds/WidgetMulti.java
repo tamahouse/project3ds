@@ -50,7 +50,8 @@ public class WidgetMulti {
 	}
 	
 	public static void clickBuyButton() throws Exception {
-		getFrame().getElement(buyBtn, 5000).click();
+		Element element = getFrame().getElement(buyBtn, 5000);
+		element.click();
 
 	}
 
@@ -58,8 +59,10 @@ public class WidgetMulti {
 		String id = "tab_"+shortcode;
 			for (int i = 0; i < 20; i++) {
 				try {
-					Element element = getFrame().getElement(By.id(id));;
+					Element element = getFrame().getElement(By.id(id));
+					if(i!=0) {
 					element.click();
+					}
 					i = 500;
 				} catch (Exception e) {
 					getFrame().getElement(By.id("ps_next")).click();

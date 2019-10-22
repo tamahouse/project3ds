@@ -1,6 +1,7 @@
 package automation.project3ds;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class Widget3dsV2 {
@@ -16,12 +17,18 @@ public class Widget3dsV2 {
 	
 	public void finish() {
 		this.setCode();
-		this.clickSubmit();
+		try {
+			driver.switchTo().alert().accept();
+		}catch (Exception ignore) {
+			
+		}
 	}
 
 	private void setCode() {
 		Element element = driver.getElement(codeTxb);
 		element.sendKeys("1234");
+		element.click();
+		element.sendKeys(Keys.ENTER);
 	}
 
 	private void clickSubmit() {

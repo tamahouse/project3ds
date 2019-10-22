@@ -48,6 +48,7 @@ public class PS_ccbrazil {
 	
 	
 	public static void createPayment() {
+		AnnotationPage.sleep(5000);
 		setCardHolder();
 		setCardNumber();
 		setCardFullExp();

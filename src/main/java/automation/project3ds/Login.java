@@ -16,6 +16,7 @@ public class Login {
 	}
 	
 	public static void login(String host) {
+		ExtentManager.logInfo(host);
 		driver().get(host);
 		setName();
 		setPassword();

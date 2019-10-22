@@ -1,6 +1,7 @@
 package automation.project3ds;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class Widget3dsV1 {
@@ -18,13 +19,21 @@ public class Widget3dsV1 {
 	
 	public void finish() {
 		this.setPassword();
-		this.clickSubmit();
 	}
 
 	private void setPassword() {
 		Element element = driver.getElement(password);
 		element.sendKeys("1234");
+		element.click();
+		element.sendKeys(Keys.ENTER);
+		try {
+			AnnotationPage.sleep(3000);
+			driver.switchTo().alert().accept();
+		}catch(Exception ignore) {
+			
+		}
 	}
+	
 
 	private void clickSubmit() {
 		Element element = driver.getElement(submitBtn);

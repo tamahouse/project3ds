@@ -23,6 +23,7 @@ import org.apache.commons.math3.exception.OutOfRangeException;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -33,6 +34,7 @@ import com.codoid.products.fillo.Recordset;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
+import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
@@ -45,13 +47,13 @@ import automation.project3ds.WidgetTerminal;
 import automation.project3ds.WidgetUni;
 import javafx.util.Pair;
 
-public class LogoLatestNaming {
+@Listeners(automation.project3ds.ExtentListener.class)
+public class LogoLatestNaming extends BaseTest{
 
 	static Map<String, Pair<Integer, Integer>> ruleMap;
 
-	Driver driver;
 
-	static String branch = "http://feature-pwl-2035.wallapi.bamboo.stuffio.com";
+	static String branch = "http://feature-pwl-2050.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(branch).generate();
 
 	private List<Map<String, String>> importData() throws Exception {
@@ -76,8 +78,8 @@ public class LogoLatestNaming {
 
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
-
-		Login.login(host);
+		driver = new Driver();
+		login(host);
 		List<Object[]> temp = new ArrayList<Object[]>();
 		List<Map<String, String>> list = this.importData();
 		for (Map<String, String> map : list) {

@@ -68,66 +68,66 @@ public class PageBrickURL {
 		element.click();
 	}
 
-	private static void finish3dsON() throws Exception {
-		element = driver.getElement(jsonBody);
-		String str = element.getText();
-		ObjectMapper mapper = new ObjectMapper();
-		JsonNode jsonNode = mapper.readTree(str);
-
-//		print temporary response
-		String printResult1 = PrettyPrint.formatJson(jsonNode);
-		try {
-			System.out.println(printResult1);
-		} catch (Exception ignore) {
-
-		}
-
-//		check response
-//		int success = jsonNode.path("success").asInt();
-		String url = jsonNode.path("secure").path("redirect").asText();
-		if (!url.equals("")) {
-
-			System.out.println(url);
-			driver.get(url);
-			if (driver.isExist(By.id("Cardinal-CCA-IFrame"), 2000)) {
-				VisaPurchaseIframe threedsIframe = getPurchaseFrame();
-				String versionKey = threedsIframe.getVersionCase();
-				if (versionKey.equals("V2")) {
-					threedsIframe.setOTP();
-					threedsIframe.clickOTPSubmitButton();
-				} else if (versionKey.equals("V1")) {
-					automation.project3ds.PageBrickURL.VisaPurchaseIframe.AuthWindow authWindow = threedsIframe
-							.getAuthWindow();
-					authWindow.setPassword();
-					authWindow.clickSubmit();
-					driver.switchTo().defaultContent();
-				}
-
-			} else {
-				if (driver.isExist(By.id("authWindow"), 2000)) {
-					AuthWindow authWindow = getAuthWindow();
-					authWindow.setPassword();
-					authWindow.clickSubmit();
-					driver.switchTo().defaultContent();
-				} else {
-
-				}
-			}
-			element = driver.getElement(jsonBody);
-			str = element.getText();
-			jsonNode = mapper.readTree(str);
-		} else {
-		}
-
-//		print final response
-		String printResult2 = PrettyPrint.formatJson(jsonNode);
-		try {
-			ExtentManager.getTest().info("Response:<br />" + printResult2);
-			System.out.println(printResult2);
-		} catch (Exception ignore) {
-
-		}
-	}
+//	private static void finish3dsON() throws Exception {
+//		element = driver.getElement(jsonBody);
+//		String str = element.getText();
+//		ObjectMapper mapper = new ObjectMapper();
+//		JsonNode jsonNode = mapper.readTree(str);
+//
+////		print temporary response
+//		String printResult1 = PrettyPrint.formatJson(jsonNode);
+//		try {
+//			System.out.println(printResult1);
+//		} catch (Exception ignore) {
+//
+//		}
+//
+////		check response
+////		int success = jsonNode.path("success").asInt();
+//		String url = jsonNode.path("secure").path("redirect").asText();
+//		if (!url.equals("")) {
+//
+//			System.out.println(url);
+//			driver.get(url);
+//			if (driver.isExist(By.id("Cardinal-CCA-IFrame"), 2000)) {
+//				VisaPurchaseIframe threedsIframe = getPurchaseFrame();
+//				String versionKey = threedsIframe.getVersionCase();
+//				if (versionKey.equals("V2")) {
+//					threedsIframe.setOTP();
+//					threedsIframe.clickOTPSubmitButton();
+//				} else if (versionKey.equals("V1")) {
+//					automation.project3ds.PageBrickURL.VisaPurchaseIframe.AuthWindow authWindow = threedsIframe
+//							.getAuthWindow();
+//					authWindow.setPassword();
+//					authWindow.clickSubmit();
+//					driver.switchTo().defaultContent();
+//				}
+//
+//			} else {
+//				if (driver.isExist(By.id("authWindow"), 2000)) {
+//					AuthWindow authWindow = getAuthWindow();
+//					authWindow.setPassword();
+//					authWindow.clickSubmit();
+//					driver.switchTo().defaultContent();
+//				} else {
+//
+//				}
+//			}
+//			element = driver.getElement(jsonBody);
+//			str = element.getText();
+//			jsonNode = mapper.readTree(str);
+//		} else {
+//		}
+//
+////		print final response
+//		String printResult2 = PrettyPrint.formatJson(jsonNode);
+//		try {
+//			ExtentManager.getTest().info("Response:<br />" + printResult2);
+//			System.out.println(printResult2);
+//		} catch (Exception ignore) {
+//
+//		}
+//	}
 	
 	private static void finish3dsPolkON() throws Exception {
 		element = driver.getElement(jsonBody);
@@ -179,14 +179,14 @@ public class PageBrickURL {
 		clickSubmit();
 	}
 
-	public static void submitInformation(String cardNumber) throws Exception {
-		createPayment(cardNumber);
-		getResponse();
-	}
-	
-	public static void submitPolk(String cardNumber) throws Exception {
-		createPayment(cardNumber);
-		getResponsePolk();
-	}
-	
+//	public static void submitInformation(String cardNumber) throws Exception {
+//		createPayment(cardNumber);
+//		getResponse();
+//	}
+//	
+//	public static void submitPolk(String cardNumber) throws Exception {
+//		createPayment(cardNumber);
+//		getResponsePolk();
+//	}
+//	
 }

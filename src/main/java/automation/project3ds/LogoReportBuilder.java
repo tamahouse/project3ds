@@ -162,17 +162,21 @@ public class LogoReportBuilder {
 
 	private Map<String, BufferedImage> checkMulti(Map<String, BufferedImage> map, String shortcode, String co_id,
 			String a_id) throws Exception {
+		
+		
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p1").co_id(co_id).isCustom()
 					.generate();
-			WidgetMulti.get(host);
-			String imageUrl = WidgetMulti.getLogoUrl(shortcode);
-			ExtentManager.addScreenshot("multi p1");
+			
+			driver.get(host);
+			WidgetPage widgetPage = new WidgetPage(driver);
+			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			ExtentManager.addScreenshot(driver, "multi p1");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
 			map.put("multi p1", actualImage);
 		} catch (IIOException e) {
-			ExtentManager.addScreenshot("multi p1");
+			ExtentManager.addScreenshot(driver, "multi p1");
 			Assertion.get().assertEquals("-", "", "[NotActualReplaced]" + "[multi P1]");
 			BufferedImage actualImage = generateBlankImage("multi p1", ruleMap.get("multi").getKey(),
 					ruleMap.get("multi").getValue());
@@ -182,14 +186,14 @@ public class LogoReportBuilder {
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p10").co_id(co_id).isCustom()
 					.generate();
-			WidgetMulti.get(host);
-			String imageUrl = WidgetMulti.getLogoUrl(shortcode);
-			ExtentManager.addScreenshot("multi p10");
+			WidgetPage widgetPage = new WidgetPage(driver);
+			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			ExtentManager.addScreenshot(driver, "multi p10");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
 			map.put("multi p1", actualImage);
 		} catch (IIOException e) {
-			ExtentManager.addScreenshot("multi p10");
+			ExtentManager.addScreenshot(driver, "multi p10");
 			Assertion.get().assertEquals("-", "", "[NotActualReplaced]" + "[multi P1]");
 			BufferedImage actualImage = generateBlankImage("multi p1", ruleMap.get("multi").getKey(),
 					ruleMap.get("multi").getValue());
@@ -204,14 +208,16 @@ public class LogoReportBuilder {
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).uni(shortcode).co_id(co_id).isCustom()
 					.generate();
-			WidgetUni.get(host);
-			String imageUrl = WidgetUni.getLogoUrl(shortcode);
-			ExtentManager.addScreenshot("uni");
+			driver.get(host);
+			WidgetPage widget = new WidgetPage(driver);
+			WidgetUni widgetUni = widget.getWidgetUni();
+			String imageUrl = widgetUni.getLogoUrl(shortcode);
+			ExtentManager.addScreenshot(driver, "uni");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
 			map.put("uni", actualImage);
 		} catch (IIOException e) {
-			ExtentManager.addScreenshot("uni");
+			ExtentManager.addScreenshot(driver, "uni");
 			Assertion.get().assertEquals("-", "", "[NotActualReplaced]" + "[uni]");
 			BufferedImage actualImage = generateBlankImage("uni", ruleMap.get("uni").getKey(),
 					ruleMap.get("uni").getValue());
@@ -226,19 +232,18 @@ public class LogoReportBuilder {
 			
 		try {
 			String host = branch + "/admin/developers/login?id="+d_id+"&admin_login=true";
-			Driver driver = AnnotationPage.getDriver();
 			driver.get(host);
 			driver.getCurrentUrl("wallapi");
 			driver.get(branch + "/developers/applications/paymentsystems/?id=" + a_id);
 			Element image = driver.getElement(By.xpath("//div[./*[@id='" + ps_id + "_active']]//img"));
 			image.moveToTopView();
-			ExtentManager.addScreenshot("v5");
+			ExtentManager.addScreenshot(driver, "v5");
 			String imageUrl = image.getAttribute("src");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
 			map.put("v5", actualImage);
 		} catch (IIOException e) {
-			ExtentManager.addScreenshot("v5");
+			ExtentManager.addScreenshot(driver, "v5");
 			Assertion.get().assertEquals("-", "", "[NotActualReplaced]" + "[v5]");
 			BufferedImage actualImage = generateBlankImage("v5", ruleMap.get("v5").getKey(),
 					ruleMap.get("v5").getValue());
@@ -251,29 +256,31 @@ public class LogoReportBuilder {
 	private Map<String, BufferedImage> checkTerminal(Map<String, BufferedImage> map, String shortcode, String logo,
 			String name, Map<String, String> hostName, String co_id, String a_id) throws Exception {
 		try {
-
+			WidgetPage widget = new WidgetPage(driver);
 			if (name.contains("light2")) {
 				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom()
 						.generate();
-				WidgetTerminal.get(hostTerminal);
+				driver.get(hostTerminal);
 				Thread.sleep(2000);
-				WidgetTerminal.clickPaymentMethod(shortcode, logo);
+				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();
+				widgetTerminal.clickPaymentMethod(shortcode, logo);
 				Thread.sleep(1000);
-				Element img = WidgetTerminal.getFrame().getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
+				Element img = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
 				String str = img.getAttribute("src");
 				ExtentManager.logInfo(str);
-				ExtentManager.addScreenshot(name);
+				ExtentManager.addScreenshot(driver, name);
 			} else if (name.contains("dark2")) {
 				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isDark()
 						.isCustom().generate();
-				WidgetTerminal.get(hostTerminal);
+				driver.get(hostTerminal);
 				Thread.sleep(2000);
-				WidgetTerminal.clickPaymentMethod(shortcode, logo);
+				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();
+				widgetTerminal.clickPaymentMethod(shortcode, logo);
 				Thread.sleep(1000);
-				Element img = WidgetTerminal.getFrame().getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
+				Element img =driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
 				String str = img.getAttribute("src");
 				ExtentManager.logInfo(str);
-				ExtentManager.addScreenshot(name);
+				ExtentManager.addScreenshot(driver, name);
 			}
 		} catch (IIOException e) {
 			Assertion.get().assertEquals(host + hostName.get(name), "", "[NotActualReplaced]" + "[" + name + "]");

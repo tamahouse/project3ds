@@ -2,40 +2,41 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 
-public class Login {
+public class Login extends BasePage {
 
 	
-	private static By nameTxb = By.id("login");
-	private static By passwordTxb = By.id("password");
-	private static By loginBtn = By.id("submit_button");
-	private static String name = utility.ConfigFile.name;
-	private static String password = utility.ConfigFile.password;
+	private By nameTxb = By.id("login");
+	private By passwordTxb = By.id("password");
+	private By loginBtn = By.id("submit_button");
+	private String name = utility.ConfigFile.name;
+	private String password = utility.ConfigFile.password;
 	
-	public static Driver driver() {
-		return AnnotationPage.getDriver();
+	public Login(Driver driver) {
+		super(driver);
 	}
 	
-	public static void login(String host) {
-		ExtentManager.logInfo(host);
-		driver().get(host);
+	public void login(String url) {
+		String loginUrl = url+"/admin/test-offerwall";
+		driver.get(loginUrl);
 		setName();
 		setPassword();
 		clickLogin();
+		driver.get(loginUrl);
 	}
 	
 	
-	private static void setName() {
-		Element nameTextbox = driver().getElement(nameTxb);
+	private void setName() {
+		Element nameTextbox = driver.getElement(nameTxb);
 		nameTextbox.sendKeys(name);
 	}
 	
-	private static void setPassword() {
-		Element passwordTextbox = driver().getElement(passwordTxb);
+	private void setPassword() {
+		Element passwordTextbox = driver.getElement(passwordTxb);
 		passwordTextbox.sendKeys(password);
 	}
 	
-	private static void clickLogin() {
-		Element loginButton = driver().getElement(loginBtn);
+	private void clickLogin() {
+		Element loginButton = driver.getElement(loginBtn);
 		loginButton.click();
 	}
 	

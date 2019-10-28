@@ -4,7 +4,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
+import automation.project3ds.BaseTest;
+import automation.project3ds.Brick_1v5;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
@@ -12,13 +15,14 @@ import automation.project3ds.PS_Neosurf;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
 import automation.project3ds.PS_gateway_brick_1v5;
-import automation.project3ds.PS_gateway_old;
+import automation.project3ds.PS_gateway_compact;
 import automation.project3ds.Pslog;
-import automation.project3ds.Wallapi;
+import automation.project3ds.WallapiAPI;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
+import automation.project3ds.WidgetPage;
 
-public class PS_gateway_widget_embarcalero2_OFF {
+public class PS_gateway_widget_embarcalero2_OFF  extends BaseTest{
 	
 	String shortcode = "gateway";
 	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
@@ -27,29 +31,14 @@ public class PS_gateway_widget_embarcalero2_OFF {
 	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).generate();
 	
 	
-	static Driver driver;
 
 	@BeforeClass
 	public void setUp() throws Exception {
-		Login.login(host);
-		CodeFeature.setCF(url, CodeFeature.CF_3DS_V2, false);
+		this.driver = new Driver(browser);
+		login(host);
+		CodeFeature.setCodeFeature(driver,url, CodeFeature.CF_3DS_V2, false);
 	}
 	
-
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-		AnnotationPage.driver = null;
-	}
-	
-	@BeforeMethod
-	public void openBrick() throws Exception {
-		driver = AnnotationPage.getDriver();
-		driver.get(host);
-		WidgetMulti.clickPaymentMethod(shortcode);
-//		WidgetMulti.clickPrice(0);
-		WidgetMulti.clickBuyButton();
-	}
 	
 	
 	@Test
@@ -58,10 +47,12 @@ public class PS_gateway_widget_embarcalero2_OFF {
 //		String cardNumber = "5200000000000007";
 		String cardNumber = "5200000000001096";
 //		String cardNumber = "5555555555554477";
-		PS_gateway_brick_1v5 brick = new PS_gateway_brick_1v5();
+		WidgetPage widgetPage = new WidgetPage(driver);
+		PS_gateway_brick_1v5 gateway_1v5 = widgetPage.getMultiWidget().getPS_gateway_brick_1v5();
+		Brick_1v5 brick = gateway_1v5.getBrick_1v5();
 		brick.setCardNumber(cardNumber);
 		brick.createPayment();
-		WidgetMainFrame.waitForThankYou();
+		widgetPage.getMultiWidget().waitForThankYou();
 	}
 
 }

@@ -15,6 +15,10 @@ import automation.project3ds.Z2.ResponseLookup;
 
 public class Action {
 	
+	public static void setCodeFeature(Driver driver, String host, String feature, Boolean isEnabled) {
+		CodeFeature cf = new CodeFeature(driver);
+		cf.setCF(host, feature, isEnabled);
+	}
 	
 	public static void assertResult(String t_id, Map<String, String> map) throws Exception {
 		String finalEciFlag = null;

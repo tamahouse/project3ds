@@ -6,61 +6,62 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PS_Pagseguro2 {
 	
-	static String name = "Payment Wall";
-	static String CPF = "72962940005";
-	static String CEP = "01452002";
-	static String areaCode = "11";
-	static String phone = "994283640";
-	static String cardNumber = "4509 9535 6623 3704";
-	static String addressNumber = "00";
-	static String addressComplement = "Any";
-	static String cardHolder = "Card Holder";
-	static String cardMonth = "01";
-	static String cardYear = "22";
-	static String cvv = "123";
-	static String birth = "20/05/1980";
+	Driver driver;
+	
+	String name = "Payment Wall";
+	String CPF = "72962940005";
+	String CEP = "01452002";
+	String areaCode = "11";
+	String phone = "994283640";
+	String cardNumber = "4509 9535 6623 3704";
+	String addressNumber = "00";
+	String addressComplement = "Any";
+	String cardHolder = "Card Holder";
+	String cardMonth = "01";
+	String cardYear = "22";
+	String cvv = "123";
+	String birth = "20/05/1980";
 	
 	
-	static By senderNameTxb = By.id("senderName");
-	static By senderCPFTxb = By.id("senderCPF");
-	static By senderAreaCodeTxb = By.id("senderAreaCode");
-	static By senderPhoneTxb = By.id("senderPhone");
-	static By shippingAddressPostalCodeTxb = By.id("shippingAddressPostalCode");
-	static By shippingAddressNumberTxb = By.xpath("//*[@style=\"display: block;\"]/*[@id='shippingAddressNumber']");
-	static By shippingAddressComplementTxb = By.xpath("//*[@style=\"display: block;\"]/*[@id='shippingAddressComplement']");
+	By senderNameTxb = By.id("senderName");
+	By senderCPFTxb = By.id("senderCPF");
+	By senderAreaCodeTxb = By.id("senderAreaCode");
+	By senderPhoneTxb = By.id("senderPhone");
+	By shippingAddressPostalCodeTxb = By.id("shippingAddressPostalCode");
+	By shippingAddressNumberTxb = By.xpath("//*[@style=\"display: block;\"]/*[@id='shippingAddressNumber']");
+	By shippingAddressComplementTxb = By.xpath("//*[@style=\"display: block;\"]/*[@id='shippingAddressComplement']");
 	
-	static By creditCardOption = By.id("creditCardOption");
-	static By bookletOption = By.id("bookletOption");
+	By creditCardOption = By.id("creditCardOption");
+	By bookletOption = By.id("bookletOption");
 	
-	static By nextButton = By.xpath("//*[@class=\"next pagseguro-button mainActionButton\"]");
+	By nextButton = By.xpath("//*[@class=\"next pagseguro-button mainActionButton\"]");
 	
-	static By creditCardNumberTxb = By.id("creditCardNumber");
-	static By clickToOpenCardBrand = By.xpath("//*[@class='brandView unknown'][@style=\"display: block;\"]//*[@class='clickToOpen']");
-	static By visaBrand = By.xpath("//*[@class='brandView unknown opened']//a[@class='omniture-click'][@name='visa']");
-	static By creditCardHolderNameTxb = By.id("creditCardHolderName");
-	static By creditCardDueDate_MonthTxb = By.id("creditCardDueDate_Month");
-	static By creditCardDueDate_Year = By.id("creditCardDueDate_Year");
-	static By creditCardCVVTxb = By.id("creditCardCVV");
-	static By cardInstallmentQuantitySelect = By.id("cardInstallmentQuantity");
+	By creditCardNumberTxb = By.id("creditCardNumber");
+	By clickToOpenCardBrand = By.xpath("//*[@class='brandView unknown'][@style=\"display: block;\"]//*[@class='clickToOpen']");
+	By visaBrand = By.xpath("//*[@class='brandView unknown opened']//a[@class='omniture-click'][@name='visa']");
+	By creditCardHolderNameTxb = By.id("creditCardHolderName");
+	By creditCardDueDate_MonthTxb = By.id("creditCardDueDate_Month");
+	By creditCardDueDate_Year = By.id("creditCardDueDate_Year");
+	By creditCardCVVTxb = By.id("creditCardCVV");
+	By cardInstallmentQuantitySelect = By.id("cardInstallmentQuantity");
 	
-	static By holderCPFTxb = By.id("holderCPF");
-	static By holderAreaCodeTxb = By.id("holderAreaCode");
-	static By holderPhoneTxb = By.id("holderPhone");
-	static By holderBornDateTxb = By.id("holderBornDate");
+	By holderCPFTxb = By.id("holderCPF");
+	By holderAreaCodeTxb = By.id("holderAreaCode");
+	By holderPhoneTxb = By.id("holderPhone");
+	By holderBornDateTxb = By.id("holderBornDate");
 	
-	static By paymentTotal = By.xpath("//*[@id='payment-total']//dd");
-	static By completed = By.id("payment-details");
+	By paymentTotal = By.xpath("//*[@id='payment-total']//dd");
+	By completed = By.id("payment-details");
 
-	public static Driver getFrame() {
-		Driver driver = WidgetMainFrame.getFrame();
+	public PS_Pagseguro2(Driver driver) {
 		WebElement frameMedia = driver.getElement(By.xpath("//iframe[@id='uolPSMediator'][@style =\"display: block;\" ]"),30000).getWebElement();
 		driver.switchTo().frame(frameMedia);
 		WebElement frameApp = driver.getElement(By.id("UolPS-application")).getWebElement();
 		driver.switchTo().frame(frameApp);
-		return driver;
+		this.driver = driver;
 	}
 	
-	public static String createBoletoPayment() {
+	public String createBoletoPayment() {
 		setSender();
 		clickBoletoOption();
 		clickNextButton();
@@ -69,7 +70,7 @@ public class PS_Pagseguro2 {
 		return transactionCode;
 	}
 	
-	public static String createCreditCardPayment() {
+	public String createCreditCardPayment() {
 		setSender();
 		clickCreditCardOption();
 		setCreditCard();
@@ -78,7 +79,7 @@ public class PS_Pagseguro2 {
 		return transactionCode;
 	}
 	
-	public static void setCreditCard() {
+	public void setCreditCard() {
 		setCardFullNumber();
 		setCardFullExp();
 		setCardHolder();
@@ -87,7 +88,7 @@ public class PS_Pagseguro2 {
 		clickNextButton();
 	}
 	
-	private static void setSender() {
+	private void setSender() {
 		AnnotationPage.sleep(2000);
 		setSenderFullAddress();
 		setSenderName();
@@ -96,158 +97,158 @@ public class PS_Pagseguro2 {
 		clickNextButton();
 	}
 	
-	private static void setHolder() {
+	private void setHolder() {
 		setHolderCPF();
 		setHolderFullPhone();
 		setHolderBirth();
 		clickNextButton();
 	}
 	
-	private static void setSenderName() {
-		Element element = getFrame().getElement(senderNameTxb);
+	private void setSenderName() {
+		Element element = driver.getElement(senderNameTxb);
 		element.sendKeys(name);
 	}
 	
-	private static void setSenderCPF() {
-		Element element = getFrame().getElement(senderCPFTxb);
+	private void setSenderCPF() {
+		Element element = driver.getElement(senderCPFTxb);
 		element.sendKeys(CPF);
 	}
 	
-	private static void setSenderAreaCode() {
-		Element element = getFrame().getElement(senderAreaCodeTxb);
+	private void setSenderAreaCode() {
+		Element element = driver.getElement(senderAreaCodeTxb);
 		element.sendKeys(areaCode);
 	}
 	
-	private static void setSenderPhone() {
-		Element element = getFrame().getElement(senderPhoneTxb);
+	private void setSenderPhone() {
+		Element element = driver.getElement(senderPhoneTxb);
 		element.sendKeys(phone);
 	}
 	
-	private static void setSenderFullPhone() {
+	private void setSenderFullPhone() {
 		setSenderAreaCode();
 		setSenderPhone();
 	}
 	
 	
-	private static void setSenderFullAddress() {
+	private void setSenderFullAddress() {
 		setCEP();
 		setAddressNumber();
 		setAddressComplement();
 	}
 	
-	private static void setCEP() {
-		Element element = getFrame().getElement(shippingAddressPostalCodeTxb);
+	private void setCEP() {
+		Element element = driver.getElement(shippingAddressPostalCodeTxb);
 		element.sendKeys(CEP);
 	}
 	
-	private static void setAddressNumber() {
-		Element element = getFrame().getElement(shippingAddressNumberTxb);
+	private void setAddressNumber() {
+		Element element = driver.getElement(shippingAddressNumberTxb);
 		element.sendKeys(addressNumber);
 	}
 	
-	private static void setAddressComplement() {
-		Element element = getFrame().getElement(shippingAddressComplementTxb);
+	private void setAddressComplement() {
+		Element element = driver.getElement(shippingAddressComplementTxb);
 		element.sendKeys(addressComplement);
 	}
 	
-	private static void clickNextButton() {
-		Element element = getFrame().getElement(nextButton);
+	private void clickNextButton() {
+		Element element = driver.getElement(nextButton);
 		element.click();
 	}
 	
-	private static void clickCreditCardOption() {
-		Element element = getFrame().getElement(creditCardOption);
+	private void clickCreditCardOption() {
+		Element element = driver.getElement(creditCardOption);
 		element.click();
 	}
 	
-	private static void clickBoletoOption() {
-		Element element = getFrame().getElement(bookletOption);
+	private void clickBoletoOption() {
+		Element element = driver.getElement(bookletOption);
 		element.click();
 	}
 	
-	private static void setCardNumber() {
-		Element element = getFrame().getElement(creditCardNumberTxb);
+	private void setCardNumber() {
+		Element element = driver.getElement(creditCardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
 	
-	private static void clickToOpenCardBrand() {
-		Element element = getFrame().getElement(clickToOpenCardBrand);
+	private void clickToOpenCardBrand() {
+		Element element = driver.getElement(clickToOpenCardBrand);
 		element.click();
 	}
 	
-	private static void clickCardBrand() {
+	private void clickCardBrand() {
 		AnnotationPage.sleep(3000);
-		Element element = getFrame().getElement(visaBrand);
+		Element element = driver.getElement(visaBrand);
 		element.clickJS();
 	}
 	
-	private static void setCardFullNumber() {
+	private void setCardFullNumber() {
 		setCardNumber();
 		clickToOpenCardBrand();
 		clickCardBrand();
 	}
 	
-	private static void setCardMonth() {
-		Element element = getFrame().getElement(creditCardDueDate_MonthTxb);
+	private void setCardMonth() {
+		Element element = driver.getElement(creditCardDueDate_MonthTxb);
 		element.sendKeys(cardMonth);
 	}
 	
-	private static void setCardYear() {
-		Element element = getFrame().getElement(creditCardDueDate_Year);
+	private void setCardYear() {
+		Element element = driver.getElement(creditCardDueDate_Year);
 		element.sendKeys(cardYear);
 	}
 	
-	private static void setCardFullExp() {
+	private void setCardFullExp() {
 		setCardMonth();
 		setCardYear();
 	}
 	
-	private static void setCardHolder() {
-		Element element = getFrame().getElement(creditCardHolderNameTxb);
+	private void setCardHolder() {
+		Element element = driver.getElement(creditCardHolderNameTxb);
 		element.sendKeys(cardHolder);
 	}
 	
-	private static void setCardCVV() {
-		Element element = getFrame().getElement(creditCardCVVTxb);
+	private void setCardCVV() {
+		Element element = driver.getElement(creditCardCVVTxb);
 		element.sendKeys(cvv);
 	}
 	
-	private static void selectProduct() {
+	private void selectProduct() {
 		try {
-		Select select = new Select(getFrame().getElement(cardInstallmentQuantitySelect,1000));
+		Select select = new Select(driver.getElement(cardInstallmentQuantitySelect,1000));
 		select.selectByValue("1");
 		}catch(Exception e) {
-			System.out.println(e.getClass().getName());
+			System.out.println("Not select product");
 		}
 	}
 	
-	private static void setHolderCPF() {
-		Element element = getFrame().getElement(holderCPFTxb);
+	private void setHolderCPF() {
+		Element element = driver.getElement(holderCPFTxb);
 		element.sendKeys(CPF);
 	}
 	
-	private static void setHolderAreaCode() {
-		Element element = getFrame().getElement(holderAreaCodeTxb);
+	private void setHolderAreaCode() {
+		Element element = driver.getElement(holderAreaCodeTxb);
 		element.sendKeys(areaCode);
 	}
 	
-	private static void setHolderPhone() {
-		Element element = getFrame().getElement(holderPhoneTxb);
+	private void setHolderPhone() {
+		Element element = driver.getElement(holderPhoneTxb);
 		element.sendKeys(phone);
 	}
 	
-	private static void setHolderFullPhone() {
+	private void setHolderFullPhone() {
 		setHolderAreaCode();
 		setHolderPhone();
 	}
 	
-	private static void setHolderBirth() {
-		Element element = getFrame().getElement(holderBornDateTxb);
+	private void setHolderBirth() {
+		Element element = driver.getElement(holderBornDateTxb);
 		element.sendKeys(birth);
 	}
 	
-	private static Boolean isPaymentDetailOpen() {
-		Element element = getFrame().getElement(completed,20000);
+	private Boolean isPaymentDetailOpen() {
+		Element element = driver.getElement(completed,60000);
 		String str = element.getAttribute("class");
 		if(str.contains("closed")) {
 			return false;
@@ -256,17 +257,17 @@ public class PS_Pagseguro2 {
 		}
 	}
 	
-	private static void clickOpenPaymentDetail() {
+	private void clickOpenPaymentDetail() {
 		Boolean isOpen = isPaymentDetailOpen();
 		if(!isOpen) {
-			Element element = getFrame().getElement(completed,20000);
+			Element element = driver.getElement(completed,20000);
 			element.click();
 		}
 	}
 	
-	private static String waitForComplete() {
+	private String waitForComplete() {
 		clickOpenPaymentDetail();
-		Element element = getFrame().getElement(By.id("transactionCode"));
+		Element element = driver.getElement(By.id("transactionCode"));
 		String transactionCode = element.getText().replace("-", "");
 		return transactionCode;
 	}

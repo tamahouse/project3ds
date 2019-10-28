@@ -30,8 +30,8 @@ public class PS_gateway_old {
 
 	
 	By id = By.id("cardsForm");
+	By cardNumberTxb = By.id("card_1");
 	By cardHolderTxb = By.id("cardholder");
-	By cardNumberTxb = By.id("cnumber_field_id");
 	By cardexpMonthTxb = By.id("expmonth_field");
 	By cardexpYearTxb = By.id("expyear_field");
 	By cardCvvTxb = By.id("cvv_id");
@@ -43,12 +43,12 @@ public class PS_gateway_old {
 	By buyButtonTxb = By.id("pay_button");
 	
 	
-	public Driver getFrame() {
-		Driver driver = WidgetMainFrame.getFrame();
+	public PS_gateway_old (Driver driver) {
 		WebElement iframe = driver.getElement(By.id("iframecc")).getWebElement();
 		driver.switchTo().frame(iframe);
-		return driver;
+		this.driver = driver;
 	}
+
 	
 	public void setCoID(String co_id) {
 		this.co_id = co_id;
@@ -69,19 +69,16 @@ public class PS_gateway_old {
 	}
 	
 	public void finish3dsPolkOFF() {
-		Driver driver = getFrame();
 		Widget3dsPolk obj = new Widget3dsPolk(driver);
 		obj.clickSubmit();
 	}
 	
 	public void finish3dsV1OFF() {
-		Driver driver = getFrame();
 		Widget3dsV1 obj = new Widget3dsV1(driver);
 		obj.finish();
 	}
 	
 	public void finish3dsV1ON() {
-		Driver driver = getFrame();
 		WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
 		driver.switchTo().frame(iframe);
 		Widget3dsV1 obj = new Widget3dsV1(driver);
@@ -89,8 +86,7 @@ public class PS_gateway_old {
 	}
 	
 	public void finish3dsV2ON() {
-		Driver driver = getFrame();
-		WebElement iframe = getFrame().getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+		WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
 		driver.switchTo().frame(iframe);
 		Widget3dsV2 obj = new Widget3dsV2(driver);
 		obj.finish();
@@ -119,64 +115,64 @@ public class PS_gateway_old {
 	
 	private void setCardHolder() {
 		AnnotationPage.sleep(7000);
-		Element element = getFrame().getElement(cardHolderTxb);
+		Element element = driver.getElement(cardHolderTxb);
 		element.sendKeys(name);
 	}
 	
 	private void setCardNumber() {
-		Element element = getFrame().getElement(cardNumberTxb);
+		Element element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
 	
 	private void setExpMonth() {
-		Element element = getFrame().getElement(cardexpMonthTxb);
+		Element element = driver.getElement(cardexpMonthTxb);
 		element.sendKeys(cardMonth);
 	}
 	
 	private void setExpYear() {
-		Element element = getFrame().getElement(cardexpYearTxb);
+		Element element = driver.getElement(cardexpYearTxb);
 		element.sendKeys(cardYear);
 	}
 	
 	private void setCardCvv() {
-		Element element = getFrame().getElement(cardCvvTxb);
+		Element element = driver.getElement(cardCvvTxb);
 		element.sendKeys(cvv);
 	}
 	
 	private void setAddressStreet() {
-		Element element = getFrame().getElement(addressStreet);
+		Element element = driver.getElement(addressStreet);
 		element.sendKeys(street);
 	}
 	
 	private void setAddressCity() {
-		Element element = getFrame().getElement(addressCity);
+		Element element = driver.getElement(addressCity);
 		element.sendKeys(city);
 	}
 	
 	private void setAddressZip() {
-		Element element = getFrame().getElement(addresstZip);
+		Element element = driver.getElement(addresstZip);
 		element.sendKeys(zip);
 	}
 	
 	private void setAddressState() {
 		try {
-		Select select = new Select(getFrame().getElement(addressState));
+		Select select = new Select(driver.getElement(addressState));
 		select.selectByValue(state_code);
 		}catch (UnexpectedTagNameException e) {
-			Element element = getFrame().getElement(addressState);
+			Element element = driver.getElement(addressState);
 			element.sendKeys("Рига");
 		}
 		
 	}
 	
 	private void setAddressCountry() {
-		Select select = new Select(getFrame().getElement(addressCountry));
+		Select select = new Select(driver.getElement(addressCountry));
 		select.selectByValue(co_code);
 	}
 	
 	
 	private void clickBuyButton() {
-		Element element = getFrame().getElement(buyButtonTxb);
+		Element element = driver.getElement(buyButtonTxb);
 		element.click();
 	}
 	

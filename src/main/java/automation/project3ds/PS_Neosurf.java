@@ -4,30 +4,42 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class PS_Neosurf {
-
-	static By enterPinTxb = By.id("pin1");
-	static By continueBtn = By.xpath("//*[@id='submitNeosurfForm']/input");
-	static By completed = By.id("returnFinal");
-	static String pin = "2679053409";
 	
-	public static Driver getFrame() {
-		Driver driver = WidgetMainFrame.getFrame();
+	Driver driver;
+
+	By enterPinTxb = By.id("pin1");
+	By continueBtn = By.xpath("//*[@id='submitNeosurfForm']/input");
+	By completed = By.id("returnFinal");
+	String pin = "2679053409";
+	
+	public PS_Neosurf(Driver driver) {
 		WebElement frameMedia = driver.getElement(By.tagName("iframe")).getWebElement();
 		driver.switchTo().frame(frameMedia);
-		return driver;
+		this.driver = driver;
 	}
 	
-	public static void setPin() {
-		Element element = getFrame().getElement(enterPinTxb);
+	public void createPayment() {
+		setPin();
+		clickContinueButton();
+		this.waitForCompleted();
+	}
+	
+	public void setPin() {
+		Element element = driver.getElement(enterPinTxb);
+		element.highlight();
 		element.sendKeys(pin);
 	}
 	
-	public static void clickContinueButton() {
-		Element element = getFrame().getElement(continueBtn);
+	public void clickContinueButton() {
+		Element element = driver.getElement(continueBtn);
 		element.click();
 	}
 	
-	public static void waitForCompleted() {
-		getFrame().getElement(completed);
+	public void waitForCompleted() {
+		driver.getElement(completed);
 	}
+	
+	
+	
+
 }

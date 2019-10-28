@@ -12,6 +12,8 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.WebDriver;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityModelProvider;
@@ -114,11 +116,11 @@ public class ExtentManager {
 		}
 	}
 	
-	public static void addScreenshot(String imageName) {
-		addScreenshot(imageName, imageName);
+	public static void addScreenshot(Driver driver, String imageName) {
+		addScreenshot(driver, imageName, imageName);
 	}
 	
-	public static void addScreenshot(String title, String imageName) {
+	public static void addScreenshot(Driver driver, String title, String imageName) {
 		try {
 			String imageFileName =  Driver.timestamp() + imageName + ".png";
 			String imagePath = "screenShot\\"+ imageFileName;
@@ -128,12 +130,12 @@ public class ExtentManager {
 			if(!folder.exists()) {
 				folder.mkdirs();
 			}
-			AnnotationPage.screenShot(createdPath);
+			AnnotationPage.screenShot(driver, createdPath);
 			ScreenCapture media = new ScreenCapture();
 			media.setPath(imagePath);
 			MediaEntityModelProvider provider = new MediaEntityModelProvider(media);
 			ExtentManager.getTest().info(title, provider);
-		}catch(Exception ignore) {
+		}catch(Exception e) {
 		}
 	}
 	

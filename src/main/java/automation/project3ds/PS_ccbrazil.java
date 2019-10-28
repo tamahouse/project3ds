@@ -5,49 +5,50 @@ import org.openqa.selenium.WebElement;
 
 public class PS_ccbrazil {
 	
-	static String name = "Payment Wall";
-	static String CPF = "72962940005";
-	static String CEP = "01452002";
-	static String areaCode = "11";
-	static String phone = "994283640";
-	public static String cardNumber = "4111111111111111";
-	static String addressNumber = "00";
-	static String addressComplement = "Any";
-	static String cardHolder = "Card Holder";
-	static String cardMonth = "01";
-	static String cardYear = "22";
-	static String cvv = "123";
-	static String birth = "20/05/1980";
-	static String birthDay = "20";
-	static String birthMonth = "05";
-	static String birthYear = "1980";
-	public static String email;
+	Driver driver;
 	
-	static By id = By.id("cardsForm");
-	static By cardHolderTxb = By.id("cardholder");
-	static By cardNumberTxb = By.id("cnumber_field_id");
-	static By cardexpMonthTxb = By.id("expmonth_field");
-	static By cardexpYearTxb = By.id("expyear_field");
-	static By cardCvvTxb = By.id("cvv_id");
-	static By zipTxb = By.name("zip");
-	static By cpfTxb = By.id("cpf");
-	static By emailTxb = By.id("email");
-	static By birthDayTxb = By.id("birth_date_day");
-	static By birthMonthTxb = By.id("birth_date_month");
-	static By birthYearTxb = By.id("birth_date_year");
-	static By phoneTxb = By.id("phone");
-	static By buyButtonTxb = By.id("pay_button");
+	String name = "Payment Wall";
+	String CPF = "72962940005";
+	String CEP = "01452002";
+	String areaCode = "11";
+	String phone = "994283640";
+	public String cardNumber = "4111111111111111";
+	String addressNumber = "00";
+	String addressComplement = "Any";
+	String cardHolder = "Card Holder";
+	String cardMonth = "01";
+	String cardYear = "22";
+	String cvv = "123";
+	String birth = "20/05/1980";
+	String birthDay = "20";
+	String birthMonth = "05";
+	String birthYear = "1980";
+	public String email;
 	
-	public static Driver getFrame() {
-		Driver driver = WidgetMainFrame.getFrame();
+	By id = By.id("cardsForm");
+	By cardHolderTxb = By.id("cardholder");
+	By cardNumberTxb = By.id("cnumber_field_id");
+	By cardexpMonthTxb = By.id("expmonth_field");
+	By cardexpYearTxb = By.id("expyear_field");
+	By cardCvvTxb = By.id("cvv_id");
+	By zipTxb = By.name("zip");
+	By cpfTxb = By.id("cpf");
+	By emailTxb = By.id("email");
+	By birthDayTxb = By.id("birth_date_day");
+	By birthMonthTxb = By.id("birth_date_month");
+	By birthYearTxb = By.id("birth_date_year");
+	By phoneTxb = By.id("phone");
+	By buyButtonTxb = By.id("pay_button");
+	
+	public PS_ccbrazil(Driver driver) {
 		WebElement iframe = driver.getElement(By.id("iframecc")).getWebElement();
 		driver.switchTo().frame(iframe);
 		driver.getElement(id);
-		return driver;
+		this.driver = driver;
 	}
 	
 	
-	public static void createPayment() {
+	public void createPayment() {
 		AnnotationPage.sleep(5000);
 		setCardHolder();
 		setCardNumber();
@@ -61,78 +62,87 @@ public class PS_ccbrazil {
 		clickBuyButton();
 	}
 	
-	protected static void setCardFullExp() {
+	
+	public String getEmail() {
+		return this.email;
+	}
+	
+	protected void setCardFullExp() {
 		setExpMonth();
 		setExpYear();
 	}
 	
-	protected static void setCardHolder() {
-		Element element = getFrame().getElement(cardHolderTxb);
+	protected void setCardHolder() {
+		Element element = driver.getElement(cardHolderTxb);
 		element.sendKeys(name);
 	}
 	
-	protected static void setCardNumber() {
-		Element element = getFrame().getElement(cardNumberTxb);
+	protected void setCardNumber() {
+		Element element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
 	
-	protected static void setExpMonth() {
-		Element element = getFrame().getElement(cardexpMonthTxb);
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+	
+	protected void setExpMonth() {
+		Element element = driver.getElement(cardexpMonthTxb);
 		element.sendKeys(cardMonth);
 	}
 	
-	protected static void setExpYear() {
-		Element element = getFrame().getElement(cardexpYearTxb);
+	protected void setExpYear() {
+		Element element = driver.getElement(cardexpYearTxb);
 		element.sendKeys(cardYear);
 	}
 	
-	protected static void setCardCvv() {
-		Element element = getFrame().getElement(cardCvvTxb);
+	protected void setCardCvv() {
+		Element element = driver.getElement(cardCvvTxb);
 		element.sendKeys(cvv);
 	}
 	
-	protected static void setZip() {
-		Element element = getFrame().getElement(zipTxb);
+	protected void setZip() {
+		Element element = driver.getElement(zipTxb);
 		element.sendKeys(CEP);
 	}
 	
-	protected static void setCPF() {
-		Element element = getFrame().getElement(cpfTxb);
+	protected void setCPF() {
+		Element element = driver.getElement(cpfTxb);
 		element.sendKeys(CPF);
 	}
 	
-	protected static void setEmail() {
+	protected void setEmail() {
 		email = "meo"+ AnnotationPage.timestamp()+"@spam4.me";
-		Element element = getFrame().getElement(emailTxb);
+		Element element = driver.getElement(emailTxb);
 		element.sendKeys(email);
 	}
 	
-	protected static void setBirthDay() {
-		Element element = getFrame().getElement(birthDayTxb);
+	protected void setBirthDay() {
+		Element element = driver.getElement(birthDayTxb);
 		element.sendKeys(birthDay);
 	}
 	
-	protected static void setBirthMonth() {
-		Element element = getFrame().getElement(birthMonthTxb);
+	protected void setBirthMonth() {
+		Element element = driver.getElement(birthMonthTxb);
 		element.sendKeys(birthMonth);
 	}
 	
-	protected static void setBirthYear() {
-		Element element = getFrame().getElement(birthYearTxb);
+	protected void setBirthYear() {
+		Element element = driver.getElement(birthYearTxb);
 		element.sendKeys(birthYear);
 	}
 	
-	protected static void setPhone() {
-		Element element = getFrame().getElement(phoneTxb);
+	protected void setPhone() {
+		Element element = driver.getElement(phoneTxb);
 		element.sendKeys(phone);
 	}
 	
-	protected static void clickBuyButton() {
-		Element element = getFrame().getElement(buyButtonTxb);
+	protected void clickBuyButton() {
+		Element element = driver.getElement(buyButtonTxb);
 		element.click();
 	}
 	
-	protected static void setFullBirth() {
+	protected void setFullBirth() {
 		setBirthDay();
 		setBirthMonth();
 		setBirthYear();

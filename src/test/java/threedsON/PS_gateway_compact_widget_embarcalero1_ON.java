@@ -11,65 +11,54 @@ import org.testng.annotations.Test;
 
 import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
+import automation.project3ds.BaseTest;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
 import automation.project3ds.PS_Neosurf;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_gateway_old;
+import automation.project3ds.PS_gateway_compact;
 import automation.project3ds.Pslog;
-import automation.project3ds.Wallapi;
+import automation.project3ds.WallapiAPI;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
+import automation.project3ds.WidgetPage;
 
-public class PS_gateway_old_widget_embarcalero2_ON {
+public class PS_gateway_compact_widget_embarcalero1_ON  extends BaseTest {
 	
 	String shortcode = "gateway";
 	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
 	String co_id = "1";
-	String a_id = "101677";
+	String a_id = "101707";
 	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).generate();
 
 	
 	
-	static Driver driver;
 
 	@BeforeClass
 	public void setUp() throws Exception {
-		Login.login(host);
-		CodeFeature.setCF(url, CodeFeature.CF_3DS_V2, true);
+		this.driver = new Driver(browser);
+		login(host);
+		CodeFeature.setCodeFeature(driver,url, CodeFeature.CF_3DS_V2, true);
 	}
 	
 
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-		AnnotationPage.driver = null;
-	}
-	
-	
-	@BeforeMethod
-	public void openBrick() throws Exception {
-		driver = AnnotationPage.getDriver();
-		driver.get(host);
-		WidgetMulti.clickPaymentMethod(shortcode);
-//		WidgetMulti.clickPrice(0);
-		WidgetMulti.clickBuyButton();
-	}
-	
 	
 	@Test
-	public void v2() throws Exception {
+	public void v1() throws Exception {
 //		String cardNumber = "4012001037141112";
-//		String cardNumber = "5200000000000007";
-		String cardNumber = "5200000000001096";
-		PS_gateway_old widget = new PS_gateway_old();
+		String cardNumber = "5200000000000007";
+//		String cardNumber = "5200000000001096";
+		WidgetPage widgetPage = new WidgetPage(driver);
+		PS_gateway_compact widget = widgetPage.getMultiWidget().getPS_gateway_old();
 		widget.setCoID(co_id);
 		widget.setCardNumber(cardNumber);
 		widget.createPayment();
-		widget.finish3dsV2ON();
-		WidgetMainFrame.waitForThankYou();
+		widget.finish3dsV1ON();
+		
+		widgetPage.getMultiWidget().waitForThankYou();
 	}
+	
 
 }

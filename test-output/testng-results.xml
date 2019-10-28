@@ -1,77 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Logo" duration-ms="254162" started-at="2019-10-22T08:45:31Z" finished-at="2019-10-22T08:49:45Z">
+  <suite name="Default suite" duration-ms="85725" started-at="2019-10-28T05:10:22Z" finished-at="2019-10-28T05:11:48Z">
     <groups>
     </groups>
-    <test name="Logo" duration-ms="254162" started-at="2019-10-22T08:45:31Z" finished-at="2019-10-22T08:49:45Z">
+    <test name="Default test" duration-ms="85725" started-at="2019-10-28T05:10:22Z" finished-at="2019-10-28T05:11:48Z">
       <class name="logo.LogoLatestNaming">
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@1ce92674]" name="execute" duration-ms="73858" started-at="2019-10-22T08:45:52Z" data-provider="data" finished-at="2019-10-22T08:47:06Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="58271" started-at="2019-10-28T05:10:48Z" data-provider="data" finished-at="2019-10-28T05:11:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[gateway]]>
+                <![CDATA[yacash]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway, called_name=gateway, co_id=1, shortcode=gateway, folder=Gateway\Gateway (no amex), a_id=101696, enable=1, ps_id=132, d_id=87983, logo=, co_name=United States}]]>
+                <![CDATA[{p1=, ps_name=Yandex/Cash, called_name=yacash, co_id=170, shortcode=yacash, folder=yacash, a_id=99894, enable=1, ps_id=286, d_id=86844, logo=, co_name=Russia}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@1ce92674]" name="execute" duration-ms="52338" started-at="2019-10-22T08:47:07Z" data-provider="data" finished-at="2019-10-22T08:47:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gateway]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Amex, called_name=gateway_amex, co_id=1, shortcode=gateway, folder=Gateway\Gateway (with amex) (1), a_id=101706, enable=1, ps_id=132, d_id=87991, logo=gateway_amex, co_name=United States}]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="tearDown" is-config="true" duration-ms="806" started-at="2019-10-28T05:11:47Z" finished-at="2019-10-28T05:11:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@1ce92674]" name="execute" duration-ms="53657" started-at="2019-10-22T08:47:59Z" data-provider="data" finished-at="2019-10-22T08:48:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gateway]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=101705, enable=1, ps_id=132, d_id=87988, logo=gateway_discover, co_name=United States}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@1ce92674]" name="execute" duration-ms="50946" started-at="2019-10-22T08:48:53Z" data-provider="data" finished-at="2019-10-22T08:49:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gateway]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Amex and Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=99720, enable=1, ps_id=132, d_id=86919, logo=gateway_amex_discover, co_name=United States}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- execute -->
+        </test-method> <!-- tearDown -->
       </class> <!-- logo.LogoLatestNaming -->
-    </test> <!-- Logo -->
-  </suite> <!-- Logo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

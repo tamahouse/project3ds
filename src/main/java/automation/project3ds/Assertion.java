@@ -15,6 +15,12 @@ public class Assertion {
 	public static String TEXT_GREY = "rgba(51, 51, 51, 0.5)";
 
 	public static Status status = Status.PASS;
+	
+	public static void assertConverted(String cl_id) throws Exception {
+		Boolean isConverted = Wallapi.getIsConverted(cl_id);
+		Assertion.get().assertEquals(isConverted, true,"[IsConvertSuccessful]");
+		Assertion.end();
+	}
 
 	public static void end() {
 		if (assertion != null) {
@@ -50,8 +56,8 @@ public class Assertion {
 
 	}
 
-	public static void isFormError(Element formError, String value) throws Exception {
-		ExtentManager.addScreenshot("isFormError");
+	public static void isFormError(Driver driver, Element formError, String value) throws Exception {
+		ExtentManager.addScreenshot(driver, "isFormError");
 //		String border = formError.getCssValue("border-color");
 //		String background = formError.getCssValue("background-color");
 		Element text = formError.getElement(By.xpath("./ul/li"));

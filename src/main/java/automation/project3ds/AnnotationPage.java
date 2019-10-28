@@ -51,7 +51,7 @@ public static Driver driver;
 		hostMap.put("pw", pw);
 	}
 	
-	public static void screenShot(String filePath) {
+	public static void screenShot(Driver driver, String filePath) {
 		Driver.screenShot(driver.getWebDriver(), filePath);
 	}
 	

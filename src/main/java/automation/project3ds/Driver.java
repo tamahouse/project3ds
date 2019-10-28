@@ -67,6 +67,25 @@ public class Driver implements WebDriver {
 		}
 		return null;
 	}
+	
+	public String switchToWindows(String containsInUrl, Boolean x, int milisecond) {
+		this.sleep(1000);
+		int timeout = 500;
+		for(int i = 0; i < milisecond/timeout; i++) {
+		List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+		for(String tab: tabs) {
+			driver.switchTo().window(tab);
+			String url = driver.getCurrentUrl();
+			if(x == true && url.contains(containsInUrl)) {
+					return tab;
+			}else if(x == false && !url.contains(containsInUrl)) {
+				return tab;
+			}
+		}
+		}
+		return null;
+	}
+	
 	public static String timestamp() {
 		return String.valueOf(System.currentTimeMillis());
 	}
@@ -241,7 +260,7 @@ public class Driver implements WebDriver {
 			this.sleep(timeout);
 		}
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
-		ExtentManager.addScreenshot("failedGetElement");
+		ExtentManager.addScreenshot(this, "failedGetElement");
 		return new Element(driver.findElement(by));
 	}
 	

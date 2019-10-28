@@ -13,6 +13,7 @@ import automation.project3ds.*;
 public class Case01_12_WidgetBrick_1v6_Test_EmptyTextbox {
 
 	String host = AnnotationPage.hostMap.get("p1");
+	String shortcode = "gateway";
 	
 	static Driver driver;
 

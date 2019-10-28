@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
+import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
@@ -22,8 +23,9 @@ import automation.project3ds.PS_Pagseguro_API;
 import automation.project3ds.Pslog;
 import automation.project3ds.WidgetIframecc;
 import automation.project3ds.WidgetMulti;
+import automation.project3ds.WidgetPage;
 
-public class PS_Pagseguro_Test {
+public class PS_Pagseguro_Multiple_Status_Test extends BaseTest{
 
 	String a_id = "99894";
 	String shortcode = "pagseguro";
@@ -33,26 +35,13 @@ public class PS_Pagseguro_Test {
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	
 	
-	static Driver driver;
 
 	@BeforeClass
 	public void setUp() throws Exception {
-		Login.login(host);
+		this.driver = new Driver(browser);
+		login(host);
 	}
 	
-
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-		AnnotationPage.driver = null;
-	}
-	
-	public void openPS() throws Exception {
-		driver = AnnotationPage.getDriver();
-		driver.get(host);
-		WidgetMulti.clickPaymentMethod(shortcode);
-		WidgetMulti.clickBuyButton();
-	}
 	
 	@DataProvider(name="data")
 	public Object[][] data() throws Exception{
@@ -83,9 +72,11 @@ public class PS_Pagseguro_Test {
 				steps.add(process);
 			}
 		}
-		this.openPS();
-		PS_Pagseguro.createPayment();
-		String transactionCode = PS_Pagseguro2.createCreditCardPayment();
+		
+		WidgetPage widgetPage = new WidgetPage(driver);
+		PS_Pagseguro ps = (PS_Pagseguro) widgetPage.getMultiWidget().createClick(shortcode);
+		PS_Pagseguro2 ps2 = ps.createPayment();
+		String transactionCode = ps2.createCreditCardPayment();
 		for(int i=0; i< steps.size(); i++) {
 			String step = steps.get(i);
 			PS_Pagseguro_API.setStatus(transactionCode, step);
@@ -93,7 +84,7 @@ public class PS_Pagseguro_Test {
 			AnnotationPage.sleep(60000);
 			}
 		}
-		String email = PS_Pagseguro.email;
+		String email = ps.getEmail();
 		String print = email + " "+ Pslog.get_cl_id_email_Fasterpay(email) + " " + transactionCode + " "+ status;
 		System.out.println(print);
 		ExtentManager.logInfo(print);

@@ -15,35 +15,22 @@ import automation.project3ds.Driver.Browser;
 
 public class PS_gateway_brick_1v5 {
 
+	Driver driver;
 	
-	Brick_1v5 brick;
-	
-	public PS_gateway_brick_1v5() {
-		AnnotationPage.sleep(7000);
-		brick = new Brick_1v5(getFrame());
-	}
-	
-	public Driver getFrame() {
-		Driver driver = WidgetMainFrame.getFrame();
+	public PS_gateway_brick_1v5(Driver driver) {
 		WebElement iframe = driver.getElement(By.id("iframecc")).getWebElement();
 		driver.switchTo().frame(iframe);
-		return driver;
+		AnnotationPage.sleep(7000);
+		this.driver = driver;
 	}
 	
-	public void setBrick() {
-		brick = new Brick_1v5(getFrame());
+	
+	public Brick_1v5 getBrick_1v5() {
+		return new Brick_1v5(driver);
 	}
 	
-	public void setCardNumber(String cardNumber) {
-		brick.setCardNumber(cardNumber);
-	}
-	
-	public void createPayment() {
-		brick.createPayment();
-	}
 	
 	public void finish3dsPolkOFF() throws Exception {
-		Driver driver = getFrame();
 		driver.switchTo().defaultContent();
 		driver.switchToWindows("3dsecure", true);
 		Widget3dsPolk obj = new Widget3dsPolk(driver);
@@ -53,7 +40,6 @@ public class PS_gateway_brick_1v5 {
 	}
 	
 	public void finish3dsV1OFF() {
-		Driver driver = getFrame();
 		driver.switchTo().defaultContent();
 		driver.switchToWindows("cardinalcommerce", true);
 		Widget3dsV1 obj = new Widget3dsV1(driver);
@@ -62,7 +48,6 @@ public class PS_gateway_brick_1v5 {
 	}
 	
 	public void finish3dsV1ON() {
-		Driver driver = getFrame();
 		if(driver.getBrowser().equals(Browser.IE)) {
 			driver.switchTo().defaultContent();
 			driver.switchToWindows("brick-3ds-v2", true);
@@ -72,7 +57,7 @@ public class PS_gateway_brick_1v5 {
 			obj.finish();
 			driver.switchToWindows("test-offerwall", true);
 		}else {
-			WebElement iframe = getFrame().getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
 			driver.switchTo().frame(iframe);
 			Widget3dsV1 obj = new Widget3dsV1(driver);
 			obj.finish();
@@ -81,7 +66,6 @@ public class PS_gateway_brick_1v5 {
 	}
 	
 	public void finish3dsV2ON() {
-		Driver driver = getFrame();
 		if(driver.getBrowser().equals(Browser.IE)) {
 			driver.switchTo().defaultContent();
 			driver.switchToWindows("brick-3ds-v2", true);
@@ -91,7 +75,7 @@ public class PS_gateway_brick_1v5 {
 			obj.finish();
 			driver.switchToWindows("test-offerwall", true);
 		}else {
-			WebElement iframe = getFrame().getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
 			driver.switchTo().frame(iframe);
 			Widget3dsV2 obj = new Widget3dsV2(driver);
 			obj.finish();
@@ -99,7 +83,4 @@ public class PS_gateway_brick_1v5 {
 
 	}
 	
-	public void clickProcessButton() {
-		brick.clickProcessButton();
-	}
 }

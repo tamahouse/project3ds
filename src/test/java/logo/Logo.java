@@ -33,6 +33,7 @@ import com.codoid.products.fillo.Recordset;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
+import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
@@ -45,7 +46,7 @@ import automation.project3ds.WidgetTerminal;
 import automation.project3ds.WidgetUni;
 import javafx.util.Pair;
 
-public class Logo {
+public class Logo extends BaseTest {
 
 	static Map<String, Pair<Integer, Integer>> ruleMap;
 
@@ -77,7 +78,7 @@ public class Logo {
 	@DataProvider(name = "data")
 	public Object[][] data() throws Exception {
 
-		Login.login(host);
+		login(host);
 		List<Object[]> temp = new ArrayList<Object[]>();
 		List<Map<String, String>> list = this.importData();
 		for (Map<String, String> map : list) {

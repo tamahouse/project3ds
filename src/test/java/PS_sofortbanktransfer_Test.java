@@ -8,6 +8,7 @@ import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
+import automation.project3ds.Network;
 import automation.project3ds.PS_Neosurf;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
@@ -20,8 +21,9 @@ import automation.project3ds.WidgetPage;
 
 public class PS_sofortbanktransfer_Test extends BaseTest{
 	
+	String a_id = "99894";
 	String shortcode = "sofortbanktransfer";
-	String url = "http://feature-pwl-2037.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pwl-2037.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).generate();
 	

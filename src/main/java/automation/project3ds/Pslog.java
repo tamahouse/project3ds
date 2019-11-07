@@ -81,6 +81,16 @@ public class Pslog {
 		return cl_id;
 	}
 	
+	public static String get_cl_id(int ps_id) throws Exception {
+		String query = "select * from ps_logs where ps_id ="+ps_id+" order by cl_id desc limit 1";
+		ResultSet resultSet = getStatement().executeQuery(query);
+		resultSet.next();
+		String cl_id = resultSet.getString("cl_id");
+		System.out.println(cl_id);
+		ExtentManager.logInfo(cl_id);
+		return cl_id;
+	}
+	
 	public static String get_Fasterpay_payment_order_id(String clickId) throws Exception {
 		ResultSet resultSet = getStatement().executeQuery("select log_data from ps_logs where cl_id = '" + clickId
 				+ "' and log_data like '%createPaymentOrder%' limit 5");

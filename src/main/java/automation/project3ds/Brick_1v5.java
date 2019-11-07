@@ -29,6 +29,7 @@ public class Brick_1v5 {
 	By payButton = By.xpath("//*[@class='button js-brick-submit']");
 	By processButton = By.xpath("//*[contains(@class,'is-active')]//*[@class='button button--100 button-secure']");
 	By successButton = By.xpath("//*[@class='button js-brick-submit brick-is-success']");
+	By error = By.xpath("//*[@class='errors js-brick-errors is-errors']");
 	
 	public Brick_1v5(Driver driver) {
 		this.driver = driver;
@@ -36,6 +37,10 @@ public class Brick_1v5 {
 	
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
+	}
+	
+	public String getEmail() {
+		return this.email;
 	}
 	
 	public void createPayment() {
@@ -48,6 +53,9 @@ public class Brick_1v5 {
 		clickPayButton();
 	}
 	
+	public void waitForError() {
+		driver.getElement(error,60000);
+	}
 	
 	private void setCardHolder() {
 		Element element = driver.getElement(cardHolderTxb);

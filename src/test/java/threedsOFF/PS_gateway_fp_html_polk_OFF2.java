@@ -43,6 +43,7 @@ public class PS_gateway_fp_html_polk_OFF2  extends BaseTest{
 	
 	@Test
 	public void polk() throws Exception {
+		driver.get(host);
 		String cardNumber = "4012001037141112";
 //		String cardNumber = "5200000000000007";
 //		String cardNumber = "5200000000001096";

@@ -65,7 +65,6 @@ public class PS_Pagseguro2 {
 		setSender();
 		clickBoletoOption();
 		clickNextButton();
-		waitForComplete();
 		String transactionCode = waitForComplete();
 		return transactionCode;
 	}
@@ -261,12 +260,14 @@ public class PS_Pagseguro2 {
 		Boolean isOpen = isPaymentDetailOpen();
 		if(!isOpen) {
 			Element element = driver.getElement(completed,20000);
+			AnnotationPage.sleep(1000);
 			element.click();
 		}
 	}
 	
 	private String waitForComplete() {
 		clickOpenPaymentDetail();
+		AnnotationPage.sleep(1000);
 		Element element = driver.getElement(By.id("transactionCode"));
 		String transactionCode = element.getText().replace("-", "");
 		return transactionCode;

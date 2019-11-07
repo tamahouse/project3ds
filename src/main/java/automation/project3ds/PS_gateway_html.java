@@ -29,6 +29,14 @@ public class PS_gateway_html {
 		brick.createPayment();
 	}
 	
+	public void waitForError() {
+		brick.waitForError();
+	}
+	
+	public String getEmail() {
+		return brick.getEmail();
+	}
+	
 	public void finish3dsPolk() {
 		driver.switchToWindows("3dsecure", true);
 		Widget3dsPolk obj = new Widget3dsPolk(driver);

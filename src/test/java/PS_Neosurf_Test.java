@@ -20,7 +20,7 @@ import automation.project3ds.WidgetPage;
 public class PS_Neosurf_Test extends BaseTest{
 	
 	String shortcode = "neosurf";
-	String url = "http://feature-pwl-2007.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pwl-2007.wallapi.bamboo.stuffio.com";
 	String co_id = "2";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).generate();
 	

@@ -46,11 +46,12 @@ public class PS_gateway_compact_embarcalero1_OFF  extends BaseTest{
 	
 	@Test
 	public void v1() throws Exception {
+		driver.get(host);
 //		String cardNumber = "4012001037141112";
 		String cardNumber = "5200000000000007";
 //		String cardNumber = "5200000000001096";
 		WidgetPage widgetPage = new WidgetPage(driver);
-		PS_gateway_compact widget = widgetPage.getMultiWidget().getPS_gateway_old();
+		PS_gateway_compact widget = widgetPage.getMultiWidget().getPS_gateway_compact();
 		widget.co_id = co_id;
 		widget.cardNumber = cardNumber;
 		widget.createPayment();

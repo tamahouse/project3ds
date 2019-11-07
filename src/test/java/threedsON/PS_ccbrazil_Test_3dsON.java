@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
+import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
@@ -23,7 +24,7 @@ import automation.project3ds.WidgetPage;
 public class PS_ccbrazil_Test_3dsON extends BaseTest{
 	
 	String shortcode = "ccbrazil";
-	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
 	String co_id = "30";
 	String a_id = "101696";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).a_id(a_id).generate();
@@ -43,9 +44,9 @@ public class PS_ccbrazil_Test_3dsON extends BaseTest{
 		PS_ccbrazil ps = (PS_ccbrazil) widgetPage.getMultiWidget().createClick(shortcode);
 		ps.createPayment();
 		widgetPage.getMultiWidget().waitForThankYou();
-//		String email = PS_ccbrazil.email;
-//		String clickID = Pslog.get_cl_id_email_Fasterpay(email);
-//		System.out.println(clickID);
+		String email = ps.getEmail();
+		String cl_id = Pslog.get_cl_id_email_Fasterpay(email);
+		Assertion.assertConverted(cl_id);
 	}
 
 }

@@ -21,7 +21,7 @@ import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
 import automation.project3ds.PS_Pagseguro_API;
 import automation.project3ds.Pslog;
-import automation.project3ds.WidgetIframecc;
+import automation.project3ds.Brick_1v6;
 import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 

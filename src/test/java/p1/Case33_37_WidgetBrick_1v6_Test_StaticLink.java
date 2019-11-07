@@ -14,7 +14,7 @@ import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
 import automation.project3ds.Widget3dsNoIframe;
-import automation.project3ds.WidgetIframecc;
+import automation.project3ds.Brick_1v6;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
 
@@ -47,7 +47,7 @@ public class Case33_37_WidgetBrick_1v6_Test_StaticLink {
 	
 	@Test
 	public void terms() throws Exception {
-		WidgetIframecc.clickTerms();
+		Brick_1v6.clickTerms();
 		driver.switchToWindows("test-offerwall", false);
 		String url = driver.getCurrentUrl();
 		Assertion.get().assertEquals(url, "https://www.paymentwall.com/en/terms", "[Term]");
@@ -58,11 +58,11 @@ public class Case33_37_WidgetBrick_1v6_Test_StaticLink {
 	@Test
 	public void tryAgain() throws Exception {
 		String cardNumber = "4000000000000002";
-		WidgetIframecc.payment("cardNumber", cardNumber).create();
+		Brick_1v6.payment("cardNumber", cardNumber).create();
 		for(int i = 0; i< 5; i++) {
-			WidgetIframecc.clickTryAgain();
+			Brick_1v6.clickTryAgain();
 			ExtentManager.addScreenshot("tryAgain");
-			WidgetIframecc.clickBuyButton();
+			Brick_1v6.clickBuyButton();
 		}
 	}
 	
@@ -73,8 +73,8 @@ public class Case33_37_WidgetBrick_1v6_Test_StaticLink {
 		WidgetMulti.clickPaymentMethod("gateway");
 		WidgetMulti.clickBuyButton();
 		for(int i = 0; i< 5; i++) {
-			WidgetIframecc.clickUserDifferentCard();
-			WidgetIframecc.clickBackToStoredCard();
+			Brick_1v6.clickUserDifferentCard();
+			Brick_1v6.clickBackToStoredCard();
 		}
 	}
 

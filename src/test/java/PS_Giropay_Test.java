@@ -5,9 +5,11 @@ import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
+import automation.project3ds.BasePage;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
+import automation.project3ds.Network;
 import automation.project3ds.PS_Giropay;
 import automation.project3ds.PS_Giropay2;
 import automation.project3ds.PS_Neosurf;
@@ -62,8 +64,11 @@ public class PS_Giropay_Test extends BaseTest{
 		PS_Giropay ps = (PS_Giropay) widgetPage.getMultiWidget().createClick(shortcode);
 		PS_Giropay2 ps2 = ps.submitBic();
 		ThankyouPage tk = ps2.createPayment();
-		String cl_id = Pslog.get_cl_id_email_Fasterpay("giropay");
+		String cl_id = Network.getCl_id(driver);
+		System.out.println(cl_id);
 		Assertion.assertConverted(cl_id);
+//		String cl_id = Pslog.get_cl_id_email_Fasterpay("giropay");
+//		Assertion.assertConverted(cl_id);
 	}
 
 }

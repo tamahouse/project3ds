@@ -16,7 +16,10 @@ public class Login extends BasePage {
 	}
 	
 	public void login(String url) {
-		String loginUrl = url+"/admin/test-offerwall";
+		String loginUrl = url;
+		if(!url.contains("/admin/test-offerwall")) {
+			loginUrl = url+"/admin/test-offerwall";
+		}
 		driver.get(loginUrl);
 		setName();
 		setPassword();

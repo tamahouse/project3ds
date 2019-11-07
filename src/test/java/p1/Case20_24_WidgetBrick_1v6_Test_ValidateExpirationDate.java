@@ -15,7 +15,7 @@ import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
-import automation.project3ds.WidgetIframecc;
+import automation.project3ds.Brick_1v6;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
 
@@ -48,7 +48,7 @@ public class Case20_24_WidgetBrick_1v6_Test_ValidateExpirationDate {
 	@Test
 	public void pastValue() throws Exception {
 		String expDate = "0118";
-		WidgetIframecc.setExpirationDate(expDate);
+		Brick_1v6.setExpirationDate(expDate);
 		ExtentManager.addScreenshot("isInvalid");
 		Assertion.end();
 	}
@@ -59,7 +59,7 @@ public class Case20_24_WidgetBrick_1v6_Test_ValidateExpirationDate {
 		Date currentTime = new Date(stamp.getTime());
 		SimpleDateFormat sdfDate = new SimpleDateFormat("MMYY");
 		String expDate = sdfDate.format(currentTime);
-		WidgetIframecc.setExpirationDate(expDate);
+		Brick_1v6.setExpirationDate(expDate);
 		ExtentManager.addScreenshot("isInvalid");
 		Assertion.end();
 	}
@@ -67,7 +67,7 @@ public class Case20_24_WidgetBrick_1v6_Test_ValidateExpirationDate {
 	@Test
 	public void futureValueShort() throws Exception {
 		String expDate = "0129";
-		WidgetIframecc.setExpirationDate(expDate);
+		Brick_1v6.setExpirationDate(expDate);
 		ExtentManager.addScreenshot("isInvalid");
 		Assertion.end();
 	}
@@ -75,7 +75,7 @@ public class Case20_24_WidgetBrick_1v6_Test_ValidateExpirationDate {
 	@Test
 	public void futureValueLong() throws Exception {
 		String expDate = "012029";
-		WidgetIframecc.setExpirationDate(expDate);
+		Brick_1v6.setExpirationDate(expDate);
 		ExtentManager.addScreenshot("isInvalid");
 		Assertion.end();
 	}

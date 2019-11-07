@@ -53,7 +53,7 @@ public class BrickWidgetHome_1v5 {
 		Thread.sleep(1000);
 //		WidgetMainFrame.clickBuyButton();
 		WidgetIframeccBackup.createPayment(cardNumber);
-		refID = WidgetIframecc.getRefId();
+		refID = Brick_1v6.getRefId();
 		ExtentManager.logInfo("refID: " + refID);
 		handleCase();
 		System.out.println(cardNumber + " : " + refID);
@@ -65,7 +65,7 @@ public class BrickWidgetHome_1v5 {
 		if (caseKey.equals("ERROR")) {
 
 		} else if (caseKey.equals("PURCHASE")) {
-			WidgetIframecc.clickProcessButton();
+			Brick_1v6.clickProcessButton();
 			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 			if (tabs.size() == 1) {
 //				String redirectKey = WidgetIframecc.getRedirectCase();

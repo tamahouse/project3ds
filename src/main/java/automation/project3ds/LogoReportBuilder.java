@@ -145,7 +145,7 @@ public class LogoReportBuilder {
 					map.put(name, actualImage);
 					if ((!name.contains("Logo") && ruleMap.get("light2Logo") == null)
 							|| (name.contains("Logo") && ruleMap.get("light2Logo") != null)) {
-						checkTerminal(map, shortcode, logo, name, hostName, co_id, a_id);
+//						checkTerminal(map, shortcode, logo, name, hostName, co_id, a_id);
 					}
 				} else if (name.equals("multi")) {
 					checkMulti(map, shortcode, co_id, a_id);

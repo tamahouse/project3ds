@@ -53,7 +53,7 @@ public class LogoLatestNaming extends BaseTest{
 	static Map<String, Pair<Integer, Integer>> ruleMap;
 
 
-	static String branch = "http://feature-pwl-2050.wallapi.bamboo.stuffio.com";
+	static String branch = "http://feature-pwl-2035.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(branch).generate();
 
 	private List<Map<String, String>> importData() throws Exception {

@@ -2,6 +2,7 @@ package automation.project3ds;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
@@ -272,7 +273,10 @@ public class WidgetPaymentMethods extends WidgetMainFrame {
 			return list;
 		}
 
-		public void clickBank(String data_id) {
+		public void clickBank() {
+			List<String> banks = this.getListBankIds();
+			Random random = new Random();
+			String data_id = banks.get(random.nextInt(banks.size()));
 			By by = By.xpath("//*[@id='payment-options']//*[@data-id='" + data_id + "']");
 			driver.getElement(by).click();
 		}

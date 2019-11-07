@@ -42,11 +42,9 @@ public class PS_gateway_custom {
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
-
-	private String getEmail() {
-		String timestamp = String.valueOf(System.currentTimeMillis());
-		String email = "meo" + timestamp + "@spam4.me";
-		return email;
+	
+	public String getEmail() {
+		return this.email;
 	}
 
 	public void setEmail() {
@@ -84,6 +82,7 @@ public class PS_gateway_custom {
 //		Thread.sleep(10000);
 		element = driver.getElement(submitBtn);
 		element.clickJS();
+		element = driver.getElement(jsonBody,60000);
 	}
 
 	public String getUrl() throws Exception {
@@ -93,7 +92,7 @@ public class PS_gateway_custom {
 		JsonNode jsonNode = mapper.readTree(str);
 		String url = jsonNode.path("secure").path("redirect").asText();
 		if (url.equals("")) {
-			throw new Exception("empty response");
+			throw new Exception(jsonNode.toString());
 		} else {
 			return url;
 		}

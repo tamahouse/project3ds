@@ -81,6 +81,7 @@ public class Driver implements WebDriver {
 			}else if(x == false && !url.contains(containsInUrl)) {
 				return tab;
 			}
+			this.sleep(timeout);
 		}
 		}
 		return null;
@@ -160,7 +161,7 @@ public class Driver implements WebDriver {
 		Point p = this.getLastScreenPosition();
 		if (browser.equals(Browser.Chrome)) {
 			LoggingPreferences logPrefs = new LoggingPreferences();
-			logPrefs.enable(LogType.BROWSER, Level.ALL);
+			logPrefs.enable(LogType.PERFORMANCE, Level.INFO);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("disable-infobars");
 			options.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);

@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85725" started-at="2019-10-28T05:10:22Z" finished-at="2019-10-28T05:11:48Z">
+  <suite name="Default suite" duration-ms="69529" started-at="2019-11-07T05:49:15Z" finished-at="2019-11-07T05:50:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="85725" started-at="2019-10-28T05:10:22Z" finished-at="2019-10-28T05:11:48Z">
+    <test name="Default test" duration-ms="69529" started-at="2019-11-07T05:49:15Z" finished-at="2019-11-07T05:50:25Z">
       <class name="logo.LogoLatestNaming">
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="58271" started-at="2019-10-28T05:10:48Z" data-provider="data" finished-at="2019-10-28T05:11:46Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="36787" started-at="2019-11-07T05:49:46Z" data-provider="data" finished-at="2019-11-07T05:50:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[yacash]]>
+                <![CDATA[gateway]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=, ps_name=Yandex/Cash, called_name=yacash, co_id=170, shortcode=yacash, folder=yacash, a_id=99894, enable=1, ps_id=286, d_id=86844, logo=, co_name=Russia}]]>
+                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Amex and Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=99720, enable=1, ps_id=132, d_id=86919, logo=gateway_discover, co_name=United States}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="tearDown" is-config="true" duration-ms="806" started-at="2019-10-28T05:11:47Z" finished-at="2019-10-28T05:11:48Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="tearDown" is-config="true" duration-ms="1039" started-at="2019-11-07T05:50:24Z" finished-at="2019-11-07T05:50:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

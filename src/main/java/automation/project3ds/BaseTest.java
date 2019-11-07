@@ -27,7 +27,6 @@ public class BaseTest {
 	}
 	
 	public void login(String url) {
-		this.url = url;
 		ExtentManager.logInfo(url);
 		Login login =  new Login(driver);
 		login.login(url);

@@ -44,6 +44,7 @@ public class PS_gateway_custom_embarcalero2_OFF  extends BaseTest{
 	
 	@Test
 	public void v2() throws Exception {
+		driver.get(host);
 //		String cardNumber = "4012001037141112";
 //		String cardNumber = "5200000000000007";
 		String cardNumber = "5200000000001096";

@@ -10,7 +10,7 @@ import automation.project3ds.Assertion;
 import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.Login;
-import automation.project3ds.WidgetIframecc;
+import automation.project3ds.Brick_1v6;
 import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
 
@@ -42,8 +42,8 @@ public class Case25_32_WidgetBrick_1v6_Test_ValidateOthers {
 
 	@Test
 	public void firstNameAsNumber() throws Exception {
-		WidgetIframecc.payment("name", "123").create();
-		Element formError = WidgetIframecc.getFormError();
+		Brick_1v6.payment("name", "123").create();
+		Element formError = Brick_1v6.getFormError();
 		String value = "Please check first name";
 		Assertion.isFormError(formError, value);
 		Assertion.end();
@@ -51,8 +51,8 @@ public class Case25_32_WidgetBrick_1v6_Test_ValidateOthers {
 	
 	@Test
 	public void lastNameAsNumber() throws Exception {
-		WidgetIframecc.payment("name", "First 123").create();
-		Element formError = WidgetIframecc.getFormError();
+		Brick_1v6.payment("name", "First 123").create();
+		Element formError = Brick_1v6.getFormError();
 		String value = "Please check last name";
 		Assertion.isFormError(formError, value);
 		Assertion.end();
@@ -60,8 +60,8 @@ public class Case25_32_WidgetBrick_1v6_Test_ValidateOthers {
 	
 	@Test
 	public void nameAsNumber() throws Exception {
-		WidgetIframecc.payment("name", "123 123").create();
-		Element formError = WidgetIframecc.getFormError();
+		Brick_1v6.payment("name", "123 123").create();
+		Element formError = Brick_1v6.getFormError();
 		String value = "Please check firstname/last name";
 		Assertion.isFormError(formError, value);
 		Assertion.end();
@@ -69,16 +69,16 @@ public class Case25_32_WidgetBrick_1v6_Test_ValidateOthers {
 	
 	@Test
 	public void emailWithOutAt() throws Exception {
-		WidgetIframecc.payment("email", "missingatsymbol").create();
-		Element emailTextbox = WidgetIframecc.getEmailTextbox();
+		Brick_1v6.payment("email", "missingatsymbol").create();
+		Element emailTextbox = Brick_1v6.getEmailTextbox();
 		Assertion.assertErrorText(emailTextbox);
 		Assertion.end();
 	}
 	
 	@Test
 	public void emailWithOutDot() throws Exception {
-		WidgetIframecc.payment("email", "missingdot@spam").create();
-		Element emailTxb = WidgetIframecc.getEmailTextbox();
+		Brick_1v6.payment("email", "missingdot@spam").create();
+		Element emailTxb = Brick_1v6.getEmailTextbox();
 		Assertion.assertErrorText(emailTxb);
 		Assertion.end();
 	}

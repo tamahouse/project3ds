@@ -6,7 +6,7 @@
       <class name="logo.LogoLatestNaming">
         <methods>
           <include name="tearDown"/>
-          <include name="execute" invocation-numbers="0"/>
+          <include name="execute" invocation-numbers="3"/>
         </methods>
       </class> <!-- logo.LogoLatestNaming -->
     </classes>

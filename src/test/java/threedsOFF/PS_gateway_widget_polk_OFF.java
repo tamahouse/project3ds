@@ -25,7 +25,8 @@ import automation.project3ds.WidgetPage;
 public class PS_gateway_widget_polk_OFF  extends BaseTest{
 	
 	String shortcode = "gateway";
-	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
 	String co_id = "1";
 	String a_id = "101696";
 	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).generate();
@@ -43,11 +44,13 @@ public class PS_gateway_widget_polk_OFF  extends BaseTest{
 	
 	@Test
 	public void polk() throws Exception {
+		driver.get(host);
 		String cardNumber = "4012001037141112";
 //		String cardNumber = "5200000000000007";
 //		String cardNumber = "5200000000001096";
 //		String cardNumber = "5555555555554477";
 		WidgetPage widgetPage = new WidgetPage(driver);
+		widgetPage.getMultiWidget().click(shortcode);
 		PS_gateway_brick_1v5 gateway_1v5 = widgetPage.getMultiWidget().getPS_gateway_brick_1v5();
 		Brick_1v5 brick = gateway_1v5.getBrick_1v5();
 		brick.setCardNumber(cardNumber);

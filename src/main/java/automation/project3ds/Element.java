@@ -247,6 +247,31 @@ public class Element implements WebElement{
 //		this.highlight(element);
 		element.click();
 	}
+	
+	public void clickThroughLoading(int miliseconds) {
+		int timeout = 300;
+		for(int i = 0; i< miliseconds/timeout; i ++) {
+			try {
+			element.click();
+			return;
+			}catch(WebDriverException e) {
+				this.sleep(timeout);
+			}
+		}
+	}
+	
+	public void clickThroughLoading() {
+		this.clickThroughLoading(20000);
+	}
+	
+	public void sleep(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	public void submit() {

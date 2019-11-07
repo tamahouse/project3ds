@@ -17,14 +17,12 @@ public class WidgetMulti extends WidgetMainFrame {
 	}
 
 	public Object createClick(String shortcode) throws Exception{
-		this.clickPaymentMethod(shortcode);
-		this.clickPrice(0);
-		this.clickBuyButton();
+		this.click(shortcode);
 		if(shortcode.equals("neosurf")) {
 			return new PS_Neosurf(driver);
 		}else if(shortcode.equals("pagseguro")) {
 			return new PS_Pagseguro(driver);
-		}else if(shortcode.equals("ccbrazil")) {
+		}else if(shortcode.equals("ccbrazil") || shortcode.equals("ccbrazilhipercard")) {
 			return new PS_ccbrazil(driver);
 		}else if(shortcode.equals("sofortbt")) {
 			return new PS_Sofortbt(driver);
@@ -32,17 +30,38 @@ public class WidgetMulti extends WidgetMainFrame {
 			return new PS_Giropay(driver);
 		}else if(shortcode.equals("vtc")) {
 			return new PS_vtc(driver);
+		}else if(shortcode.equals("boletobr")) {
+			return new PS_boletobr(driver);
+		}else if(shortcode.equals("przelewy24")) {
+			return new PS_przelewy24(driver);
+		}else if(shortcode.equals("gudangvoucher")) {
+			return new PS_gudangvoucher(driver);
 		}
 		return null;
 	}
 	
+	public void click(String shortcode) throws Exception{
+		this.clickPaymentMethod(shortcode);
+		this.clickPrice(0);
+		this.clickBuyButton();
+	}
 	
-	public PS_gateway_compact getPS_gateway_old() {
+	
+	public PS_gateway_compact getPS_gateway_compact() throws Exception {
 		return new PS_gateway_compact(driver);
 	}
 	
-	public PS_gateway_brick_1v5 getPS_gateway_brick_1v5() {
+	
+	public PS_gateway_old getPS_gateway_old() throws Exception {
+		return new PS_gateway_old(driver);
+	}
+	
+	public PS_gateway_brick_1v5 getPS_gateway_brick_1v5() throws Exception {
 		return new PS_gateway_brick_1v5(driver);
+	}
+	
+	public PS_gateway_brick_1v6 getPS_gateway_brick_1v6() throws Exception {
+		return new PS_gateway_brick_1v6(driver);
 	}
 	
 	
@@ -70,6 +89,20 @@ public class WidgetMulti extends WidgetMainFrame {
 		List<Element> list = driver.getElements(byprice);
 		Element element = list.get(index);
 		element.click();
+	}
+	
+	public void clickPrice(String price, String currency) {
+		By byprice = By.xpath("//*[@id='ps_price']//tr/td[@class='price']/b");
+		driver.getElement(byprice);
+		List<Element> list = driver.getElements(byprice);
+		for(Element element: list) {
+			String str = element.getText();
+			String actualPrice = str.replaceAll("[^0-9.,]+","");;
+			String actualCurrency = str.replaceAll("[0-9., $]","");
+			if(price.equals(actualPrice) && actualCurrency.equals(currency)) {
+				element.click();
+			}
+		}
 	}
 	
 	public void clickBuyButton() throws Exception {

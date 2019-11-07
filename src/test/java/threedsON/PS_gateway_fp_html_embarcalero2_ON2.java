@@ -6,11 +6,13 @@ import org.testng.annotations.Test;
 
 import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
+import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Brick_1v5;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
 import automation.project3ds.Login;
+import automation.project3ds.Network;
 import automation.project3ds.PS_Neosurf;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
@@ -25,11 +27,12 @@ import automation.project3ds.WidgetMulti;
 public class PS_gateway_fp_html_embarcalero2_ON2  extends BaseTest {
 	
 	String shortcode = "gateway";
-	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
 	String co_id = "1";
 	String a_id = "101696";
 	String host = url+"/test-staging-brick/brick-fp.html";
-	
+	int ps_id = 132;
 	
 
 	@BeforeClass
@@ -44,6 +47,7 @@ public class PS_gateway_fp_html_embarcalero2_ON2  extends BaseTest {
 	
 	@Test
 	public void v2() throws Exception {
+		driver.get(host);
 //		String cardNumber = "4012001037141112";
 //		String cardNumber = "5200000000000007";
 		String cardNumber = "5200000000001096";
@@ -52,6 +56,10 @@ public class PS_gateway_fp_html_embarcalero2_ON2  extends BaseTest {
 		html.setCardNumber(cardNumber);
 		html.createPayment();
 		html.waitForSuccessButton();
+		String email = html.getEmail();
+		String cl_id = Pslog.get_cl_id_email_Fasterpay(email);
+		System.out.println(cl_id);
+		Assertion.assertConverted(cl_id);
 	}
 	
 

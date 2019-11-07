@@ -51,7 +51,7 @@ public class Assertion {
 			errorText = error.getText();
 		} catch (Exception e) {
 		}
-		String eErrorText = WidgetIframecc.getErrorMessage(element);
+		String eErrorText = Brick_1v6.getErrorMessage(element);
 		get().assertEquals(errorText, eErrorText, assertTitle + "[ErrorTextValue]");
 
 	}

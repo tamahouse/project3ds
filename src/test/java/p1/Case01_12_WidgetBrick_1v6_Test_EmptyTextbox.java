@@ -39,10 +39,10 @@ public class Case01_12_WidgetBrick_1v6_Test_EmptyTextbox {
 
 	@Test
 	public void case01_06_emptyTextboxClick() throws Exception {
-		List<Element> list = WidgetIframecc.getTextboxList();
+		List<Element> list = Brick_1v6.getTextboxList();
 		for (Element element : list) {
 			element.click();
-			WidgetIframecc.clickWhiteSpace();
+			Brick_1v6.clickWhiteSpace();
 			Assertion.assertErrorText(element);
 		}
 		ExtentManager.addScreenshot("isInvalid");
@@ -53,8 +53,8 @@ public class Case01_12_WidgetBrick_1v6_Test_EmptyTextbox {
 	
 	@Test
 	public void case07_12_emptyTextboxSubmit() throws Exception {
-		WidgetIframecc.clickBuyButton();
-		List<Element> list = WidgetIframecc.getTextboxList();
+		Brick_1v6.clickBuyButton();
+		List<Element> list = Brick_1v6.getTextboxList();
 		for (Element element : list) {
 			Assertion.assertErrorText(element);
 		}

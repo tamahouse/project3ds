@@ -44,11 +44,13 @@ public class PS_gateway_widget_embarcalero1_OFF  extends BaseTest{
 	
 	@Test
 	public void v1() throws Exception {
+		driver.get(host);
 //		String cardNumber = "4012001037141112";
 		String cardNumber = "5200000000000007";
 //		String cardNumber = "5200000000001096";
 //		String cardNumber = "5555555555554477";
 		WidgetPage widgetPage = new WidgetPage(driver);
+		widgetPage.getMultiWidget().click(shortcode);
 		PS_gateway_brick_1v5 gateway_1v5 = widgetPage.getMultiWidget().getPS_gateway_brick_1v5();
 		Brick_1v5 brick = gateway_1v5.getBrick_1v5();
 		brick.setCardNumber(cardNumber);

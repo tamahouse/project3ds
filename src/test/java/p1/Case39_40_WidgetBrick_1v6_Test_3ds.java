@@ -2,19 +2,16 @@ package p1;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
+import automation.project3ds.Brick_1v6;
 import automation.project3ds.Driver;
 import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
 import automation.project3ds.Login;
 import automation.project3ds.Widget3dsNoIframe;
-import automation.project3ds.Brick_1v6;
-import automation.project3ds.WidgetMainFrame;
 import automation.project3ds.WidgetMulti;
 
 public class Case39_40_WidgetBrick_1v6_Test_3ds {

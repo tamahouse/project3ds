@@ -1,36 +1,24 @@
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
-import automation.project3ds.BasePage;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
-import automation.project3ds.ExtentManager;
 import automation.project3ds.Network;
-import automation.project3ds.PS_Pagseguro;
-import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_Pagseguro_API;
-import automation.project3ds.PS_boletobr;
 import automation.project3ds.PS_btfinland;
-import automation.project3ds.PS_idealpayments;
+import automation.project3ds.PS_multibanco;
 import automation.project3ds.PS_ppro;
-import automation.project3ds.PS_boletobr;
-import automation.project3ds.Pslog;
-import automation.project3ds.ThankyouPage;
-import automation.project3ds.Wallapi;
 import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 
 
 public class PS_ppro_multibanco_Test extends BaseTest{
 
-	String a_id = "99894";
-	String shortcode = "btfinland";
-	String co_id = "70";
+	String shortcode = "multibanco";
+	String co_id = "1";
 //	String url = "http://feature-pwl-2048.wallapi.bamboo.stuffio.com";
-	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).a_id(a_id).isCustom().generate();
+	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	
 	
@@ -49,13 +37,13 @@ public class PS_ppro_multibanco_Test extends BaseTest{
 		widgetMulti.clickPaymentMethod(shortcode);
 		widgetMulti.clickPrice(0);
 		widgetMulti.clickBuyButton();
-		PS_btfinland ps = new PS_btfinland(driver);
+		PS_multibanco ps = new PS_multibanco(driver);
 		PS_ppro ps2 = ps.createPayment();
 		ps2.finishPaymentStep();
 		String cl_id = Network.getCl_id(driver);
 		System.out.println(cl_id);
-		String reportUrl = url+ "/admin/payment-clicks/transaction-details?click="+cl_id;
-		driver.get(reportUrl);
+//		String reportUrl = url+ "/admin/payment-clicks/transaction-details?click="+cl_id;
+//		driver.get(reportUrl);
 		Assertion.assertConverted(cl_id);
 //		Assertion.get().assertEquals(BasePage.isNumeric(cl_id), true,"[cl_id available]");
 //		Assertion.end();

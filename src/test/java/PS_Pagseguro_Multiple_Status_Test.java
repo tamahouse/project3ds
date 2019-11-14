@@ -3,26 +3,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
-import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
-import automation.project3ds.Element;
 import automation.project3ds.ExtentManager;
-import automation.project3ds.Login;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
 import automation.project3ds.PS_Pagseguro_API;
 import automation.project3ds.Pslog;
-import automation.project3ds.Brick_1v6;
-import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 
 public class PS_Pagseguro_Multiple_Status_Test extends BaseTest{

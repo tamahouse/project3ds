@@ -2,8 +2,6 @@ package automation.project3ds;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -12,14 +10,9 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
-import org.openqa.selenium.WebDriver;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityModelProvider;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.model.Media;
-import com.aventstack.extentreports.model.MediaType;
 import com.aventstack.extentreports.model.ScreenCapture;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;

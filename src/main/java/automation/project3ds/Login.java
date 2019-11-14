@@ -30,6 +30,7 @@ public class Login extends BasePage {
 	
 	private void setName() {
 		Element nameTextbox = driver.getElement(nameTxb);
+		driver.sleep(1000);
 		nameTextbox.sendKeys(name);
 	}
 	

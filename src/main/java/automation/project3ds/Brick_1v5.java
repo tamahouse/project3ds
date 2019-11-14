@@ -1,11 +1,6 @@
 package automation.project3ds;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 
 public class Brick_1v5 {
@@ -62,17 +57,17 @@ public class Brick_1v5 {
 		element.sendKeys(name);
 	}
 	
-	private void setCardNumber() {
+	public void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
 	
-	private void setCardExp() {
+	public void setCardExp() {
 		Element element = driver.getElement(cardExpTxb);
 		element.sendKeys(exp);
 	}
 	
-	private void setCardCvv() {
+	public void setCardCvv() {
 		Element element = driver.getElement(cardCvvTxb);
 		element.sendKeys(cvv);
 	}
@@ -82,13 +77,16 @@ public class Brick_1v5 {
 		element.sendKeys(zip);
 	}
 	
-	private void setEmail() {
+	public void setEmail() {
 		email = "meo"+AnnotationPage.timestamp()+"@spam4.me";
 		Element element = driver.getElement(emailTxb);
+		String cEmail = element.getAttribute("value");
+		if(cEmail.equals("")) {
 		element.sendKeys(email);
+		}
 	}
 	
-	private void clickPayButton() {
+	public void clickPayButton() {
 		Element element = driver.getElement(payButton);
 		element.click();
 	}

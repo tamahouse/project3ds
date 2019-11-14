@@ -1,12 +1,5 @@
 package automation.project3ds;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

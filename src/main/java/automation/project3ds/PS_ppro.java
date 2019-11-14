@@ -1,11 +1,8 @@
 package automation.project3ds;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class PS_ppro {
 	Driver driver;

@@ -1,0 +1,1427 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			.r-img { width: 25rem; }
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Nov 14, 2019 12:49:10 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>Defaulttest</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>LogoLatestNaming.execute (gateway )</span>
+						<span class='test-time'>Nov 14, 2019 12:49:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 14, 2019 12:49:10 PM</span>
+	<span class='label end-time'>Nov 14, 2019 12:49:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+622ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Defaulttest</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:10 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_gateway, ps_name=Gateway, called_name=gateway, co_id=1, shortcode=gateway, folder=Gateway\Gateway (no amex), a_id=101696, enable=1, ps_id=132, d_id=87983, logo=, co_name=United States}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:16 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710556165uni.png' src='screenShot\1573710556165uni.png' data-src='screenShot\1573710556165uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:17 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:17 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:17 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:17 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:18 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:23 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710563551multi p1.png' src='screenShot\1573710563551multi p1.png' data-src='screenShot\1573710563551multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:25 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710565036multi p10.png' src='screenShot\1573710565036multi p10.png' data-src='screenShot\1573710565036multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:49 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710588687v5.png' src='screenShot\1573710588687v5.png' data-src='screenShot\1573710588687v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:49 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:49 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710589958uni' src='image\1573710589958uni' data-src='image\1573710589958uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710589988dark2' src='image\1573710589988dark2' data-src='image\1573710589988dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590016dark3' src='image\1573710590016dark3' data-src='image\1573710590016dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590053light' src='image\1573710590053light' data-src='image\1573710590053light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590060dark' src='image\1573710590060dark' data-src='image\1573710590060dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590069light3' src='image\1573710590069light3' data-src='image\1573710590069light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590093multi p1' src='image\1573710590093multi p1' data-src='image\1573710590093multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590101v5' src='image\1573710590101v5' data-src='image\1573710590101v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710590110light2' src='image\1573710590110light2' data-src='image\1573710590110light2'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>12:49:50 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>LogoLatestNaming.execute (gateway )</span>
+						<span class='test-time'>Nov 14, 2019 12:49:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 14, 2019 12:49:51 PM</span>
+	<span class='label end-time'>Nov 14, 2019 12:50:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+174ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Defaulttest</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:51 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_gateway, ps_name=Gateway - With Amex, called_name=gateway_amex, co_id=1, shortcode=gateway, folder=Gateway\Gateway (with amex) (1), a_id=101706, enable=1, ps_id=132, d_id=87991, logo=gateway_amex, co_name=United States}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:51 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:57 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710597305multi p1.png' src='screenShot\1573710597305multi p1.png' data-src='screenShot\1573710597305multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:49:59 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710598841multi p10.png' src='screenShot\1573710598841multi p10.png' data-src='screenShot\1573710598841multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:04 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710603765uni.png' src='screenShot\1573710603765uni.png' data-src='screenShot\1573710603765uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:04 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:04 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:04 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:05 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_amex@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:06 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:18 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710617975v5.png' src='screenShot\1573710617975v5.png' data-src='screenShot\1573710617975v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:18 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						light2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619137light2Logo' src='image\1573710619137light2Logo' data-src='image\1573710619137light2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						darkLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619152darkLogo' src='image\1573710619152darkLogo' data-src='image\1573710619152darkLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						dark2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619161dark2Logo' src='image\1573710619161dark2Logo' data-src='image\1573710619161dark2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619178uni' src='image\1573710619178uni' data-src='image\1573710619178uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619186dark2' src='image\1573710619186dark2' data-src='image\1573710619186dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619201dark3' src='image\1573710619201dark3' data-src='image\1573710619201dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619225light' src='image\1573710619225light' data-src='image\1573710619225light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						dark3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619235dark3Logo' src='image\1573710619235dark3Logo' data-src='image\1573710619235dark3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619258dark' src='image\1573710619258dark' data-src='image\1573710619258dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						lightLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619267lightLogo' src='image\1573710619267lightLogo' data-src='image\1573710619267lightLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						light3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619272light3Logo' src='image\1573710619272light3Logo' data-src='image\1573710619272light3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619291light3' src='image\1573710619291light3' data-src='image\1573710619291light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619309multi p1' src='image\1573710619309multi p1' data-src='image\1573710619309multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619314v5' src='image\1573710619314v5' data-src='image\1573710619314v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710619322light2' src='image\1573710619322light2' data-src='image\1573710619322light2'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='131'>
+					<div class='test-heading'>
+						<span class='test-name'>LogoLatestNaming.execute (gateway )</span>
+						<span class='test-time'>Nov 14, 2019 12:50:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 14, 2019 12:50:19 PM</span>
+	<span class='label end-time'>Nov 14, 2019 12:50:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+181ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Defaulttest</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_gateway, ps_name=Gateway - With Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=101705, enable=1, ps_id=132, d_id=87988, logo=gateway_discover, co_name=United States}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:19 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:20 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:20 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:25 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710625053multi p1.png' src='screenShot\1573710625053multi p1.png' data-src='screenShot\1573710625053multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:26 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710626338multi p10.png' src='screenShot\1573710626338multi p10.png' data-src='screenShot\1573710626338multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:31 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710631185uni.png' src='screenShot\1573710631185uni.png' data-src='screenShot\1573710631185uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:31 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:32 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:33 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:46 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710646520v5.png' src='screenShot\1573710646520v5.png' data-src='screenShot\1573710646520v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						light2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647656light2Logo' src='image\1573710647656light2Logo' data-src='image\1573710647656light2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						darkLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647672darkLogo' src='image\1573710647672darkLogo' data-src='image\1573710647672darkLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						dark2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647678dark2Logo' src='image\1573710647678dark2Logo' data-src='image\1573710647678dark2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647697uni' src='image\1573710647697uni' data-src='image\1573710647697uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647703dark2' src='image\1573710647703dark2' data-src='image\1573710647703dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647721dark3' src='image\1573710647721dark3' data-src='image\1573710647721dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647749light' src='image\1573710647749light' data-src='image\1573710647749light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						dark3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647755dark3Logo' src='image\1573710647755dark3Logo' data-src='image\1573710647755dark3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647787dark' src='image\1573710647787dark' data-src='image\1573710647787dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						lightLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647796lightLogo' src='image\1573710647796lightLogo' data-src='image\1573710647796lightLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						light3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647801light3Logo' src='image\1573710647801light3Logo' data-src='image\1573710647801light3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647824light3' src='image\1573710647824light3' data-src='image\1573710647824light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647843multi p1' src='image\1573710647843multi p1' data-src='image\1573710647843multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647849v5' src='image\1573710647849v5' data-src='image\1573710647849v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710647855light2' src='image\1573710647855light2' data-src='image\1573710647855light2'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>12:50:47 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='196'>
+					<div class='test-heading'>
+						<span class='test-name'>LogoLatestNaming.execute (gateway )</span>
+						<span class='test-time'>Nov 14, 2019 12:50:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 14, 2019 12:50:48 PM</span>
+	<span class='label end-time'>Nov 14, 2019 12:51:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+393ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>Defaulttest</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:48 PM</td>
+				<td class='step-details'>
+						Params: {p1=tab_gateway, ps_name=Gateway - With Amex and Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=99720, enable=1, ps_id=132, d_id=86919, logo=gateway_discover, co_name=United States}
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:48 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:48 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:48 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:54 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710653771multi p1.png' src='screenShot\1573710653771multi p1.png' data-src='screenShot\1573710653771multi p1.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:50:55 PM</td>
+				<td class='step-details'>
+						multi p10
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710655114multi p10.png' src='screenShot\1573710655114multi p10.png' data-src='screenShot\1573710655114multi p10.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:00 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710660110uni.png' src='screenShot\1573710660110uni.png' data-src='screenShot\1573710660110uni.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:00 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:00 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:01 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:01 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover_d@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:01 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_d.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:01 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:02 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway_discover@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:02 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@3x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:14 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenShot\1573710674251v5.png' src='screenShot\1573710674251v5.png' data-src='screenShot\1573710674251v5.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						http://feature-pwl-2069.wallapi.bamboo.stuffio.com/images/ps_logos/v2/gateway@2x.png
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						light2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675407light2Logo' src='image\1573710675407light2Logo' data-src='image\1573710675407light2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						darkLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675423darkLogo' src='image\1573710675423darkLogo' data-src='image\1573710675423darkLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						dark2Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675430dark2Logo' src='image\1573710675430dark2Logo' data-src='image\1573710675430dark2Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						uni
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675454uni' src='image\1573710675454uni' data-src='image\1573710675454uni'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						dark2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675460dark2' src='image\1573710675460dark2' data-src='image\1573710675460dark2'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						dark3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675479dark3' src='image\1573710675479dark3' data-src='image\1573710675479dark3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						light
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675507light' src='image\1573710675507light' data-src='image\1573710675507light'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						dark3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675514dark3Logo' src='image\1573710675514dark3Logo' data-src='image\1573710675514dark3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						dark
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675546dark' src='image\1573710675546dark' data-src='image\1573710675546dark'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						lightLogo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675554lightLogo' src='image\1573710675554lightLogo' data-src='image\1573710675554lightLogo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						light3Logo
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675559light3Logo' src='image\1573710675559light3Logo' data-src='image\1573710675559light3Logo'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						light3
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675583light3' src='image\1573710675583light3' data-src='image\1573710675583light3'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						multi p1
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675601multi p1' src='image\1573710675601multi p1' data-src='image\1573710675601multi p1'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						v5
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675607v5' src='image\1573710675607v5' data-src='image\1573710675607v5'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						light2
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='image\1573710675613light2' src='image\1573710675613light2' data-src='image\1573710675613light2'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>12:51:15 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Defaulttest</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 14, 2019 12:49:10 PM</td>
+										<td class='linked' test-id='1'>LogoLatestNaming.execute (gateway )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 14, 2019 12:49:51 PM</td>
+										<td class='linked' test-id='66'>LogoLatestNaming.execute (gateway )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 14, 2019 12:50:19 PM</td>
+										<td class='linked' test-id='131'>LogoLatestNaming.execute (gateway )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Nov 14, 2019 12:50:48 PM</td>
+										<td class='linked' test-id='196'>LogoLatestNaming.execute (gateway )</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Nov 14, 2019 12:49:10 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Nov 14, 2019 12:51:15 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 2m 5s+250ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>Defaulttest</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 4,
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "LogoLatestNaming.execute (gateway )":39.622,"LogoLatestNaming.execute (gateway )":28.174,"LogoLatestNaming.execute (gateway )":28.181,"LogoLatestNaming.execute (gateway )":27.393
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

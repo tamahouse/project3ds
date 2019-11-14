@@ -7,29 +7,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 
-import org.apache.commons.math3.exception.OutOfRangeException;
 import org.openqa.selenium.By;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.Status;
-import com.codoid.products.exception.FilloException;
-import com.codoid.products.fillo.Connection;
-import com.codoid.products.fillo.Fillo;
-import com.codoid.products.fillo.Recordset;
 
 import javafx.util.Pair;
 
@@ -41,6 +27,8 @@ public class LogoReportBuilder {
 
 	String branch;
 	String host;
+	
+	String develop = "http://develop.wallapi.bamboo.stuffio.com";
 	
 	public LogoReportBuilder(String branch, String host, Driver driver) {
 		this.branch = branch;
@@ -167,10 +155,18 @@ public class LogoReportBuilder {
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p1").co_id(co_id).isCustom()
 					.generate();
-			
+			String developHost = AnnotationPage.WallapiUrl.host(develop).a_id(a_id).widget("p1").co_id(co_id).isCustom()
+					.generate();
+			driver.get(developHost);
+			WidgetPage developwidgetPage = new WidgetPage(driver);
+			String developImageUrl = developwidgetPage.getMultiWidget().getLogoUrl(shortcode);
+//			
 			driver.get(host);
 			WidgetPage widgetPage = new WidgetPage(driver);
 			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			
+			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[multi p1]");
+			
 			ExtentManager.addScreenshot(driver, "multi p1");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
@@ -186,8 +182,18 @@ public class LogoReportBuilder {
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).widget("p10").co_id(co_id).isCustom()
 					.generate();
+			String developHost = AnnotationPage.WallapiUrl.host(develop).a_id(a_id).widget("p10").co_id(co_id).isCustom()
+					.generate();
+			driver.get(developHost);
+			WidgetPage developwidgetPage = new WidgetPage(driver);
+			String developImageUrl = developwidgetPage.getMultiWidget().getLogoUrl(shortcode);
+//			
+			driver.get(host);
 			WidgetPage widgetPage = new WidgetPage(driver);
 			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			
+			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[multi p10]");
+			
 			ExtentManager.addScreenshot(driver, "multi p10");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
@@ -208,10 +214,19 @@ public class LogoReportBuilder {
 		try {
 			String host = AnnotationPage.WallapiUrl.host(branch).a_id(a_id).uni(shortcode).co_id(co_id).isCustom()
 					.generate();
+//			String developHost = AnnotationPage.WallapiUrl.host(develop).a_id(a_id).uni(shortcode).co_id(co_id).isCustom()
+//					.generate();
+//			driver.get(developHost);
+//			WidgetPage developWidget = new WidgetPage(driver);
+//			WidgetUni developoWidgetUni = developWidget.getWidgetUni();
+//			String developImageUrl = developoWidgetUni.getLogoUrl(shortcode);
+			
 			driver.get(host);
 			WidgetPage widget = new WidgetPage(driver);
 			WidgetUni widgetUni = widget.getWidgetUni();
 			String imageUrl = widgetUni.getLogoUrl(shortcode);
+			
+//			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[uni]");
 			ExtentManager.addScreenshot(driver, "uni");
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
@@ -232,6 +247,13 @@ public class LogoReportBuilder {
 			
 		try {
 			String host = branch + "/admin/developers/login?id="+d_id+"&admin_login=true";
+			String developHost = develop + "/admin/developers/login?id="+d_id+"&admin_login=true";
+			driver.get(developHost);
+			driver.getCurrentUrl("wallapi");
+			driver.get(develop + "/developers/applications/paymentsystems/?id=" + a_id);
+			Element developimage = driver.getElement(By.xpath("//div[./*[@id='" + ps_id + "_active']]//img"));
+			String developImageUrl = developimage.getAttribute("src");
+			
 			driver.get(host);
 			driver.getCurrentUrl("wallapi");
 			driver.get(branch + "/developers/applications/paymentsystems/?id=" + a_id);
@@ -239,6 +261,9 @@ public class LogoReportBuilder {
 			image.moveToTopView();
 			ExtentManager.addScreenshot(driver, "v5");
 			String imageUrl = image.getAttribute("src");
+			
+			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[v5]");
+			
 			URL url = new URL(imageUrl);
 			BufferedImage actualImage = ImageIO.read(url);
 			map.put("v5", actualImage);
@@ -260,6 +285,9 @@ public class LogoReportBuilder {
 			if (name.contains("light2")) {
 				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom()
 						.generate();
+				String developHost = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom()
+						.generate();
+				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);
 				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();

@@ -1,7 +1,6 @@
 package automation.project3ds;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.fasterxml.jackson.databind.JsonNode;

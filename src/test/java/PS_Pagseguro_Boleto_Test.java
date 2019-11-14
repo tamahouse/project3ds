@@ -1,28 +1,23 @@
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
-import automation.project3ds.ExtentManager;
 import automation.project3ds.Network;
 import automation.project3ds.PS_Pagseguro;
 import automation.project3ds.PS_Pagseguro2;
 import automation.project3ds.PS_Pagseguro_API;
-import automation.project3ds.Pslog;
-import automation.project3ds.Wallapi;
 import automation.project3ds.WidgetPage;
 
 
 public class PS_Pagseguro_Boleto_Test extends BaseTest{
 
-	String a_id = "99894";
 	String shortcode = "pagseguro";
 	String co_id = "30";
-	String url = "http://feature-pwl-1969.wallapi.bamboo.stuffio.com";
-	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).a_id(a_id).isCustom().generate();
+//	String url = "http://feature-pwl-1969.wallapi.bamboo.stuffio.com";
+	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).isCustom().generate();
 	
 	
 

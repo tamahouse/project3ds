@@ -1,28 +1,13 @@
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
-import automation.project3ds.BasePage;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
-import automation.project3ds.Login;
 import automation.project3ds.Network;
-import automation.project3ds.PS_Giropay;
-import automation.project3ds.PS_Giropay2;
-import automation.project3ds.PS_Neosurf;
-import automation.project3ds.PS_Pagseguro;
-import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_Sofortbt;
 import automation.project3ds.PS_gudangvoucher;
 import automation.project3ds.PS_gudangvoucher.GudangIframe;
-import automation.project3ds.Pslog;
-import automation.project3ds.ThankyouPage;
-import automation.project3ds.WallapiAPI;
-import automation.project3ds.WidgetMainFrame;
-import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 
 public class PS_gudangvoucher_Test extends BaseTest{
@@ -68,8 +53,8 @@ public class PS_gudangvoucher_Test extends BaseTest{
 		ps2.finishPayment();
 		String cl_id = Network.getCl_id(driver);
 		System.out.println(cl_id);
-		String reportUrl = url+ "/admin/payment-clicks/transaction-details?click="+cl_id;
-		driver.get(reportUrl);
+//		String reportUrl = url+ "/admin/payment-clicks/transaction-details?click="+cl_id;
+//		driver.get(reportUrl);
 		Assertion.assertConverted(cl_id);
 //		String cl_id = Pslog.get_cl_id_email_Fasterpay("giropay");
 //		Assertion.assertConverted(cl_id);

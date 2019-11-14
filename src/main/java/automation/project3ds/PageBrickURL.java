@@ -1,8 +1,5 @@
 package automation.project3ds;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.openqa.selenium.By;
 
 import com.fasterxml.jackson.databind.JsonNode;

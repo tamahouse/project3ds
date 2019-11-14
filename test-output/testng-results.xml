@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="69529" started-at="2019-11-07T05:49:15Z" finished-at="2019-11-07T05:50:25Z">
+  <suite name="Default suite" duration-ms="230244" started-at="2019-11-14T08:58:15Z" finished-at="2019-11-14T09:02:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="69529" started-at="2019-11-07T05:49:15Z" finished-at="2019-11-07T05:50:25Z">
+    <test name="Default test" duration-ms="230244" started-at="2019-11-14T08:58:15Z" finished-at="2019-11-14T09:02:05Z">
       <class name="logo.LogoLatestNaming">
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="36787" started-at="2019-11-07T05:49:46Z" data-provider="data" finished-at="2019-11-07T05:50:23Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="103104" started-at="2019-11-14T08:59:22Z" data-provider="data" finished-at="2019-11-14T09:01:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[gateway]]>
+                <![CDATA[unipinexpress]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[{p1=tab_gateway, ps_name=Gateway - With Amex and Central, called_name=gatewaydiscover, co_id=1, shortcode=gateway, folder=gateway discover, a_id=99720, enable=1, ps_id=132, d_id=86919, logo=gateway_discover, co_name=United States}]]>
+                <![CDATA[{p1=, ps_name=Unipin Express, called_name=unipinexpress, co_id=94, shortcode=unipinexpress, folder=UniPin Express\PNG, a_id=99894, enable=1, ps_id=180, d_id=86844, logo=, co_name=Indonesia}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="tearDown" is-config="true" duration-ms="1039" started-at="2019-11-07T05:50:24Z" finished-at="2019-11-07T05:50:25Z">
+        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="execute" duration-ms="57563" started-at="2019-11-14T09:01:07Z" data-provider="data" finished-at="2019-11-14T09:02:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[unipinwallet]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{p1=, ps_name=Unipin Wallet, called_name=unipinwallet, co_id=94, shortcode=unipinwallet, folder=Unipinwallet, a_id=99894, enable=1, ps_id=203, d_id=86844, logo=, co_name=Indonesia}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execute -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@6e1567f1]" name="tearDown" is-config="true" duration-ms="882" started-at="2019-11-14T09:02:04Z" finished-at="2019-11-14T09:02:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

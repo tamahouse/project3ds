@@ -17,7 +17,6 @@ import automation.project3ds.ExtentManager;
 import automation.project3ds.FasterPay;
 import automation.project3ds.PageBrickHTML;
 import automation.project3ds.Pslog;
-import automation.project3ds.Z2;
 
 public class BrickHTML_Card1_OFF_Test {
 

@@ -1,23 +1,12 @@
 package threedsOFF;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.BaseTest;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
-import automation.project3ds.Login;
-import automation.project3ds.PS_Neosurf;
-import automation.project3ds.PS_Pagseguro;
-import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_ccbrazil;
-import automation.project3ds.Pslog;
-import automation.project3ds.WallapiAPI;
-import automation.project3ds.WidgetMainFrame;
-import automation.project3ds.WidgetMulti;
+import automation.project3ds.PS_ccbrazil_compact;
 import automation.project3ds.WidgetPage;
 
 public class PS_ccbrazilhipercard_Test_3dsOFF  extends BaseTest{
@@ -42,7 +31,7 @@ public class PS_ccbrazilhipercard_Test_3dsOFF  extends BaseTest{
 	public void execute() throws Exception {
 		driver.get(host);
 		WidgetPage widgetPage = new WidgetPage(driver);
-		PS_ccbrazil ps = (PS_ccbrazil) widgetPage.getMultiWidget().createClick(shortcode);
+		PS_ccbrazil_compact ps = (PS_ccbrazil_compact) widgetPage.getMultiWidget().createClick(shortcode);
 		ps.setCardNumber(cardNumber);
 		ps.createPayment();
 		widgetPage.getMultiWidget().waitForThankYou();

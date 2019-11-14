@@ -1,10 +1,8 @@
 package automation.project3ds;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class Widget3dsNoIframe {
 	

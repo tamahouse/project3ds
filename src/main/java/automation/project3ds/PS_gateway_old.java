@@ -9,7 +9,8 @@ public class PS_gateway_old {
 	
 	Driver driver;
 	
-	String name = "Payment Wall";
+	String unique = BasePage.getUniqueText();
+	String name = "Holder "+ unique;
 	String CPF = "72962940005";
 	String CEP = "01452002";
 	String areaCode = "11";
@@ -47,6 +48,10 @@ public class PS_gateway_old {
 		WebElement iframe = driver.getElement(By.id("iframecc")).getWebElement();
 		driver.switchTo().frame(iframe);
 		this.driver = driver;
+	}
+	
+	public String getUnique() {
+		return unique;
 	}
 
 	
@@ -101,11 +106,12 @@ public class PS_gateway_old {
 			state_code = "ON";
 			co_code = "CA";
 		}
+		setAddressCountry();
 		setAddressStreet();
 		setAddressCity();
 		setAddressZip();
 		setAddressState();
-		setAddressCountry();
+	
 	}
 	
 	private void setCardFullExp() {
@@ -156,6 +162,7 @@ public class PS_gateway_old {
 	private void setAddressState() {
 		try {
 		Select select = new Select(driver.getElement(addressState));
+		driver.sleep(1000);
 		select.selectByValue(state_code);
 		}catch (UnexpectedTagNameException e) {
 			Element element = driver.getElement(addressState);
@@ -167,6 +174,7 @@ public class PS_gateway_old {
 	private void setAddressCountry() {
 		Select select = new Select(driver.getElement(addressCountry));
 		select.selectByValue(co_code);
+		driver.sleep(1000);
 	}
 	
 	

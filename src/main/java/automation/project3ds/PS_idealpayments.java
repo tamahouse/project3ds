@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class PS_idealpayments {
 	Driver driver;

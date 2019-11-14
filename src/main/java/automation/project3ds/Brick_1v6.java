@@ -1,8 +1,6 @@
 package automation.project3ds;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -229,7 +227,9 @@ public class Brick_1v6 {
 		element.sendKeys(EMAIL);
 	}
 	
-
+	public String getEmail() {
+		return this.EMAIL;
+	}
 
 	public void clickBuyButton() throws Exception {
 		Element buyButton = driver.getElement(buyBtn);

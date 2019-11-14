@@ -56,6 +56,8 @@ public static Driver driver;
 	}
 	
 	public static class WallapiUrl{
+		
+		public static String SUCCESS_URL = "success_url";
 		String host = AnnotationPage.host;
 //		String a_id = "99894";
 		String a_id = "101693";
@@ -69,6 +71,7 @@ public static Driver driver;
 		String prefix = "&data%5B";
 		String suffix = "%5D=";
 		String custom = "";
+		String customItem = "";
 		String brick_1_6 = "";
 		String theme = "";
 		String version = "";
@@ -108,6 +111,12 @@ public static Driver driver;
 			return this;
 		}
 		
+		public WallapiUrl uni_3(String shortcode) {
+			this.widget = "p2_3";
+			this.p = prefix + "ps" + suffix+shortcode;
+			return this;
+		}
+		
 		public WallapiUrl widget(String widget) {
 			this.widget = widget;
 			return this;
@@ -117,6 +126,8 @@ public static Driver driver;
 			this.co_id = co_id;
 			return this;
 		}
+		
+		
 		
 		
 		public WallapiUrl uid(String uid) {
@@ -139,6 +150,13 @@ public static Driver driver;
 			return this;
 		}
 		
+		
+		public WallapiUrl isCustom(String key, String value) {
+			customItem = "&data%5Bcustom%5D%5B"+key+"%5D="+value;
+		return this;
+	}
+	
+		
 		public WallapiUrl isUidTimeline() {
 			uid = Driver.timestamp();
 		return this;
@@ -150,7 +168,7 @@ public static Driver driver;
 			String w = prefix + "widget" + suffix+ this.widget;
 			String co = prefix + "co_id" + suffix + this.co_id;
 			String u = prefix + "uid" + suffix+ this.uid;
-			String url = h + a+ w+ co+ u+p+this.custom+this.brick_1_6+this.theme+this.version;
+			String url = h + a+ w+ co+ u+p+this.custom+this.brick_1_6+this.theme+this.version+this.customItem;
 			return url;
 		}
 		

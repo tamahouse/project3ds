@@ -1,39 +1,23 @@
 package threedsON;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import automation.project3ds.Action;
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
+import automation.project3ds.BaseTest_Z2;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
-import automation.project3ds.Login;
 import automation.project3ds.Network;
-import automation.project3ds.PS_Neosurf;
-import automation.project3ds.PS_Pagseguro;
-import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_gateway_compact;
 import automation.project3ds.PS_gateway_old;
 import automation.project3ds.Pslog;
-import automation.project3ds.WallapiAPI;
-import automation.project3ds.WidgetMainFrame;
-import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 
-public class PS_gateway_old_widget_embarcalero2_ON  extends BaseTest {
+public class PS_gateway_old_widget_embarcalero2_ON  extends BaseTest_Z2 {
 	
 	String shortcode = "gateway";
-//	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
-	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
-	String co_id = "1";
+	String url = "http://feature-ccg-843.wallapi.bamboo.stuffio.com";
+	String co_id = "76";
 	String a_id = "101677";
 	int ps_id = 132;
 	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).generate();
@@ -63,9 +47,10 @@ public class PS_gateway_old_widget_embarcalero2_ON  extends BaseTest {
 		widget.setCoID(co_id);
 		widget.setCardNumber(cardNumber);
 		widget.createPayment();
+		String unique = widget.getUnique();
 		widget.finish3dsV2ON();
 		widgetPage.getMultiWidget().waitForThankYou();
-		String cl_id = Network.getCl_id(driver);
+		String cl_id = Pslog.get_cl_id_email_Fasterpay(unique);
 		System.out.println(cl_id);
 		Assertion.assertConverted(cl_id);
 	}

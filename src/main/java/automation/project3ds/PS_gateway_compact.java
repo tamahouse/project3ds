@@ -1,5 +1,7 @@
 package automation.project3ds;
 
+import java.util.UUID;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -9,7 +11,8 @@ public class PS_gateway_compact {
 	
 	Driver driver;
 	
-	String name = "Payment Wall";
+	String unique = BasePage.getUniqueText();
+	String name;
 	String CPF = "72962940005";
 	String CEP = "01452002";
 	String areaCode = "11";
@@ -26,6 +29,7 @@ public class PS_gateway_compact {
 	String zip = "32043";
 	String state_code = "FL";
 	String co_code = "US";
+	
 	public String co_id = "1";
 
 	
@@ -101,11 +105,12 @@ public class PS_gateway_compact {
 			state_code = "ON";
 			co_code = "CA";
 		}
+		setAddressCountry();
 		setAddressStreet();
 		setAddressCity();
 		setAddressZip();
 		setAddressState();
-		setAddressCountry();
+
 	}
 	
 	private void setCardFullExp() {
@@ -116,9 +121,13 @@ public class PS_gateway_compact {
 	private void setCardHolder() {
 		AnnotationPage.sleep(7000);
 		Element element = driver.getElement(cardHolderTxb);
+		name = "Holder "+unique;
 		element.sendKeys(name);
 	}
 	
+	public String getUnique() {
+		return this.unique;
+	}
 	private void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);

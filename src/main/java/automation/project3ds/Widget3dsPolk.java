@@ -1,7 +1,6 @@
 package automation.project3ds;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 
 public class Widget3dsPolk {
 

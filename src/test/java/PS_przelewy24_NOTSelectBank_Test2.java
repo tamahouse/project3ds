@@ -1,21 +1,13 @@
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import automation.project3ds.AnnotationPage;
 import automation.project3ds.Assertion;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
-import automation.project3ds.ExtentManager;
 import automation.project3ds.Network;
-import automation.project3ds.PS_Pagseguro;
-import automation.project3ds.PS_Pagseguro2;
-import automation.project3ds.PS_Pagseguro_API;
 import automation.project3ds.PS_przelewy24;
 import automation.project3ds.PS_przelewy24_2;
-import automation.project3ds.Pslog;
-import automation.project3ds.ThankyouPage;
-import automation.project3ds.Wallapi;
 import automation.project3ds.WidgetPage;
 
 

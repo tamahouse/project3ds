@@ -1,10 +1,7 @@
 package automation.project3ds;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.By;
 
 public class WidgetMulti extends WidgetMainFrame {
@@ -23,7 +20,7 @@ public class WidgetMulti extends WidgetMainFrame {
 		}else if(shortcode.equals("pagseguro")) {
 			return new PS_Pagseguro(driver);
 		}else if(shortcode.equals("ccbrazil") || shortcode.equals("ccbrazilhipercard")) {
-			return new PS_ccbrazil(driver);
+			return new PS_ccbrazil_compact(driver);
 		}else if(shortcode.equals("sofortbt")) {
 			return new PS_Sofortbt(driver);
 		}else if(shortcode.equals("giropay")) {
@@ -43,6 +40,12 @@ public class WidgetMulti extends WidgetMainFrame {
 	public void click(String shortcode) throws Exception{
 		this.clickPaymentMethod(shortcode);
 		this.clickPrice(0);
+		this.clickBuyButton();
+	}
+	
+	public void click(String shortcode, String price, String currency) throws Exception{
+		this.clickPaymentMethod(shortcode);
+		this.clickPrice(price, currency);
 		this.clickBuyButton();
 	}
 	
@@ -78,7 +81,7 @@ public class WidgetMulti extends WidgetMainFrame {
 		if (!url.contains("http")) {
 			url = driver.getElement(By.xpath("//*[@id='" + "tab_"+shortcode + "']/b")).getCssValue("background-image");
 		}
-		url = url.substring(5, url.indexOf(".png") + 4);
+		url = url.replace("url(\"", "").replace("\")", "");
 
 		return url;
 	}

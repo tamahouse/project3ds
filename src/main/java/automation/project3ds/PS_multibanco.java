@@ -18,11 +18,11 @@ public class PS_multibanco {
 		this.driver = driver;
 	}
 	
-	public PS_idealpayments2 createPayment() {
+	public PS_ppro createPayment() {
 		setName();
 		setEmail();
 		clickContinueButton();
-		return new PS_idealpayments2(driver);
+		return new PS_ppro(driver);
 	}
 
 

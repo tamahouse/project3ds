@@ -1,9 +1,5 @@
 package automation.project3ds;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

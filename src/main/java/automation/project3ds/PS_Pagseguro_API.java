@@ -1,8 +1,8 @@
 package automation.project3ds;
 
-import org.openqa.selenium.By;
-import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
+
+import io.restassured.response.Response;
 
 public class PS_Pagseguro_API {
 	

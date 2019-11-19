@@ -113,12 +113,12 @@ public class PS_gateway_compact {
 
 	}
 	
-	private void setCardFullExp() {
+	public void setCardFullExp() {
 		setExpMonth();
 		setExpYear();
 	}
 	
-	private void setCardHolder() {
+	public void setCardHolder() {
 		AnnotationPage.sleep(7000);
 		Element element = driver.getElement(cardHolderTxb);
 		name = "Holder "+unique;
@@ -128,7 +128,7 @@ public class PS_gateway_compact {
 	public String getUnique() {
 		return this.unique;
 	}
-	private void setCardNumber() {
+	public void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
 		element.sendKeys(cardNumber);
 	}
@@ -143,7 +143,7 @@ public class PS_gateway_compact {
 		element.sendKeys(cardYear);
 	}
 	
-	private void setCardCvv() {
+	public void setCardCvv() {
 		Element element = driver.getElement(cardCvvTxb);
 		element.sendKeys(cvv);
 	}
@@ -158,7 +158,7 @@ public class PS_gateway_compact {
 		element.sendKeys(city);
 	}
 	
-	private void setAddressZip() {
+	public void setAddressZip() {
 		Element element = driver.getElement(addresstZip);
 		element.sendKeys(zip);
 	}
@@ -180,7 +180,7 @@ public class PS_gateway_compact {
 	}
 	
 	
-	private void clickBuyButton() {
+	public void clickBuyButton() {
 		Element element = driver.getElement(buyButtonTxb);
 		element.click();
 	}

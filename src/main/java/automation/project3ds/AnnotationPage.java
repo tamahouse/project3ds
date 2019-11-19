@@ -111,8 +111,8 @@ public static Driver driver;
 			return this;
 		}
 		
-		public WallapiUrl uni_3(String shortcode) {
-			this.widget = "p2_3";
+		public WallapiUrl uni(String widget, String shortcode) {
+			this.widget = widget;
 			this.p = prefix + "ps" + suffix+shortcode;
 			return this;
 		}
@@ -139,6 +139,11 @@ public static Driver driver;
 				custom = "&are_flexible_call=on&data%5Bamount%5D=5&data%5BcurrencyCode%5D=USD&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=";
 			return this;
 		}
+		
+		public WallapiUrl isPrice(String price, String currency) {
+			custom = "&are_flexible_call=on&data%5Bamount%5D="+price+"&data%5BcurrencyCode%5D="+currency+"&data%5Bag_name%5D=Test+Product&data%5Bag_type%5D=fixed&data%5Bag_external_id%5D=1&data%5Bag_period_length%5D=&data%5Bag_period_type%5D=&data%5Bag_recurring%5D=";
+		return this;
+	}
 		
 		public WallapiUrl isDark() {
 				theme = "&data%5Bcustom%5D%5Btheme%5D=dark";

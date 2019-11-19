@@ -133,7 +133,7 @@ public class LogoReportBuilder {
 					map.put(name, actualImage);
 					if ((!name.contains("Logo") && ruleMap.get("light2Logo") == null)
 							|| (name.contains("Logo") && ruleMap.get("light2Logo") != null)) {
-//						checkTerminal(map, shortcode, logo, name, hostName, co_id, a_id);
+						checkTerminal(map, shortcode, logo, name, hostName, co_id, a_id);
 					}
 				} else if (name.equals("multi")) {
 					checkMulti(map, shortcode, co_id, a_id);
@@ -285,8 +285,16 @@ public class LogoReportBuilder {
 			if (name.contains("light2")) {
 				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom()
 						.generate();
-				String developHost = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isCustom()
+				String developHost = AnnotationPage.WallapiUrl.host(develop).co_id(co_id).a_id(a_id).t3().isCustom()
 						.generate();
+//				driver.get(developHost);
+//				Thread.sleep(2000);
+//				WidgetTerminal widgetTerminalDev = widget.getWidgetTerminal();
+//				widgetTerminalDev.clickPaymentMethod(shortcode, logo);
+//				Thread.sleep(1000);
+//				Element imgDev = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
+//				String strDev = imgDev.getAttribute("src");
+				
 				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);
@@ -295,11 +303,28 @@ public class LogoReportBuilder {
 				Thread.sleep(1000);
 				Element img = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
 				String str = img.getAttribute("src");
+				
+				
 				ExtentManager.logInfo(str);
 				ExtentManager.addScreenshot(driver, name);
+				
+//				Assertion.get().assertNotEquals(str, strDev, "[ChangeIndex]" + "[t3]");
+				
 			} else if (name.contains("dark2")) {
 				String hostTerminal = AnnotationPage.WallapiUrl.host(branch).co_id(co_id).a_id(a_id).t3().isDark()
 						.isCustom().generate();
+				String developHost = AnnotationPage.WallapiUrl.host(develop).co_id(co_id).a_id(a_id).t3().isDark()
+						.isCustom().generate();
+				
+//				driver.get(developHost);
+//				Thread.sleep(2000);
+//				WidgetTerminal widgetTerminalDev = widget.getWidgetTerminal();
+//				widgetTerminalDev.clickPaymentMethod(shortcode, logo);
+//				Thread.sleep(1000);
+//				Element imgDev =driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
+//				String strDev = imgDev.getAttribute("src");
+				
+				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);
 				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();
@@ -309,6 +334,9 @@ public class LogoReportBuilder {
 				String str = img.getAttribute("src");
 				ExtentManager.logInfo(str);
 				ExtentManager.addScreenshot(driver, name);
+				
+//				Assertion.get().assertNotEquals(str, strDev, "[ChangeIndex]" + "[t3]");
+				
 			}
 		} catch (IIOException e) {
 			Assertion.get().assertEquals(host + hostName.get(name), "", "[NotActualReplaced]" + "[" + name + "]");

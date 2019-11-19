@@ -12,4 +12,8 @@ public class ThankyouPage {
 		this.driver = driver;
 		driver.getElement(complete);
 	}
+	
+	public String getCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
 }

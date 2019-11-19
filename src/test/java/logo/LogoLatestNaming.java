@@ -29,7 +29,7 @@ public class LogoLatestNaming extends BaseTest{
 	static Map<String, Pair<Integer, Integer>> ruleMap;
 
 
-	static String branch = "http://feature-logo-test.wallapi.bamboo.stuffio.com";
+	static String branch = "http://feature-pwl-2073.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(branch).generate();
 	String developHost = "http://develop.wallapi.bamboo.stuffio.com/admin/test-offerwall";
 

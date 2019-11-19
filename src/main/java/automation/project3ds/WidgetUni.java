@@ -12,6 +12,10 @@ public class WidgetUni extends WidgetMainFrame{
 	public void get(String host) {
 		driver.get(host);
 	}
+	
+	public PS_gateway_compact_short getPS_gateway_compact_short() throws Exception {
+		return new PS_gateway_compact_short(driver);
+	}
 
 
 	public String getLogoUrl(String shortcode) throws Exception {

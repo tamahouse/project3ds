@@ -16,7 +16,7 @@ public class PS_ppro_idealpayments_Test extends BaseTest{
 
 	String shortcode = "idealpayments";
 	String co_id = "144";
-	String url = "http://feature-pwl-2054.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-pwl-2071.wallapi.bamboo.stuffio.com";
 //	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";

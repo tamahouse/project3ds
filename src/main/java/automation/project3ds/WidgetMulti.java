@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 
+import automation.project3ds.WidgetMainFrame.WidgetType;
+
 public class WidgetMulti extends WidgetMainFrame {
 	
 	private By buyBtn = By.id("ps_psb");
@@ -11,6 +13,33 @@ public class WidgetMulti extends WidgetMainFrame {
 	
 	WidgetMulti(Driver driver) {
 		super(driver);
+	}
+	
+	
+	public Object getPS(String shortcode){
+		switch(shortcode) {
+		case PS_shortcode.MERCADOPAGO:
+			return new PS_mercadopago(driver);
+		case PS_shortcode.MERCADOPAGO2:
+			return new PS_mercadopago2(driver);
+		case PS_shortcode.EBANXTRANSFER:
+			return new PS_ebanxtransfer(driver);
+		case PS_shortcode.BANRISULBRAZIL:
+			return new PS_ebanx(driver);
+		case PS_shortcode.BRADESCOBRAZIL:
+			return new PS_bradescobrazil(driver);
+		case PS_shortcode.BANCOBRAZIL:
+			return new PS_ebanx(driver);
+		case PS_shortcode.ITAUBRAZIL:
+			return new PS_ebanx(driver);
+		case PS_shortcode.SERVIPAGCHILE:
+			return new PS_servipagchile(driver);
+		case PS_shortcode.SENCILLITO:
+			return new PS_servipagchile(driver);
+		case PS_shortcode.PSECOLOMBIA:
+			return new PS_psecolombia(driver);
+		}
+		return null;
 	}
 
 	public Object createClick(String shortcode) throws Exception{

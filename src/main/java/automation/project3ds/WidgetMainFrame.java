@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 public class WidgetMainFrame {
 
 	Driver driver;
-
+	
 	private By thankyou2 = By.xpath("//h2[text()='Transaction was successful']");
 	private By privacyPolicy = By.xpath("//*[contains(@class,'footer_copy_and_privacy')]/a");
 	private By paymentMethodContainer = By.id("pay_methods_container");
@@ -17,6 +17,13 @@ public class WidgetMainFrame {
 	private By price = By.xpath("//tr[contains(@id,'price_')]");
 
 	private By thankyou = By.xpath("//*[@class='thankyou_widget']");
+	
+	public static class WidgetType {
+		public static final String MULTI = "multi";
+		public static final  String UNI = "uni";
+		public static final  String P2_3 = "p2_3";
+		public static final  String TERMNIAL = "terminal";
+	}
 
 	public WidgetMainFrame (Driver driver) {
 		try {
@@ -29,6 +36,7 @@ public class WidgetMainFrame {
 		driver.switchTo().frame(iframe.getWebElement());
 		this.driver = driver;
 	}
+
 
 	public void waitForThankYou() {
 		driver.getElement(thankyou, 600000);

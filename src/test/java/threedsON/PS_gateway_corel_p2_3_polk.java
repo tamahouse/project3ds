@@ -14,6 +14,7 @@ import automation.project3ds.Brick_1v5;
 import automation.project3ds.Brick_1v5_corel;
 import automation.project3ds.CodeFeature;
 import automation.project3ds.Driver;
+import automation.project3ds.MailHog;
 import automation.project3ds.Driver.Browser;
 import automation.project3ds.Network;
 import automation.project3ds.PS_gateway_brick_1v5;
@@ -28,8 +29,8 @@ public class PS_gateway_corel_p2_3_polk  extends BaseTest_Z2 {
 //	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String a_id = "99708";
-//	String url = "http://feature-bt2-116.wallapi.bamboo.stuffio.com";
-	String host = AnnotationPage.WallapiUrl.host(url).uni_3(shortcode).co_id(co_id).isUidTimeline().a_id(a_id).generate();
+	String widget = "p2_3";
+	String host = AnnotationPage.WallapiUrl.host(url).uni(widget,shortcode).co_id(co_id).isUidTimeline().a_id(a_id).generate();
 	
 	int ps_id = 132;
 	
@@ -60,6 +61,8 @@ public class PS_gateway_corel_p2_3_polk  extends BaseTest_Z2 {
 		String email = brick.getEmail();
 		String cl_id = Pslog.get_cl_id_email_Fasterpay(email);
 		System.out.println(cl_id);
+		Boolean isMailed = MailHog.isMailSentTo(email);
+		Assertion.get().assertEquals(isMailed, true,"[isMailed]");
 		Assertion.assertConverted(cl_id);
 	}
 	

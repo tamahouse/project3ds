@@ -2,6 +2,8 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 
+import automation.project3ds.WidgetMainFrame.WidgetType;
+
 public class WidgetPage extends BasePage {
 	
 	By submitBtn = By.xpath("//*[@id='testOfferwall']//input[@value='Submit']");
@@ -10,7 +12,22 @@ public class WidgetPage extends BasePage {
 		super(driver);
 	}
 	
+	public Object getWidgetMainFrame(String type) {
+		switch(type) {
+		case WidgetType.MULTI:
+			return new WidgetMulti(driver);
+		case WidgetType.UNI:
+			return new WidgetUni(driver);
+		case WidgetType.P2_3:
+			return new Widget_p2_3(driver);
+		case WidgetType.TERMNIAL:
+			return new WidgetTerminal(driver);
+		}
+		return null;
+	}
+
 	public WidgetMulti getMultiWidget() {
+		
 		return new WidgetMulti(driver);
 	}
 	

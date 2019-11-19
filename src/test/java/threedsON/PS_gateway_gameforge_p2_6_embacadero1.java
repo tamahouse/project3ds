@@ -1,0 +1,61 @@
+package threedsON;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import automation.project3ds.AnnotationPage;
+import automation.project3ds.Assertion;
+import automation.project3ds.BaseTest;
+import automation.project3ds.BaseTest_Z2;
+import automation.project3ds.CodeFeature;
+import automation.project3ds.Driver;
+import automation.project3ds.Network;
+import automation.project3ds.PS_gateway_compact_short;
+import automation.project3ds.PS_gateway_old;
+import automation.project3ds.Pslog;
+import automation.project3ds.WidgetMainFrame.WidgetType;
+import automation.project3ds.WidgetPage;
+import automation.project3ds.WidgetUni;
+
+public class PS_gateway_gameforge_p2_6_embacadero1  extends BaseTest_Z2 {
+	
+	String shortcode = "gateway";
+	String url = "https://feature-https-test.wallapi.bamboo.stuffio.com";
+	String co_id = "76";
+	String a_id = "101723";
+	String widget = "p2_1";
+	String host = AnnotationPage.WallapiUrl.host(url).uni(widget,shortcode).co_id(co_id).isUidTimeline().a_id(a_id).generate();
+	
+	
+	
+
+	@BeforeClass
+	public void setUp() throws Exception {
+		this.driver = new Driver(browser);
+		login(host);
+		CodeFeature.setCodeFeature(driver,url, CodeFeature.CF_3DS_V2, true);
+	}
+	
+
+	
+	@Test
+	public void v1() throws Exception {
+		driver.get(host);
+//		String cardNumber = "4012001037141112";
+		String cardNumber = "5200000000000007";
+//		String cardNumber = "5200000000001096";
+		WidgetPage widgetPage = new WidgetPage(driver);
+		WidgetUni widgetUni = (WidgetUni) widgetPage.getWidgetMainFrame(WidgetType.UNI);
+		PS_gateway_compact_short ps = widgetUni.getPS_gateway_compact_short();
+		ps.setCoID(co_id);
+		ps.setCardNumber(cardNumber);
+		ps.createPayment();
+		String unique = ps.getUnique();
+		String cl_id = Pslog.get_cl_id_email_Fasterpay(unique);
+		System.out.println(cl_id);
+		ps.finish3dsV1ON();
+		widgetPage.getMultiWidget().waitForThankYou();
+		Assertion.assertConverted(cl_id);
+	}
+	
+
+}

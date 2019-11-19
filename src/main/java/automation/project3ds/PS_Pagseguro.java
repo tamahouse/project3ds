@@ -9,7 +9,7 @@ public class PS_Pagseguro {
 	String timestamp = AnnotationPage.timestamp();
 	String name1 = "Payment ";
 	String name2 = "Payment Wall";
-	public String email = "meo"+timestamp+"@sandbox.pagseguro.com.br";
+	public String email = "test_user_82315550@testuser.com";
 	
 	By nameTxb = By.id("name");
 	By emailTxb = By.id("email");

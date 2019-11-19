@@ -17,7 +17,7 @@ public class PS_ppro_btfinland_Test extends BaseTest{
 	String shortcode = "btfinland";
 	String co_id = "70";
 //	String url = "http://feature-pwl-2048.wallapi.bamboo.stuffio.com";
-	String url = "http://feature-pwl-2054.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-pwl-2071.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	

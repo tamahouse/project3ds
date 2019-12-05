@@ -18,9 +18,10 @@ public class Wallapi {
 	
 	public static Boolean getIsConverted(String cl_id) throws Exception {
 		Boolean x = isConverted(cl_id);
+		Boolean y = isApproved(cl_id);
 		for(int i =0; i< 20; i++) {
-			if(x == true) {
-				return x;
+			if(x == true && y == true) {
+				return true;
 			}else {
 				Thread.sleep(10000);
 				x = isConverted(cl_id);
@@ -34,6 +35,14 @@ public class Wallapi {
 		ResultSet result = getStatement().executeQuery(query);
 		result.next();
 		Boolean x = result.getBoolean("cl_tracked");
+		return x;
+	}
+	
+	private static Boolean isApproved(String cl_id) throws Exception {
+		String query = "select cl_approved from ps_clicks where cl_id ="+cl_id+" limit 1";
+		ResultSet result = getStatement().executeQuery(query);
+		result.next();
+		Boolean x = result.getBoolean("cl_approved");
 		return x;
 	}
 

@@ -14,7 +14,6 @@ public class PS_gateway_compact_short extends PS_gateway_compact {
 	}
 	
 	public void createPayment() {
-		AnnotationPage.sleep(5000);
 		setCardHolder();
 		setCardNumber();
 		setCardFullExp();

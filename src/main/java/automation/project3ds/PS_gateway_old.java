@@ -64,7 +64,6 @@ public class PS_gateway_old {
 	}
 	
 	public void createPayment() {
-		AnnotationPage.sleep(5000);
 		setCardNumber();
 		setCardFullExp();
 		setCardHolder();
@@ -121,11 +120,13 @@ public class PS_gateway_old {
 	
 	private void setCardHolder() {
 		Element element = driver.getElement(cardHolderTxb);
+		System.out.println(this.unique);
 		element.sendKeys(name);
 	}
 	
 	private void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
+		driver.sleep(1000);
 		element.sendKeys(cardNumber);
 	}
 	
@@ -180,6 +181,7 @@ public class PS_gateway_old {
 	
 	private void clickBuyButton() {
 		Element element = driver.getElement(buyButtonTxb);
+		element.moveToTopView();
 		element.click();
 	}
 	

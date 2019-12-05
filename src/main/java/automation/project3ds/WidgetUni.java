@@ -2,7 +2,7 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 
-public class WidgetUni extends WidgetMainFrame{
+public class WidgetUni extends WidgetObject{
 	
 	
 	public WidgetUni(Driver driver) {

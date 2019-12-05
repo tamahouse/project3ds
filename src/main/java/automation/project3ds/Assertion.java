@@ -41,20 +41,6 @@ public class Assertion {
 		return assertion;
 	}
 
-	public static void assertErrorText(Element element) throws Exception {
-		String title = element.getText().replace("\n", "");
-		String assertTitle = "[" + title + "]";
-		String errorText = "";
-		try {
-			Element error = element
-					.getElement(By.xpath("./following-sibling::*[contains(@class,'brick-errors')]/*[text()]"));
-			errorText = error.getText();
-		} catch (Exception e) {
-		}
-		String eErrorText = Brick_1v6.getErrorMessage(element);
-		get().assertEquals(errorText, eErrorText, assertTitle + "[ErrorTextValue]");
-
-	}
 
 	public static void isFormError(Driver driver, Element formError, String value) throws Exception {
 		ExtentManager.addScreenshot(driver, "isFormError");

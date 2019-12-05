@@ -32,7 +32,7 @@ public class PS_boletobancario {
 	String BIRTH_DATE_DAY = "12";
 	String BIRTH_DATE_MONTH = "12";
 	String BIRTH_DATE_YEAR = "1912";
-	String EMAIL = "meo@spam4.me";
+	String EMAIL;
 	String PHONE = "(27) 4945-8003";
 	String ZIPCODE = "29161401";
 	String COMPANY_NAME = "Company Name";
@@ -123,7 +123,13 @@ public class PS_boletobancario {
 	}
 
 	public void set_email() {
+		String timestamp = AnnotationPage.timestamp();
+		EMAIL = "meo"+timestamp+"@spam4.me";
 		set_email(EMAIL);
+	}
+	
+	public String getEmail() {
+		return this.EMAIL;
 	}
 
 	public void set_phone() {

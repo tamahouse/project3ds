@@ -12,9 +12,10 @@ import automation.project3ds.AnnotationPage;
 import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.ExtentManager;
-import automation.project3ds.PS_Pagseguro;
+import automation.project3ds.PS_pagseguro;
 import automation.project3ds.PS_Pagseguro2;
 import automation.project3ds.PS_Pagseguro_API;
+import automation.project3ds.PS_boletobancario;
 import automation.project3ds.Pslog;
 import automation.project3ds.WidgetPage;
 
@@ -24,7 +25,7 @@ public class PS_Pagseguro_Multiple_Status_Test extends BaseTest{
 	String shortcode = "pagseguro";
 	String co_id = "30";
 	String url = "http://feature-pwl-1969.wallapi.bamboo.stuffio.com";
-	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).a_id(a_id).isCustom().generate();
+	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).co_id(co_id).a_id(a_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	
 	
@@ -67,7 +68,8 @@ public class PS_Pagseguro_Multiple_Status_Test extends BaseTest{
 		}
 		
 		WidgetPage widgetPage = new WidgetPage(driver);
-		PS_Pagseguro ps = (PS_Pagseguro) widgetPage.getMultiWidget().createClick(shortcode);
+		Object object = widgetPage.getPS(widget, shortcode,logo);
+		PS_pagseguro ps = (PS_pagseguro) object;
 		PS_Pagseguro2 ps2 = ps.createPayment();
 		String transactionCode = ps2.createCreditCardPayment();
 		for(int i=0; i< steps.size(); i++) {

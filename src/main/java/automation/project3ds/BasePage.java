@@ -6,9 +6,20 @@ import java.util.regex.Pattern;
 public class BasePage {
 	
 	Driver driver;
+	String branch;
 	
 	public BasePage(Driver driver) {
 		this.driver = driver;
+	}
+	
+	public BasePage(Driver driver, String branch) {
+		this.driver = driver;
+		this.branch = branch;
+	}
+	
+	
+	public static String timestamp() {
+		return String.valueOf(System.currentTimeMillis());
 	}
 
 	public static String getBetweenText(String str, String pattern1, String pattern2) {

@@ -63,7 +63,6 @@ public class PS_gateway_compact {
 	}
 	
 	public void createPayment() {
-		AnnotationPage.sleep(5000);
 		setCardHolder();
 		setCardNumber();
 		setCardFullExp();
@@ -126,6 +125,7 @@ public class PS_gateway_compact {
 	}
 	
 	public String getUnique() {
+		System.out.println(this.unique);
 		return this.unique;
 	}
 	public void setCardNumber() {
@@ -165,6 +165,7 @@ public class PS_gateway_compact {
 	
 	private void setAddressState() {
 		try {
+		driver.sleep(2000);
 		Select select = new Select(driver.getElement(addressState));
 		select.selectByValue(state_code);
 		}catch (UnexpectedTagNameException e) {
@@ -182,7 +183,8 @@ public class PS_gateway_compact {
 	
 	public void clickBuyButton() {
 		Element element = driver.getElement(buyButtonTxb);
-		element.click();
+		element.moveToTopView();
+		element.clickJS();
 	}
 	
 

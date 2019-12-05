@@ -19,6 +19,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,10 +61,15 @@ public class Driver implements WebDriver {
 		List<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		for (String tab : tabs) {
 			driver.switchTo().window(tab);
-			String url = driver.getCurrentUrl();
-			if (x == true && url.contains(containsInUrl)) {
+			String url = null;
+			try {
+			url = driver.getCurrentUrl();
+			}catch(Exception e) {
+				
+			}
+			if (url != null && x == true && url.contains(containsInUrl)) {
 				return tab;
-			} else if (x == false && !url.contains(containsInUrl)) {
+			} else if (url != null && x == false && !url.contains(containsInUrl)) {
 				return tab;
 			}
 		}
@@ -287,16 +293,23 @@ public class Driver implements WebDriver {
 	}
 
 	public void getCurrentUrl(String contains) {
-		for (int i = 0; i < 200; i++) {
-			String url = getCurrentUrl();
-			if (url.contains(contains)) {
-				return;
-			} else {
-				sleep(100);
-			}
-		}
+		this.getCurrentUrl(contains, true);
 	}
 
+	public String getCurrentUrl(String contains, Boolean x) {
+		for (int i = 0; i < 200; i++) {
+			String url = getCurrentUrl();
+			if (url.contains(contains) && x == true) {
+				return url;
+			}else if (!url.contains(contains) && x == false) {
+				return url;
+			}else {
+				sleep(500);
+			}
+		}
+		return null;
+	}
+	
 	public void waitUrlNotBlank() throws Exception {
 		for (int i = 0; i < 200; i++) {
 			String url = driver.getCurrentUrl();

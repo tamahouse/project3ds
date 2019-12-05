@@ -46,13 +46,17 @@ public class Brick_1v6 {
 	public By emailTxb = By.xpath("//div[contains(@class, 'is-active')]//div[@class='brick-form-row']/div/div[./descendant::*[contains(text(),'Email')]]");
 	
 	By textboxList = By.xpath("//div[contains(@class, 'is-active')]//div[@class='brick-form-row']/div/div");
-	
+	By successButton = By.xpath("//*[@class='button js-brick-submit brick-is-success']");
+	By error = By.xpath("//*[@class='brick-errors__error']");
+	By success = By.xpath("//*[@class='brick-step brick-step-result js-brick-step js-brick-step-result is-active']//*[@data-phrase='transaction-successful']");
 	
 	public Brick_1v6(Driver driver) {
 		this.driver = driver;
 	}
 
-	
+	public void waitForError() {
+		driver.getElement(error,60000);
+	}
 	
 	public List<Element> getTextboxList(){
 		driver.getElement(cardHolderInput);
@@ -86,7 +90,7 @@ public class Brick_1v6 {
 	}
 	
 	
-	public void createPayment() throws Exception {
+	public void createPayment() {
 		setCardHolder();
 		setCardNumber();
 		setExpirationDate();
@@ -151,8 +155,9 @@ public class Brick_1v6 {
 	}
 
 	
-	public void setCardHolder() throws Exception {
+	public void setCardHolder() {
 		Element cardHolderNameTextbox = driver.getElement(cardHolderInput);
+		cardHolderNameTextbox.sendKeys(NAME);
 		cardHolderNameTextbox.sendKeys(NAME);
 //		
 	}
@@ -166,21 +171,20 @@ public class Brick_1v6 {
 		driver.switchTo().frame(frame);
 	}
 
-	public void setCardNumber() throws Exception {
+	public void setCardNumber() {
 		Element cover = getCardNumberTextbox();
 		this.getDeepIframe(cover);
 		Element container = driver.getElement(cardNumberInput);
 		container.sendKeys(CARDNUMBER);
-		Thread.sleep(2000);
 		this.switchToBrickIframe();
 		driver.getElement(white).click();
 	}
 	
-	public void setCardNumber(String cardNumber) throws Exception {
+	public void setCardNumber(String cardNumber) {
 		this.CARDNUMBER = cardNumber;
 	}
 	
-	public void setCVV() throws Exception {
+	public void setCVV() {
 		Element cover = getCvvTextbox();
 		this.getDeepIframe(cover);
 		Element container = driver.getElement(cardNumberInput);
@@ -191,24 +195,26 @@ public class Brick_1v6 {
 	
 	private void switchToBrickIframe() {
 		driver.switchTo().defaultContent();
-		Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"));
+		String url = driver.getCurrentUrl();
+		if(!url.contains("html")) {
+		Element iframe = driver.getElement(By.xpath("//*[@id=\"main\"]/iframe"),500);
 		driver.switchTo().frame(iframe.getWebElement());
 		iframe = driver.getElement(By.id("iframecc"));
 		driver.switchTo().frame(iframe.getWebElement());
+		}
 	}
 	
-	public void setExpirationDate() throws Exception {
+	public void setExpirationDate() {
 		Element cover = getExpirationDateTextbox();
 		this.getDeepIframe(cover);
 		Element container = driver.getElement(cardNumberInput);
 		container.sendKeys(EXPDATE);
-		Thread.sleep(500);
 		this.switchToBrickIframe();
 		driver.getElement(white).click();
 	}
 
 	
-	public void setZipCode() throws Exception {
+	public void setZipCode() {
 		Element zipTextbox = driver.getElement(zipInput);
 		zipTextbox.sendKeys(ZIP);
 //		this.clickImage();
@@ -228,19 +234,22 @@ public class Brick_1v6 {
 	}
 	
 	public String getEmail() {
+		System.out.println(EMAIL);
 		return this.EMAIL;
 	}
 
-	public void clickBuyButton() throws Exception {
+	public void clickBuyButton() {
 		Element buyButton = driver.getElement(buyBtn);
+		buyButton.moveToTopView();
 		buyButton.click();
-		Thread.sleep(500);
+		driver.sleep(500);
 	}
 
-	public void clickProcessButton() throws Exception {
-		Thread.sleep(1000);
-		Element processButton = driver.getElement(processBtn);
-		processButton.click();
+	public void clickProcessButton() {
+		Element element = driver.getElement(processBtn);
+		element.highlight();
+		driver.sleep(2000);
+		element.clickJS();
 	}
 
 	public String getRefId() {
@@ -252,6 +261,14 @@ public class Brick_1v6 {
 
 	public Boolean getSuccess() {
 		return driver.isExist(thankyou);
+	}
+	
+	public void waitForSuccessButton() {
+		driver.getElement(successButton,60000);
+	}
+	
+	public void waitForSuccess() {
+		driver.getElement(success,60000);
 	}
 
 //	public PurchaseIframe getPurchaseFrame() {

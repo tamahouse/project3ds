@@ -31,6 +31,7 @@ public class PS_mercadopago {
 	
 	public void setEmail() {
 		Element element = driver.getElement(emailTxb);
+		driver.sleep(1000);
 		element.sendKeys(email);
 	}
 	

@@ -9,6 +9,7 @@ public class MailHog {
 	String url = "http://bamboo.stuffio.com:8025";
 	
 	By searchTxb = By.id("search");
+	By numberInbox = By.xpath("//a[@ng-click='backToInboxFirst()']");
 	By searchToSelect = By.xpath("//a[@ng-click=\"search('to', searchText)\"]");
 	By resultBoxes = By.xpath("//div[@class='msglist-message row ng-scope']");
 
@@ -23,11 +24,27 @@ public class MailHog {
 	
 	public static boolean isMailSentTo(String condition) {
 		MailHog hog = new MailHog();
+		hog.waitForLoaded();
 		hog.setSearch(condition);
 		hog.clickSearchTo();
 		Boolean result = hog.isResult();
 		hog.quit();
 		return result;
+	}
+	
+	private void waitForLoaded() {
+		for(int i = 0; i< 20 ; i++) {
+			Element element = driver.getElement(numberInbox);
+			String str = element.getText();
+			String index = BasePage.getBetweenText(str, "(", ")");
+			Boolean isNumber = BasePage.isNumeric(index);
+			if(isNumber == true) {
+				driver.sleep(500);
+				return;
+			}else {
+				driver.sleep(500);
+			}
+		}
 	}
 	
 	private void setSearch(String condition) {
@@ -42,7 +59,8 @@ public class MailHog {
 	
 	private boolean isResult() {
 		try {
-			driver.getElement(resultBoxes);
+			Element element = driver.getElement(resultBoxes);
+			element.highlight();
 			return true;
 		}catch (Exception e) {
 			return false;

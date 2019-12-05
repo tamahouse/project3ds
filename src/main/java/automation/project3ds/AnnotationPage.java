@@ -112,13 +112,23 @@ public static Driver driver;
 		}
 		
 		public WallapiUrl uni(String widget, String shortcode) {
+			String originShortcode = shortcode;
+			try {
+			originShortcode = shortcode.substring(0,shortcode.indexOf("_"));
+			}catch(Exception e) {
+				
+			}
 			this.widget = widget;
-			this.p = prefix + "ps" + suffix+shortcode;
+			this.p = prefix + "ps" + suffix+originShortcode;
 			return this;
 		}
 		
 		public WallapiUrl widget(String widget) {
+			if(widget.equals("t3")) {
+				this.t3();
+			}else {
 			this.widget = widget;
+			}
 			return this;
 		}
 		

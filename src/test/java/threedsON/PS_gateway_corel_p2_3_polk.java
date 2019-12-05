@@ -19,14 +19,15 @@ import automation.project3ds.Driver.Browser;
 import automation.project3ds.Network;
 import automation.project3ds.PS_gateway_brick_1v5;
 import automation.project3ds.PS_gateway_brick_1v5_corel;
+import automation.project3ds.PS_shortcode;
 import automation.project3ds.Pslog;
 import automation.project3ds.WidgetPage;
 import automation.project3ds.Widget_p2_3;
 
 public class PS_gateway_corel_p2_3_polk  extends BaseTest_Z2 {
 	
-	String shortcode = "gateway";
-//	String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
+	String shortcode = PS_shortcode.GATEWAY_CORAL_15;
+//	String url = "http://feature-wid-176.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String a_id = "99708";
 	String widget = "p2_3";
@@ -46,15 +47,15 @@ public class PS_gateway_corel_p2_3_polk  extends BaseTest_Z2 {
 	
 	
 	@Test
-	public void v1() throws Exception {
+	public void polk() throws Exception {
 		driver.get(host);
 		String cardNumber = "4012001037141112";
 //		String cardNumber = "5200000000000007";
 //		String cardNumber = "5200000000001096";
 //		String cardNumber = "5555555555554477";
 		WidgetPage widgetPage = new WidgetPage(driver);
-		Widget_p2_3 widget_p2_3 = widgetPage.getWidget_p2_3();
-		PS_gateway_brick_1v5_corel gateway_1v5 = widget_p2_3.getPS_gateway_brick_1v5_corel();
+		Object object = widgetPage.getPS(widget, shortcode,logo);;
+		PS_gateway_brick_1v5_corel gateway_1v5 = (PS_gateway_brick_1v5_corel) object;
 		Brick_1v5_corel brick = gateway_1v5.getBrick_1v5_corel();
 		brick.setCardNumber(cardNumber);
 		brick.createPayment();

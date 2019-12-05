@@ -27,7 +27,7 @@ public class Widget3dsV1 {
 		element.click();
 		element.sendKeys(Keys.ENTER);
 		try {
-			AnnotationPage.sleep(3000);
+			AnnotationPage.sleep(5000);
 			driver.switchTo().alert().accept();
 		}catch(Exception ignore) {
 			

@@ -7,7 +7,7 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
-public class WidgetPaymentMethods extends WidgetMainFrame {
+public class WidgetPaymentMethods extends WidgetObject {
 	
 	Driver driver;
 

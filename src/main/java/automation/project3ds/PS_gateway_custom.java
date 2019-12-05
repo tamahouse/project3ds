@@ -47,6 +47,7 @@ public class PS_gateway_custom {
 		email = "meo" + AnnotationPage.timestamp() + "@spam4.me";
 		element = driver.getElement(emailTxb);
 		email = getEmail();
+		driver.sleep(700);
 		element.sendKeys(email);
 	}
 
@@ -153,7 +154,6 @@ public class PS_gateway_custom {
 	}
 
 	public void createPayment() throws Exception {
-		Thread.sleep(1000);
 		setEmail();
 		setCardNumber();
 		setExpiryMonth();

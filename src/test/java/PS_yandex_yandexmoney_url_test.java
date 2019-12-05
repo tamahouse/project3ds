@@ -11,18 +11,20 @@ import automation.project3ds.BaseTest;
 import automation.project3ds.Driver;
 import automation.project3ds.Network;
 import automation.project3ds.PS_mollie;
+import automation.project3ds.PS_shortcode;
 import automation.project3ds.PS_yandexmoney;
+import automation.project3ds.PS_yandexmoney2;
 import automation.project3ds.Pslog;
 import automation.project3ds.WidgetMulti;
 import automation.project3ds.WidgetPage;
 
 public class PS_yandex_yandexmoney_url_test extends BaseTest{
 	
-	String shortcode = "yandexmoney";
-	String url = "http://feature-pwl-2061.wallapi.bamboo.stuffio.com";
+	String shortcode = PS_shortcode.YANDEXMONEY;
+//	String url = "http://feature-pwl-2061.wallapi.bamboo.stuffio.com";
 	String co_id = "170";
 	String testUrl = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\testUrl.xlsx";
-	String host = AnnotationPage.WallapiUrl.host(url).isUidTimeline().co_id(co_id).isCustom("success_url", "any").generate();
+	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();
 	
 //	static Driver driver;
 //
@@ -63,13 +65,11 @@ public class PS_yandex_yandexmoney_url_test extends BaseTest{
 			WidgetPage widgetPage = new WidgetPage(driver);
 			widgetPage.setCustomItem(AnnotationPage.WallapiUrl.SUCCESS_URL, url);
 			widgetPage.clickSubmitButton();
-			WidgetMulti widgetMulti = widgetPage.getMultiWidget();
-			widgetMulti.clickPaymentMethod(shortcode);
-			widgetMulti.clickPrice("50.00", "RUB");
-			widgetMulti.clickBuyButton();
-			PS_yandexmoney ps = new PS_yandexmoney(driver);
-			ps.clickPayButton();
-			ps.clickkBackToStoreCompletedButton();
+			Object object = widgetPage.getPS(widget, shortcode,logo);
+			PS_yandexmoney ps = (PS_yandexmoney) object;
+			PS_yandexmoney2 ps2 = ps.getNewWindows();
+			ps2.clickPayButton();
+			ps2.clickkBackToStoreCompletedButton();
 //			String transID = ps.getTransId();
 //			System.out.println(transID);
 //			String cl_id = Pslog.get_cl_id_email_Fasterpay(transID);

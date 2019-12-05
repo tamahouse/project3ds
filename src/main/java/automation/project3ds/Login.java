@@ -4,15 +4,23 @@ import org.openqa.selenium.By;
 
 public class Login extends BasePage {
 
-	
 	private By nameTxb = By.id("login");
 	private By passwordTxb = By.id("password");
 	private By loginBtn = By.id("submit_button");
 	private String name = utility.ConfigFile.name;
 	private String password = utility.ConfigFile.password;
 	
+	public Login(Driver driver, String branch) {
+		super(driver, branch);
+	}
+	
 	public Login(Driver driver) {
 		super(driver);
+	}
+	
+	public void open() {
+		String url = this.branch + "/admin";
+		driver.get(url);
 	}
 	
 	public void login(String url) {
@@ -25,6 +33,21 @@ public class Login extends BasePage {
 		setPassword();
 		clickLogin();
 		driver.get(loginUrl);
+	}
+	
+	public void simpleLogin(String url) {
+		String loginUrl = url + "/admin";
+		driver.get(loginUrl);
+		setName();
+		setPassword();
+		clickLogin();
+	}
+	
+	public void login() {
+		this.open();
+		setName();
+		setPassword();
+		clickLogin();
 	}
 	
 	

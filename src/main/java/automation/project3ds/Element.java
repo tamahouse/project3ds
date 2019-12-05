@@ -245,6 +245,7 @@ public class Element implements WebElement{
 	public void click() {
 		// TODO Auto-generated method stub
 //		this.highlight(element);
+//		driver.screenShot("C:\\Users\\chase\\Downloads\\Netbanking\\netbanking.png");
 		element.click();
 	}
 	

@@ -49,7 +49,6 @@ public class PS_ccbrazil_old {
 	
 	
 	public void createPayment() {
-		AnnotationPage.sleep(5000);
 		setCardNumber();
 		setCardFullExp();
 		setCardHolder();
@@ -64,6 +63,7 @@ public class PS_ccbrazil_old {
 	
 	
 	public String getEmail() {
+		System.out.println(this.email);
 		return this.email;
 	}
 	
@@ -79,6 +79,7 @@ public class PS_ccbrazil_old {
 	
 	protected void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
+		driver.sleep(1000);
 		element.sendKeys(cardNumber);
 	}
 	
@@ -139,6 +140,7 @@ public class PS_ccbrazil_old {
 	
 	protected void clickBuyButton() {
 		Element element = driver.getElement(buyButtonTxb);
+		element.moveToView();
 		element.click();
 	}
 	

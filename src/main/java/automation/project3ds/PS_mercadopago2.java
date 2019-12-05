@@ -3,7 +3,7 @@ package automation.project3ds;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class PS_mercadopago2 {
+public class PS_mercadopago2  {
 	
 	Driver driver;
 	
@@ -16,6 +16,8 @@ public class PS_mercadopago2 {
 	By accountOption = By.xpath("//*[@for='mp_login_row']");
 	By creditcardOption = By.xpath("//*[@for='new_card_row']");
 	By cvvTxb = By.id("cvv");
+	By selectItemBtn = By.xpath("//*[@id='installments_select_express']/button");
+	By item = By.xpath("(//*[@class='andes-list__item-primary'])[2]");
 	By payBtn = By.id("pay");
 	
 	By cardNumberTxb = By.id("card_number");
@@ -23,6 +25,7 @@ public class PS_mercadopago2 {
 	By cardHolderTxb = By.id("fullname");
 	By continueBtn = By.id("submit");
 	By cpfTxb = By.id("number");
+	By item1 = By.xpath("//li[./*[@id='1']]");
 
 	public PS_mercadopago2(Driver driver) {
 		WebElement frameMedia = driver.getElement(By.id("step2_iframe"),30000).getWebElement();
@@ -31,10 +34,9 @@ public class PS_mercadopago2 {
 	}
 	
 	public ThankyouPage finishPayment_AccountOption() {
-		PS_mercadopago3 ps3 = this.getLoginPage();
-		PS_mercadopago2 ps2 = ps3.createPayment_AccountOption();
-		ps2.setCVV();
-		ps2.clickPayButton();
+		this.setCVV();
+		this.selectItem();
+		this.clickPayButton();
 		return new ThankyouPage(driver);
 	}
 	
@@ -47,6 +49,7 @@ public class PS_mercadopago2 {
 		this.clickContinueButton();
 		this.setCPF();
 		this.clickContinueButton();
+		this.clickItem1();
 		this.clickPayButton();
 		return new ThankyouPage(driver);
 	}
@@ -73,6 +76,25 @@ public class PS_mercadopago2 {
 		element.sendKeys(CVV);
 	}
 	
+	private void clickSelectItemButton() {
+		Element element = driver.getElement(selectItemBtn);
+		element.click();
+	}
+	
+	private void clickItem() {
+		Element element = driver.getElement(item);
+		element.click();
+	}
+	
+	private void selectItem() {
+		try {
+		this.clickSelectItemButton();
+		this.clickItem();
+		}catch (Exception e) {
+			
+		}
+	}
+	
 	private void clickPayButton() {
 		Element element = driver.getElement(payBtn);
 		element.click();
@@ -96,6 +118,15 @@ public class PS_mercadopago2 {
 	private void clickContinueButton() {
 		Element element = driver.getElement(continueBtn);
 		element.click();
+	}
+	
+	private void clickItem1() {
+		try {
+		Element element = driver.getElement(item1);
+		element.click();
+		}catch(Exception e) {
+			
+		}
 	}
 	
 	private void setCPF() {

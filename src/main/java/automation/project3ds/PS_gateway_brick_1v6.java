@@ -41,25 +41,25 @@ public class PS_gateway_brick_1v6 {
 	}
 	
 	public void finish3dsV1ON() {
-		if(driver.getBrowser().equals(Browser.IE)) {
-			driver.switchTo().defaultContent();
-			driver.switchToWindows("brick-3ds-v2", true);
-			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
-			driver.switchTo().frame(iframe);
-			Widget3dsV1 obj = new Widget3dsV1(driver);
-			obj.finish();
-			driver.switchToWindows("test-offerwall", true);
-		}else {
-			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
-			driver.switchTo().frame(iframe);
-			Widget3dsV1 obj = new Widget3dsV1(driver);
-			obj.finish();
-		}
+//		if(driver.getBrowser().equals(Browser.IE)) {
+		driver.switchTo().defaultContent();
+		driver.switchToWindows("brick-3ds-v2", true);
+		WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+		driver.switchTo().frame(iframe);
+		Widget3dsV1 obj = new Widget3dsV1(driver);
+		obj.finish();
+		driver.switchToWindows("test-offerwall", true);
+//		}else {
+//			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+//			driver.switchTo().frame(iframe);
+//			Widget3dsV1 obj = new Widget3dsV1(driver);
+//			obj.finish();
+//		}
 
 	}
 	
 	public void finish3dsV2ON() {
-		if(driver.getBrowser().equals(Browser.IE)) {
+//		if(driver.getBrowser().equals(Browser.IE)) {
 			driver.switchTo().defaultContent();
 			driver.switchToWindows("brick-3ds-v2", true);
 			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
@@ -67,12 +67,12 @@ public class PS_gateway_brick_1v6 {
 			Widget3dsV2 obj = new Widget3dsV2(driver);
 			obj.finish();
 			driver.switchToWindows("test-offerwall", true);
-		}else {
-			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
-			driver.switchTo().frame(iframe);
-			Widget3dsV2 obj = new Widget3dsV2(driver);
-			obj.finish();
-		}
+//		}else {
+//			WebElement iframe = driver.getElement(By.id("Cardinal-CCA-IFrame")).getWebElement();
+//			driver.switchTo().frame(iframe);
+//			Widget3dsV2 obj = new Widget3dsV2(driver);
+//			obj.finish();
+//		}
 
 	}
 	

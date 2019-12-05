@@ -14,12 +14,8 @@ public class PS_ppro {
 		this.driver = driver;
 	}
 	
-	public ThankyouPage createPayment() throws Exception {
-		this.finishPaymentStep();
-		return new ThankyouPage(driver);
-	}
 
-	public void finishPaymentStep() throws Exception {
+	public ThankyouPage finishPayment() throws Exception {
 		By primaryButton = By.xpath("//button[@class='btn btn-primary']");
 		List<String> tabs = driver.waitForNewTab();
 		driver.switchTo().window(tabs.get(1));
@@ -27,10 +23,7 @@ public class PS_ppro {
 		driver.getElement(primaryButton).click();
 		driver.getElement(primaryButton).click();
 		driver.navigate().refresh();
-		
-//		driver.getElement(thankyou);
-//		driver.close();
-//		driver.switchTo().window(tabs.get(0));
+		return new ThankyouPage(driver);
 	}
 
 }

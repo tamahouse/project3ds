@@ -175,7 +175,7 @@ public class PS_boletobr {
 	public void clickSummit() throws Exception {
 		driver.waitForNumberOfElement(spinner, 0, 20000);
 		driver.getElement(payment_button).click();
-		driver.waitForNumberOfElement(spinner, 0, 20000);
+		driver.waitForNumberOfElement(spinner, 0, 90000);
 	}
 
 	public Element getError() {

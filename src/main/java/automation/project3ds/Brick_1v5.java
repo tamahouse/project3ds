@@ -35,6 +35,7 @@ public class Brick_1v5 {
 	}
 	
 	public String getEmail() {
+		System.out.println(this.email);
 		return this.email;
 	}
 	
@@ -79,6 +80,7 @@ public class Brick_1v5 {
 	
 	public void setEmail() {
 		email = "meo"+AnnotationPage.timestamp()+"@spam4.me";
+		System.out.println(this.email);
 		Element element = driver.getElement(emailTxb);
 		String cEmail = element.getAttribute("value");
 		if(cEmail.equals("")) {
@@ -88,6 +90,7 @@ public class Brick_1v5 {
 	
 	public void clickPayButton() {
 		Element element = driver.getElement(payButton);
+		element.moveToTopView();
 		element.click();
 	}
 	

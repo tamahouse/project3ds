@@ -64,6 +64,7 @@ public class Pslog {
 	}
 	
 	public static String get_cl_id_email_Fasterpay(String email) throws Exception {
+		System.out.println(email);
 		String query = "select * from ps_logs where log_data like '%"+email+"%' order by cl_id desc limit 1";
 		ResultSet resultSet = getStatement().executeQuery(query);
 		resultSet.next();

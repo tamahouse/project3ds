@@ -17,6 +17,7 @@ import javax.imageio.ImageIO;
 
 import org.openqa.selenium.By;
 
+import automation.project3ds.WidgetObject.WidgetType;
 import javafx.util.Pair;
 
 public class LogoReportBuilder {
@@ -159,11 +160,13 @@ public class LogoReportBuilder {
 					.generate();
 			driver.get(developHost);
 			WidgetPage developwidgetPage = new WidgetPage(driver);
-			String developImageUrl = developwidgetPage.getMultiWidget().getLogoUrl(shortcode);
+			WidgetMulti developwidget = (WidgetMulti) developwidgetPage.getWidgetMainFrame(WidgetType.MULTI);
+			String developImageUrl = developwidget.getLogoUrl(shortcode);
 //			
 			driver.get(host);
 			WidgetPage widgetPage = new WidgetPage(driver);
-			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			WidgetMulti widget = (WidgetMulti) developwidgetPage.getWidgetMainFrame(WidgetType.MULTI);
+			String imageUrl = widget.getLogoUrl(shortcode);
 			
 			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[multi p1]");
 			
@@ -186,11 +189,13 @@ public class LogoReportBuilder {
 					.generate();
 			driver.get(developHost);
 			WidgetPage developwidgetPage = new WidgetPage(driver);
-			String developImageUrl = developwidgetPage.getMultiWidget().getLogoUrl(shortcode);
+			WidgetMulti developwidget = (WidgetMulti) developwidgetPage.getWidgetMainFrame(WidgetType.MULTI);
+			String developImageUrl = developwidget.getLogoUrl(shortcode);
 //			
 			driver.get(host);
 			WidgetPage widgetPage = new WidgetPage(driver);
-			String imageUrl = widgetPage.getMultiWidget().getLogoUrl(shortcode);
+			WidgetMulti widget = (WidgetMulti) widgetPage.getWidgetMainFrame(WidgetType.MULTI);
+			String imageUrl = widget.getLogoUrl(shortcode);
 			
 			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[multi p10]");
 			
@@ -223,7 +228,7 @@ public class LogoReportBuilder {
 			
 			driver.get(host);
 			WidgetPage widget = new WidgetPage(driver);
-			WidgetUni widgetUni = widget.getWidgetUni();
+			WidgetUni widgetUni = (WidgetUni) widget.getWidgetMainFrame(WidgetType.UNI);
 			String imageUrl = widgetUni.getLogoUrl(shortcode);
 			
 //			Assertion.get().assertNotEquals(imageUrl, developImageUrl, "[ChangeIndex]" + "[uni]");
@@ -298,7 +303,7 @@ public class LogoReportBuilder {
 				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);
-				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();
+				WidgetTerminal widgetTerminal = (WidgetTerminal) widget.getWidgetMainFrame(WidgetType.TERMNIAL);
 				widgetTerminal.clickPaymentMethod(shortcode, logo);
 				Thread.sleep(1000);
 				Element img = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
@@ -327,7 +332,7 @@ public class LogoReportBuilder {
 				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);
-				WidgetTerminal widgetTerminal = widget.getWidgetTerminal();
+				WidgetTerminal widgetTerminal = (WidgetTerminal) widget.getWidgetMainFrame(WidgetType.TERMNIAL);
 				widgetTerminal.clickPaymentMethod(shortcode, logo);
 				Thread.sleep(1000);
 				Element img =driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));

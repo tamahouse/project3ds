@@ -7,7 +7,7 @@ public class PS_gudangvoucher {
 	
 	Driver driver;
 	
-	String email = "meo@spam4.me";
+	String email;
 	String username = "demouser4";
 	String password = "6Jsm39WD";
 	
@@ -26,9 +26,15 @@ public class PS_gudangvoucher {
 	}
 	
 	private void setEmail() {
+		String timestamp = AnnotationPage.timestamp();
+		email = "meo"+timestamp+"@spam4.me";
 		Element element = driver.getElement(byemailTxb);
 		driver.sleep(1000);
 		element.sendKeys(email);
+	}
+	
+	public String getEmail() {
+		return this.email;
 	}
 	
 	private void clickContinue() {

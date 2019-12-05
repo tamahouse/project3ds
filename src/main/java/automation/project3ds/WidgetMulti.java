@@ -4,66 +4,15 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 
-import automation.project3ds.WidgetMainFrame.WidgetType;
+import automation.project3ds.WidgetObject.WidgetType;
 
-public class WidgetMulti extends WidgetMainFrame {
+public class WidgetMulti extends WidgetObject {
 	
 	private By buyBtn = By.id("ps_psb");
-	private By thankyou = By.xpath("//h3[text()='Thank you for your purchase!']");
+	private By thankyou = By.xpath("//*[@id='ps_content']/h3[text()]");
 	
 	WidgetMulti(Driver driver) {
 		super(driver);
-	}
-	
-	
-	public Object getPS(String shortcode){
-		switch(shortcode) {
-		case PS_shortcode.MERCADOPAGO:
-			return new PS_mercadopago(driver);
-		case PS_shortcode.MERCADOPAGO2:
-			return new PS_mercadopago2(driver);
-		case PS_shortcode.EBANXTRANSFER:
-			return new PS_ebanxtransfer(driver);
-		case PS_shortcode.BANRISULBRAZIL:
-			return new PS_ebanx(driver);
-		case PS_shortcode.BRADESCOBRAZIL:
-			return new PS_bradescobrazil(driver);
-		case PS_shortcode.BANCOBRAZIL:
-			return new PS_ebanx(driver);
-		case PS_shortcode.ITAUBRAZIL:
-			return new PS_ebanx(driver);
-		case PS_shortcode.SERVIPAGCHILE:
-			return new PS_servipagchile(driver);
-		case PS_shortcode.SENCILLITO:
-			return new PS_servipagchile(driver);
-		case PS_shortcode.PSECOLOMBIA:
-			return new PS_psecolombia(driver);
-		}
-		return null;
-	}
-
-	public Object createClick(String shortcode) throws Exception{
-		this.click(shortcode);
-		if(shortcode.equals("neosurf")) {
-			return new PS_Neosurf(driver);
-		}else if(shortcode.equals("pagseguro")) {
-			return new PS_Pagseguro(driver);
-		}else if(shortcode.equals("ccbrazil") || shortcode.equals("ccbrazilhipercard")) {
-			return new PS_ccbrazil_compact(driver);
-		}else if(shortcode.equals("sofortbt")) {
-			return new PS_Sofortbt(driver);
-		}else if(shortcode.equals("giropay")) {
-			return new PS_Giropay(driver);
-		}else if(shortcode.equals("vtc")) {
-			return new PS_vtc(driver);
-		}else if(shortcode.equals("boletobr")) {
-			return new PS_boletobr(driver);
-		}else if(shortcode.equals("przelewy24")) {
-			return new PS_przelewy24(driver);
-		}else if(shortcode.equals("gudangvoucher")) {
-			return new PS_gudangvoucher(driver);
-		}
-		return null;
 	}
 	
 	public void click(String shortcode) throws Exception{
@@ -79,25 +28,7 @@ public class WidgetMulti extends WidgetMainFrame {
 	}
 	
 	
-	public PS_gateway_compact getPS_gateway_compact() throws Exception {
-		return new PS_gateway_compact(driver);
-	}
-	
-	
-	public PS_gateway_old getPS_gateway_old() throws Exception {
-		return new PS_gateway_old(driver);
-	}
-	
-	public PS_gateway_brick_1v5 getPS_gateway_brick_1v5() throws Exception {
-		return new PS_gateway_brick_1v5(driver);
-	}
-	
-	public PS_gateway_brick_1v6 getPS_gateway_brick_1v6() throws Exception {
-		return new PS_gateway_brick_1v6(driver);
-	}
-	
-	
-	public Boolean getCompleteMessage() {
+	public Boolean waitForSuccess() {
 		return driver.isExist(thankyou);
 }
 
@@ -120,7 +51,12 @@ public class WidgetMulti extends WidgetMainFrame {
 		driver.getElement(byprice);
 		List<Element> list = driver.getElements(byprice);
 		Element element = list.get(index);
+		element.highlight();
+		try {
 		element.click();
+		}catch (Exception e) {
+			
+		}
 	}
 	
 	public void clickPrice(String price, String currency) {

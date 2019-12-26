@@ -80,6 +80,11 @@ public class WidgetPage extends BasePage {
 			 widgetTerminal.click(originShortcode, logo);
 			 this.widget = widget;
 			 break;
+		case WidgetType.PW:
+			 WidgetPW widgetPW = new WidgetPW(driver);
+			 widgetPW.click(originShortcode, logo);
+			 this.widget = widget;
+			 break;
 		}
 		return this.getPS(shortcode);
 	}
@@ -101,6 +106,10 @@ public class WidgetPage extends BasePage {
 			break;
 		case WidgetType.TERMNIAL:
 			 WidgetTerminal widgetTerminal = new WidgetTerminal(driver);
+			 this.widget = widget;
+			 break;
+		case WidgetType.PW:
+			 WidgetPW widgetPW = new WidgetPW(driver);
 			 this.widget = widget;
 			 break;
 		}
@@ -194,6 +203,124 @@ public class WidgetPage extends BasePage {
 			return new PS_gateway_old(driver);
 		case PS_shortcode.NETBANKING:
 			return new PS_netbanking(driver,widget);
+		case PS_shortcode.WEBMONEY:
+			return new PS_webmoney(driver,widget);
+		case PS_shortcode.CHERRYCREDITS:
+			return new PS_cherrycredits(driver,widget);
+		case PS_shortcode.ALLTHEGATE:
+			return new PS_allthegate (driver,widget);
+		case PS_shortcode.KFTC:
+			return new PS_kftc (driver,widget);
+		case PS_shortcode.TODITO:
+			return new PS_todito (driver);
+		case PS_shortcode.PAYSAFECARD:
+			return new PS_paysafecard (driver);
+		case PS_shortcode.WAVEGAME:
+			return new PS_wavegame (driver, widget);
+		case PS_shortcode.MOL:
+			return new PS_mol (driver);
+		case PS_shortcode.OXXOMEXICO:
+			return new PS_oxxomexico (driver);
+		case PS_shortcode.DRAGONPAY:
+			return new PS_dragonpay (driver);
+		case PS_shortcode.YAMONEY:
+			return new PS_yamoney (driver, widget);
+		case PS_shortcode.MYCARDCARD:
+			return new PS_mycardcard (driver);
+		case PS_shortcode.TICKETSURF:
+			return new PS_ticketsurf (driver);
+		case PS_shortcode.EPREPAG:
+			return new PS_eprepag (driver);
+		case PS_shortcode.EFECTYCOLOMBIA:
+			return new PS_efectycolombia (driver);
+		case PS_shortcode.BTCOLOMBIA:
+			return new PS_btcolombia (driver);
+		case PS_shortcode.BALOTO:
+			return new PS_baloto (driver);
+		case PS_shortcode.GANA:
+			return new PS_gana (driver);
+		case PS_shortcode.PSE:
+			return new PS_pse (driver);
+		case PS_shortcode.BTPERU:
+			return new PS_btperu (driver);
+		case PS_shortcode.QIWIWALLET:
+			return new PS_qiwiwallet (driver, widget);
+		case PS_shortcode.UNIONPAY:
+			return new PS_unionpay (driver, widget);
+		case PS_shortcode.MOBILEGATEWAY:
+			return new PS_mobilegateway (driver);
+		case PS_shortcode.EPINPAYMENTSYSTEM:
+			return new PS_epinpaymentsystem (driver);
+		case PS_shortcode.GAMEON:
+			return new PS_gameon(driver);
+		case PS_shortcode.BOLETO:
+			return new PS_boleto(driver);
+		case PS_shortcode.TRANSFERENCIABANCARIA:
+			return new PS_transferenciabancaria(driver);
+		case PS_shortcode.BANKTRANSFERMEXICO:
+			return new PS_banktransfermexico(driver, widget);
+		case PS_shortcode.BANCOMERMEXICO:
+			return new PS_bancomermexico(driver);
+		case PS_shortcode.BANAMEXMEXICO:
+			return new PS_banamexmexico(driver);
+		case PS_shortcode.SANTANDERMEXICO:
+			return new PS_santandermexico(driver);
+		case PS_shortcode.OXXO:
+			return new PS_oxxo(driver, widget);
+		case PS_shortcode.REDCOMPRA:
+			return new PS_redcompra(driver, widget);
+		case PS_shortcode.REDPAGOS:
+			return new PS_redpagos(driver, widget);
+		case PS_shortcode.CVSPHARMACY:
+			return new PS_cvspharmacy (driver, widget);
+		case PS_shortcode.DOLLARGENERAL:
+			return new PS_dollargeneral (driver, widget);
+		case PS_shortcode.IDEALNL:
+			return new PS_idealnl(driver);
+		case PS_shortcode.BANCONTACT:
+			return new PS_bancontact (driver, widget);
+		case PS_shortcode.EVROSET:
+			return new PS_evroset(driver);
+		case PS_shortcode.SVYASNOI:
+			return new PS_svyasnoi(driver);
+		case PS_shortcode.SEPADIRECTDEBIT:
+			return new PS_sepadirectdebit(driver);
+		case PS_shortcode.PAGOFACIL:
+			return new PS_pagofacil(driver, widget);
+		case PS_shortcode.RAPIPAGO:
+			return new PS_rapipago(driver, widget);
+		case PS_shortcode.WALMART:
+			return new PS_walmart(driver, widget);
+		case PS_shortcode.MONEYGRAM:
+			return new PS_moneygram(driver, widget);
+		case PS_shortcode.CANADAPOST:
+			return new PS_canadapost(driver, widget);
+		case PS_shortcode.OPENBUCKS:
+			return new PS_openbucks(driver, widget);
+		case PS_shortcode.TEENCASHKR:
+			return new PS_teencashkr (driver);
+		case PS_shortcode.BTPOLAND:
+			return new PS_btpoland(driver);
+		case PS_shortcode.WECHATPAYMENTS:
+			return new PS_wechatpayments(driver);
+		case PS_shortcode.DOTPAY:
+			return new PS_dotpay(driver);
+		case PS_shortcode.DOTPAYMT:
+			return new PS_dotpaymt(driver);
+		case PS_shortcode.DOTPAYBZWBK:
+			return new PS_dotpaybzwbk(driver);
+		case PS_shortcode.DOTPAYINGB:
+			return new PS_dotpayingb(driver);
+		case PS_shortcode.DOTPAYINGBACC:
+			return new PS_dotpayingbacc(driver);
+		case PS_shortcode.DOTPAYINTELIGO:
+			return new PS_dotpayinteligo(driver);
+		case PS_shortcode.DOTPAYPEKAO:
+			return new PS_dotpaypekao(driver);
+		case PS_shortcode.PAYPAL:
+			return new PS_paypal(driver, widget);
+		case PS_shortcode.FASTERPAY:
+			return new PS_fasterpay(driver, widget);
 		}
 		
 		return null;

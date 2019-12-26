@@ -15,6 +15,7 @@ public class BaseTest_Z2 extends BaseTest{
 //	public Driver driver;
 	public String url = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
 //	public String url = "http://feature-pwg-1162.wallapi.bamboo.stuffio.com";
+//	public String url = "http://release-8.1.53.wallapi.bamboo.stuffio.com";
 	public static String browser = Browser.Chrome;
 	
 	

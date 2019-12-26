@@ -163,7 +163,6 @@ public class PS_gateway_old {
 	private void setAddressState() {
 		try {
 		Select select = new Select(driver.getElement(addressState));
-		driver.sleep(1000);
 		select.selectByValue(state_code);
 		}catch (UnexpectedTagNameException e) {
 			Element element = driver.getElement(addressState);

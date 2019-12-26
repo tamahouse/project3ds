@@ -21,6 +21,11 @@ public class Assertion {
 		Assertion.get().assertEquals(isConverted, true,"[IsConvertSuccessful]");
 		Assertion.end();
 	}
+	
+	public static void assertClickAvailable(String cl_id) {
+		Assertion.get().assertEquals(BasePage.isNumeric(cl_id), true,"[cl_id available]");
+		Assertion.end();
+	}
 
 	public static void end() {
 		if (assertion != null) {

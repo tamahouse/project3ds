@@ -18,6 +18,7 @@ public class BasePage {
 	}
 	
 	
+	
 	public static String timestamp() {
 		return String.valueOf(System.currentTimeMillis());
 	}

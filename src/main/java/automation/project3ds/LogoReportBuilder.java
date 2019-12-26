@@ -292,14 +292,14 @@ public class LogoReportBuilder {
 						.generate();
 				String developHost = AnnotationPage.WallapiUrl.host(develop).co_id(co_id).a_id(a_id).t3().isCustom()
 						.generate();
-//				driver.get(developHost);
-//				Thread.sleep(2000);
-//				WidgetTerminal widgetTerminalDev = widget.getWidgetTerminal();
-//				widgetTerminalDev.clickPaymentMethod(shortcode, logo);
-//				Thread.sleep(1000);
-//				Element imgDev = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
-//				String strDev = imgDev.getAttribute("src");
-				
+////				driver.get(developHost);
+////				Thread.sleep(2000);
+////				WidgetTerminal widgetTerminalDev = widget.getWidgetTerminal();
+////				widgetTerminalDev.clickPaymentMethod(shortcode, logo);
+////				Thread.sleep(1000);
+////				Element imgDev = driver.getElement(By.xpath("//*[@class='payment-option js-payment-option is-active']/div/img"));
+////				String strDev = imgDev.getAttribute("src");
+//				
 				
 				driver.get(hostTerminal);
 				Thread.sleep(2000);

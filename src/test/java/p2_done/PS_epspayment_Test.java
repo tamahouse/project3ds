@@ -18,7 +18,7 @@ import automation.project3ds.WidgetPage;
 public class PS_epspayment_Test extends BaseTest{
 	
 	String shortcode = PS_shortcode.EPSPAYMENT;
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
 	String co_id = "15";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).co_id(co_id).generate();
 	

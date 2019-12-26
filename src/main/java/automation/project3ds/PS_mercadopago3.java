@@ -7,14 +7,16 @@ import automation.project3ds.WidgetObject.WidgetType;
 public class PS_mercadopago3 {
 	
 	Driver driver;
-	public static String EMAIL = "test_user_82315550@testuser.com";
+//	public static String EMAIL = "test_user_82315550@testuser.com";
+	public static String EMAIL = "test_user_35548847@testuser.com";
 	
 	String redirectUrl = "mercadolivre.com";
 	String email = EMAIL;
-	String password = "qatest7910";
+//	String password = "qatest7910";
+	String password = "qatest6312";
 	
 	By emailTxb = By.id("user_id");
-	By continueBtn = By.xpath("//*[@value='Continuar']");
+	By continueBtn = By.xpath("//*[text()='Continuar']");
 	By passwordTxb = By.id("password");
 	By completeBtn = By.id("action-complete");
 

@@ -77,7 +77,7 @@ public class Pslog {
 		}catch(Exception e) {
 			
 		}
-		System.out.println(cl_id);
+		System.out.println("http://feature-pwg-1166.wallapi.bamboo.stuffio.com/admin/reports/payment-transaction/?search[cl_id]="+cl_id);
 		ExtentManager.logInfo(cl_id);
 		return cl_id;
 	}

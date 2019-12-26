@@ -18,7 +18,7 @@ public class PS_pagseguro_Boleto_Test extends BaseTest{
 
 	String shortcode = PS_shortcode.PAGSEGURO;
 	String co_id = "30";
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).co_id(co_id).widget(widget).isPrice(price, currency).generate();
 	
 	

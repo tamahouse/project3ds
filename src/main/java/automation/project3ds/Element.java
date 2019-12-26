@@ -6,10 +6,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
@@ -249,6 +251,21 @@ public class Element implements WebElement{
 		element.click();
 	}
 	
+	public void check() {
+		this.clickCheckbox(true);
+	}
+	
+	public void uncheck() {
+		this.clickCheckbox(false);
+	}
+	
+	private void clickCheckbox(Boolean x) {
+		Boolean isSelected = element.isSelected();
+		if(isSelected != x) {
+			element.click();
+		}
+	}
+	
 	public void clickThroughLoading(int miliseconds) {
 		int timeout = 300;
 		for(int i = 0; i< miliseconds/timeout; i ++) {
@@ -284,7 +301,12 @@ public class Element implements WebElement{
 	public void sendKeys(CharSequence... keysToSend) {
 		// TODO Auto-generated method stub
 //		this.highlight(element);
+		try {
 		element.sendKeys(keysToSend);
+		}catch(ElementNotVisibleException e) {
+			driver.sleep(1000);
+			element.sendKeys(keysToSend);
+		}
 	}
 
 	@Override

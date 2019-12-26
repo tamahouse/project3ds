@@ -11,7 +11,7 @@ public class PS_przelewy24 {
 	
 	String email = "meo@spam4.me";
 	
-	By bybank = By.xpath("//*[@id='payment-options']//a");
+	By bybank = By.xpath("//*[@id='prezform']//*[@data-id]");
 	By byemail = By.id("przelewy_email");
 	By bypayButton = By.id("paybutton");
 
@@ -29,7 +29,7 @@ public class PS_przelewy24 {
 	}
 	
 	private Element getBank(int index) {
-		driver.getElement(bybank);
+		driver.getElement(bybank,40000);
 		driver.sleep(2000);
 		List<Element> list = driver.getElements(bybank);
 		Element element = list.get(index);

@@ -2,6 +2,8 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 
+import automation.project3ds.WidgetObject.WidgetType;
+
 public class ThankyouPage {
 	
 	Driver driver;
@@ -12,6 +14,7 @@ public class ThankyouPage {
 		this.driver = driver;
 		driver.getElement(complete);
 	}
+	
 	
 	public String getCurrentUrl() {
 		return driver.getCurrentUrl();

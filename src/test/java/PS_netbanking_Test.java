@@ -22,11 +22,11 @@ import automation.project3ds.WidgetPage;
 public class PS_netbanking_Test extends BaseTest{
 	
 	String shortcode = PS_shortcode.NETBANKING;
-	String url = "http://feature-pwl-2060.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-pwl-2082.wallapi.bamboo.stuffio.com";
 	String co_id = "93";
 	String testUrl = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\testUrl.xlsx";
-	String price = "100";
-	String currency = "INR";
+	String price = "0.3";
+	String currency = "USD";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();
 	
 //	static Driver driver;

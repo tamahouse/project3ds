@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 public class PS_idealpayments {
 	Driver driver;
-	By paymentOptions = By.xpath("//*[@id='payment-options']/*[@class='payment-method']");
+	By paymentOptions = By.xpath("//*[@id='payment-options']//*[@data-id]");
 	By thankyou = By.xpath("//*[./h3[text()='Thank you for your purchase!']]");
 	
 
@@ -21,24 +21,26 @@ public class PS_idealpayments {
 		return new PS_ppro(driver);
 	}
 
-	private List<String> getListBankIds() {
-		List<String> list = new ArrayList<String>();
+	private List<Element> getListBankIds() {
 		driver.getElement(paymentOptions);
+		driver.sleep(2000);
 		List<Element> elements = driver.getElements(paymentOptions);
-		for (Element element : elements) {
-			String data_id = element.getElement(By.xpath("./a")).getAttribute("data-id");
-			list.add(data_id);
-		}
-		return list;
+//		for (Element element : elements) {
+//			String data_id = element.getElement(By.xpath("./a")).getAttribute("data-id");
+//			list.add(data_id);
+//		}
+		return elements;
 	}
 
 	public void clickBank() {
-		List<String> banks = this.getListBankIds();
+		List<Element> banks = this.getListBankIds();
 		Random random = new Random();
-		String data_id = banks.get(random.nextInt(banks.size()));
-		By bybank = By.xpath("//*[@id='payment-options']//*[@data-id='" + data_id + "']");
-		By byxButton = By.xpath("//*[@id='ps_new_window_popup']/div/a");
-		driver.getElement(bybank).click();
+		Element element = banks.get(random.nextInt(banks.size()));
+//		By bybank = By.xpath("//*[@id='payment-options']//*[@data-id='" + data_id + "']");
+//		By byxButton = By.xpath("//*[@id='ps_new_window_popup']/div/a");
+//		driver.getElement(bybank).click();
+		element.click();
+		
 	}
 
 }

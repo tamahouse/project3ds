@@ -14,7 +14,7 @@ public class MerchantAdd extends BasePage {
 	String COMPANY = timestamp;
 	
 	String addUrl;
-	
+	String d_id;
 	
 	By nameTxb = By.name("data[d_name]");
 	By lastnameTxb = By.name("data[d_lastname]");
@@ -33,6 +33,11 @@ public class MerchantAdd extends BasePage {
 		driver.get(url);
 	}
 	
+	public void openEdit() {
+		String url = this.branch + "/admin/developers/edit?id="+this.d_id;
+		driver.get(url);
+	}
+	
 	
 	public MerchantAdd(Driver driver, String branch) {
 		super(driver, branch);
@@ -40,7 +45,7 @@ public class MerchantAdd extends BasePage {
 	}
 
 
-	private void setName() {
+	public void setName() {
 		Element element = driver.getElement(nameTxb);
 		element.sendKeys(NAME);
 	}
@@ -60,22 +65,22 @@ public class MerchantAdd extends BasePage {
 		element.sendKeys(PASSWORD);
 	}
 	
-	private void setCompany() {
+	public void setCompany() {
 		this.setCompany(COMPANY);
 	}
 	
-	private void setCompany(String company) {
+	protected void setCompany(String company) {
 		Element element = driver.getElement(companyTxb);
 		element.clear();
 		element.sendKeys(company);
 	}
 	
-	private void clickSaveButton() {
+	public void clickSaveButton() {
 		Element element = driver.getElement(saveBtn);
 		element.click();
 	}
 	
-	public String add() {
+	public MerchantManagement add() {
 		this.open();
 		this.setName();
 		this.setLastName();
@@ -83,18 +88,11 @@ public class MerchantAdd extends BasePage {
 		this.setPassword();
 		this.setCompany();
 		this.clickSaveButton();
-		String url = driver.getCurrentUrl("search",true);
-		String id = url.substring(url.indexOf("[id]=")+5);
-		String link = url.replace("?search[id]", "/edit?id");
-		driver.get(link);
-		this.setCompany(id);
-		this.clickSaveButton();
-		return id;
+		return new MerchantManagement (driver, branch);
 	}
 	
-	private void getDID() {
-		
-	}
+
+	
 	
 
 }

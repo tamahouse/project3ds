@@ -14,8 +14,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
@@ -32,6 +34,7 @@ import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 
 public class Driver implements WebDriver {
 
@@ -74,6 +77,20 @@ public class Driver implements WebDriver {
 			}
 		}
 		return null;
+	}
+	
+	public Alert switchToAlern() throws Exception {
+		Exception exception = null;
+		for (int i=0; i<40; i++) {
+			try {
+				Alert alert = this.switchTo().alert();
+				return alert;
+			}catch(NoAlertPresentException e) {
+				this.sleep(500);
+				exception = e;
+			}
+		}
+		throw exception;
 	}
 
 	public String switchToWindows(String containsInUrl, Boolean x, int milisecond) {
@@ -273,6 +290,10 @@ public class Driver implements WebDriver {
 
 	public Element getElement(By by) {
 		return this.getElement(by, 20000);
+	}
+	
+	public Select getSelect(By by) {
+		return new Select(this.getElement(by));
 	}
 
 	public List<Element> getElements(By by) {

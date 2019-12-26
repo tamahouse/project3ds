@@ -2,6 +2,7 @@ package automation.project3ds;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 
 public class PS_boletobr {
 	
@@ -26,7 +27,7 @@ public class PS_boletobr {
 	String CITY = "Aparecida de Goiânia";
 
 	By type = By.id("type");
-	By responsible_cpf = By.id("responsible_cpf");
+	By responsible_cpf = By.xpath("//div[not(contains(@style,'none'))]/div[not(contains(@style,'none'))]/*[@id='responsible_cpf']");
 	By cnpj = By.id("cnpj");
 	By cpf = By.id("cpf");
 	By first_name = By.id("first_name");
@@ -64,8 +65,16 @@ public class PS_boletobr {
 	}
 
 	public void set_type(String str) {
+		driver.sleep(2000);
+		try {
 		Select select = new Select(driver.getElement(type));
 		select.selectByValue(str);
+		}catch(UnexpectedTagNameException e) {
+			Element element = driver.getElement(By.xpath("//div[./*[@id='type']]"));
+			element.click();
+			Element element2 = driver.getElement(By.xpath("//li[@data-value='"+str+"']"));
+			element2.click();
+		}
 	}
 
 	public void set_cpf(String str) {
@@ -174,8 +183,17 @@ public class PS_boletobr {
 
 	public void clickSummit() throws Exception {
 		driver.waitForNumberOfElement(spinner, 0, 20000);
-		driver.getElement(payment_button).click();
+		Element payButton = driver.getElement(payment_button);
+		payButton.click();
 		driver.waitForNumberOfElement(spinner, 0, 90000);
+		Element element = driver.getElement(By.xpath("//div[./*[@id='zipcode']]"));
+		Boolean isError = element.getAttribute("class").contains("has-invalid-value");
+		while (isError == true) {
+			driver.sleep(1000);
+			payButton.click();
+			element = driver.getElement(By.xpath("//div[./*[@id='zipcode']]"));
+			isError = element.getAttribute("class").contains("has-invalid-value");
+		}
 	}
 
 	public Element getError() {
@@ -185,6 +203,10 @@ public class PS_boletobr {
 	private void setStreetNumber() {
 		Element element = driver.getElement(street_number);
 		element.sendKeys(STREET_NUMBER);
+	}
+	
+	private void waitForPrintButton() {
+		driver.getElement(print);
 	}
 
 	public void createPersonalPayment() throws Exception {
@@ -196,18 +218,21 @@ public class PS_boletobr {
 		set_zipcode();
 		setStreetNumber();
 		clickSummit();
+		this.waitForPrintButton();
 	}
 
 	public void createBussinessPayment() throws Exception {
-		set_type("business");
-		set_responsible_cpf();
-		set_cnpj();
+		
 		set_firstname();
 		set_lastname();
 		set_email();
-		set_company_name();
 		set_zipcode();
 		setStreetNumber();
+		set_type("business");
+		set_responsible_cpf();
+		set_cnpj();
+		set_company_name();
 		clickSummit();
+		this.waitForPrintButton();
 	}
 }

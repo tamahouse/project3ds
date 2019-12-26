@@ -24,6 +24,7 @@ public class WidgetObject {
 		public static final  String P2_3 = "p2_3";
 		public static final  String P2_1 = "p2_1";
 		public static final  String TERMNIAL = "t3";
+		public static final  String PW = "pw";
 	}
 
 	public WidgetObject (Driver driver) {

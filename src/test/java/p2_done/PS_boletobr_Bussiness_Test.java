@@ -20,7 +20,7 @@ public class PS_boletobr_Bussiness_Test extends BaseTest{
 
 	String shortcode = PS_shortcode.BOLETOBR;
 	String co_id = "30";
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-pwg-1166.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).co_id(co_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	

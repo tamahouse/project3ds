@@ -105,6 +105,12 @@ public static Driver driver;
 			return this;
 		}
 		
+		public WallapiUrl pw() {
+			this.widget = "pw";
+			this.version = "&data%5Bcustom%5D%5Bversion%5D=1.2";
+			return this;
+		}
+		
 		public WallapiUrl uni(String shortcode) {
 			this.widget = "p2";
 			this.p = prefix + "ps" + suffix+shortcode;
@@ -126,6 +132,8 @@ public static Driver driver;
 		public WallapiUrl widget(String widget) {
 			if(widget.equals("t3")) {
 				this.t3();
+			}else if(widget.equals("pw")){
+				this.pw();
 			}else {
 			this.widget = widget;
 			}

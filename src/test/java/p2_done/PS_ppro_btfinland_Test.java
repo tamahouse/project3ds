@@ -21,7 +21,7 @@ public class PS_ppro_btfinland_Test extends BaseTest{
 
 	String shortcode = PS_shortcode.BTFINLAND;
 	String co_id = "70";
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).co_id(co_id).isCustom().generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	

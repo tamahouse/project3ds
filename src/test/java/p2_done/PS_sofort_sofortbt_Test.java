@@ -17,7 +17,7 @@ import automation.project3ds.WidgetPage;
 public class PS_sofort_sofortbt_Test extends BaseTest{
 	
 	String shortcode = PS_shortcode.SOFORTBT;
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).co_id(co_id).generate();
 	

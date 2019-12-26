@@ -20,7 +20,7 @@ import automation.project3ds.WidgetPage;
 public class PS_yandex_yandexmoney extends BaseTest{
 	
 	String shortcode = PS_shortcode.YANDEXMONEY;
-	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
+//	String url = "http://feature-pgp-494.wallapi.bamboo.stuffio.com";
 	String co_id = "170";
 	String testUrl = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\testUrl.xlsx";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();

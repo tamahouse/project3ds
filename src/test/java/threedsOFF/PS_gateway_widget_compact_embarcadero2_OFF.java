@@ -21,7 +21,7 @@ public class PS_gateway_widget_compact_embarcadero2_OFF  extends BaseTest_Z2 {
 	String co_id = "76";
 	String a_id = "101707";
 	int ps_id = 132;
-	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).a_id(a_id).co_id(co_id).generate();
+	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).a_id(a_id).co_id(co_id).isUidTimeline().generate();
 
 	
 	

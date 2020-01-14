@@ -8,7 +8,7 @@ public class PS_mercadopago {
 	Driver driver;
 	
 	
-	public String email = PS_mercadopago3.EMAIL;
+	public String email;
 	
 	By emailTxb = By.id("email");
 	By continueBtn = By.id("paybutton");
@@ -30,6 +30,8 @@ public class PS_mercadopago {
 	
 	
 	public void setEmail() {
+		String timestamp = AnnotationPage.timestamp();
+		this.email = "test_payer_"+timestamp+"@testuser.com";
 		Element element = driver.getElement(emailTxb);
 		driver.sleep(1000);
 		element.sendKeys(email);

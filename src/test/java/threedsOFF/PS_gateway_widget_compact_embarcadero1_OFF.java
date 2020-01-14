@@ -21,7 +21,7 @@ public class PS_gateway_widget_compact_embarcadero1_OFF  extends BaseTest_Z2 {
 	String co_id = "76";
 	String a_id = "101707";
 	int ps_id = 132;
-	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).isCustom("email", "meo+meo%40spam4.me").generate();
+	String host = AnnotationPage.WallapiUrl.host(url).a_id(a_id).co_id(co_id).isUidTimeline().generate();
 
 	
 	

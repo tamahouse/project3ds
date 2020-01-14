@@ -14,7 +14,7 @@ import automation.project3ds.RiskSettingIframe;
 public class RemoveRiskSetting extends BaseTest{
 	
 	String branch = "http://feature-brick-test.wallapi.bamboo.stuffio.com";
-	String a_id = "99894";
+	String a_id = "99906";
 
 	@Test
 	public void riskRemove() {

@@ -88,10 +88,15 @@ public class ProjectManagement extends BasePage{
 			Element element = driver.getElement(submitForReviewBtn);
 			element.sleep(1000);
 			element.click();
+			driver.sleep(3000);
 		}
 		
 		private void waitForStatusPending() {
-			this.element().getElement(statusPendingBtn);
+			try {
+			this.element().getElement(statusPendingBtn,30000);
+			}catch(Exception e) {
+				
+			}
 		}
 		
 	}

@@ -19,7 +19,7 @@ public class PS_przelewy24_SelectBank_Test extends BaseTest{
 
 	String shortcode = PS_shortcode.PRZELEWY24;
 	String co_id = "164";
-	String url = "http://feature-pgp-497.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-pgp-505.wallapi.bamboo.stuffio.com";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).generate();
 	String filePath = "C:\\Workspace\\project3ds\\src\\main\\java\\utility\\ps_data.xlsx";
 	

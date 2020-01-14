@@ -35,6 +35,7 @@ public class PS_qiwiwallet_Test extends BaseTest{
 	
 	String shortcode = PS_shortcode.QIWIWALLET;
 //	String url = "http://feature-pwl-2060.wallapi.bamboo.stuffio.com";
+	String price = "0.01";
 	String co_id = "170";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();
 	

@@ -11,8 +11,8 @@ public class PS_cbc  extends PS_t3_url {
 		super(driver, widget);
 	}
 	
-	public PS_mollie getNewWindows() {
-		return new PS_mollie(driver);
+	public PS_cbc2 getNewWindows() {
+		return new PS_cbc2(driver);
 	}
 	
 	

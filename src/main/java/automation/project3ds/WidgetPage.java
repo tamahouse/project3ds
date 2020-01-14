@@ -321,6 +321,12 @@ public class WidgetPage extends BasePage {
 			return new PS_paypal(driver, widget);
 		case PS_shortcode.FASTERPAY:
 			return new PS_fasterpay(driver, widget);
+		case PS_shortcode.BANKTRANSFERCN:
+			return new PS_banktransfercn(driver, widget);
+		case PS_shortcode.ALIPAY:
+			return new PS_alipay(driver, widget);
+		case PS_shortcode.CULTUREVOUCHERKR:
+			return new PS_culturevoucherkr(driver);
 		}
 		
 		return null;

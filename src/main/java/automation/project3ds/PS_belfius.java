@@ -11,8 +11,8 @@ public class PS_belfius  extends PS_t3_url {
 		super(driver, widget);
 	}
 	
-	public PS_mollie getNewWindows() {
-		return new PS_mollie(driver);
+	public PS_belfius2 getNewWindows() {
+		return new PS_belfius2(driver);
 	}
 	
 	

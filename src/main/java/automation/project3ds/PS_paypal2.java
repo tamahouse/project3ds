@@ -49,6 +49,7 @@ public class PS_paypal2 {
 	
 	private void setPassword() {
 		Element element = driver.getElement(passwordTxb);
+		driver.sleep(1000);
 		element.sendKeys(PASSWORD);
 	}
 	

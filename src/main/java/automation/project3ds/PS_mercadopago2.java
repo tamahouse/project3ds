@@ -22,7 +22,8 @@ public class PS_mercadopago2  {
 	
 	By cardNumberTxb = By.id("card_number");
 	By cardExpTxb = By.id("input_expiration_date");
-	By cardHolderTxb = By.id("fullname");
+//	By cardHolderTxb = By.id("fullname");
+	By cardHolderTxb = By.xpath("//*[contains(@id,'full')][contains(@id,'name')]");
 	By continueBtn = By.id("submit");
 	By cpfTxb = By.id("number");
 	By item1 = By.xpath("//li[./*[@id='1']]");
@@ -33,14 +34,13 @@ public class PS_mercadopago2  {
 		this.driver = driver;
 	}
 	
-	public ThankyouPage finishPayment_AccountOption() {
+	public void finishPayment_AccountOption() {
 		this.setCVV();
 		this.selectItem();
 		this.clickPayButton();
-		return new ThankyouPage(driver);
 	}
 	
-	public ThankyouPage finishPayment_CreditCardOption() {
+	public void finishPayment_NOT_login() {
 		this.clickCreditCardOption();
 		this.setCardNumber();
 		this.setCardExp();
@@ -51,7 +51,6 @@ public class PS_mercadopago2  {
 		this.clickContinueButton();
 		this.clickItem1();
 		this.clickPayButton();
-		return new ThankyouPage(driver);
 	}
 	
 	private void clickAccountOption() {
@@ -102,6 +101,8 @@ public class PS_mercadopago2  {
 	
 	private void setCardNumber() {
 		Element element = driver.getElement(cardNumberTxb);
+		driver.sleep(2000);
+		element.clear();
 		element.sendKeys(CARDNUMBER);
 	}
 	
@@ -112,6 +113,7 @@ public class PS_mercadopago2  {
 	
 	private void setCardHolder() {
 		Element element = driver.getElement(cardHolderTxb);
+		element.clear();
 		element.sendKeys(CARDHOLDER);
 	}
 	

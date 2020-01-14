@@ -27,7 +27,7 @@ public class MailHog {
 		hog.waitForLoaded();
 		hog.setSearch(condition);
 		hog.clickSearchTo();
-		Boolean result = hog.isResult();
+		Boolean result = hog.isResult(condition);
 		hog.quit();
 		return result;
 	}
@@ -57,10 +57,12 @@ public class MailHog {
 		element.click();
 	}
 	
-	private boolean isResult() {
+	private boolean isResult(String condition) {
 		try {
+			By resultBoxes = By.xpath("//div[@class='msglist-message row ng-scope']//*[contains(text(),'"+condition+"')]");
 			Element element = driver.getElement(resultBoxes);
 			element.highlight();
+			System.out.println(element.getText());
 			return true;
 		}catch (Exception e) {
 			return false;

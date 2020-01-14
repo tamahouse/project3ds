@@ -11,8 +11,8 @@ public class PS_kcb  extends PS_t3_url {
 		super(driver, widget);
 	}
 	
-	public PS_mollie getNewWindows() {
-		return new PS_mollie(driver);
+	public PS_kcb2 getNewWindows() {
+		return new PS_kcb2(driver);
 	}
 	
 	

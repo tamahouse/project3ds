@@ -2,32 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="255021" started-at="2019-12-26T03:56:46Z" finished-at="2019-12-26T04:01:01Z">
+  <suite name="Default suite" duration-ms="45423" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="255021" started-at="2019-12-26T03:56:46Z" finished-at="2019-12-26T04:01:01Z">
-      <class name="logo.LogoLatestNaming">
-        <test-method status="PASS" signature="execute(java.lang.String, java.util.Map)[pri:0, instance:logo.LogoLatestNaming@69ea3742]" name="execute" duration-ms="169484" started-at="2019-12-26T03:58:09Z" data-provider="data" finished-at="2019-12-26T04:00:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[openbucks]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[{p1=, ps_name=Openbucks, called_name=openbucks, co_id=2, shortcode=openbucks, folder=openbucks, a_id=99894, enable=1, ps_id=170, d_id=86844, logo=openbucks_usca, co_name=Canada}]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="45423" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
+      <class name="RemoveRiskSetting">
+        <test-method status="PASS" signature="riskRemove()[pri:0, instance:RemoveRiskSetting@5700d6b1]" name="riskRemove" duration-ms="44626" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- execute -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:logo.LogoLatestNaming@69ea3742]" name="tearDown" is-config="true" duration-ms="892" started-at="2019-12-26T04:01:01Z" finished-at="2019-12-26T04:01:01Z">
+        </test-method> <!-- riskRemove -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:RemoveRiskSetting@5700d6b1]" name="tearDown" is-config="true" duration-ms="737" started-at="2020-01-10T08:45:17Z" finished-at="2020-01-10T08:45:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- logo.LogoLatestNaming -->
+      </class> <!-- RemoveRiskSetting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

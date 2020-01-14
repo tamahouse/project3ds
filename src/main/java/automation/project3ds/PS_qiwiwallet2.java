@@ -29,6 +29,7 @@ public class PS_qiwiwallet2 {
 	
 	private void setPhone() {
 		Element element = driver.getElement(phoneTxb);
+		element.clear();
 		element.sendKeys(PHONE);
 	}
 	

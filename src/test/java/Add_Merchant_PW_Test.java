@@ -60,11 +60,11 @@ public class Add_Merchant_PW_Test extends BaseTest{
 		MerchantEdit merchantEdit = navigator2.getMerchantEdit(d_id);
 		merchantEdit.setCompany();
 		merchantEdit.clickSaveButton();
-		MerchantArea merchantArea = navigator2.getMerchantArea(d_id);
-		ProjectSetting projectSetting2 = navigator2.getProjectSetting(a_id);
-		projectSetting2.setStatusLive();
-		projectSetting2.setBlockPaymentNo();
-		projectSetting2.setBlockOfferNo();
-		projectSetting2.clickSaveButton();
+//		MerchantArea merchantArea = navigator2.getMerchantArea(d_id);
+//		ProjectSetting projectSetting2 = navigator2.getProjectSetting(a_id);
+//		projectSetting2.setStatusLive();
+//		projectSetting2.setBlockPaymentNo();
+//		projectSetting2.setBlockOfferNo();
+//		projectSetting2.clickSaveButton();
 	}
 }

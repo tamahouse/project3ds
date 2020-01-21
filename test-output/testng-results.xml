@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45423" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
+  <suite name="Default suite" duration-ms="96611" started-at="2020-01-21T09:22:29Z" finished-at="2020-01-21T09:24:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45423" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
-      <class name="RemoveRiskSetting">
-        <test-method status="PASS" signature="riskRemove()[pri:0, instance:RemoveRiskSetting@5700d6b1]" name="riskRemove" duration-ms="44626" started-at="2020-01-10T08:44:32Z" finished-at="2020-01-10T08:45:17Z">
+    <test name="Default test" duration-ms="96611" started-at="2020-01-21T09:22:29Z" finished-at="2020-01-21T09:24:05Z">
+      <class name="p2_done.PS_ppro_epspayments_Test">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:p2_done.PS_ppro_epspayments_Test@1ed4004b]" name="setUp" is-config="true" duration-ms="53476" started-at="2020-01-21T09:22:29Z" finished-at="2020-01-21T09:23:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- riskRemove -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:RemoveRiskSetting@5700d6b1]" name="tearDown" is-config="true" duration-ms="737" started-at="2020-01-10T08:45:17Z" finished-at="2020-01-10T08:45:17Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="execute()[pri:0, instance:p2_done.PS_ppro_epspayments_Test@1ed4004b]" name="execute" duration-ms="42265" started-at="2020-01-21T09:23:22Z" finished-at="2020-01-21T09:24:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execute -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:p2_done.PS_ppro_epspayments_Test@1ed4004b]" name="tearDown" is-config="true" duration-ms="837" started-at="2020-01-21T09:24:04Z" finished-at="2020-01-21T09:24:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- RemoveRiskSetting -->
+      </class> <!-- p2_done.PS_ppro_epspayments_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

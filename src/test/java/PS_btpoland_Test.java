@@ -30,7 +30,7 @@ import automation.project3ds.WidgetPage;
 public class PS_btpoland_Test extends BaseTest{
 	
 	String shortcode = PS_shortcode.BTPOLAND;
-//	String url = "http://feature-pwl-2060.wallapi.bamboo.stuffio.com";
+	String url = "http://feature-fix-btpoland.wallapi.bamboo.stuffio.com";
 	String co_id = "164";
 	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();
 	

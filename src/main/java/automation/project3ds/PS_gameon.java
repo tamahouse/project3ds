@@ -6,11 +6,11 @@ public class PS_gameon {
 	
 	Driver driver;
 	
-	String CODE = "0000000000000000000000000";
+	String CODE = "TF7E0260DB66642CF8A95C76C";
 	
 	By codeTxb = By.xpath("//*[@id='cardCodePartAll' or @id = 'cardCodePart1']");
 	By submitBtn = By.id("submit_button");
-	By error = By.xpath("//*[@id='messages'][not(contains(@style,'none'))]");
+	By cardBalanceTxt = By.id("card_balance_label");
 
 	public PS_gameon(Driver driver) {
 		this.driver = driver;
@@ -19,7 +19,8 @@ public class PS_gameon {
 	public void createPayment() {
 		this.setCode();
 		this.clickSubmitButton();
-		this.waitForError();
+		this.waitForCardBalance();
+		this.clickSubmitButton();
 	}
 
 	private void setCode() {
@@ -32,8 +33,8 @@ public class PS_gameon {
 		element.click();
 	}
 	
-	private void waitForError() {
-		driver.getElement(error,120000);
+	private void waitForCardBalance() {
+		driver.getElement(cardBalanceTxt,120000);
 	}
 
 	

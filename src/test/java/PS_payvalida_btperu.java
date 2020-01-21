@@ -33,7 +33,7 @@ public class PS_payvalida_btperu extends BaseTest{
 	String shortcode = PS_shortcode.BTPERU;
 //	String url = "http://feature-pwl-2060.wallapi.bamboo.stuffio.com";
 	String co_id = "161";
-	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).isCustom(AnnotationPage.WallapiUrl.SUCCESS_URL, "https%3A%2F%2Fwww.spam4.me").generate();
+	String host = AnnotationPage.WallapiUrl.host(url).widget(widget).isPrice(price, currency).isUidTimeline().co_id(co_id).generate();
 	
 //	static Driver driver;
 //

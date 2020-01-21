@@ -10,12 +10,16 @@ public class PS_payvalida {
 	
 	String redirectUrl = "payvalida.com";
 	
-	
+	By successForm = By.id("imprimir");
 	
 	public PS_payvalida(Driver driver) {
 		this.driver = driver;
 		driver.switchToWindows(redirectUrl, true,60000);
+		this.waitForSuccesForm();
 	}
 
+	public void waitForSuccesForm() {
+		driver.getElement(successForm);
+	}
 
 }

@@ -19,7 +19,7 @@ public class BaseTest_Z2 extends BaseTest{
 //	public String url = "http://release-8.1.53.wallapi.bamboo.stuffio.com";
 	public String url = "https://feature-https-test.wallapi.bamboo.stuffio.com";
 	public static String widget = WidgetType.MULTI;
-	public static String browser = Browser.Chrome;
+	public static String browser = Browser.IE;
 	
 	
 //	@AfterClass

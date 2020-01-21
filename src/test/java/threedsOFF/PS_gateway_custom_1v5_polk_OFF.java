@@ -12,13 +12,13 @@ import automation.project3ds.Network;
 import automation.project3ds.PS_gateway_custom;
 import automation.project3ds.Pslog;
 
-public class PS_gateway_custom_1v5_polk_ON  extends BaseTest_Z2 {
+public class PS_gateway_custom_1v5_polk_OFF  extends BaseTest_Z2 {
 	
 	String shortcode = "gateway";
 //	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String a_id = "101696";
-	String host = url+"/test-staging-brick/1.5/brick-custom-new-widget.html";
+	String host = url+"/test-staging-brick/1.5/brick-custom-new-widget.html?iframe=true";
 	int ps_id = 132;
 	
 

@@ -24,7 +24,7 @@ public class PS_gateway_custom {
 	By expiryMonthTxb = By.id("card-exp-month");
 	By expiryYearTxb = By.id("card-exp-year");
 	By cvvTxb = By.id("card-cvv");
-	By submitBtn = By.xpath("//button");
+	By submitBtn = By.xpath("//button[text()='Submit']");
 	By jsonBody = By.xpath("//body[contains(text(),'{')]");
 	int s = 110;
 

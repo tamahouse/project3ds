@@ -11,22 +11,20 @@ public class PS_btpoland {
 	Driver driver;
 	
 	String NAME = "Payment Wall";
-	String EMAIL = "meo@spam4.me";
+	String EMAIL = "paymentwalltest@gmail.com";
 	
 	By paymentOptions = By.xpath("//*[@id='btpoland_banks']//*[@data-bank-code]");
+	By mbankOption = By.xpath("//*[@data-bank-code][@alt='mBank']");
 	By nameTxb = By.id("full-name");
 	By emailTxb = By.id("p-form-email");
 	By proceedBtn = By.id("submitButton");
-
-	
-	
 
 	public PS_btpoland(Driver driver) {
 		this.driver = driver;
 	}
 	
 	public PS_btpoland2 createPayment() throws Exception {
-		this.clickBank();
+		this.clickMBank();
 		this.setName();
 		this.setEmail();
 		this.clickProceedBtn();
@@ -43,6 +41,12 @@ public class PS_btpoland {
 //		}
 		return elements;
 	}
+	
+	private void clickMBank() {
+		Element element = driver.getElement(mbankOption);
+		element.click();
+	}
+	
 
 	public void clickBank() {
 		List<Element> banks = this.getListBankIds();

@@ -7,8 +7,9 @@ public class PS_btperu {
 	Driver driver;
 	
 	String DI = "34234234234";
-	String EMAIL = "meo@spam4.me";
+	String EMAIL = "humanbeing@gmail.com";
 	
+	By bankOption = By.xpath("//a[@data-bank-id]");
 	By diTxb = By.id("di");
 	By emailTxb = By.id("email");
 	By summitBtn = By.id("btnSubmit");
@@ -18,10 +19,16 @@ public class PS_btperu {
 	}
 	
 	public PS_payvalida createPayment() {
+		this.setBank();
 		this.setDI();
 		this.setEmail();
 		this.clickSubmit();
 		return new PS_payvalida(driver);
+	}
+	
+	private void setBank() {
+		Element element = driver.getElement(bankOption);
+		element.click();
 	}
 
 	private void setDI() {

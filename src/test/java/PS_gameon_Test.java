@@ -71,8 +71,9 @@ public class PS_gameon_Test extends BaseTest{
 		Object object = widgetPage.getPS(widget, shortcode,logo);
 		PS_gameon ps = (PS_gameon) object;
 		ps.createPayment();
+		widgetPage.waitForThankyou(widget);
 		String cl_id = Pslog.get_cl_id_email_Fasterpay(shortcode);
-		Assertion.assertClickAvailable(cl_id);
+		Assertion.assertConverted(cl_id);
 //		String cl_id = Pslog.get_cl_id_email_Fasterpay("giropay");
 //		Assertion.assertConverted(cl_id);
 	}

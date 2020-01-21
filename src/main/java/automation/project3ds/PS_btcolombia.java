@@ -7,7 +7,7 @@ public class PS_btcolombia {
 	Driver driver;
 	
 	String DI = "34234234234";
-	String EMAIL = "meo@spam4.me";
+	String EMAIL = "humanbeing@gmail.com";
 	
 	By diTxb = By.id("di");
 	By emailTxb = By.id("email");

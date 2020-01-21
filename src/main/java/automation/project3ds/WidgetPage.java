@@ -327,6 +327,8 @@ public class WidgetPage extends BasePage {
 			return new PS_alipay(driver, widget);
 		case PS_shortcode.CULTUREVOUCHERKR:
 			return new PS_culturevoucherkr(driver);
+		case PS_shortcode.MYCARDWALLET:
+			return new PS_mycardwallet(driver, widget);
 		}
 		
 		return null;

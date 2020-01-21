@@ -17,7 +17,7 @@ public class PS_gateway_custom_1v6_embarcalero1_OFF  extends BaseTest_Z2 {
 //	String url = "http://feature-pwg-1139.wallapi.bamboo.stuffio.com";
 	String co_id = "76";
 	String a_id = "101696";
-	String host = url+"/test-staging-brick/1.6/brick-custom-new-widget.html";
+	String host = url+"/test-staging-brick/1.6/brick-custom-new-widget.html?iframe=true";
 	int ps_id = 132;
 	
 	

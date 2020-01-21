@@ -70,8 +70,9 @@ public class PS_mycardcard_Test extends BaseTest{
 		Object object = widgetPage.getPS(widget, shortcode,logo);
 		PS_mycardcard ps = (PS_mycardcard) object;
 		ps.createPayment();
+		widgetPage.waitForThankyou(widget);
 		String cl_id = Pslog.get_cl_id_email_Fasterpay(shortcode);
-		Assertion.assertClickAvailable(cl_id);
+		Assertion.assertConverted(cl_id);
 //		String cl_id = Pslog.get_cl_id_email_Fasterpay("giropay");
 //		Assertion.assertConverted(cl_id);
 	}

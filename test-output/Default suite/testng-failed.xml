@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Add_Merchant_PW_Test">
+      <class name="PS_mycardcard_Test">
         <methods>
+          <include name="execute"/>
           <include name="tearDown"/>
-          <include name="addMerchant"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- Add_Merchant_PW_Test -->
+      </class> <!-- PS_mycardcard_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
